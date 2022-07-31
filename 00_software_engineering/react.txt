@@ -1,0 +1,6 @@
+component: a piece of user interface.And every app is a tree of components.
+
+Component class has some methods that we inherit.
+npx create-react-app blog
+
+

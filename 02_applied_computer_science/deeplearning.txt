@@ -1,0 +1,4 @@
+onefourthlabs:
+    "Aim for brevity while avoiding jargon"
+                                    -Edgar Dijkstra
+    

@@ -1,0 +1,585 @@
+cs50:
+    students:
+        off premise storage,applications,machines.
+        you don't want to cool and fix stuff.
+    it is a rebranding of outsourcing jobs.
+    possible because speed is faster hence it is as good as photos being in your own space.
+
+    IaaS: Infrastructure as a service,started by amazon.
+    
+    easy to scale up and down (it is automatic/ autoscaling) when say your website gets mentioned on buzzfeed.
+    computers crash because they have finite resources,and cpu cycles,and it somepoint
+    routers drop data,or server starts using virtual space,and eventually server goes down.
+
+    you can do autoscaling based on traffic,say if 80% of threshold crossed scale up and vice versa,this is called elastic in aws.
+
+    downside: 
+        security:
+            giving whole data to someone elses computer.
+        can use private cloud:
+            like having your own servers.
+        you need internet access to access it.
+            hooks:
+                reaction to some reaction,like everytime i push to github,grab from there to amazon,it is called continuous deployment.
+                you run tests called continuous integration.
+        latency
+        
+        trust
+            note: github comes with github enterprise,you can run it on your  own server.
+        if something goes down:
+            you have no control over things.
+        
+        eg. somebody removed left-pad from node repository and when they did npm install in server it failed.hence cloud can be risky.
+
+    cloud saves space,time and work and labour.
+    servers can have 16 even 64 cpu's,and tens of gigabytes of Ram and terabytes of storage.
+
+    on cloud we use virtualization,so we don't have one os running on one machine.
+    and so resources are used appropriately. 
+
+    in virualization one machines acts like many and hypervisor is a software this allows us to do so,a hypervisor can run on hardware or on host os.
+
+    containerization is even light weight version of virtualization but containerization cannot replace virualtization as containers are just processes.
+
+    --
+
+
+
+module 1:
+    
+    computing :
+        mean to solve any goal oriented activity.
+        or an executing algorithm.  
+    
+    centralized computing:
+        one computer and multiple jobs are submitted and done by that computer.
+    
+    distributed computing:
+        multiple machine acting like one and performing a single task,connected through a network.
+    
+        peer to peer network is a distributed system.
+    
+    Grid computing:
+
+    
+
+university academy:
+    cloud refers to servers that are accessed over the internet located remotely.
+    computing refers to using these resouces to execute an algorithm.
+
+    it is on demand availablity of computer systems resouces and computing power without direct active management by the user.
+
+    properties of cloud computing:
+        on demand.
+    
+    mainframe computer is a high processing computer used for  business,it is not as fast as super computer.
+
+    
+    
+AWS CERTIFIED PRACTIONER:
+-------------------------
+    cloud practitioner is a foundational certificate,
+    there are three levels:
+        foundational
+        associate
+        professional
+    cloud practioner is a foundational certificate,equivalent of six months of fundamental aws cloud and industry knowledge.
+
+    create an aws account,create a free tier account.
+        on aws.amazon.com
+    
+    go to management console as root.
+
+    what is cloud computing:
+        a server contains a processor,and RAM and storage to store data.
+        we also have routers,swithches,databases etc.
+
+        earlier people would buy server and put it in a garage and get an office later and then a data center for servers,and it worked for very long.
+        the problems were,pay for the rent for the data center,pay for power supply ,cooling,maintenance. Adding and replacing hardware takes time and scaling is limited.
+        hire 24/7 team to monitor the infrastructure.
+        and how to deal with disaster like earthquake fire ,power shutdown.
+
+
+        cloud computing is the on-demand delivery of compute power,database storage,applications,and other IT resources.
+        through a cloud services platform with pay-as-you-go pricing.
+
+        you can provision exactly right type and size of computing resources you need.
+
+        you can access these resources instantly.
+        simple way to access servers,storage,databases and a set of application services.
+
+        AWS owns and maintains the network-connected hardware required for these application services,while you provision and use what you need via a web application.
+
+            gmail is an email cloud service.
+            netfix is on AWS
+        
+        the deployment models of the cloud:
+            private cloud:
+                cloud services used by a single organisation,not exposed to the public.
+                your own private data center but managed by someone else.
+                you have complete control
+                security for sensitive applications
+                meet specific business needs
+            public cloud:
+                three big players:
+                    microsoft azure
+                    google cloud
+                    aws
+                cloud resources owned and operated by a third party cloud service provider delivered over the Internet.
+            Hybrid cloud:
+                keep some servers on premises and extend some capabilities to the cloud,your own infrasture and some servers from aws.
+                control over sensitive assets in your private infrastructure.
+                flexibility and cost effectiveness of the public cloud.
+            
+        five characteristics of cloud computing:
+            on demand self service.
+                no need of human intervention.
+            broad network access: can be accessed by diverse client platforms.
+
+            multi tenany and resource pooling: multiple customers can share the same infrastructure and applications with security and privacy.
+            mutliple customers served from same physical machines
+
+            rapid elasticality and scalability:
+                can scale up and down on demand.
+            
+            measured service
+                usage is measured,users pay correctly for what they have used.
+    
+    advantages:
+        trade capital extensse(CAPEX) for opeational expense (OPEX)
+            pay on demand: don't own hardware
+            reduced total cost of ownership (TCO) and opeartional expense(OPEX)
+        benefit from massive economics of scale.
+            prices are reduced as aws is more efficient due to large scale.
+        stop guessing capacity:
+            scale based on actual measured usage.
+        increase speed and agility
+        stop spending money running and maintaining data centers.
+        go global in minutes:leverage the aws global infrastructure.
+    
+
+    problems solved by cloud:
+        flexibility:change resource types when needed
+        cost effectiveness:pay as you go,for what yo use
+        scalability:accomodate larger loads by making hardware stronger or adding addititional nodes
+        elasticity:ability to scale out and scale in when needed.
+        high availalbity and fault tolerance: build across data centers
+        agility: rapidly develop test and launch software applications.
+    
+
+
+    types of cloud computing:
+        infrastruture as a service(Iaas)
+            provide buliding blocks for cloud IT
+            provides networking,computing,data storage space in its raw form
+            highest level of flexibility
+            easy parallel with traditional on-premises IT
+        Platform as a Service(PaaS)
+            removes the need for your organization to manage the underly ing infrastucture.
+            Focus on the deployment and management of your applications
+        Software as a Service(SaaS)
+            completed product that is run and manged by the service provider.
+        
+    on premise                 IaaS              Paas             Saas
+     
+     applications            applications       applications    everything by aws
+     data                    data               data
+     runtime                 runtime
+     middleware              middleware
+     os                      os
+     virtualization
+     servers
+     storage
+     networking
+
+
+
+
+    IAAS:
+        Amazon EC2 on AWS
+        GCP,Azure,Digital Ocean,Linode etc
+    PAAS:
+        Elastic Beanstalk(on AWS)
+        heroku,Google App Engine(GCP),windows Azure
+    SAAS:
+        many aws services (eg rekognition for ml by aws)
+        google apps (gmail),dropbox,zoom
+    
+
+    pricing in aws:
+        aws has 3 pricing fundamentals,following the pay-as-you go pricing model
+
+        compute:
+            pay for compute time
+        storage:
+            pay for data storaged in the cloud.
+        data transfer out of the cloud:
+            for networking. 
+            data transfer IN is free.
+        
+        solves the expensive issue of traditional IT.
+
+    
+    AWS history:
+        2002 internally launched.
+        2003 amazon infrastructure is one of their core strenth,idea to market.
+        2004 launched publicly with SQS
+        2006 Re-lauched publicly with SQS,S3,and EC2
+        2007 launched in europe
+
+        now dropbox,airbnb,netflex,nasa run on it.
+
+    AWS cloud number facts:
+        aws is the top leader,
+        followed by microsoft.
+        then google.
+        alibaba cloud,Oracle,IBM,
+    
+        in 2019 AWS had 35 billion in annual revenue.
+        AWS had 47% of market and microsoft had 22%
+
+        over 1 million active users.
+
+    AWS usecases:
+        to build sophisticated and scalable applications.
+        applicable to a diverse set of industries.
+        can be used for data analytics ,to host websites,to backup storage.
+        gaming servers etc.
+    
+    AWS global infrastructure:
+        AWS regions
+        AWS availability zones
+        AWS data centers
+        AWS edge locations/points of presence.
+    
+        regions are all around the world even in mumbai.
+        each region is connected via a private network of aws.
+        each region has availabity zones say 3 each
+
+        AWS has regions all around the world:
+            names can be us-east-I ,eu-west-3,ap-south-1 for mumbai ap is asia pacific, me-south-1 for middle east
+        A region is a cluster of data centers
+        Most AWS serives are region-scoped.
+    
+    how to choose a region:
+        compliance with data governance and legal requirements:data never leaves a region without your explicit permission,hence have to launch in that country.
+        proximity to customers: reduce latency
+        available services: within a region new services and new features aren't avaialbe in every region.
+        pricing: pricing varies region to region and is transparent in the service pricing page.
+
+    Availability zones:
+        each region has a many availabity zones usually 3 min 2 and max 6,
+        eg sydney: ap-southeast-2
+         has ap-southeast-2a ap-southeast-2b and ap-southeast-2c 
+
+        each of these zones are one or more data centers with redundant power and networking and connectivity.
+        they are separeate from each othe rso taht they are isolated from disasters.
+        they are connected with high bandwidth ultra-low latency networking.
+        hence forming a region.
+
+    AWS points of presence(edge locations):
+        amazon has 216 points of presence (205 edge locations & 11 regional caches)
+        in 84 cities across 42 countries.
+
+        content is delivered to end users with lower latency.
+
+    
+    AWS has global services:
+        identity and Access management (IAM)
+        route 53 (dns service)
+        cloudFront(content delivery network)
+        WAF (web application firewall)
+
+    MOST AWS services are region-scoped:
+        Amazon EC2 (IaaS)
+        Elastic Beanstalk(PaaS)
+        Lambda (Function as a service)
+        Rekognition (Software as a Service)
+
+
+in management console:
+    at top right you have region,generally use one geographically close.
+    services on left corner to see all available services
+    you also have a search bar.
+    the region will show global if the service is global.
+    resouces change from region to region as those services are regional.
+    if service not available you can switch the region.
+
+shared responsilbity model diagram:
+    it defines what is your responsiblity and what is aws's
+    customer is responsible for security in the cloud.
+    AWS is responsible for security of the cloud.
+        hardware etc,availability,compute,database,networking,regions,edge location.
+    you accept their policy when you use aws.
+    you can't abuse the cloud.
+
+first AWS service:
+
+    IAM: Users & Groups
+    -------------------
+    IAM: identity and access management,Global service
+    Root account created by default,shouldn't be used or shared.
+    Users are people within your organization, and can be grouped.
+     eg group for developers and group of operations.
+    groups only contain users.
+    some users don't need to belong to a group
+    and a user can belong to multiple groups.
+
+    IAM: permissions
+    users or groups can be assigned JSON documents called policies.
+        it express what a group or a user can do.
+    these policies define the permissions of the users.
+    in AWS we appy the least privilege principle: don't give more permissions than needed.
+
+
+    practise IAM
+        search iam in search bar.
+        iam is a global service and it doesn't require a region selection.
+        click on users and add user.
+        create a group as well.
+        you can download .csv or send email.
+        you can add users ad admin.
+
+    IAM policies in depth:
+        group level policies get applied to all people in group.
+        inline policies for users that are not in any group.
+    policies structure:
+        consists of :
+            Version:policy language version,always include "2012-10-17"
+            Id:an identifier for the policy(optional)
+            Statement: on or more individual statements (required)
+            each statement:
+                Sid: an identifier for the statement (optional)
+                Effect: whether the statement allows or denies access(Allow,Deny)
+                Principal: account/user/role to which this policy applied to
+                Action: list of actions this policy allows or denies
+                Resource: list of resources to which the actions applied to
+                condition: conditions for when this policy is in effect (optional)
+
+        example:
+
+                {
+                    "Version":"2012-10-17",
+                    "Id":"S3-Account-Permissions",
+                    "Statement":[
+                        {
+                            "Sid":"1",
+                            "Effect":"Allow",
+                            "Principal":{
+                                "AWS":["arn:aws:iam::123456:root"]
+                            },
+                            "Action":[
+                                "s3:GetObject",
+                                "s3:PutObject"
+                            ],
+                            "Resource":["arn:aws:s3:::mybucket/*"]
+                        }
+                    ]
+                }
+
+    you can remove users from a group on gui.same for adding.
+    in users click on user and add permissions,you can copy your json.
+    a user can have multiple policies.
+    click on policies to see all available policies.
+
+    eg AdministratorAccess policy gives you access to everything
+            it is like
+                Effect:"Allow",
+                "Action":"*",
+                "Resource":"*"
+        you can see the permissons of a policy in polices tab and you can even search for one.
+
+        you can even create your own polices using json or gui tool.
+
+        IAM - Password POlicy
+            strong password:higher security for your account.
+            you can setup:
+                set a minimum length
+                require specific characters
+                allow IAM users to change their password
+                require to change after some time
+                prevent password re-use
+            MULTI factor Authentication-MFA
+                MFA = password you know +security device you own.
+                so even if password is stolen or hacked the account is not compromised.
+                MFA DEVICES:
+                    virtual MFA device liek google authenticator or authy.
+                    or U2F universal 2nd factor securty key
+                    you put it in your pendrive.
+        
+        click on account settings to change the password policy
+            check box what you want.
+        for root account setup the mfa.
+            if you lose mfa token you will be locked out of your account.
+            click on your account and then on my secuity credentials.
+            activate mfa.
+        
+    to access aws:
+        aws management console protected by password and mfa
+        aws command line interface (CLI) protected by access keys.
+        aws software developer kti sdk: protected by access keys.
+        
+        access keys are generated through the aws console.
+        users manage thieri own access keys
+        access keys are secret.
+
+    you can write scripts to automate things.
+    sdk is language specific apis
+    you embed things in your application.
+    can be done on python,javascript etc.
+    aws cli is build on aws sdk for python.
+
+    aws cli:
+        install the aws cli version 2
+        now open it.
+        aws --version
+        in linux just use it in terminal.
+    access key:
+        go to users,in security credentials create access key.
+        you get access key and access key id.
+    
+    in terminal:
+        aws configure
+            enter both and your region like eu-west-1
+        aws iam list-users 
+        if no permissions,you get nothing.
+    cloud shell is like terminal in browser,it is not global,it is only availabe in certain regions only.no need to configure.
+    you can upload and download files to cloudshell.
+    you can create files using touch etc.
+
+    IAM roles for Services:
+        some AWS service will need to peform actions on your behalf.
+        to do so we will assign persmission to aws services with IAM Roles.
+    EC2 instance is a virtual server,it might want to do some action on aws and to do so will create an IAM role.and it will have certain permission for access.
+    common roles:
+        EC2 instance roles
+        lambda function roles
+        roles for cloudformation.
+    you can click on roles and create roles.
+
+
+    IAM security tools:
+        iam credential report ( account-level)
+            a repor that lists all your account's users and the status of their various credentials.
+        
+        iam access advisor( user-level)
+            access advisor shows the service permissions granted to a user and when those services were last accessed.
+        can be used to revise policy.
+    
+    click on report and download csv 
+    for user click on access advisor.
+    if someone is not using a service we should remove those permissions from that user.
+
+    iam guidelines adn best practises:
+        do not use root account accept for aws account setup
+        do not give your credentials instead create new user.
+        assign users to groups and assign permissions to groups.
+        create a strong password policy.
+        use mfa.
+        create and use roles for giving permissions to aws services.
+        use access keys for cli
+        iam credentials report to analytics of users.
+    
+    shared responsible model:
+        what aws is responsible for and what you are responsible for.
+        aws is responsible for:
+            infrastructure,global network security.
+            configuratin and vunerablity analysis.
+            compliance validation.
+        you are responsible for:
+            users,groups,roles,policies,management,monitoring.
+            enable mfa on all accounts.
+            rotate all your keys often 
+            to apply appropriate permissions.
+            analyze access patterns and review permissions.
+
+
+From aws management console you you choose service like iam or ec2 etc whichever you want to work with.
+
+to see billing details click on account and my billing.
+click on bills to see the bills.
+    and break down of that bill.
+
+you can create budget for maximum you want to spend.you will recieve alerts.
+
+EC2:
+    ec2 is one of the most popular aws offering.
+    ec2 is elastic compute cloud = infrastructure as a service.
+    it mainly consists of:
+        renting virtual machines EC2
+        sotring data on virtual drives EBS 
+        distribute load across machines ELB 
+        scaling the services using an auto scaling group ASG 
+    knowing EC2 is fundamental to understand how the cloud works.
+
+    EC2 sizing & configuration options:
+        os -> linux,windows,mac os
+        how much cpu and cores.
+        how much ram 
+        how much storage space 
+            network attached EBS,EFS 
+            hardware (EC@ instance storage )
+        network card: speed of the card,public ip address.
+        firewall rules: secuity group.
+        bootstrap script (configure at first launch):EC2 user data.
+    EC2 user data:
+        it is possible to bootstrap our instances using an EC2 user data script.
+        bootstrapping means launching commands when a machine starts.
+        the script is only run once at the instane first start.
+        EC2 user data is used to automate boot tasks such as:
+            installing updates
+            installing software
+            downloading common files from teh internet
+            anything you can think of.
+        they run with root user.
+    ec2 instances can have different cpus ram etc.
+
+    search ec2 and go to ec2 console.
+    choose the region close to you.
+    choose AMI,amazon machine image=>basically your os.
+
+    you can paste your bootstrap sh script there .
+    you can stop restart terminate an instance.
+    the public ip is not static by default.
+
+
+    EC2 instance types:
+        there are general purpose,compute optimized etc.
+        m5.2xlarge
+            here m is instance class
+            5 is generaton (AWS improves them over time.)
+            2x large represents size within the instance class.
+
+        general purpose are great fro diveristy of workloads such as web servers,or code repositories.
+
+        balance between:
+            compute
+            memory 
+            networking
+        start with t.
+        compute optimized:
+            great for compute intensive tasks that require high performance.
+                batch processing.
+                media transcoding
+                high perrormance web server.
+                high performance computing (HPC)
+                scientific modelling.
+                dedicated gaming servers.
+            name starts with c 
+        memory optimized:
+            for processing large datasets.
+            like high performance ralational /non relational databases
+            distributed web scale cache stores.
+            im memory databases.
+            real time processing.
+            names start with R as in RAm ans x and z.
+        storage optimized:
+            great for storage intensive tasks that require hgh sequential read and write to large data sets on local storage.
+            use cases:
+                oltp
+                realtional/non relational databases.
+                data warehousing
+                distributed file system.
+        
+
+        

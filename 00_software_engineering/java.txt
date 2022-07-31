@@ -1,0 +1,1743 @@
+openjdk ->opensource java development kit
+SE: standard edition,there are different editions like EE is for enterprise edition.and Micro 
+jdk: java development kit = compiler plus JRE 
+JRE: java runtime environment,to run the program by user,it contains JVM and class libraries,class loader etc
+
+java 1.2 = java 2 product similarly for jdk 16.
+
+jdk contains compiler and runtime environment.
+google jdk download to downlaod it. It will install jdk, and it comes with compiler as well as runtime environment.
+
+editor: intellij,eclipse,netbeans.
+
+introduction:
+    Anatomy of a java function:
+        return type   name(parameters){//curly brace here.
+
+        }
+    every java program has atleast 1 function,called main.
+
+    name of function -> verbs eg sendEmail
+
+    a class is a container for related function used to organise code.
+        clas Main{
+            void main(){
+
+            }
+        }
+            functions inside a class is called a method.
+    
+    access modifers are keywords that say who can access a method etc.
+
+    PascalNamingConvention for classes : first letter of each word is capital.
+    camelNamingConvention for methods and variables: apart from first word all start with an upper case.
+
+    a package is used to group related usually domain in reverse for base package.
+        eg com.googe
+    
+    inside project inside src,inside package Main.java 
+
+    package com.google;
+    public class Main{
+        public static void main(String[] args){ //main is always static 
+            //comment
+            System.out.println("hi");
+        }
+    }
+
+    System is in java.lang package hence imported automatically.
+    f for fields and m for methods in intelliJ 
+    System.out is an instance of PrintStream class and println is its method.
+    
+    " " for strings.
+
+    System is a final class.
+        and out is a static field in it of type PrintStream.
+    PrintStream is java.io.PrintStream
+
+    final class System{
+        public static final PrintStream out;
+    }
+
+    java execution:
+        source code (.java file ) -> java compiler -> ByteCode .class file 
+                                    javac Main.java 
+
+        .class gets saved in out folder in our project.
+        .class file is device independent .it cna run on any device,which is why JVM exists in the first place so our byte code becomes device independent,as JVM is for each specific device and does the translation for us.
+    
+        java Runtime environment:
+            which executes your byte code on hardware.
+            byte code -> JVM -> native code for hardware
+
+            invoking jvm from src 
+            java com.google.Main
+        
+    
+    developed by james gosling in 1995 at SUN,acquired by Oracle in 2010.
+
+    originally called oak. now java inspired by java coffee,thats why its logo has coffee.
+
+    four editions:
+        SE
+        EE  : comes with extra libraries etc for enterprises. 
+        ME  : Micro edition for mobile devices.
+        java card for smart cards.
+
+    VARIABLES:
+        to store data temporarly 
+        int age=30;
+        System.out.println(age);
+        int a=3,b=4; don't declare a lot of variables in single line.just one in a line.
+
+        types
+            primitive             reference for storing complex objects
+            for storing simple
+            values 
+
+            byte 1 byte -128 to 127 
+            short 2 bytes
+            int 4 bytes 
+            long 8 bytes 
+            float 4 bytes 
+                1.4E-45 to 3.4e38 if more gives infinity,7 significant digits.
+            double 8 bytes  upto 15 digits.
+            char 2 bytes  maximum 65540,min is 0 overflow here as well like others.same way underflow.
+            boolean 1 byte 
+
+        float f=1.2f by default double, otherwise error. 
+        long l=1l as by default int
+        char ch='a';
+        boolean isEligible=false;
+
+        use meaninful names like isEligible
+
+        reference types:
+            import java.util.Date //java.sql also provides Data so be careful to choose right package everytime.
+
+            Date now=new Date(); //new allocates memory in heap.
+
+            now.getTime() //10 digit "long" time.
+
+        in java we have 8 primitive types.
+
+        java has garbage collector to free heap storage automatically.
+
+        reference types are copied by references,primitive by value.
+
+        String message= new String("hi there");
+            in java.lang hence automatically imported.
+            short hand String message = "hello there";
+
+            concatenation:
+                String message = "hello" + "world";
+            
+            methods for String:
+                message.endsWith("hello"); returns boolean.
+                        .startsWith("hi")
+                        .length():
+                        .indexOf("hey"); //returns of first occurence or -1 if not found.
+                        .replace("hi","hello") it returns a new String.
+                String is immutable.
+                        .toLowerCase();
+                        .toUpperCase();
+                        .trim();//removes spaces from begining and end.
+                
+            named arguments to methods like name:3,age:4
+            parameters vs arugments:
+                parameters are holes and arugments are real values.
+
+            escape sequence \" etc \\
+            new line \n tabs \t 
+    
+    Array is a reference type,to stores a list of numbers.
+        int[] number=new int[5];
+        number[0]=1;
+        number[10]=3 gives exception
+        can't print directly.
+            import java.util.Arrays;
+            Arrays.toString(number)   => overloaded method for all kinds of arrays.
+        int[] numbers={1,2,3};
+        numbers.length;
+        field <> attribute.
+        Arrays.sort(number); it is an inplace sort.
+            sort is also overloaded.
+        
+        int[][] numbers=new int[2][3];
+        number[0][1]=3;
+        Array.deepToString(numbers); //to print the matrix.
+        int[][] numbers ={{1,2,3},{3,4,5}}
+    
+    constants
+        final float pi=3.14f;
+        now a constant hence cannot change,and use PI as a name,contants in CAPS 
+    Golden Rule
+                                            general methods in OOPs:
+                                try   object.method(); or ClassName.method(object);
+    
+    Arithmatic expressions.
+        *,+,-,/,%
+        double result=(double)10/(double)4; casting.
+        integer division gives integer.
+
+        x++,x--,++x,--x
+        augumented/compound operator
+            x+=2
+        implicit casting byte>short>int>long>float>double
+            to more expressive it is done implicitly.
+        
+        to cast to less expressive we have to do it explicitly.
+        int a =(int) b+2;
+
+        also there is precedence of * over + etc,use parenthesis.
+
+    for String to anything else.
+        Integer.parseInt(str);
+        Short.parseShort();
+        Float.parseFloat();
+        
+            all these wrapper classes in java.lang.
+        
+    Math class in java.lang
+    Math.round(2.1) returns long.
+    Math.ceil();
+        .floor();
+        .max(1,2);
+        .random(); returns a double [0,1]
+    
+    (int)(a*b) important as casting happens first.
+
+    Reading input:
+        import java.util.Scanner;
+        Scanner scanner=new Scanner(System.in) System.in refers to where to get input from.
+        Byte age=scanner.nextByte();
+        in System.out.println there is implicit call to toString() method of each argument.
+        .nextFloat()
+        .nextDouble()
+        .next() for one token
+        .nextLine() for whole line
+        .nextInt()
+        to read a character next().charAt(0);
+        .nextLine().trim() is cool.
+    Abstract class: can't create objects.
+    Math.pow(a,b)
+    don't use magic numbers in your code,use final variables.
+
+    comparison operators:
+        x==y
+        x!=y
+        >,<,>=,<=
+        returns true or false.
+    
+    logical operator:
+        t>20 && t<30
+            left to right evaluation and short circuiting.
+        ||,!
+    
+    variable names hasDegree,isEligible
+
+    if (boolean expression){
+
+    }
+    else if (boolean expression){
+
+    }
+    else{
+
+    }
+
+    scope of variables is within the code block {} called block scoped,python is function scoped.
+
+    instead of writing conditions in if ()
+    always write
+        boolean isEligible=age>18
+        if (isEligible)
+        best way to code.the best way to make code readable.
+    
+    DRY: don't repeat yourself,if a calculation is appearing multiple times,assign it to a variable.
+    if if duplication makes code readible go for readability over exception.
+
+    don't put calucations in for loop if nothing is changing like x/y in condition as it would calculate it everytime.
+
+    ternary opeartor:
+    String a= 3>4? "hi there" : "hello";
+
+    switch(variable){
+        case "admin":-----------
+                     break;
+        default:---------
+
+    }
+    you can use strings in java inside switch condition.
+
+    for loop
+        for(int i=0;i<10;i++){
+
+        }
+    while (boolean){
+
+    }
+    do{
+
+    }while(condition)
+    break,continue,while(true)
+
+    for strings input.equals("quit") as == only does reference comparison.
+    it returns boolean and compareTo gives a number which is 0 if equal,like first-second.
+
+    String[] fruits={"apple","banana"}
+    for each loop:
+    for(String fruit:fruits){
+        sout(fruit);
+    }    
+    only forward and no index.
+
+
+    clean coding:
+        any fool can code that computers can understand,good programmers read code that humans understand.
+                                                        Martin fowler
+        the goal is to write modifialbe and maintainable code.
+
+        creating methods:
+            public static int greetUser(String name){
+                return 1;
+            }
+            public here means available everywhere/can be made private,can be called outside.
+            static means this belongs to class and not objects.
+            no need to define above main.
+        
+        refactor => changing code without changing functionality/behaviour. usually by breaking into methods.
+
+        if many loops use one method and generalize.
+
+        if something is repetative,put it in a method.
+
+        methods should not be more than 20 lines.
+
+        one method should be doing one thing.
+
+        always reduce weight of main method.
+
+        compile time error<> syntax error.
+
+        runtime error <> semantic error.
+
+        can't use reserverd keywords for variable name.
+
+        ctrl + x for cut and copy.
+
+        don't pollute main method.
+
+        even inputs in another method.
+        
+        try to write code wehre code is to be modified only at one place.
+
+        don't declare varialbes before use if not necessary.
+
+        declare private static fields if same fields in every method.
+
+    debugging:
+        click on grey area to insert a break point.
+        can add variables to watch.
+        click on rerun to rerun.
+    packaging into jar: java archieve,it is compiled code.
+        right click file>project structure>artifacts>+>jar>from modules and select main class >build artifact in build options.
+        find it in out in artifacts.
+        you get a .jar file.
+
+        to run a jar file 
+            java -jar abc.
+        
+        {} is called code block.
+        
+---------------------------------------------------------------------------------------------------------
+
+OOP:
+    programming paradigms:
+        procedural
+        functional
+        object oriented
+        event driven
+        logic 
+        aspect oriented
+    oop and functional are most famous.
+    js is event-driven/asynchrounous.
+
+    oop have state(fields/data) and behaviour
+    in functional data and behaviour are different.
+
+    problem solving:
+        process of defining a problem,identifying and comparing different solutions,and picking one that best solves that problem with respect to context and contraints.
+    we choose programming paradigm based on cotext.
+    oops for graphical interfaces etc. Functional is good for reliability.
+    we can use multiple paradigms in a single project.
+
+    benefits:
+        reduced complexity
+        easier maintainence
+        code reuse
+        faster development
+    class:
+        blueprint/template for an object
+    object:
+        instance of a class
+    
+    oops is not just about using classes.
+
+    encapsulation and abstraction are the foundations of OOP.
+
+    creating classes:
+
+        we should add each class in new file,in some package.
+        package abc;
+        public class Textbox{
+            public String text;
+            public void setText(String text){
+                this.text=text;//if same same then use this,this refers to current object.
+            }
+        }
+        public class is available to all classes who want it,it is an access modifers.
+
+        in main
+            Textbox t1=new Textbox();
+            or var t2=new Textbox();
+            t1.setText("hi there")
+            t1.text 
+        in a class there are fields and methods.
+
+        all objects inherit from Object class.
+
+        all objects are set to null by default,gives rise to NUllPointerException,doing things to null object hence always intitiaze reference types.
+
+        primitive types are stored in stack and reference types in heap.
+        the value of a reference type in stack is an address in heap.
+
+        oop is a way of thinking,not just fields methods and classes.
+
+        references are in stack,when no references at all to a memory garbage collector kicks in.
+
+        java automatically deallocates memory.
+
+        unused objects by garbage collector.
+
+        procedural programming is using function call and doing things as your alogrithm says. Main method would be very bloat. And it is not OOP.
+        sphagetti code: code where everything is linked to everything else.
+        you can copy class from one project and use it somewhere else in another project.
+
+        encapsulation:
+            bundle the data and methods taht operate on the data in a single unit called class.
+            we just want related things together and things become easy to keep track of.
+
+        write as independent code/class as possible.
+
+        try to have methods with no or very less parameters and provide data via constructor.
+        methods in Main were static as there is no object there.
+        obj.salary=20 works
+
+        we use getters and setters to get and put data from and to object and also put validation there.
+        do validation of fields inside that class only.don't do that in main class using "if"
+
+        public variables are accessable outside class so use private and getters and setters.hence not accessible outside that class.
+
+        just because you use class doesn't mean you are doing oop. you could be doing procedural programming while using classes etc.
+
+        sphetti code: everything is connected to everything else and it is messy.
+
+        can 
+                throw new IllegalArgumentException("salary cannot be zero"); //in validator of field
+
+        make fields private.
+
+        exception if not handled,terminates the program.
+
+        abstraction:
+            hiding details to make interface clean and to reduce complexity or to not allow operations that can cause errors.
+        
+        coupling: the level of dependency between classess.
+
+        there is always coupling between classes but we try to make it minimal as more couploing means more cost of changes.
+        
+        we want to hide details and expose some getters and setters so that internally we can change and modify things easily.
+
+        it is ok for methods coupled within the class.
+
+        we can make methods private also.
+        private int getAbba(){}
+
+        abstraction reduces coupling to a degree where the only coupling there remains would be the existence of that class as other class are using it,internally we can easily modify it.
+
+        if class A uses class B then A is dependent on B.
+
+        we don't want one changed class and one thousand broken classes.
+
+        coupling points are the code lines that creates coupling.
+
+        make methods private if you don't need outside it reduces coupling,and we can change private methods easily.
+
+        your api for other classes to use should be minimal.
+
+        less coupling means less places of modification.
+
+        alt + enter to create a method after already using it in intelliJ
+
+        constructor:
+            method that puts objects in initial valid state.
+            which is minimal requirement.
+            a special method that is called when  we create a new object.
+
+            java automatically creates constructor puts all to default called default constructor.
+
+            public class Employee{
+                private int a;
+                public Employee(int b){ //java creates this automatically if you don't and this is what you call after new.it has no return type. This time default constructor is not called.
+                    b=a;//not recomended,call b=setA(b) to set and do validation etc.
+                }
+            }
+            if you provide constructor,default constructor is not created.
+        one method can call another method inside it.
+        method overloading:
+            same method different no. of arugment or different arguments.
+            not a nice practice to use method overloading
+            constructor overloading also not recomended.use defualt arguments instead.
+
+            calling overloaded method of same name this(a,b,c) only for constructor this way, as there is no other way to call the constructor.
+
+            overloading makes sense if you are doing to two integers and then overloading for two doubles.
+
+        static members:
+            belong to class
+            class can have instance members and static memebers.
+            public static int a=3;
+            in constructor can modify it useing a++ or anywhere.
+
+            static methods:
+                public static void xyz(){
+
+                }
+            can be called using class name or instance.
+            they can only see other static methods and members.
+            we can't access instance methods inside static method.
+
+            main method is static so JVM can call it directly. without need for object.
+
+            if all members sharing an object create a static member like a Scanner object.
+
+            don't use too many static methods.
+
+            can make it static and private
+            private static.
+
+            each class should have one job.
+
+            even Integer.parseInt is a static method,as it is obvious.
+
+    creating a jar file using terminal
+        compile code first
+        create Manifest.txt 
+            Main-class: HelloWorld
+        jar cfm HelloWorld.jar Manifest.txt HelloWorld.class
+        java -jar HelloWorld.jar 
+
+        to include multiple files 
+        javac *.java 
+        jar cfm HelloWorld.jar Manifest.txt *.class
+
+    in procedural programming we just have a bunch of funtions calling each other.
+
+    each class should have one kind of responsibilies.
+    you have to import dependencies in each class individually.
+
+    the great thing about static method is that you don't need to create objects before using them and it is nice.
+
+    in a nutshell oop is about intitiazing objects using constructor and all data via constructor and then get anything you want using a method without any parameters.
+
+    create a class for all constants and use in other classes so there is only one place to modify.
+    instead of having same variables in all classes.
+
+    inheritance: third principle of oop
+    -----------------------------------
+
+    to reuse code and have common behaviour in one place.
+    there is baseclass/parent/parent class,sub/child.
+    put all common code in one super class.
+    eg public class UIcontrol{
+
+    }
+    public class TextBox extends UIcontrol{
+
+    }
+    inherits all features and methods from parent.
+
+    the Object class:
+        every class inherits from Object class directly or indirectly 
+        hence giving every class some features and methods.
+            var obj=new Object();
+                Object is in java.lang
+                obj.equals()
+                obj.toString() returns package name @ hashcode in hexadecimal as string.
+                obj.notify();
+                    .hashCode(); it returns the hash. it is a number.
+                    .equals() by default compares by reference and not value.
+    in class:
+        there are fields,private methods,public methods,constructor.
+        at top put fields then constructor and then public method and then private methods.
+    constructor:
+        first constructor of parent and then of child is run.
+        if parent has parameters then pass that as first in child constructor on super.
+        public TextBox(){
+            super(a); //if parent has defualt constructor then we can skip this.
+            child thing
+        }
+
+    access modifier:
+        public are accessable outside class
+        private are not accessable outiside class.
+        private members are not inherited by subclass or even private methods.
+        protected are public in that package and not available in ohter packages,and are inherited even by other package classes. protected is a bad programming practise.
+
+        default vlaue:
+            package private.
+            public in package and private outside that package,also not recomended.
+            always use private and public.
+        
+        import package.Classname;
+    
+    overiding methods:
+        creating your own method instad of using parents same parameters.
+        same parameters return type etc.
+
+        using annotation
+        @Override
+        public String toString(){
+
+        }
+        annotations give extra information to compiler,it is a label.
+
+        println calls toString method for all its input objects.hence no need to call overided method.
+
+    upcasting and downcasting:
+        upcasting is casting object to one of its super types
+        downcasting is toone of its sub types.
+
+        every child object is a valid parent object,as inheritance is a IS-A relationship.
+        object can hence be passed as so and as it has all parent members.
+        upcasting is automatic,hence can be given as input.
+
+        for downcasting:
+            var t= (Textbox) control; (control is a UIControl object)
+            now you can use Textbox methods as well.
+        parent is not necessarily a child,hence downcasting would give error if here control was not Textbox that was casted into UIcontrol earlier.
+
+        for a parent you can substitute any child.
+
+        hence always check types:
+            a instanceof Textbox to check if it is instance of desired class.as if paremeter accepts UIcontrol but you want Textbox .
+        parent cannot be casted into child.
+
+    comparing objects:
+        01==02 compares references.
+    
+    obj1.equals(obj2) also compares references.
+
+    we can override equals() method.
+        public boolean equals(Object obj){ //since we are overriding and paremeter type has to be same hence Object type.and use instanceof to check type.
+            var other=(myclass) obj;
+            return other.x==x;
+        }
+        can also put if this==obj in case they are same objects.
+        if you assign an object to parent type,then you can only use its method that parent allows if you can typecast it back to orignal type and use other methods etc.
+    polymorphism:many forms
+    -----------------------
+    note: even though private members are not inherited,that doesn't mean public method won't be allowed to use them similary settings and getters and constructor  etc do the work normal way.
+
+        you can have multiple children of UIControl and each method overriding the methods of parent is its own way.
+        Control[] controls={new Textbox(),new DropDown()}
+    
+    abstract classes:
+        it doesn't mean anything in real,hence abstract
+        cannot initiate,just provide some common code for sub classes.
+        obj.getClass() to get class of a given object.
+
+        public abstract class Abc{
+            public abstract void render();//abstract here forces chld to define it.
+        }
+        you have to define child also as abstract if you are not Defining abstract methods.
+        define an abstract method and every class will have its own implementation hence polymorphism.
+
+        you can have non abstract method as well in abstract class for common code.
+
+        with polymorphism we get rid of using if else to cover cases.
+
+    final classes and methods:
+    --------------------------
+         can't extend final class.
+         we cann't override final method.
+
+         public final class Abc{
+
+         }
+         public final int {
+
+        } in any class need not to be final class.
+
+        String class is final as String is immutable.
+    
+    deep inheritance not recomended,it causes coupling.
+    java has no multiple inheritance as diamond problem,ambiguity,coupling,which one to choose of fields and methods.
+        YAGNI : you aren't gonna need it.
+
+    INTERFACES:
+    ------------
+        we use interfacers to build loosely coupled extensible,testable applications.
+        if class A uses Class B we say A is dependent on B.
+
+        we want loose coupling eg by private methods.
+
+        with interface we get complete independency.
+
+        public interface Draggable{
+            void drag();
+        } 
+        it only includes methods declaration.
+
+        class A -> interface <- class B 
+
+        interface defines what should be done.
+            classes define how it should be done.
+        
+        interface is a chef and you need a chef as long as it does the job you don't care who the chef is.
+        and chef can be replaced with another chef but if chef as to be john,you are screwed.
+
+        interfaces are used to minimize the impact of changes.
+
+        able postfix used or Can eg CanCalculate or I to name.
+
+        everything in an interface is public,methods are abstract,as private would be meaninless.
+        you define and change alogrithms underneath easily.
+
+        public interface TaxCalculator{
+            double calculateTax();
+
+        }
+
+        interface has no state/data.
+        we cannot instantiate an interface.
+
+        public class C implements TaxCalculator{
+
+        }
+        can be like extends A implements B 
+
+        every class that implements interfaca has to define those methods.
+        also use:
+            @Override 
+            and make methods public.
+        
+        interface is like a contract.
+        abstract is like partially completed class used to share code.
+
+
+        for multiple use class A implements B,C,D{}
+
+        Dependency injection:
+        ----------------------
+        other classes pass you your dependency,you don't create it.
+        and to define variables you only use interface name,and then get it using constructor or methods.
+        hence your code is only dependent on interface.
+        private interfaceA x;
+
+        we can pass a dependency using a constructor or a setter or a regular method.
+        similarly in method definition,the parameter would be of type that interface not the class.
+        don't use anything from outside class,until it is needed.
+
+        constructor injection:
+            passing dependency using constructor.
+
+        it is called programming against interfaces.
+
+        we didn't create an object hence no object.
+        
+        main will give input an object of that clas whihc implements that interface.
+        hence loose coupling.
+        we can also create setter for it,setter injection.
+
+        put getters and setters at the end.
+
+        constructor injection is best and recomended as you might forget calling setters sometimes.
+
+        or just put the dependency as input to a method so we don't use it anywhere else hence rest of the code is independent,called method injection,where the parameter is interface type not class type.
+
+        divide your inteface into small intefaes foucsing on single capability.
+        it is called inteface segregation principle. Each interface in different file. One interface can extend another. It can extend multiple interfaces.
+        
+        constructor injection is the best way,as it exposes all dependency.
+
+        the coupling with interfaces is small and limited to interfaces.
+
+        from java 8.
+        you can have fields in interface,they are static,and public and cannot cannot change hence final,don't use them.could be used to have magic numbers in one place.but still don't use them.
+
+        interfaces are just contracts and why should other classes even know of such constants as the classes uses the interface will be aware of its existence and it doesn't make sense.
+
+        can declare static methods in interfaces like static double abc (){code} with whole code,don't don't them it has logic and logic can change and is not good to be at interface level,instead use abstract class in such case.
+
+        interface is about whats not hows.
+
+        coupling to an interface is the best kind of coupling.
+
+        create small interfaces and then to make a combination of them as your depency use inhertance among them.
+            public interface UIWidget extends Draggable,Resizable{
+                void resize()
+            }
+        an interface can have multiple parents,as there is no ambiguity as there is no implementation.
+        each interfcae should be doing one thing.
+
+        each interface in one file.
+
+        eg having an interface for video encoder so tommorow we can change it easily as long as the interface is same.
+
+        create interface for all dependencies.
+
+        use protected in an abstract class to make it inheritiable.
+
+        you can create private methods in interface,so if you get repetative code used in static methods you can extract them into a private method. and it is terrible thing that happened to java.
+
+        public interface B extends C,D
+        public class C implements B,C,D 
+        interfaces make unit testing easy.
+
+        you create interface and ask poeple to implement it.
+
+        interface should only have public methods in that that are not static.
+
+        if you want to share code use,abstract classes and inherit.
+
+        some people are abusing classes ability to implement multiple interfaces as a hack for multiple inheritance,they treat interfaces like classes and put a lot of code there.
+
+        abstract classes are there to share code.
+        
+        how to oop:
+           escapsulation by class
+           abstraction by private keyword.
+           intefaces to deal with external dependencies.
+           inheritance for code reusability.
+        
+
+course 3:
+------------------------------------------------------------------------------------------------------
+    concurrency:
+    -------------
+    Thread class in java.lang package.
+    sout(Thread.activeCount()) it is a static method.
+        one normal and one garbage collection.
+        sout(Runtime.getRuntime().availableProcessors())
+
+        Thread t1=new Thread()
+        public class A implements Runnable{
+            @Override
+            public void run{
+                sout("abc");
+            }
+        }
+        Thread t=new Thread(new A());
+        t.start()
+        Thread takes a Runnable object as an argument where Runnable object is of class that implements Runnable.it only has one method which is public and returns void and takes no parameter.
+
+        pausing a Thread.
+            Thread.sleep(5000)  five seconds. put it in try catch as it could throw exeception.otherwise error . try{} catch(InterruptedException e){e.printStackTrace();} if you try to interrupt a thread that is sleeping.
+        
+        sout(Thread.currentThread().getNmae()) /  .getId() 
+        each Thread has a name and an id.
+
+        you can create thousands of threads in a loop.
+
+        joining a thread.
+        t2.join() wait for t2 to complete.like downloading a file and then waiting for it to complete then start scanning it with next thread. put this in try catch also.
+        if you use Thread.sleep in main thread and it is UI then UI will freeze so be careful there.
+
+
+        t.interrupt() it just sends an interrupt request,it is upto that thread to decide if it wants to do anything about  it.
+        in that Thread you can write
+            if (Thread.currentThread().isInterrupted()){
+                break or whatever or return.
+            } in loop. and if it is sleeping for that we already saw to put that in interrupt exception.
+        
+        concurrency issues:
+            shared resources.
+            like shared data,called race condition: multiple threads racing to do modify a resource. sometimes two modify but only once is done. solved by atomic code.
+            or if one modifes and another doesn't see that is called visibility issue,different threads get different view.
+            we should write thread safe code.
+        
+        the class with run can have constructor etc as well or any other methods as well.
+        even with join you have to handle InterruptedException. as it is as good as sleep.
+
+        you should create a list of threads and and add to them and you can use join for any of them later. List<Thread> threads = new ArrayList<>();
+
+        stratagies to write thread-safe code.
+            not sharing data: confinement.
+            immutablity : shared data cannot be changed.
+            synchronization: not allowing multiple access at a time using locks.
+                problem: deadlocks
+            or use atomic objects.
+                eg atomic integers,if you increment atomic integer it would be done in one step.
+            partition data into segments: where thread can access a segment concurrently.
+        
+        how to write a class:
+            fields,constructor,methods,getters,setters.
+        
+        confinement:
+            like creating an array for input to each thread and each thread modifies the given element for them in array and at the end we combine the result accordingly.
+            you create objects of runnable class in a list so you can access results stored in that object later.
+        locks:
+            import java.util.concurrent.locks.Lock;
+            private Lock l= new ReentrantLock();  Lock is an interface.
+            before critical section
+            l.lock();
+                CRITICAL CODE     
+            l.unlock(); //this should be in finally section if it can throw an exception. as otherwise things would be locked, and even though it is private, all threads of this class are bound to it.
+
+            the synchronized keyword:
+                no need of locks.
+
+                instead a method with critical section
+                synchronized(this){  "this" here is called a monitor object
+                    critical section
+                }
+                for all objects of that class only one thread will execute that code.
+                passing this is a bad practise here,as monitor object is associated with this then if you are using another monitor as this as monitor object again then you cannot even enter that code by another thread while one is running.as synchronized would associate lock with an object,which you want to be modifed carefully.causes unnecessary waits.
+
+                hence use 
+                synchronized(total){ here you create new Object as total then put any critical code inside even if you don't use total ever,it is kinda naming critcal sections. you just create a object by the name "total" as private so lock is associated with it.
+                    critical code 
+                }
+
+                public synchronized void increment(){
+
+                }
+                this is as good as using synchronized(this)
+                which is not the good practise. now this whole method is synchronized.
+
+
+        the volatile keyword:
+            private volatile boolean x;
+                keeps changing so add to main memory from cache always hence solves visibility problem.
+        
+        Thread signalling:
+            while(!status.isDone()){} this would waste cpu cycles as it is waiting.
+            every object has wait and notify. inherited from Object class
+            some variable v
+            v.wait(); current threads goes to sleep until other thread changes v.
+            wait until its value changes or some thread changes it,handle uninterrrupedException here as well.and have to call it in synchronized block,where the monitor is same object that you use wait on.
+            v.notifyAll() after changing.
+                in synchronized block
+                or just v.notify() if only one thread waiting.
+                same variable as monitor.
+            
+            don't use them
+        
+        Atomic objects:
+            we have atomic classes
+            we have atomic boolean,integer etc.
+            private AtomicInteger a= new AtomicInteger();
+            a.increment();
+            a.getAndIncrement(); etc. returns value and then increments.
+
+            they are cool.
+            for counters they are cool
+        Adders:
+            faster than atomic objects.
+            private LongAdder total=new LongAdder();
+
+            total.intValue(); to get the value.
+            total.increment();
+            better than atomic types.
+        
+        synchronized collections:
+
+            Collection<Integer> collection=new ArrayList<>();
+                                        = Collections.synchronizedCollection(new ArrayList<>());
+                                        now all the methods have synchronization code.
+                                    
+        
+            they use locks.
+        
+            this can have performance issues.
+            so use concurrent collections in that case,uses partitioning of data.
+        
+        concurrenct collections:
+            Map<Integer,String> map=new HashMap<>();
+            regular hashmap
+
+                                = new concurrenctHashMap<>();
+            the methods remain the same,beauty of programming against the interfaces,just changed the name and everything else remains same.
+
+
+    lambda expressions:
+        were introduced in java 8,it is a functional programming concept.
+        it was introduced to give us functional programming.
+
+        functional interface:
+            an interface with single abstract method.
+            can have default methods though/with implementation ones.//bad practise.
+
+        package xyz;
+        public interface Printer{
+            void print(String message);
+            default void printTwice(String message){
+                sout("hi")
+            } default is a bad programming practice
+        } 
+        even if there are static methods,it is still a functional interface.
+
+        public class ConsolePrinter implements Printer{
+            @Override
+            public void print(String message){
+                sout("hi");
+            }
+        }
+
+        sometimes we don't want to create a class just to implement a single function. when programming against interfaces.
+
+        Anonymous inner classes.
+            if we want class for one instance.
+            given an interface Printer.
+
+            greet(new Printer(){
+                public void print(String message){
+                    sout("hello");
+                }
+            })
+            //greet takes an object of type Printer
+            here now we created a class with no name, it is called anonymous inner class.
+        
+        java 8 gives us lambda expressions as better alternative.
+
+        lambda expressions: like an anonymous function.
+            we want functions on its own without belonging to a class.
+            greet((String message)->{
+                sout(hello);
+            } )  arrow is called the lambda opearator
+            hence a functional interface can be implemented using lambda expressions.
+            we can even remove the type, compiler figures it out automatically.
+            (message,second)->{}
+            for single parameter we can skip parenthesis.
+            message->{}
+            if single line we can even remove brackes.
+            message->sout("hi")
+            
+            we can even store lambda expressions in a variable.
+
+            Printer printer=message -> sout("hi");
+
+            lambda expressions are objects used to represent anonymous functions.
+
+            you can access static fields of class in the inner lambda expressions directly.
+            and you can even access instance methods in enclosing method.
+
+            this in lambda expression refers to enclosing object,where as in anonymous classes it refers to the anonymous class itself.
+
+            anonymous classes can have state but not the lambda expressions.
+
+
+            Method reference:
+                sometimes all we do in lambda expression is passing the parameter to an existing method.
+                eg in 
+                message->System.out.println(message)
+                we can reference this method directly.
+                like
+                    greet(System.out::println)
+                can even reference same class or static method etc
+                lets say you are in clas Abc that has a method print as we
+                 then greet(Abc::print) this greet is also called in Abc.
+                
+                for instance methods.
+                greet(objectname::method)
+
+                for constructor:
+                greet(Abc::new) 
+                
+                with method reference we write conpact and easy to use lambda expressions.
+            
+            Build in functional interfaces.
+                 in java.util.function.
+
+                 we have four types of functional interfaces in java.
+                    consumers
+                    suppliers
+                    function
+                    predicate.
+                
+                consumers:
+                    single arugment and returns nothing hence it consumes.
+                supplilers:
+                    no arguments and returns a value.
+                function:
+                    maps a value to different value.
+                predicate:
+                    returns a criteria if satisfied by the value.
+                
+                the consumer interface:
+                    void accept(T t)
+                    it could have a default method in interface.
+                    biconsumer takes 2 arguments.
+                    int consumer takes integer.
+
+                    using consumer interface.
+                        list.forEach expects a consumer interface.
+                        list.forEach(item->{sout(item)})
+                    
+                    chaining consumers.
+                        List<String> list=List.of("a","b","c");
+                        Consumer<String> print=item->sout(item);
+                        Consumer<String> printUpperCase=item->sout(item.upper())
+
+                        list.forEach(print.andThen(printUpperCase)) it calls second consumer on item not its output as there is none of its output. you get aAbBcC as printed.
+                        andThen is a default method in consumer interface.
+                        you can use:
+                            print.andThen(printUpperCase).andThen(print) so on and so forth.
+                the supplier interface:
+                    T get()
+                    Supplier<Double> getRandom=()->Math.random();
+                    getRandom.get() to call it.
+                    we also have like IntSupplier.
+                the function interface:
+                    takes an arugment and returns a value.
+                    R apply(T t)
+                    can have multiple parameters.
+
+                    Function <String,Integer> map=str->str.length();
+                    map.apply("sky"); 
+                composing functions:
+                    Function<String,String> replaceColon=str->str.something;
+                    Function <String,String> addsomething same way 
+
+                    replaceColon.andThen(addsomething).apply(input)
+                        can assign it to a value.
+                    
+                    or use.
+                        addBrackes.compose(replaceColon).apply(argument.)
+                    
+                the predicate interface:
+                    used to filter data.
+                    boolean test(T t)
+                    can have multiple arguments.
+
+                    Predicate<String> isLongerThan5=str->str.length>5;
+                    isLongerThan5.test("sky");
+                
+                combining predicates.
+                    Predicate<String> hasLeftBrack=str->str.startsWith("{");
+                    Predicate<String> hasRightBrace=
+                    Predicate<String> hasBoth=hasLeftBrack.and(hasRightBrace);
+                    hasBoth.test("hi there");
+                    can even use or,or first.negate().
+                
+                the binary Operator interface.
+                    all these interfaces in java.util.function
+
+                    binary operator is a special kind of operator that takes two arugments and returns one it infact is a special type of function.
+
+                    takes two of type T and returns of type T 
+
+                    BinaryOperator<Integer> add=(a,b)->a+b;
+                    add.apply(1,2);
+
+                the Unary Operator interface:
+                    takes T and returns T 
+                    UnaryOperator<Integer> square=n->n*n;
+                    another like increment.
+                    increment.andThen(square).apply(2);
+                    can assign to anything.
+                
+
+                in java functional interfaces can be used to do functional programming.
+                                                                                   
+    Excepiton Handling:
+        what are exceptions:
+            NUllPointerException is a class in java.lang
+            so exception is an object that gives information about the error.
+
+            there are several exception classes in java.
+            the line that throws error-> offending line.
+
+            stacktrace is the stack status at the time the error occurs.
+            it gets printed.
+
+        if an exception can occur in a method,we say that method threw an exception.
+
+        the java runtime looks for the exception handler,in reverse order in stack.
+            if there isn't one,the program stops with printing stack trace.
+        
+        as a good developer you should either handle them or prevent them from happening.
+
+        types of exceptions:
+            we have three types of exceptions in java, checked,unchecked/runtime, and error
+        
+            checked exceptions are the ones that we devleopers should anticipate,and handle properly,like reading a file,good developers always handle.
+            And java compiler forces you to handle checked Exceptions.
+
+            var reader=new FileReader("abc.txt")
+                throws fileNotFoundException.
+                you have to put it in try except, as compiler wouldn't let you get away without handling the potential exception.
+            
+            unchecked Excepitons or runtime exceptions,these occur during run time, like passing Null as an arugment,these are programming errors. these should be prevented from happening in the first place with good programming pracitses and a lot of testing and automated testing.
+
+            RuntimeExceptions:
+                NUllPointerException
+                ArithmeticException like divide by zero.
+                IllegalArgumentException
+                IndexOutOfBoundsException
+                IllegalStateException
+            
+            Error:
+                an error external to our applications
+                like stackoverflow or outofmemory etc.
+            
+
+            Hierarchy of Exception classes in java:
+                    at top below Object class is Throwable class with defines common characteristics of all Exceptions like error message in stacktrace.
+ 
+                    below it are two classes  Exception  and Error 
+                    Error and all its subclasses represent errors that are external to our application.
+                        like out of memory 
+                    Exception Class is for all checked and unchecked exceptions.
+
+                    Under Exceptions we have RuntimeException as parent for unchecked exceptions.
+                    
+                    checked Exceptions are under Exception even RuntimeException is also under it.
+            
+            Throwable inherits from Object directly.
+
+            Handling exceptions:
+
+                try{
+                    risky code
+                }
+                catch(fileNotFoundException e){
+                    sout("doesn't exist")
+                    or sout(e.getMessage())
+                    e.printStackTrace(); //prints that red text.
+                }
+
+                control moves to catch block when exception happends.
+            
+                catching multiple types of exceptions:
+                    try{
+
+                    }
+                    catch(fileNotFoundException e){
+
+                    }
+                    catch(IOException e){
+
+                    }
+
+                    the order of the catch blocks matters,as if it caught the exception already,put more specific exceptions at the top.
+                
+                combining exceptions
+                    catch (IOException | ParseException e){//eg when different lines in try block can give different exceptions.
+
+                    }
+            
+            the finally block:
+                try{
+
+                }
+                catch(){
+
+                }
+                finally{
+                    release resources,databases,network etc. but it cannot read what is is try as try has local scope so declare variable before. if needed set it to null. can use if to check if the variable is null. you might need to even handle file closing.
+                    finally is always executed,if exceptions occur or not.
+                    even closing files can throw an exception.
+                }
+
+            better way of releasing external resources:
+                declare resources as part of try block
+
+                try(var reader=new FileReader("abc.txt")){
+                    this is called try with resource statment
+                    no need to close resources explicitly,the java compiler would transform it into above type.and  add finally block.
+
+                    for this to work the theses classes like reader here, should implement AutoClosable interface.
+                }
+                you can create multiple objects like
+                    try(
+                        var a= new something;
+                        var b= new something else;
+                    ){
+
+                    }
+                
+
+        throwing exceptions:
+
+            public void deposit(float value){
+                if value<){
+                    throw new IllegalArgumentException();
+                } this is called defensive programming,coding in a defensive manner.
+            }
+
+            although code becomes noisy.
+            don't pollute every method with validation,perform this only when taking input from users.
+            hence always validate at the boundary of your exceptions.
+
+            we wanna throw exception in a method and have the caller of the method handle it.
+
+                this means this method may throw an exception.
+                public void deposit(float value) throws IOException{
+                    if something{
+                        throw new IOException();
+                    }
+                }
+                now java compiler forces user to put it in a try catch block.
+                without throws compiler won't force caller fo this method to handle, and if the exception is unhandled it won't compile without using throws.
+            
+            logging of error in real world applications is important. in catch block you should log it first.
+
+            if the code in catch gets executed,we are not telling the user the error happened.
+            as if we just printed something in terminal from server side,and something should happen in client side as well.
+
+            so we rethrow the exception:
+                 in catch{
+                     logging 
+                     throw e;
+                     and put in method that it Throws that kind of exeception
+                 }
+                 and this you can handle for client 
+                only used in certain cases.
+
+            generic exception classes:
+                catch(Exception e)
+                or Throwable e 
+
+            
+            custom exeception:
+                public class MyException extends Exception{ //extend Runtime for unchecked instead.
+                    optionally takes a constructor
+                    public MyException(String message){
+                        super(message);
+                    }
+                    publci MyException(){
+                        super("hi there");
+                    }
+                }
+                    always use suffix Exception to name Exceptions
+
+
+            chaining exceptions:
+                wrapping an exeception inside a more generic exceptions
+                like a bank withrow can fail because of many possiblities.
+                    liek InsufficientFundsException;
+                    like ConnectionFailedException; etc
+                
+                we we wrap all in one generic and then figure out what caused that one.
+
+                - first add a more general purpose exception.
+
+                now in deposit :
+                    var fundException= new InsufficientFundsException();
+                    var accountException= new accountException();
+
+                    accountException.initCause(fundException);
+                    throw accountException;
+
+                    or take parameters from constructor of generic exception
+                        public accountException(Exception cause){
+                            super(cause);
+                        }
+                    now you can use accountException(new fundException())
+                
+                at the handling side:
+                    e.printStackTrace();
+                    will give details.
+                    e.getCause() returns a throwable that was the cause.
+
+
+    
+    Generics:
+        you add packages to file directory where your Main file is.
+
+        to create list of any type we can create array of Objects hence heterogenous.
+
+        private Object[] item= new Object[10];
+        since object is parent to all,events ints it can convert of Integer.valueOf(1)
+
+        but it is a bad programming practise,as we don't know which is which in that array.hence hard to assign,need casting but it can be useful at times,we can return Object from a method and typecast accordingly.
+
+        the idea with generics is that if you have list data structure we should be able to put any kind of type in it instead of defining the same for strings,integers etc individually.
+        we can do it with Objects but it is not a good practise.
+
+        so we have Generics.
+        generic is, us making code independent of type.
+        public class GenericList<T> { here t is a parameter for class,can use any letter T,E T is used as it stands for Template/Type E is for element.
+            private t[] items= new T[10]; this gives error as it cannot instantiate T, as it does't know what type it is so we use.
+            private T[] items=(T[]) new Object[10];
+            private void add(T items){
+
+            }
+            public T get(int index){
+
+            }    
+        }
+        to instantiate we use new GenericList<String>();
+        classes can also have parameters like objects.
+        GenericList<Integer> list=new GenericList<>();
+        with generics the type has to be reference type.
+
+        list.add(1) java automatically wraps it into integer class it is called boxing.
+        int n=list.get(0);  unboxing.
+
+
+        constrained/bounded parameters
+        public class GenericList<T extends Number>{
+            now T has to only be Number or its child.
+        }
+
+        Numbers is in java.lang.Numbers
+
+        Constraint can even be interface.
+        even for interfaces we use extends keyword 
+
+        < T extends Comparable & Runnable> 
+        Comparable is used for comparing and hence can be used for sorting.
+        Integer etc already implement Comparable.
+
+        type erasure:
+            internally compiler uses Object class to cresate Generics, it replaces T's with Object clas like earier thats why new Object[10] works when instantiating.
+            when yoiu apply constrant it becomes of that constraint type.
+            for intefaces replaces with that interface.
+            for multiple interfaces it takes left most interface.
+
+            the only difference is compile time safety nothing more.
+        
+        Comparable interface:
+            to compare two objects:
+                to determine the order.
+            public class User implements Comparable<User>{even Comparable interface is Generic type 
+                @Override
+                public int compareTo(User o){
+                    < return -1 or negative 
+                    == return 0
+                    > return 1 or positive if current is greater than o.
+                    to use u1.compareTo(u2)
+                    
+                    like 
+                    return points-o.points
+                }
+            }
+        
+         Generic methods:
+            can declare inside a non-generic class
+            like
+                public class Utils{
+                    public static <T> T max(T first,T second){
+                        can use T extends Comparable<T> and then use comapareTo method.
+                    }
+                }
+                publc static <K,V> void print(T keys,V values){
+                     <K,V> are put before return type.
+                }
+                same for public class Key<U,V>{
+
+
+                }
+            if a class implements comparable, you can directly use < > == on it.
+
+            Generic classes and inheritance:
+                 instructor is subclass of User,you can assign instructor to User or use inplace of it,but cannot pass GenericList<instructor> for GenericList<User> to solve it you need to copy one by one or use wildcards.
+                 as GenericList of instructor is not a subtype of GenericList of User.as internally all use Objects.
+            
+            wildcards:
+                like in methods put
+                public static void print(GenericList<?> user){
+                    here ? repsents unknown type.
+                    now you can pass GenericList of anything as argument.
+                    java internally creates an anonymous object type under the hood for T 
+                    we can have multiple wildcard,we can assign results of that to an Object class object.
+                    
+                    we can restrict the wild card values.
+                        ? extends Number and now you can store/read these in Number variables in that class.
+                        but you cannot add to this list as you don't have access to the anonymous class created so you can use ? super Number here ? will be be now super class of Number hence we can add and cannot read.
+                }
+
+    Collections framework:
+        used to deal with colletion of objects.
+        
+                    Iterable interface
+                    Collection interface
+            List           Queue            Set are also intefaces
+            ArrayList      Priority Queue   HashSet  these are classes.
+            LinkedList     
+
+        these classes implement these interfaces
+
+        iterable represents objects which can be used in for each.
+        collection extends itearable and adds extra functinalites,like add addAll, clear etc 
+        set represents colletion without duplicates.
+
+        to loop over an object implement Iterable interface.
+        Iterable is part of java.lang package.
+
+        e.g we want to use     ->     for(User item: Users)
+
+        public class GenericList<T> implements Iterable<T>{
+            @overide
+            public Iterator<T> iterator(){
+                it returns an Iterator Object,it is an object used to iterate over an object.
+                return null 
+            }
+        }
+
+        in main 
+        var iterator=genlistobj.iterator();
+        while(iterator.hasNext()){
+            var current=iterator.next();
+        }
+        internally this,hence for each loop is a syntax sugar.
+        or use
+        for(var item:genlistobj){
+            whatever. the above is what it gets converted into.
+        }
+
+        the Iterator interface in java.util.
+        it has four methods, two having default implementation
+        implement hasNext(),next()
+
+        eg.
+         inside our GenericList,create another class 
+         private class ListIterator implements Iterator<T>{
+             private GenericList list;
+             private int index=0;
+             public ListIterator(GenericList<T> list){
+                 this.list=list;
+                 we can access private members of above class as well since it is inside it.
+                 like list.items and items was private field of list.
+             }
+             @Override
+             public boolean hasNext(){
+                 return (index<list.count);
+             }
+             public T next(){
+                 return list.items[index++];
+             }
+         }
+
+        now in GenericList in iterator return new ListIterator(this);
+
+        Collection interface:
+            add(),remove(),contains() etc 
+
+    Collection<String> collection= new ArrayList<>(); these use E instead of T as in element.
+    collection.add("a")
+    sout(collection) also works 
+    Collections.addAll(collection,"a","b","c") ... means varialbe number of arugments in documentation.
+    collection.siz();
+    collection.remove("a");
+                .clear()
+                .isEmpty()
+                .contains("a")
+                .toArray() returns an Object array.
+                .toArray(new String[3]) to get String array
+                .toArray(new String[0]) to find size automatically.
+    
+    if you assign a String to Object then you can't use String methods to it.
+
+    program against interfaces:
+        Collection<String> other= new ArrayList<>();
+        c2.addAll(c1)
+        c1==c2 checks for reference
+        c1.equals(c2) checks if same content for collections.
+    
+    List interface:
+        list represent collection with index.
+        collection doesn't have index.
+        List<String> list= new ArrayList<>();
+        list.add("add")
+        list.add(0,"hi")
+        Collections.addAll(list,"a","ab")
+        list.set(0,"aa");
+        list.remove(0)
+        list.indexOf("a") -1 if not htere.
+        list.lastIndexOf("a")
+        list.subList(0,3) [0,3) it returns a list.
+    
+
+    sorting:
+        Collection.sort(customers) customers should implement Comparable interface. it sorts in place.
+        implements Comparable<thatClass>
+
+        the Comparator interface.
+            similar to Comparable inteface.
+            classnameComparator implements Comparator<classname>
+            public int compare(classname 01,classname 02){
+                
+            }
+        now using Comparator inteface we can sort:
+        Collections.sort(customers,new EmailComparator());
+        email comparator is the class implementing comparator,or use lambda expression.
+
+    Queue:
+        similar to list interface it extends Collection interface.
+        Queue<String> queue=new ArrayDeque<>();
+        queue.add("a")
+        queue.add("b")
+        queue.offer("d") offer and add do the same though might return different
+        queue.peek() to see top. returns null if not there queue.element() throws exception if not there.
+        queue.remove()
+        queue.poll() return null if not there and remove throws an exception.
+    
+    Set interface:
+        collection that contains no duplicates.
+        Set<String> set= new HashSet<>();
+        set.add("sky")
+        set.add("is")
+        the order is not guaranteed.
+        new HashSet(collectionofsametype)
+
+        set operations:
+            Set<String> set1= new HashSet<>(Array.asList("a","b","c"));
+            Arrays.asList creates a list.
+
+            Union.
+                set1.addAll(set2)
+            Intersection.
+                set1.retainAll(set2)
+            Difference:
+                set1.removeAll(set2);
+    
+    Map 
+        Map is in java.util.
+        it is not part of collection framework,it doesn't inherit form Iterable or Collection.
+
+        Map<String,Customer> map= new HashMap<>();
+        map.put("c2",c1)
+        map.get("e1") returns null if not there 
+        map.getOrDefault("e1",-1)
+        map.containsKey("ww")
+        map.replace("e1",c3)
+
+        it is not Iterable so cannot use for each loop.
+
+        for(var key: map.keySet())
+        map.entrySet()
+        map.values()
+        with entry you can use entry.getValue() and entry.getKey()
+    
+    STREAMS:
+        one of the important feature in java,that allows us to process data in declarative way.
+        like sql queries.
+
+        List.of(firstobj,secondobj,thirdobj) to create List.
+
+        imperative programming:
+            how to do stuff 
+        
+        delcarative programming:
+            What to be done eg SQL.
+        
+        streams were introduced to process data in functional way.
+
+        eg
+            every collection has a stream method.
+
+            list.stream() returns a stream object. filter expects a predicate funciton.
+            var x=list.stream().filter(movie-> movieg.getLIkes()>10).count()
+        
+        different ways to create a stream.
+            From a collection
+            From arrays
+            From an arbitary number of objects
+            infinite/finite streams.
+        
+        Collection<Integer> x;
+        x.stream() it has a stream method to get a stream object.
+
+        int [] arr={1,2,3}
+            arrays don't have stream() method.
+            but we have Arrays.stream(arr).forEach(n-> sout(n)) it expects a consumer.
+
+        creating stream
+            Stream.of(1,2,3,4,5)
+            var stream=Stream.generate(()->Math.random()) for infinite stream.
+            stream.forEach(n->System.out.println(n))
+            stream.limit(3).forEach() to only run 3 times.
+
+            Stream.iterate(seed:1,n->n+1) seed and a unary operator to generate the numbers.
+            you can apply limit.
+        
+        Mapping elements:
+            map()
+            flatMap()
+
+            movies.stream().map(movie->movie.getName()).forEach(name->sout(name))
+
+            don't assign to varialbes instead just chain.
+
+            Stream.of(List.of(1,2,3),List.of(4,5,6))
+            this is a stream of lists.
+
+                to work on individually on elements.
+
+                stream.flatMap(list->list.stream()) convert list to stream now use .forEach() like before.
+
+                flatMap is used to flaten a stream.
+        
+
+
+    The executive framework:
+        the working with Threads is complex so java 5 came up with this shit.
+
+        Thread issues:
+            we have limited number of threads available,as if we create a lot of threads we can run out of memory and crash the app.
+        
+        solution:
+            thread pool: a pool of threads called worker threads and they can be used to do some job and when the job is completed it goes back to thread pool.
+            these threads are not destroyed after completion,they can be reused to do some other task.
+
+            tasks wait in queue if all threads are busy.
+
+            hence we don't have to worry about creating threads directly,instead we submit our job to the thread pool.
+        
+        creating thread pool 
+            import java.util.concurrent;
+            ExecutorService/var executor=Executors.newFixedThreadPool(nThreads:2); 2 is the number of worker threads.
+            ExecutorService is an interface.
+
+            executor.submit(a runnable object) submitting a task 
+
+            you can submit as many tasks as you want,say in a loop.
+
+            executor keeps on waiting for tasks 
+            executor.shutdown() fo shutdownNow() to shutdown at that moment.
+            as a best practise run it in try finally block and put shutdown in finally.
+
+            the concurrency problems still remain,it just simplifies thread manipulation.
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+

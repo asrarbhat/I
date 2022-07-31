@@ -1,0 +1,172 @@
+to land your dream job
+FAANG:  FACEBOOK,APPLE,AMAZON,NETFLIX AND GOOGLE.
+there are other fang like companies. eg. microsoft,linkedin,whatsapp etc.these have also multi billion valuation.
+there could be different interview processes.but core remains same.
+
+process begins with assigining you a recruiter,gut chuck interview 15-30 minutes.
+then you have an interview with someone from engineering,it would be 1 hour video call where you get to solve one or two technical problems.
+
+in this course you would learn to solve these technical problems.
+
+then there is an onsite interview,this is whole day,with 5 different interviews with 4 engineers and one hr culture interview,you solve the same kind of technical problems,diffent engineers to avoid bias.
+
+three keys to technical interviews:
+    technical knowledge comprising of data structures and algorithms.
+    critical and abstract problem solving
+    communication.
+
+indices start from zero and if you need nonzero numbers add one to indices .
+
+STEPS:
+
+step1: verify the constraints.
+        are all the numbers positive or can there be negatives,
+        are there duplicate numbers in the array,
+        will there always be a solution available,
+        what do we return if there's no solution.
+        can there be multiple solutions.
+step2: turn these edge cases into test cases.say on paper.
+think about a brute force solution and its time complexity.
+double check for errors.
+test your code for all test cases.even in interview.
+figure your time and space complexity of your algorithm.
+make tradeoffs between memory and compute to get ideal algorithm.
+
+use hashmap for making your lookups O(1)
+using hashmaps is the best trick for performance.
+
+
+check if two pointers can solve the problem,say with different speeds over the linked list or array and second choice shoudl be using a hashmap.
+
+maximum area of array items on chart: 
+    it is a maximum value question,we need best of all.hence we need all first.
+    area = min(a,b) X |bi-ai|
+    test cases:
+        [7,1,2,3,9]  output 28
+        [] output 0
+        [7] output 0
+        [3,4] output 3 
+        [6,9,3,4,5,8] output 32
+    solution: 
+        brute force : two loops O(n^2),space complexity is O(1)
+        if default value is 0 then initialize max to 0 so in edge cases it automatically returns 0 : cool.
+        test your solution.
+
+        can we optimize this solution?
+            we use cache/hash if we can reuse some value. Here we cannot cache.
+            two shifting pointers:
+                we put one pointer at begining and one at the end,hence we get biggest possible x value.
+                we get area from a,b being at the ends.
+                now we move the smaller value to maximize min(a,b) in the multiplication at cost of moving one.
+                keep track of max and repeat it.
+                O(n) time complexity.
+                the main thing about two pointers is to know, how to move them.
+                the trick was in min(a,b) only the minimum of two matter.
+
+ rain collection problem:
+    [0,1,0,2,1,0,3,1,0,1,2] output is 8.
+    my own dope linear solution:
+        start from left:
+            if first element is less than or equal to second element,then repeat from second element.
+            now find element that is greater than or equal to first element:
+                if exists, add difference to next element to output and move the left one by one until you reach next maxima and repeat.
+                if doesn't exist,start the same process from right most element to current element.
+    his way:
+        current water=min(max left,max right)-height    for each element.
+        brute force would be to find max left,max right for each each element and add the diffence to minimum to output.and ignore if negative.
+        linear: two pointer technique.
+            put maxleft and maxright pointers and move from which side is smaller max and update maxleft,maxright accordingly and repeat.
+
+Strings:
+    two pointer technique is a great technique,it also works on strings.
+    string can be thought as an array of characters.
+    
+    question: check if two strings are equal,# is a backspace, 
+        own idea: use stack.and solution is linear.
+        ofcourse check the constraints first.
+            eg # at the begining, or are empty strings equal,or is it case sensitive.
+        write test cases
+            cover edge cases.
+            tests should usually cover general case of all types and edge cases of all types.
+    brute force would be to convert into usual form and compare.
+    another own solution : start comparing from the end,and if hashes are there,hence jump in that string hash times. memory is constant this way.
+
+    when using stack make sure how to handle pop if stack is empty.
+    his solution: use two pointers,one for each string, from behind.
+
+    question:
+        given a string,find the length of the longest substring without repeating characters.
+        own solution: keep a dict,go through string and put index in dict,and everytime check if the index of new letter is after the starting index,if yes then increase starting index by 1.
+
+        another solution: just use linear search from start pointer,it would be linear anyway, as longest possible substring is anyway 26.hence even brute force is linear and contant in space.
+        contiguous means you cannot skip letter.
+        substring means it has to be continous,subsequence means it doesn't need to be contiguous.
+
+        avoid optimizations that just reduce a few computations,but makes code dirty.
+
+        usually edge cases are checked at top in the function are value returned.
+
+        sliding window technique:
+            you can slide a window of certain size,back and forth.
+             eg given an array find two subsequent integers such that their size is maximum, use window fo two.
+    
+subproblems:
+    a subproblem is a problem we have to solve along the way to solving the main problem 
+
+an empty string is a palindrome.
+solve palindrome using two pointers from begining and end not using a stack,as a stack would need a # symbol in the middle,or just reverse a string and compare.
+
+linked lists:
+    cycle in linked list by two pointers at different speed.
+    own: modify the value to a value that is not in domain and if you find it then there is a cycle.
+
+    reverse a linked list:
+        keep a variable for previous node,current node,next node,then set next nodes value to previous node and move to next node.
+
+    edge cases with linked list could be tricky as it could be empty or have only 1 element and from the head it is hard to figure out if you are only given head.
+
+    floyd-tortoirse algorithm is two pointers moving at different speeds.one step in one beat and one step in two beats.the size of cyle can be then calculated by being stagnant,and making another pointer move.
+
+stacks and queues.
+    you don't get questions about them,but you use them as data structures to solve problems.
+    stacks for parenthesis match.
+
+tail recursion:
+    normal recursion O(n) for space.
+    tail recursion O(1) for space.
+    eg factorial of 4 would to stack 4 times hence linear space complexity,as original call is waiting.
+    eg of tail recursion:
+        function tailFactorial(x,totalSoFar=1){
+            if x==0 return totalSoFar;
+            return tailFactorial(x-1,totalSoFar*x)
+        }
+        here we are returning function so last one is removed from stack.
+        they key being if you return a function call last one is popped from stack first.because good engine would do that optimization.
+    certain engines or languages do not support it. js do not support it.
+
+to find kth highest you can sort and find kth.
+quick sort is recursive and inplace.
+recursion is divide and conquer.
+    divide a problem into small instances of small problem.
+    combine the solutions to get the solution for the whole.
+quick sort idea can be used for find kth max or min efficiently depending on position of pivot,called quick select algorithm.
+depth first,breadth first,preorder,post order,in order.
+recursion on a tree can be used to find the length of longest path or even the longest path.you can pass count or even the path as well as arguemnt to the function.O(N) where n is the number of nodes.
+level order/breadth first can be implemented with a queue.
+full binary tree: zero or 2 children
+complete: all full except last layer.
+the number of leaf nodes in a complete binary tree can be found by using binary search.
+to check if a tree is binary search tree,to in order traversal with two variables and see if it is always sorted,as inorder traversal should always print sorted array.
+priority queue is same as a heap.
+you can do bfs and dfs in 2d array,treating it as a graph.
+
+graph questions are very abstract and you have to figure out that it is a graph question.
+use recursion with graphs.
+dijkstra can't work with negative weights.
+backtracking: try all possibilites and depending on constrains skip a few.like from AI course.
+it is bruteforce with elegance. eg solviing sudoku.
+
+                        
+
+
+

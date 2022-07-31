@@ -1,0 +1,66 @@
+#video 1
+
+software development life cycle.
+    plan,implement,test,deploy,maintain.  in loop
+
+Programming=> done by developers. using various languagues,they wonk in teams. And team size and jobs
+vary. and they fix bugs.
+
+Test=> to make sure changes don't break the whole thing,
+        developers test the code and dedicated testers also do the same.
+        it can be automated testing.
+
+ and now it is released.
+   to do so build/package it and run it on servers,or updgrade existing software.
+this is where operations(IT operations) team comes in,operations run the software in production.
+like integrating the new features without downtime.they also make sure servers don't fail or if
+fail are resilient to such failure,and the architecture should handle large traffic.And they have 
+to make the software perform efficient
+
+Programmers and Operations are supposed to have different skills.
+operations usually needs OS,mostly linux,command-line,scripting efficient,monitoring tools.
+the knowledge needed is different.
+
+Development and Operations teams need to communicate effectively,as the roles are different 
+it is hard to communicate properly eg works on my machine,not in server,or dependecies,env variables
+folders needed,databases needed etc . Operations teams have to prepare the enviroment for the
+deployment, this communication is usually not effective and doesn't work,something is always missing.
+
+
+How to solve it?
+    DevOps culture,way of working between Dev's and OP'same
+    common language to communicate
+    now it is own role and job.
+    many new concepts and tools.
+    DevOps engineer.
+
+DevOPs tasks and responsibitiies:
+    need some know-how from DEV and OPs team.
+    they have subset of skills from both sides,hence can talk to both sides.
+    additional DevOps specific skills and know-how.
+    eg build continuous pipeline for Test,Build,Push,deploy using
+    technology like Docker,Kubernetes.
+
+Waterfall vs Agile.
+    influence speed and process of software development
+Waterfall:
+    Requirements => once all done then go to
+    Development  => once whole done then
+    Testing      => once whole done then
+    Operations   => now deployed
+waterfall doesn't work realy good with changing requirements.
+
+Agile:
+    speed of development,testing and deployment cycles is benefit
+    each feature gets tested,deployed.
+    immediate feeback.
+    fast development adn deployment process.
+    scrum and kanban are two implementations of Agile.As Agile is just a guidelines
+Agile is at the heart of continuous integrations and pipeline.
+
+Agile is to business and Devlopment what Devops is to Development and Opeartions.
+Agile is an interface between business people and Developers.
+
+
+#TODO 4 
+

@@ -1,0 +1,126 @@
+yale
+leture 1: introduction, first five lessons.
+    what is game theory:
+        a method of studying strategic situations.
+        eg motor industries, ford has to be worried what tesla is doing.
+        strategic means when your outcome doesn't only depends on your actions, but also other people's actions.
+        it applies to law, politics, sports, biology etc 
+    
+    grade game:
+        you choose one and your randomly selected pair selects one of alpha and beta.
+
+                          pair 
+                   alpha       beta 
+        
+    me      apha    B-,B-        A,C 
+
+            beta    C,A         B+,B+  
+
+            this is outcome matrix.
+
+        
+        english: swinging <> to much change from high low etc.
+        objective: goal 
+
+        game theory helps you when objectives are clear.
+
+        in above the objective can be to increase your grade or to increase the collective grades of both and strategy would change accordingly.
+        
+        definition: my strategy alpha strictly dominates my strategy beta if my pay off from alpha is strictly greater than that from beta regardless of what others do.
+
+    lessson 1:
+        do not play a strictly dominated strategy(a strategy for which there exists a strictly dominated strategy)
+    lesson 2:
+        rational choice can lead to outcomes that suck. (dominant strategy)
+    this game is called prisoners dilemma.
+        eg two prisoners asked to rat each other out in different rooms to get free or to get sentenced.
+    there are hundreds of prisoners dilemma examples in real life.
+        eg firms deciding prices for their products.
+    remedies to prisoners dilemma: contract eg if you don't lower your prices, then i won't lower mine, but it is against the law. But it would work with roommates to tidy up the room. you can communicate.
+    it is possible that there is no dominant strategy, as in dominant strategy it for all has to be better.
+
+    pay offs matter as well.
+    any kind of information is important and information would change your decisions.
+
+    the best lesson is to put yourself in others shoes and try to figure out what they will do. Figure out their dominated strategies.
+    it is much easier to figure out your payoffs than that of your opponents.
+
+    out there in real world, roughly 70% percent chose alpha and rest choose beta. 30% could be stupid.
+    in yale it was 85% alpha.
+
+
+    game number 2:
+        choose a whole number between 1 and 100.
+        one whose number is closest to 2 thirds of the average would win 5 dollars - difference between result and his number in cents.
+
+lecture 2: putting yourself into other people's shoes.
+    even carbon emmision is a prisoner's dilemma, a lot of real world problems are prisoners dilemma.
+    formal stuff: ingredients of a game.
+        1. we need players represented by i,j,k etc 
+        2. strategies represented by s subscribt i is the particular strategy of player i. capital S i is the set of possible strategies of player i. it could be set of all possible strategies.
+        3. s without an i would mean partiucular play of the game. it is the move of all players at an instance. it is called a strategy profile/vector/list. one strategy for each player. it is the strategies they did make.
+        4. payoffs: u representing utility. u for i depends on s of all. in earlier numbers game it is 5 dollars - the cents difference or 0.
+        for some time we will assume that everyone knows these things, although it is not a realistic assumption.
+
+        s subscript -i is a choice for all except person i.
+    
+    game:  
+        two players 1, 2
+        player 1 has 2 choices, top and bottom.
+        player 2 has three choices, left, center, right.
+        and payoffs for six possiblities are
+            5,-1        11,3        0,0
+            6,4          0,2        2,0 
+        
+        players: 1,2
+        strategy sets: S1={top, bottom} for S2{L,C,R}
+        payoffs: u1(T,C)=11, u2(T,C)=3 
+        here player 1 does not have any dominating strategy. For player 2 right is a dominated strategy, as center always does better than right, hence center strictly dominates right, hence player should not choose right.
+
+    def: player i's strategy si` is strictly dominated by player i's strategy si , if ui(si,s-i)> ui(si`,s-i) for all s-i
+
+
+    game:
+                                           attacker 
+                                easy pass           hard pass 
+                  Easy path     1,1                      1,1
+
+    defender    
+                 hard path     0,2                       2,0
+
+                 these are the battalions they lose 
+                 from the point of view of attacker easy path weakly domintes hard pass, as he does as least as well or better than hard path.
+                
+    def: player i's strategy si` is weakly domnated by her strategy si if ui(si,s-i)>=ui(si`,s-i) for all s-i and is greater than for at least for one strategy.
+
+    never choose a weakly dominated strategy as well.
+    in this case we now know that attacker would never choose hard pass as easy pass is weakly dominant strategy for hinm so so have choose easy path.
+
+    hence always put yourself in others shoes and check their strategies and see if they have a dominating strategy.
+
+    for whole number game:
+        choosing a number over 67 is strictly dominated choices.
+        hence now choices above 67 are irrelavant as if they don't even exist.
+        now we have 1 through 67.
+        now the similary arugment rules out strategies bigger than 45, once we delete all above 67.This time we put ourself in other people's shoes to elimimate 45 and above.
+        now repeat again the same after deletion, while putting ourselves in other people's shoes while they are putting themselves in other people's shoes. hence in shoes in shoes strategy.
+        now try in shoes in shoes in shoes strategies 
+        and we finally get 1
+
+        being rational rules out choosing above 67.
+        for the rest of it, it requires more than rationality.
+        to rule out second slice, we need to know that others are rational.
+        to rule out third slice, we need to know that other people are rational and other people know that other people are rational.
+        rationality R, KR is knowledge of rationality, KKR, knowlege of knowledge of ratinality.
+
+        you would choose a number like 45 if you think rest of the people are dumb.
+         and you would choose, near 34 if you think rest of the people are rational.
+
+        common knowledge: i know, you know, i know you know, you know i know , you know i know you know etc. till infinity.
+
+        turns out the average was 13.3 and 2/3 of average was 9. which is the right answer.
+
+        the answer is not 1 because it takes a lot for everyone to think that deep.some people gave up in certain levels.
+        hence you need to think how sophisticated are other people at playing the game, then you decide how deep do you need to go.
+
+        you need to know what other people know and how they know that. Hence common knowledge is a subtle thing, mutual knowledge is not always same as common knowledge.

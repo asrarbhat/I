@@ -1,0 +1,1169 @@
+aman dattarwal
+
+lecture 1:
+    zeros and ones is mere a convention,we could have gone for trinary.
+    binary is simpler.
+
+    we can use flow charts to describe an algorithm.
+    or use pseudocode.
+
+    #include<iostream>
+    using namespace std;
+
+    int main(){
+        #ifdef ONLINE_JUDGE
+            freopen("input.txt","r",stdin); //takes input from input.txt
+            freopen("output.txt","w",stdout); // puts output in output.txt
+        #endif
+
+        int a,b;
+        cin>>a>>b;
+        cout<<a+b<<"\n";
+
+        return 0;
+    }
+
+    //hour gass =>that shesha and raith
+
+
+lecture 2:
+    use c/c++ extention in vscode
+    and use code runner extention
+
+lecture 3:
+    varaibles are memory locations that we want to make changeable
+    constants are ones that we do not want to changeable
+
+    data types
+        primitives:
+            integers,floats,characters,booleans
+        derivated:
+            derived from primitives like arrays,pointers,references,functions
+        user-defined:
+            class,struture,union,enum
+        
+
+        integers can be signed or unsigned.
+
+        floats upto 7 digits of precision
+        doubles upto 15 digits of precision
+
+        character are 1 byte
+        characters are ints underneath.
+
+
+        int a; //varaible declration
+        a=12; intialization
+        
+        sizeof(a)
+        sizeof(b)
+
+        type modifiers
+         int by defualt is signed
+         we can use modifiers like signed,unsigned,long,short
+         short is 2 bytes
+        
+
+        short int li;
+        long int li;
+
+        #include<iostream> preprocessor directive, used to include files
+        although those files only contain the prototypes of functions
+
+        main is the entry point of our program.
+
+        to print
+            std::cout<<"hello there\n";
+            return 0;//this is the exit code of our program
+
+        std=>standard
+
+        using namespace std;
+        telling which namespace we are using
+
+        cin>>amount1; //insertion operator.
+
+        for(intialization;condition;update){
+
+        }
+
+        do{
+
+
+        }while(condition);
+
+        switch are substitute to long if else statements
+        if has to be int or character
+
+        given operators the output is always of type which is more expressive.
+
+        i++ + ++ k   spaces matter here.
+
+Lecture 4:
+
+LECTURE 5:
+    decimal to binary:
+        divide by 2 and keep the remainer,recursively and 
+        remainers in reverse are the numbers required
+        makes sense:
+            if you check on pen and paper it starts to make sense
+            and can be used for any number system
+            although how you would do it is 
+            decimal= base(some number)+ remainder
+            decimal= base( base * some other number + another ramainder)+ remainder
+            decimal = base squared * some other number + base times another ramainder + remainder
+            
+
+            i got the idea
+        from any other to decimal is easy just multiply way.
+    
+
+LECTURE 6:
+    FUNCTIONS:
+
+        return Type function name (parameter1,parameter2){
+            return value
+        }
+
+        int add(int n1,int n2){
+            return n1+n2;
+
+        }
+
+        int x=add(3,4)
+
+        to a function things are always passed by value.
+        all that matters is what is that value.
+
+    functions are put in call stack.
+
+    stack frame => function in stack
+
+    if x==true basically true is the keyword
+
+    #include<math.h>
+    now use sqrt(num)
+
+LECTURE 8
+    ARRAYs:
+        homogenous.
+
+        int array[4]={1,2,3,4};
+        if no intialization, the values could be random.
+        if any one intialized rest will be 0,i guess.
+
+        int arr[4];
+        arr[0]=3;
+        cout<<arr[3];
+
+        float arr[n] where we can take n as input.
+        we can use for loop to take input,same for output.
+
+        built in function.
+        max(n1,n2) 
+        min(n1,n2)
+
+        cin>>n;
+
+        for binary search using iteartion
+        we use while(left<=right)
+            and mid is (left+right)/2
+            shift + (  for put selected text in such.
+        
+
+LECTURE 9:
+    2d ARRAYS:
+        int arr[n][m];
+        bool arr[n][m];
+        arr[i][j]=77
+    
+    use 2 for loops to do stuff.
+
+    to do a transpose of a matrix,just write a function 
+    that takes indexes and returns j i instead of i j
+    no need to do anything to data.
+
+    in character array 
+        use char arr[n+1] for n elements as last one would be /0 null
+        to check end of a sentence
+    
+    char arr[100]="apple";
+    arr[i]=33;
+    while (arr[i]!='/o'){
+
+    }
+    to take input
+
+    cin>>arr; //to take string
+    cout<<arr; //to print the string.
+
+lecture 11:
+    POINTERS:
+         variabes whose value is someone else addreses in memory.
+         and can be used to maniputate.
+
+    int a;
+    int *ptr; //pointer to int.
+    ptr=&a; where &a returns the address,it is like a function.or infact a function.
+    cout<<&a;
+    cout<<ptr;
+    cout<<*ptr; // * is indirection operator //derefence
+    
+    best use is to modify data using function,without taking whole data
+    as input.
+
+    *ptr=20;
+
+    pointer arithmatic.
+     increment ptr+1 //adds size of that kind the value it takes
+     decrement ptr-1
+     in array we can subtrack pointers can well
+     it returns number of elments between them.
+
+     char *ptr;
+
+     name of array is pointer to its first element/zeroth element
+     and it cannot be modifed.
+
+     *arr would be the first element.
+
+     int *ptr=arr;
+     now we can use ptr to traverse the array,using ptr++ etc
+
+     or use *(arr+1)
+
+     arr is a constant pointer.
+
+     i think i understand how pointers work in n dimentional system
+     name points to first element of type n-1 dimetions.
+
+     we can make pointer to a pointer.
+     int **p;
+     p=&ptr;
+
+     similarly **p; to get the value of that 
+
+     passing pointer to a function
+        int func(int *ptr,int b)
+    
+    if returning pointer from a function make sure the memory that it points 
+    to is in heap and not in stack.
+
+    we always pass by value,it all depends on what that value is.
+
+    func(int *a,int *b)
+    funct(&a,&b)
+
+    recursion can cause stackoverflow as stack size is fixed.
+
+    heap is dynammic,can be as big as virtual memory.
+
+    int a=10; stores in stack
+    int *p=new int(); //stores in heap
+    *p=20;
+     delete(p); to free it.
+     int *p=new int[4]; //exception if allocation fails.
+     foo =new (nothrow) int[5];to assign instead instead of exception
+     if foo==nullptr{}
+     can use p[0] to access as well
+     delete[]p; //to free memory
+     p=NULL;//to set to NULL
+
+    delete ptr;for one value
+    delete[] ptr;for an array
+    ptr=new int;
+    to intitiize as well
+    ptr=new int(5);,new float(32),
+     memory is not deallocated automatically here.
+
+
+strings:
+    in strings no need to know the size
+    character arrays are static in memory
+    basically string is a class that makes things easier.
+
+    #include<string>
+
+    string str;
+    cin>>str;
+    cout<<str;
+
+    different ways to declare
+    string str1 {5,"n"}; same as nnnnn
+    sting str="hello there";
+
+    but if spaces also
+    getline(cin,str);
+
+    cin only read one token.
+
+    different string functions.
+    s1.append(s2) appends to str1
+    s1+s2 doesn't modify but returns the concatenation.
+    although we can assign it to s1
+    to get characters 
+    s[1]
+
+    s.clear() makes it empty string.
+
+
+
+OOPS:
+    
+    class student{
+        string name;//data member/atributes
+        int age;
+        bool gender;
+    };
+
+    student a; //to create an object.
+    student b;
+    a.name="hiter"
+    a.age=true;
+
+    put class above main 
+    and create objects in main
+
+    by default attributes are public 
+
+    to make them public
+    public:
+        string name;
+    
+    can make the array
+    student arr[3];
+    arr][i].name;
+
+    to add methods.
+
+    in class
+    void printInfo(){
+        cout<<name;
+
+    }
+    can even access private members in these methods.
+
+    obj.printInfo();
+
+    constructor
+        add method
+        student(string name){
+
+        } //no return type 
+
+        the default constructor student(){}
+    now in main 
+    student a("hi there")
+
+
+MODERN C++ 2018;
+-------------------------------
+
+LECTURE 1: INTRODUCTION AND BASICS
+    
+    c++ has changed in recent years.
+    in this course we are not going to start from c.
+
+    OpenCV is a computer vision library even insdusty uses it.
+
+    c++ is most used systems language
+
+    c++11 is a modern languague
+         it is almost entirely new langauge.
+        
+    top 500 super computers use linux.
+
+    there is no backup/trash when using terminal,deletions are permanent
+
+    within c++,there is much smaller and clearner langauge
+    struggling to get out.
+            Bjare Stroustrup.
+
+    #include<iosteam>
+
+    int main(){
+        std::cout<<"hello world"<<std::endl;
+        return 0;
+    }
+
+    comments and whitespaces are ignored in c++,
+    one white space as as good and hundred. /* */ or //
+    as the parser is designed to ignore white spaces.
+
+    to format your code 
+        use clang_format to format your code.
+        code is very often read than run.
+        hence good code style is really good.
+        use cpplint to check the style,this tool is provided by google
+        Google code style sheet is good for c++
+
+    main is a function that returns an error code,
+        error code 0 means OK
+        error code can be [1,255]
+        same as the codes you see in terminal.
+        to see if program executed with success or what error it found.
+
+    #include directives
+    two variants:
+
+        #include <file> system includes files
+        #include "file" local include files
+
+        it copies the content of file into the current file.
+
+        #include "some_file.h"
+
+        it can be any file.
+
+        the copying happens before compilation.
+
+        it is used for modularity and clean coding and eventually whole is added up.
+    
+    I/0 streams for simple input and output
+
+    HANDLE stdin,stdout and stderr;
+
+    std::cin maps to stdin
+    std::cout maps to stdout
+    std::cerr maps to stderr
+
+    #include<iostream> to use I/0 streams 
+    part of c++ library
+
+    std::cin >> some_number;
+    std::cout<<"hello world";
+    std::cerr<<"boring error"<<std::endl;
+
+    using gcc compiler,there is a compiler in windows,Clang is new and better compiler.
+        c++ -std=c++11 -o hello_world hello_world.cpp  ,here c++ maps to systems c++ compiler you can use g++ which is real binary or use Clang 
+        ./hello_world
+    
+    temp folder in your linux gets deleted everytime you start a new power on.
+
+LECTURE 2: VARIABLES,BASIC TYPES,CONTROL STRUCTURES.
+    type name value;
+    every variable has a type as c++ is typed langauge.
+    the variables are not automatically initialized unlike java.
+    always initialize the variables.
+    
+    int a;
+    use snake_case as per google styles
+    all lowercase,underscore to separate the words.
+    c++ is case sensitive.
+
+    bool this_is_fun=false;
+    chaer carret='\n';
+    int hi=32;
+    short s=32;
+    long l=32;
+    float f-3.3f;
+    double d=0.1;
+    auto s=3; int by default
+    auto s=3.3f float type  because of f
+    auto d=3.3 now is double
+
+    auto is new addition is c++11, auto is nice thing.
+
+cppreference.com for any kind of problem
+
+    operations.
+        +,-,/,*,>,>=,<,==
+        for relational output is bool
+        +=,-= etc also
+
+    avoid == for floats,you know why. there is some imprecision,it might backfire.
+    use some episilon instead.
+
+    || ,&& , ! booelan operators.
+
+    increment ++
+    decrement --
+    you can assign boolean expression to a bool variable.
+    / gives output in most expressive type.think of it as a function that return float if 
+    any of the two is float.
+    % is for integers.
+
+    do not use increment or decrement in an expression,it is very bad practise.
+    the point of increment decrement is only because we sometimes use it to increment by
+    one or decrement by one very commonly.
+
+
+    STRINGS:
+        #include<string>
+            it is part of the standard library
+            to use std::string
+        + for concatenation.
+        str.empty() to see if it is empty.
+
+        std::string hello="Hello";
+        std::cout<<hello;
+        std::cin>>hello; reads one toke only.
+
+        getline(cin,hello); for multiple tokens.
+
+    ARRAYS:
+        #include<array>
+        to use std::array
+        store a collection of items of same type
+
+        array<float,3> arr={1.0f,2.0f,4.0f};
+        to access arr[2];
+        to remove all arr.clear();
+        arr.front() is same as arr[0]
+        arr.back() ==arr[arr.size()-1]
+
+    VECTOR : the main time of c++
+        #include<vector> to use std::vector
+        it is implemented as a dynamic table
+        to access we use indexing like the arrays.
+        vec.emplace_back(value) preffered in c++11 instead of vec.push_back(value)
+
+        it is dynamic in nature.
+
+        std::vector<std::string> vec;
+        vec.reserve(100) //it will reserve memory for these many items in advance.
+        vec.emplace_back("hello");
+
+        using namespace std;
+            to avoid using std:: everytime.
+        vector<int> vec={1,2,3};
+        cout<<vec.front() <<vec.back()
+        to print first and last element in vector.
+
+        can use push_back or emplace_back to add elements.
+        
+        c++ -std=c++11 -Wall -o main main.cpp 
+        always us Wall flag to see warnings as well as c++ can be dangerous with errors.
+
+        read errors from the top.
+
+        vec.size() to get length of the vector.
+
+        if a lot of pushbacks needed use reserve
+
+        there is a single global scope.
+        local scope starts with {} 
+        all variables belong to a scope.
+        all variables die in the end of their scope.
+        you can create a scope simply by using
+        {
+
+        }
+        no need for if else or a function.
+
+        using namespace std; brings all variables in that namespace to your scope.
+
+        or use
+        using std::cout;
+        using std::cin;
+        now use cin,cout directly.it is better don't bring all variables.
+
+        const int x=10;
+        if you want constants.
+        it can be used with any type.
+        googel suggests camelCase for constants.
+        const std::string kHello="hello";
+
+        declare everything as constant only make variable when you know it is to change.
+        it is called defensive programming.
+
+
+        REFERENCES TO VARIALBES.
+            we can create a reference to any variable
+            use & to state that a varaible is a reference.
+            float& ref=orignal_number;
+            std::string& refer=hello;
+
+            reference is part of type:
+                variable ref has type float&
+            whatever happens to reference happens to variable and vice versa.
+            yields performance gain as references avoid copying data.
+
+            it is an abstracion on pointers.
+            you can only assign R-vale to a reference=>something that can sit on the right side of assignment.
+            you can even print the reference and it will print the same thing.
+
+            prefer to use references over pointers.
+
+            references are great for performance gain.as there will be no copying.
+            if big data it will be expensive.
+
+            references are fast but reduce control.
+            const float& ref =orignal_number;
+            const std::string& hello_ref=hello;
+            we use { in same line in c++
+            
+            in switch it has to be int,char,bool,enum etc only
+
+            ++i is faster than i++
+
+            range for loop in c++:
+                iterating over a standard container like aray or vector
+                to avoid index mistakes
+                in c++11
+                for(float/auto value : vec){ its like for item in vector
+
+                }
+
+                can use for(const auto& num: vector)
+
+                const flaot& means using this reference we cannot change value,
+                the reference itself can refer to other value as well.
+
+                can use for strings as well to go through character by character
+
+                all c libraries have c++ version of them prefixed with C 
+                eg math.h  to cmath without h
+                   stdio.h to cstdio
+                   stdlib.h to cstdlib
+                
+we no longer use .h with c++,well they don't need to be files,the code could be in
+the compiler itself.an implementation can provide standard headers however it wants.
+.h in c is used to differentiate header files from txt etc
+
+LECTURE 3:
+
+
+
+
+OOP:
+    the problem with functional programming is that if data format changes in one function will ripple and every function needs to be changed. hence hard to maintain.
+
+    whereas in OOP data structure is hidden.
+    for small tasks better use functional programming.
+
+    it takes more design time to build an oop program.
+
+    std::vector is a class and so is std::string
+    std::vector<int> scores;
+
+    creating objects:
+        Account frank_count.
+    
+
+    declaring a class:
+        class Class_Name better use capitals for class Names.
+         eg 
+            class Player{
+                std::string name;
+                int health;
+                int xp;
+
+                void talk(std::string text_to_say);
+                bool is_dead();
+            };
+
+            creating objects:
+                Player frank;
+                Player hero;
+
+                Player *enemy = new Player(); //enemy is a pointer to object.
+                delete enemy;
+
+            you can create array of objects:
+                Account accounts[] {first,second};
+            
+            std::vector<Account> also can be done.
+
+        
+        classes can be declared anywhere even in main but that would also define the scope of that class.
+
+        class Player{
+          //attributes
+            string name;
+            int health;
+            int xp;
+
+          //methods
+          void talk(string);
+          bool is_dead();   
+        };
+        
+        in main creating objects:
+            Player frank;
+            Plyaer hero;
+            Player *enemy {nullptr};
+            enemy=new Player;
+            delete enemy;
+
+        to access:
+            frank.balance
+            frank.deposit(1)
+         for pointers:
+            frank->balance;
+            frank->deposit(100)
+            or  (*frank).deposit(100)
+        
+        by defualt everything is private.
+            public:
+                string name;
+                int heath;
+            
+        for methods:
+            void talk(string name){
+                cout<<"hi";
+
+            }
+        
+        access modifiers:
+            public:
+                accessible everywhere.
+            private:
+                accessible only by member or friends of the class
+            protected:
+                used with inheritance
+        public:
+        anything from here is pubic until we find another.
+
+        void set_balance(double bal){
+            balance=bal;
+        }
+        to declare a method outside class:
+            double Account::get_balance(){
+                return balance;
+            }
+        
+
+
+        we generally separate class specification and implementation.
+
+        Account.h 
+            class Account{
+                private:
+                double balance;
+                public:
+                void set_balance(double bal);
+                double get_balance();
+            };
+            here we put the specification
+            
+    
+
+
+
+udemy c++:
+    it is good to create a folder and then src folder in it for source code.
+    programming is like an instrument,you have to practise a lot.
+    c++ is both procedural and OOP.
+    c++11 onwards is called modern c++ and earier is called classical c++.
+    c++ 1979
+    .cpp or .cc for .h extention.
+    std::cout<< insertion operator,it inserts into output stream.
+    std::cin>>n; extraction opearator.
+    g++ gnu c++ compiler.
+    g++ -Wall -std=c++14 main.cpp -o main
+    compilation + linking is called build.
+    .obj in windows and .o in linux for object code.
+    the c++ headers do not atleast some of them do not end with .h as it doesn't have to be a module it could be inbuilt in compiler etc or it doesn't need to be a file,secondly since c++ and c are compatatible and there is string.h implementation and in c++ we have string class so there was a collsion,for some time people used .hxx or .H but eventually not using any was selected.
+    during debugging start from top to debug as first error can cause other.
+    compiler warnings should not be ignored,they are potential problems/bugs eg variable not used or not intialized.
+    int if uninitialized have garbage value.
+    linker error,when library missing,usually becuase path variable problem,and linker is having hard time to build an executable.eg extern int x; and it cannot find x anywhere.
+    extern int x;not in me in some other module.
+    linker error is not compiler error and are tricky to solve.
+    Runtime error -> use exception handling.
+    logic error are bugs.
+    90 keywords in c++
+    cin,cout are not keywords,main,#include are not keywords these are identifiers.
+    << stream insertion opearator,>> stream extraction operator,:: scope resolution operator.
+    c++ preprocessor is a program that processes our program before compilation,it strips all comments and replaces by single space.
+    preprocessor directive starts with # pound symbol/hash
+    #include<iostream> #include "myfile.h"  #if #elif #else #endif etc 
+    it replaces preprocessor directive with that file and preprocesses that file recursively.
+    you can use #if etc to write condition for preprocessor for windows and linux etc.
+
+    c++ preprocessor doesn't understand c++
+    comments /* hi */ or //hi 
+    #define #undef 
+
+    your code should be self documenting.
+    don't comment obvious things.
+
+    you can have multi line comment at the top,describing the program.
+    you can modify comment when you modify the code.
+
+    int main{
+        //code 
+        return 0;
+    }
+    int main(int argc,char * argv[])
+    {
+        return 0; this return is send as code to the caller.
+    }
+     0 means successfully done 
+
+    main is starting point of a program.
+
+    Namespaces:
+        name given to a piece of code 
+        why std::cout and not cout 
+            std is a namespace for c++ standard namespace,third party libraries will have their own namespace.
+        scope resolution operator:
+            ::
+        namespaces are used to avoid naming conflicts like module.function() in python we have namespace::cout() 
+    
+    using namespace std;
+    cin>>n;cout<<n; but this brings whole namespace.
+
+    using std::cout;
+    using std::cin;
+    using std::endl; only brings these ones.
+    cout<<n; etc 
+
+    basic IO using cin and cout.
+    cin,cout,cerr,clog are objects representing streams.
+    cout is standard output stream.
+    cin is standard input stream.
+    cout by default is console.
+    cin by default is keyboard.
+    cin>>a>>b; data processed only when enter is pressed.
+
+    white spaces are ignored in cin,even tabs. and act as terminators.
+    like  ,    123    ,is as good as ,123
+    cin treats number as the type of variable to assign to,
+    cin reads from buffer.
+    10.5 is treated as 10 0.5 if you were looking for int and double 
+    inputs are read from memory called buffer and not from screen.it reads from buffer using pointer.
+    
+    variables:
+        variables are abstracion for memory locations.
+        they have type and value in static type.
+        they must be declared before they are used.
+        string name,Person james. etc
+        letters,numbers,_ 
+        can start with _ 
+        can use camelCase or snake_case
+        declare variabes right before you use them.
+       
+        int age=21; c like intitalization
+        int age (21); constructor initialization
+        int age {21}; c++ 11 list intitalization;
+        they have garbage value if not initialzed.
+        better names:
+            int width; is not as good as int room_width;
+        global varaibles are initialized to 0;
+        global variabes are not good programming practise.
+        char 8 bit 
+        char16_t,char32_t, for more.
+        by default signed.
+    
+    floats power -38 to 38 
+    double -308 to 308
+    bool: 8 bits, true is non zero and false is 0;
+    char a {'j'};
+    single quotes for char.
+    in c style intitalization we get overflow and that is % size;
+    but in list sytel we get error that says doesn't fit,when assigning.
+    bool b {false};
+    sizeof(int)
+    sizeof(double)
+    sizeof(variable) we can omit () for varaibles
+
+    use <climits> CHAR_MAX , INT_MAX,etc 
+
+    const double pi {3.3};
+    just add const at the begining.
+    don't use #define for constants in modern c++,as hard to find errors,these are called defined constants.
+    always intitiize variables,and use psedudocode to solve problem first.
+    double d=2.3e23;
+
+    Arrays and vectors:
+        compound data type: made up of other types.
+        collection of elements
+
+        Arrays:
+            fixed size,same type,stored in contiguous memory,indexed from 0,no checking if you are out of bounds.iteration for processing,always initialize as they containn garbage,very efficient.
+        
+            declaration: int test_scores[5];
+                         double temp[n];
+                         const double temp[n];
+                         double t[10] {0};  all to zero.
+                                    {3,5} rest to 0
+                         int arr[] {1,2,3};
+            accessing elements:
+                arr[0]
+                cin >>arr[0]
+            name of array is address of first element of array.
+            no bounds checking in c++;
+            char vowals[] {'a','e'}
+            cin>>vowels[2];
+            arrays contain junk by default.
+            {100} first 100 rest 0
+
+            2D array:
+                int arr[2][3]
+                int arr[n][m]
+                cin >> arr[1][2]
+                int arr[][] {{1,2,3},{4,5,6}};
+            we rarely use arrays,we use vectors now.
+        
+        vectors:
+            dynamic arrays are vectors 
+            part of c++ standard library.
+            an array that can shrink its size at execution time or grow.
+            very efficient,can provide bounds checking.
+            can use sort,reverse,find and more.
+            
+            #include<vector>
+            using namespace std;
+            vector<char> vowels;
+            vector<int> test_scores;
+                for empty vectors.
+            vector<char> vowels(5); containing 5 characters initialized to 0;
+            vector<char> vowels {'a','b','c'};
+            vector<double> temp(365,80.0); of size 365 and all initialized t 80.0 
+            vectors are object oriented.
+            we use iteration.
+            accessing using  arr[1] or arr.at(1) to assing arr.at(1)=3; arr.push_back(3);
+            gives error if index out of bounds,arr.size() for size 
+            2d vector:
+                vector<vector<int>> movie {{1,2,3},{4,5,6}};
+                movie[0][0]
+                movie.at(0).at(1)
+                to add a vector movie.push_back(vector2)
+
+            at checks bounds [] might not check bounds
+            always use inbuild methods to use an object.
+    
+statements and operations:
+    expressions return a value,
+    statements are instructions.
+    n1 {1} is initialization it is not assignment,n=23 is assignment.
+    l-value is location,r-value is value stored in that location.
+    n=m=1000; works. as right to left.
+    int/int gives floored int.
+    PEMDAS 
+    the output type is as that of most expressive one,called type coersion.
+    statements contains expressions.
+    statements end with ;
+    promotion and demotion:
+    avg= static_cast<double>(amount); for type conversion.
+    (double) is old style and don't use it.
+    now i know why it is not liked when you use c like syntax in c++.
+    12.0 == 11.99999999999999999999999 because of how they are stored in memory.example keeping on dividing by 2 and put in memory accordingly.finally understood it. gives true,it looks at precision.for double,float for ints they have to be same.
+    not !,and && ,or || both ways accepted.
+    not has precedence then and then or,as not is a unary operator.
+    also there is short-circuit evaluation,stop if result gotten.
+    relational first and then logical.
+    precedence:
+        [] -> . () left to right 
+        ++ -- not * & sizeof   -(unary) right to left 
+        rest left to right 
+        = and ?: are right to left.
+
+control flow:
+    switch arugment has to evaluate to integer type.
+    for(int i=1,j=2;j<3;l--,j++){}
+    for(vartype var_name:sequence){} for c++ 11 onwards.
+    for(int score: scores){} for (auto score: scores)
+    auto figures out on its own.
+
+characters and strings:
+    characters are integers mapped to ASCII 
+    in c++ : c style string and c++ strings.
+    in c++ strings we have string objects like vectors.
+    #include<cctype.h> isalpha() etc in it for characters,isalnum() etc 
+    in c style \0 null terminated strings,stored in contiguous memory.
+    char myname[] {"frank"}; \0 added automatically.
+    char name[40] {"hello there"}; all other \0 
+    char filename[20] {};
+    cin>>filename; cout<<filename;
+    strlen() returns size_t it is unsigned int type.
+    strcpy() to copy the string.
+    cin reads only one token.
+    std::sting class in standard template library (STL)
+    #include<string> also continuous in memory,safer,dynamic size.
+    string s {"hello"};
+    string s; creates an empty string.no garbage value.
+    string s2 {s3};
+    assigning s1=s2 works.
+    concat s1+s2 but "abc"+"d" is illegal as for two c type literals,should be atleast one c++ string literal.
+    s[0] or s.at(0)
+    for (char ch: s)
+    can also do for(int ch : s)
+    ==,!=,>,< etc all work for these strings and can compare to c style as well.
+    it compares content and not reference.
+    str.substr(0,4);
+    .find("this")
+    .length();
+    s1+="hi"
+    getline(cin,s1)
+    getline(cin,s,'x') read till x is encountered.x is a delimiter.
+    
+
+
+
+object oriented programming:
+    prodcedural programming focuses on functions.
+    vector,string are c++ classes.
+
+    Account franks_account;
+
+    declaring a class:
+
+            class Class_Name
+            {
+                //declarations;
+            };
+
+            eg 
+
+            class Player
+            {
+                std::string name;
+                int health;
+                
+                void talk(std::string text);
+                bool is_dead();
+            };
+
+
+            Player *enemy=new Player();
+            delete enemy;
+
+            Account accounts[] {franks_account,jims_account};
+            std::vector<Account> accounts1;
+
+    you can even define classes within main function.
+
+    class name should be in uppercase.
+
+    Player frank;
+    Player hero;
+    Player *enemy {nullptr};
+    enemy=new Player(); to create it in heap.
+    delete enemy;
+    frank.name;
+    hero.name;
+    string are initialzed to empty string.
+
+        
+    you can even intitiize values in class;
+    like int a=3;
+    for any type.
+
+    accessing class member:
+        Account frank;
+        frank.balance=22;
+        frank.deposit(1000);
+
+        for pointers
+        called reference operator.
+        frank_poiter->balance==22;
+        frank_pointer->deposit(1000);
+
+        or (*frank_pointer).balance();
+        etc 
+
+    methods:
+        void talk(){
+            std::cout<<name; //where name is an instance variable.
+            balance+=2;
+        }
+    
+    class Member Access Modifiers:
+        public: 
+            accessible everywhere.
+        private:
+            accessible only by members or friends of the class.
+        protected:
+            used with inheritance
+
+        everything you declare that point forward would belong to that one.
+
+    class Class_Name{
+        public:
+            //declarations
+        private:
+            //declarations
+            by default,everything is private.
+            used for information hiding.
+            for both methods and instance variables.
+    };
+
+    you get compiler error if you access private member.
+
+    eg 
+        public:
+            bool withdraw(double amount){}
+    
+    class methods can be implemented inside class or outside using scope resolution operator.
+        classname::method_name
+
+        eg void Account::set_balance(double bal){
+            balance=bal;
+        }
+
+    class can be declared in .h file and implemented in .cpp file 
+
+    eg Account.h
+        class Account{
+            private:
+                double balance;
+            public:
+                void set_balance(double bal);
+                double get_balance();
+        };
+
+        in Account.cpp provide the implementation.
+         on top include 
+            #include "Account.h"
+            void Account::set_balance whatever.
+            and implement all such methods.
+        
+        in main:
+            #include "Account.h" 
+            you don't include .cpp file.
+        
+        you can use block guard to check if already imported.
+
+        if you are using string in class,add the same at top in .h file.
+
+    constructors and destructures:
+        constructors are used for initialization
+        you can overload them,name is same as class ,has to be public
+        public:
+            Player();
+            Player(std::string name);
+            Player(std::string name,int health,int xp);
+            there is no return type.
+            you can also have 
+            Player(int health);
+            different constructors can have same number of arguments.
+
+    destructures are special member methods,name is same as class proceeded with a tilde(~)
+    invoked automatically when an object is destroyed.
+    no return type and no parameters.
+    only 1 destructor is allowed in a class and cannot be overloadead.
+    useful to release memory and other resources.
+
+         it is public 
+         ~Player();
+         delete enemy ; and 
+        even gets called for members that are not dynamically allocated,when scope ends.
+    c++ provides default constructor and destructure.
+
+    for constructors:
+        Player slayer;
+        Player frank {"Frank",100,4};
+
+    order of destruction is reverse in a scope.
+
+    if you define a constructor,c++ will no longer generate a constructor.
+    you have to use your own constructor now.
+
+    each constructor much have unique signature,for the compiler to tell apart.
+
+    members are given memory even before constructor is called.
+    
+
+
+
+
+
+
+
+
+
+
+

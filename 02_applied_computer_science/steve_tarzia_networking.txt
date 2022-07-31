@@ -1,0 +1,206 @@
+lecture 1:
+    it teaches you how internet works,and internet is cool,it is one of the greatest technical achievements in human history.
+
+    not all parts are running same software,yet it works.
+
+    a typical software engineer only needs to know it at application layer,as in creating different kind of connections and sending and recieving data via those connections.
+
+    you can learn general systems design things from this course.
+
+    kurose and ross textbook.
+
+    internet is a graph of devices from graph theoretic sense.
+    internet is network of networks.
+
+    DNS  is not just for websites,it is also for emails etc.
+
+    picture on page 18 is all machines that were connect to internet at that point in time.
+
+    since there are multiple ways to go from one machine to another,we need to find the best way for routing.
+
+    birth of modern internet 1983 (arpanet adopted tcp/ip)
+
+    email predates web.
+
+    protocols are the standards which allow us to make any kind of software and hardware underneath.
+
+    protocols define the structure of the message,and the communication.these protocols are defined at bit level.
+
+    protocols: set of rules for interaction.
+        eg there is a protocol at shopping mall,as in reliance store.
+        you get your watermelon,you weigh it and get price tag,and then you pay and leave.
+    
+    network has hosts and routers.
+    routers act as relay,and their purpose is to know in which direction to forward the data.
+
+    history:
+        postal mail was a technology that changed the world.
+        about a hundred years ago people figured out we can send message using a wire.
+        the challenge came about when we wanted to connect lots of people.
+        then the telephone.
+            public switched telephone network(PSTN)
+                end to end electrical connection,by moving cables plugged into switchboards, even in 1950's.
+                the operator would connect a wire from your hole to another persons hole,after you talk to operator.
+    data centers use fiber optic signals with upto 100GBps
+    wifi and cellular ranges are different because wifi uses 2 or 5 ghz frequency whereas celluar uses 
+    lower like in hundreds,lower frequency travels further,and wifi is allowed to not use more power and cellular tower is.
+
+    circuit switching and packet switching. we now use packet switching. circuit switching is nowadays done by splitting frequency band and not having physical devices. hence they are multiplexed.
+
+    packet switching sends data as packets => small chunks (1.5kb)
+        each packet is like a postcard,where there are addresses etc,and it goes one step at a time.and a packet could get dropped,and it is an best effort method.
+    
+    switching here means the way link is shared by competing users.
+
+
+lecture 2:
+    IXP: are buildings where many isps have equipment to exchange data with other isp's.there are multiple routers with short wires to make this transfer.
+
+    CDN'S are high speed global networks eg by akamai.
+
+    regional isp's might need to pay to tier 1 isp's to connect.
+
+    tier1 isp could also be regional isp.
+
+    the economics of it works based on who benefits the most.
+    
+    networking involves many protocols for internet to work,at different levels on the stack,http being at the top.
+    
+    TLS for encrpytion. transport layer security.
+    TCP for reliable stream of data.
+    IP to forward data.
+    ethernet/wifi to share a communication link with multiple local devices.
+
+    header in a level is added to the begining of it.
+    
+    tcp breaks into packets.
+
+    with wireshark you might see other people's network  as well, if you are on wifi.
+
+    socket:
+        socket is a network connection basically,it is the os listening on some port and allowing you to send data to network using that port.
+        
+        basically 16 bit port number + ip address that is active.
+            80 for http 443 for http+tls=https 
+            53 dns 
+            smtp(email) 25
+    
+    application layer protocols depend on what we want to do:
+        http to send web pages.
+        smtp for emails.
+        ssh for remote access to machines 
+        dns for dns query.
+        etc 
+    
+    each tab in chrome has different port number.
+    ports below 1024 are privilaged and need sudo to access.
+
+    tcp gives reliable bidirectional pipe.
+        even though packets are not sent or recieved in order,but still tcp is good enough to give us illusion that tells us order is maintained.
+
+        tcp gives us file like interface,where we read and write.
+
+    udp is alternative to tcp:
+        there are less gurarantees,no handshakes etc,usually used for media transfer.
+    
+lecture 3:
+    Application layer:
+        packets travel along many hops to reach the intended destination.
+        socket is a software abstracton of a network connection.
+            each socket is bound to a particular port number.
+        sockets could be tcp or udp.
+
+        purpose of application layer protocol is to allow apps running on different computers to communicate.it could be client server or peer to peer.
+
+        the idea is to have ability to send arbitary size messages.
+
+        in p2p,you just have a software.
+
+        tcp is a client-server data exchange protocol built on top of tcp.
+
+        raw data/bytes
+        http is stateless protocol,every request is self contained.
+
+        content length is used to determine if whole message has been recieved.
+
+        different methods can be used for same url like get,put,post,delete
+        post requests do not end data as json in html form it is like that long string though in body,thats why we need middleware in node.
+
+        even with cookies,http is stateless,as server doesn't need to remember anything,cookie is just a reminder.
+
+        forms with get request,in that case parameters are added to query,called query parameters.
+        + for space as we cannot have space in url,it has to be + or %20 and & as separator.
+
+        http is very robust protocol,we get encrpytion etc.
+
+        http is no longer limited to web pages,you can use it for any client server architecture.
+        majority of problems have been saved in http.
+
+        api : definition of programming interface.
+        REST : representational state transfer.
+        rest uses json.data should not be put in http headers,just use json.
+
+        mail uses port 25 and was developed in 1982
+        gmail is a user agent for me.
+        smtp is a p2p.
+        nslookup -type=MX stevetarzia.com to see the mail server ip address. MX means mail exchange
+        emails are easy to be faked.
+
+lecture 4: DNS
+    ad blockers can be used to block third party cookies/trackers 
+    in browser go to developers tools then to application and then under storage you can find cookies.
+    even new york times got facebook cookies.
+    you put entry in tld server.
+    ip of 13 root dns servers is hardcoded to your isp.
+    local dns server is usually operated by your isp,it acts like a cache.
+
+    a proxy is a middleman for a request.
+
+    route53 is amazons dns thing.
+    dynamic nameservers are cool : your dns server that replies intelligently.
+    dns can return multiple records for a given query.
+    ip geo location: finding location from ip.
+
+    nslookup www.google.com
+    ping 123.1.1.1
+
+    you get conneted say in 100ms
+
+    traceroute 1.11.11.11
+
+lecture 5: reliable transport
+    tcp gives to application the longest contiguous packets we got so far.
+
+lecture 6: TCP 
+    tcp is what makes reliable transport over unreliable channel possible.
+    DNS uses UDP
+
+lecture 7:
+    network assisted congestion control is not used in internet but in private clouds.
+
+lecture 8:
+    switch uses mac address to forward packets.
+    routers with respect to given interface is part of that subnet.
+    cidr notation uses /24 to show subnet and other way is to use bitmask.
+lecture 9 : NAT 
+lecture 10:
+    net neutrality means all packets treated same.
+
+lecture 11: BGP 
+
+lecture 12: broadcast.
+    internet doesn't allow broadcast
+
+lecture 13: mac
+    you need mac to get ip address
+
+
+    
+
+lecture 15: encrpytion and anonymity.
+    onion is called onion because it has layers.
+    
+lecture 16: authentication
+    browser comes with a few root certifcates.
+
+

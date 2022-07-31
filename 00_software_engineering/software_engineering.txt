@@ -1,0 +1,144 @@
+## OOP from nptel
+
+- started in early 1980's
+- UML became an ISO standard in 2004.
+- Object Modelling using UML.
+- UML is modelling langauage using which you can document and design things.
+- UML is independent of methodology.
+- methodologies are tied to notations.
+- modelling is an abstraction mechanism.
+    - we capture only important aspects and ignores the rest.
+    - different models obtained when different aspects are ignored.
+- view:  different perspective of a softawre.
+    - users view.
+    - structural view.
+    - behavioural view.
+    - implementation view.
+    - enivironmental view.
+- users view using usecase diagrams,it is the starting point.
+- structural view using class diagram and object diagram.
+- behavioural view using sequence digram state chart etc.
+- implementation view using component diagram.
+- enviromental view using deployment diagram.
+- a use case is a way user is gonna interact with that component.
+- there may be dependecies between use cases.
+- typically name of a use case is a verb.
+- use case diagram serves as a requirements specification.
+
+
+
+UDACITY: software Architecture and Design:
+
+Lecture 1:
+    A man is known by the design he keeps.
+    this course is learning by doing.
+    there is high level Architectural design and then there is detailed design.
+    the focus is on OOD.
+
+    you first express the analysis and design of an application using the UML.
+    specify functional semantics of an application using the Object Constraint language(OCL)
+    
+Lecture 2:
+    eg problem:
+        Designing a text Browser.
+         it has viewport== window, it has text, and it has scroll bar with a tray and handle.
+         use case: Structural elements. eg resizing the window, moving handle, etc 
+         operations of use cases: how the user will use the intended use cases, eg move handler in scroll bar, view text, resize window.
+         we would also need a File Manager to supply us the text, and this is not a GUI use case.
+         a use case doesn't need to be a GUI, it could be internal.
+
+    once yoiu have use cases, yoiu can begin to construct an analysis model, we will use UML to express this analysis.
+
+    UML class-model diagrams:
+        rectangle for classes, with three compartments, Name of class, attributes, methods.
+        class name in pascal naming convention.
+        methods using camel case.
+        operations can either do something or return something.
+        eg resizeViewPort(new size)
+        it is independent of language.
+        percepts: attributes that the user can see. eg text, scroll bar, viewport.
+
+    Relationships among components:
+        3 types in UML:
+            association, aggregation, generalization.
+    
+    min(size of window, size of file) nice way to say or express instead of being verbose.
+    we don't express Constraints or internals in UML, we use OCL for that.
+
+    association means when change in one changes another. It can have more than one component and we can name associations.
+
+    lines visible association:
+        file manager --------- viewport 
+        they effect one another, what you read defines what you see, and what you see defines what to read next.
+    
+    association can be ternary, if 3 components interact or change each other.
+        eg Handle proportion association:
+            scroll bar, filemanger, and viewport are associated this way.
+            as the size of handle is determined by the size of file in filemanager, and how much in scroll bar tray handle would mvoe is dependent of it and how many lines you see is also dependent on it.
+     dealing with Relationships is the hardest part.
+     association determines what subsequent event you want to see.
+
+Lecture 3: Design Concepts
+    design is delibrative, purposive planning.
+    software Design: The process of building a program while satisfying a problem's functional requirements and nto violating its non functional constraints.
+    It has two aspects:
+        Architectural Design: carving programs into components.
+        detailed design: dealingn with individual components with respect to data structures and alogrithms, can use pseudocode, flowcharts, decision tables, structured programming.
+   Approaches to software Design:
+        eg OOD 
+        it has a method: Systematic sequence of steps that a design team uses to solve a problem.
+
+        it can be a top down, or bottom up, many other tradeoffs in design.
+        tolls etc also to be used.
+
+        we need Design Validation == review == walk through.
+
+        specification = what 
+        Design = How 
+        programming = doing it
+
+    the earlier you find problems, the less expensive they are to fix.
+    Traditional Design documentation for your design:
+        sub compnents:
+            processes/activities
+            data/ data flows 
+        control flow 
+        performance 
+        resources 
+        what that choice of alogrithms
+    
+    Design Rationale:
+        The reasons for which you did what you did.
+    
+    coupling:
+        the extend to which compnents depend on each other for execution.
+        low coupling is good.
+    
+    cohesion:
+        the extend to which a component has a single purpose or function.
+        high cohesion is good.
+    
+    highly cohesive modules are good.
+    packages are for reduced coupling.
+    inheritance increases coupling.
+    information hiding: give syou freedom to change implementation just provide API.
+    abstraction and refinement: details get into smaller components.
+
+    Declarative programming is abstraction.
+    even classes, aggregates like arrays are a abstraction.
+    "i would have made this letter shorter, but i wasn't free" ~pascal  
+
+    philosophy of design:
+        use of models: for analysis.
+        understand social context.
+        use good tools like IDE's 
+        vocabulary invent:
+            folders, desktop, trash 
+    
+    design is most creative part of software development.
+
+Lecture 4: Diagrams
+    analysis is about the problem, and design is about the solution.
+    
+        
+

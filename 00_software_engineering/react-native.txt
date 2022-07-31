@@ -1,0 +1,447 @@
+MOSH HAMEDANI: 
+    
+    how to build fast and reactive mobile apps.
+
+    built on top of react and instead of targetting browser this targets browser.
+
+    a framework for building native apps using Javascript.
+
+    native means they are not web apps that look like mobile apps,they run on mobile without browser.
+
+    they can run on ios and Andriod.
+
+    there need not to be different codebases for android and ios.
+
+    facebook,instagram,uber eats,skype etc are built this way.
+
+    we can build react native apps using:
+            Expo Cli
+            React Native ClI 
+        
+    better use Expo for beginner friendly experience. and on top of react native.
+    we might not have access to everything native to these devices,but expo provides api for pretty much everything.
+
+    setting up development env:
+        run node version 12 or higher.
+        install expo Cli
+            npm install -g expo-cli 
+        install expo client on both ios and Android devices.
+
+        install vscode with extentions React Native Tools , React-Native/React/Redux snippets,prettier for formatting,material icon theme,format on save.
+
+    our first app:
+        expo init firstapp    //in terminal.
+        use manage workflow there as option,blank one.
+         open your code in vscode.
+    
+    structure:
+        you get assets folder,to put audio,video,images that you want to bundle with app.
+        App.js, a basic react-native component.
+            View is like a div in web world 
+            Text is used to display text
+            we don't  have div,a like html,react native provides its own syntax for them.
+
+        you can use class components or function components,better use function components.
+        
+        import React from 'react';
+        import {StyleSheet,Text,View} from 'react-native';
+        export default function App(){
+
+            return (
+                <View style={styles.container}>
+                    <Text> hello there </Text>
+                </View>
+            );
+        }
+        const styles= StyleSheet.create({
+            container:{
+                flex:1,
+                backgroundColr:'#fff',
+                alignItems:"center",
+                justifyContent:"center",
+                },
+        });
+
+        View gets mapped to UIview for ios and android view for andriod.
+
+        in TERMINAL:
+            npm start
+             metro bundler compiles all your js code into a single file.
+
+            logs will appear in the same terminal session.
+        
+        how to run on ios simulator:
+            you need mac.
+                you need xcode.
+                it comes with a simulator. run it.
+            in metro bundler in web all your need to do is to click on run on ios simulator.
+        react native uses fast refreshes hence automatically refreshes. ctrl+d to get options in expo.
+        if doesn't refresh,go to expo app and click on refresh.
+
+        how to run on android simulator:
+            download android studio.
+        
+        docs.expo.io for documentation.
+        under manage workflow you can find all instructions.
+
+        ctrl+m in emulator to see the options in expo,even in emulator we run it on expo.
+
+        to run on physical device is easier,just scan the qr code,install expo client,the network should be same,shake the device to see developer menu.
+
+
+    tools to debug:
+        using console.log() statements.
+        you can even see logs in browser,on the same port.
+
+        can debug in chrome:
+            though you can figure out things easily from the error.
+            just enable remote dubugging in expo client and now it will open in chrome.
+
+            in chrome open developer tools and do debugging,
+                in sources click on pause on exception,and reload from expo client,and put break points accordingly.
+
+                you can even execute line by line in sources,when debugging.
+                can even put varialbes in watch list.
+            
+            once down close debugger in app to avoid low peformance.
+
+        debugging in vscode:
+            enable debugging in vscode.
+            since you have React native tools extention installed,click on debug in vscode,create launch.json,select config accoridingly.
+        
+        .vscode contains vscode configurations for that project.
+
+    publishing:
+        it will have public web url.
+        publish to expo for devlopment.
+        for production we put on app store.
+        in metro bundler click n publish.
+
+    adding jsconfig.json to project makes it a js project and not a  typescript project.
+
+
+FUNDAMENTAL CONCEPTS:
+    core components and api's
+        View,Text,Image,Button,Touchables,Alert and so on.
+        head over to reactnative.dev/docs for documentation
+        a button would look like typical android button on android and typical ios button on ios.
+        we can customize look and file using styles.
+        there are api's to give access to native api's 
+        some api's are specific to android and same for ios.
+    
+    View
+
+        <View style={styles.container}>
+            <Text> Hello react native </Text>
+        </View>
+
+        we don't have div etc in reactnative, View is a like a div, it is a container component used to group things together.
+
+        const styles=StyleSheet.create({
+            container:{
+                flex:1, #it will grow horizontally and vertically to fill free space.
+                backgroundColor: "dodgerblue" //we can use rgb.
+
+            }
+        })
+
+        instead of View,use SafeAreaView if notch is an issue,it adds padding at the top. //import it
+
+    Text
+
+        <Text> hi there </Text>
+        you can't put text anywhere,it has to be in <Text>
+
+        it has props like 
+        <Text numberOfLines={1}> hi there</Text> it gives ... at the end
+
+        to make it clickable
+        <Text onPress={()=>console.log("hi")}> //or function name.
+
+    Image            to render images 
+
+        justifyContent: "center",
+        alignItems: "center"          //these two to put the container at center.
+
+        import Image from reactnative
+
+        <Image source={require('./assets/icon.png')}/> it is self closing.
+
+        require function returns a number,that is reference to our image.
+
+        for network images.
+
+        <Image source={{width:200,height:300,uri: "https..dhh.png }}/>  //need to metion dimetions.
+
+        props blurRadius={10} to make blurry.
+    
+    Touchables
+        Image doesn't have onPress
+        import TouchableWithoutFeedback from reactnative
+        put your image component in 
+        <TouchableWithoutFeedback>
+        </TouchableWithoutFeedback>
+
+        it has properties like onPress onLongPress etc.
+
+        TouchableWithoutFeedback when touched doesn't give any visual feedback.
+
+        TouchableOpacity is another way when clicked it becomes opaque for a fraction of a second.
+
+        TouchableHighlight its background becomes darker for a fraction of a second.
+
+        TouchableNativeFeedback is only for android.
+
+    Buttons:
+        <Button title="click me" onPress={()=>{}}/>
+        each platform gives different kind of button.
+
+        color="orange" prop for color.
+
+    Alerts:
+        onPress={()=>alert("button tapped")} like browser.
+    you need to import Alert and Button by the way.
+    Alert.alert("title","message",[{text:"yes",onPress:()=>{}},{text:"no",onPress:()=>{}}])
+
+    Alert.prompt("title","message",text=>{}) doesn't work in android.
+
+    Stylesheet api:
+        const styles=StyleSheet.create({
+            container:{
+                flex:1,
+                backgroundColor:"#fff"
+            }
+        })
+        this is not css.
+        style={styles.container} as prop
+        can give inline object style={{color:"#fff"}} or plane Javascript object.
+        but StyleSheet.create would validate our properties. and reactnative team has done some optimizations also.
+
+        you can also pass array of objects 
+        style={[styles.container,obj2]} right one overrides left one.
+    
+    styles should be placed below components not in separate files.
+
+    platform specific code:
+        SafeAreaView only works on ios.
+        import Platform module 
+        paddingTop: Platform.OS=== "andriod" ? 20 : 0;
+        import StatusBar
+        StatusBar.currentHeight to get it.
+    
+LAYOUT:
+    dimentions of components:
+        style={{
+            backgroundColor: "green",
+            widhth:150,
+            height:70
+        }}
+
+        these are density independent pixels
+        physical pixels=dips X scale factor.
+        eg iphone 4 is 320X480 but scale factor is 2x hence pixels would be 640X960.
+        width: "50%" for half of screen.
+
+        import Dimentions from rn 
+        console.log(Dimentions.get('screen')) you get width height and scale factor as well.
+        but it doesn't respond to orientation changes.
+    detecting orientation changes:
+        cmd left arrow or right arrow to rotate screen in emulator.
+
+        in app.json
+        "orientation":"default" to support both other are "landscape" "portrait"
+
+        hooks are functions that bring extra capabilities to our components.there are many inbuilt hooks.
+
+        npm i @react-native-community/hooks
+
+        import {useDimentions} from '@react-native-community/hooks'
+
+        this hook updates value anytime there is change.
+
+        console.log(useDimentions()) it return the same kind of object.
+        console.log(useDeviceOrientation()) it shows if landscape or portrait.
+        everytime we rotate the device,while app is reloaded.
+
+        const {landscape}=useDeviceOrientation()
+        in styles
+            height: landscape? '100%':'30%',
+        
+    flexbox:
+        to build complex layout.
+        flex: 1 take the whole avaible space,parent
+        flex=0.5 takes half the space parent
+        we usually use it for a container.
+
+        we can use views inside views.
+        with multiple child views we can use flex 1,1,1,2 etc to divide screen in respective ratios
+
+        width,height to a view is given say,these views will be layed out vertically one next to another.
+        now to lay them horizontally set flexDirection: "row" row-reverse,column,column-reverse etc
+        now primary axis is horizontal axis and cross axis is vertical axis.
+    
+    aligning items:
+        justifyContent: "center" to put in center along primary axis. can be flex-end etc or space-around etc.
+        alignItems: "center" for secondary axis.
+        flex,flexDirection,justifyContent,alignItems
+
+        you can put these for individual views are well 
+
+        alignSelf: "flex-start" etc 
+
+    wrapping items:
+
+        by default all are in one row and when new added items get shrunk.
+
+        so flexWrap: "wrap" ,now wraps and alignItems means for that line only.
+        alignContent: "center" for whole content in center. it only works when there is wrapping.
+    
+    flexBasis : 100 same as height or widith depending on primary axis.
+    flexGrow: 1 to grow to take whole space.
+    flexShrink: 1  to shrink 
+    flex is short for flex grow and flex shrink,-ve for flex shrink.
+
+    absolute and relative positioning in rn:
+        top:20 move 20 down form original position or -ve for to move up.
+        bottom: 20 is the opposite. 
+        same way left and right. 
+        position by default is relative.
+        and rest of the components do not get affected.
+
+        if we put position:"absolute" them it will be positioned based on parent.and other views will be repositined.
+
+    create folder app and put all application code into it. also move assets folder into it.in app.json update path to where it is needed.
+
+    create screens folder in to to have all screen components
+        inside it  WelcomeScreen.js 
+        rsf to have basic template.
+        <ImageBackground source..> 
+        put other components here.
+        </ImageBackground> to have image as source. 
+
+    in App.js 
+        import WelcomeScreen from "./app/screens/WelcomeScreen";
+
+        return (
+            <WelcomeScreen/>
+        )
+
+    you can write multiple styles in a StyleSheet.create.style.logo,style.loginButton etc 
+
+    resizeMode="contain" is cool property for images to show while image.
+    create config folder config and you can put configurations there,eg colors.js and export an object containing say primary,secondary,black,etc 
+
+style:
+    borders:
+        borderWidth: 10,
+        borderColor:"greem",
+        borderRadius:10,
+
+        we do side wise like borderTopWidth:20,borderTopLeftRadius
+    
+    shadows:
+        for ios:
+            shadowColor: "grey",
+            shadowOffset:{width:10,height:10},
+            shadowOppacity:1,
+            shadowRadius:10
+        for android:
+            elevation:20,
+    paddings and margins:
+        padding:10,
+        paddingHorizontal:10,
+        paddingLeft:30, etc
+        
+        overiding takes place from top to bottom.
+
+        margin:20,
+        marginTop:20,
+        marginHorizontal:20
+    
+    styling text:
+
+        fontSize:30,
+        fontFamily:"whatever" you can also use custom fonts.
+        fontStyle: "italic",
+        fontWeight: "bold" or "600"
+        color: "green"
+        textTransform: "capitalize",
+        textDecorationLine: "line-through",
+        textAlign: "right",
+        lineHeight: 10,
+
+        these properties are only for text,there is no style inheritance you have to give it to Text only.
+        and styling doesn't give errors.
+    
+    encapsulating Styles:
+        you create a compnent say AppText.js and you can put text within this component to give same style.
+
+        function AppText(props){
+            return (
+                <Text> {props.children}</Text>
+            )
+        }
+        apply styles and 
+        export it
+
+        now use anywhere use <AppText>hi there </AppText>
+
+    
+    icons:
+
+        expo gives whole lot of icons.
+        import {MaterialCommunityIcons} from '@expo/vector-icons' this comes with expo automatically.
+        ctrl plus space to see possible options.
+
+        <MaterialCommunityIcons name="email" size={60} color:"green" />
+    
+    platform specific code:
+
+        ...Platform.select({
+            ios:{
+                fontSize:20,
+                fontFamily:"ff"
+            }
+            android: {
+                fontFamily:"roboto"
+            }
+        })
+
+        it returns one of the objects depending on os.
+        hence we destructure it in style.
+    
+        you can also implement these components differently in different files.
+        eg AppText.android.js and AppText.ios.js 
+
+            in app 
+                import AppText from "path"
+                and simulator will automatically decide based on os.
+            
+        
+        you can also put styles in different file if you want.or put index.js in a folder and import that folder.
+
+        better use styles in same file than separate file.
+
+        giving props
+            <AppButton title="Login" onpress={()=>console.log()}> 
+            in below props.title , props.onpress 
+        
+        or function button({title,onpress}){
+
+        }
+
+        image path as prop will not work as it would make it dynamic,you you have to use require also in prop.
+        overflow: "hidden", for overflowing.
+    
+Lists:
+    flatlist component:
+        <flatList data={arrayofobjects} keyExractor={message=>message.id.toString()} renderIten={({item}=><ListItem title={item.title}/>)} /> list item is our own custom compnent.
+
+
+
+
+
+
+
+
+

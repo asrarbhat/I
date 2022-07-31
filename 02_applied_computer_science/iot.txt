@@ -1,0 +1,72 @@
+what is iot?
+    the iot is the intelligent connectivity of physical devices, driving massive gains in terms efficiency, business growth and quality of life.
+
+    why:
+        efficiency
+        improves quality of life.
+    
+    iot is going to be everywhere.
+    it is used by IT,consumer,industry etc.
+
+    everything could be connected to each other and make them talk to each other.
+    and be connect to cloud.
+
+    in heart it is:
+        sensors and actuators + connectivity + people and processes.
+        using internet the data flows.
+        there are processes running on it.
+    sensors:
+        to sense light,humidity,sound,tilt,electricity,leaks,flow,gas,temperature,position etc 
+    connectivity:
+        using bluetooth,wifi,ethernet,satellite,etc.
+        we can control the device using internet.
+    people and proceses:
+        this data can be used for better decision making or to notify consumer,etc 
+        remote monitoring,automation etc 
+
+    eg smart thermostats,connected cars,activity trackers,smart outlets,etc 
+    2 billion devices in 2014
+
+    can be used in health,home,etc 
+
+    home and building security,building automation etc.
+
+building blocks of an IOT system:
+    hardware:
+        microcontroller:
+            ardruino,raspberry pi etc.
+        shields:
+            wifi,bluetooth,ethernet etc 
+        electrical components:
+            resistors,copacitors,transistors,semiconductors etc.
+        electro-mechanical:
+            like a relay(like a switch in wire)
+    software:
+        IDE
+        drivers  //for translation
+        libraries  //prewritten code
+        database
+        cloud to log entries.
+        programming language.
+    
+    iot devices could be talking to each other as well.
+    we can use web sockets for devices to connect to each other.
+    
+    ardruino UNO is one of the microcontroller.
+        you get a port for power,a port for USB to connect to your computer,and you have a lot of pins.
+        and ardruino nano is a smaller version of the same,with same port for power and to connect to computer.
+
+        you can't connect to internet using these boards and you have to add ethernet shield on top of them.ethernet shild is also a board.you can add sd card also to the shield.there are smaller shield chips also.or have a board with both internet and microcontroller.And there is also a wifi shield.
+
+    go to arduino to download the ide
+
+    every program is called a sketch.
+    go to file and examples to run example programs.
+    verify,upload,to the device.
+    you have pins like pin 8 to connect to say outside led.And in program you will refer to that pin on board.
+
+    bread board is used for demos.
+
+    
+    
+     

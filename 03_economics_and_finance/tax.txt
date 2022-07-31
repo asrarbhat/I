@@ -1,0 +1,26 @@
+every year the rules would be changed.
+you have to follow that year.
+tax rates would be changing.
+government gets money from taxation.
+assessment year/financial year: april 1st to 31st march.
+    you pay taxes on income earned in that assessment period.
+history:
+    1857, government incurred heavy losses: sir james wilson introduced income tax in 1860. Then with a lot of amendments we got 1961 act finally.
+        it gives us method to assess and penalties etc.
+        penalties for late, prosecutions for not at all paying.
+    central board of direct taxes CBDT is the department for it.
+
+    finance act: finance minister prsents a finance bill in the parliment every year.
+        bill has to pass by  parliment and president of india, in the month of march.
+        applicable from the very first day of financial year.
+
+    features of income tax:
+        central act: charged by central govt.
+        direct tax: cannot shift the burden, you pay it yourself.
+        tax on income: salary, hourse property, business, capital gains etc 
+        annual tax: you pay on annual income only, for that assessment year/ financial year.
+
+    income tax: direct, indirect
+        direct tax: imposed on a pariticular person.
+            income tax, divident tax, inheritance tax, estate duty.
+        

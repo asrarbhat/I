@@ -1,0 +1,54 @@
+MIT 
+
+LECTURE 1:
+    what is psychology and economics, or behavioural economics?
+        it is a field of academic research that studies the joint influences of psychological and economic factors on behaviour.
+        it is an attempt to take insights from biology to make economic models more realistic, hence more prediticive so we can come up with better policies.
+    
+    old assumptions:
+        people know their utility functions and they try to optimize it and they don't make mistakes in doing so.
+        people are driven by self interest. They don't care about what other people think about them.
+        people prefer stable preferences.
+        risk aversion: people are risk averse. They prefer low risk.
+        people are perfect information processors.
+        people have no taste for beliefs or information, they only use information to make better decisions. It doesn't effect their utility function.
+        are perfectly rational.
+        maximize utility.
+
+    when you look at world these assumptions could be violated:
+        people tend to prefer the information that is in their favour.
+        transitivity of choices is not always well defined.
+        it is tough to update belief as in bayesian systems.
+        people care about what other people think.
+        people don't always want more information, eg thirteen from house not wanting to know the result if she has huntington.
+        memory is limited.
+        people give charity.
+        attention is limited.
+
+    the world is full of cognitive biases, people do not behave perfectly.
+    we can model these deviations, based on improved assumptions.
+    key principles of standard economics still apply.
+    we just focus on important deviations.
+
+    very often prices are the most important aspect of choice, morals etc also play a small part.
+    
+lecture 2: Overview II 
+    How do economists think about human behaviour?
+        1. goal driven individual behaviour: constrained optimization.
+            - utility function: what makes people happy.
+        risk averse: avoiding risk.
+        2. Beliefs: what do people believe about their environment?
+        3. Choice/Decision making: how do people use the above to make decisions?
+
+    psychological insights can improve our understanding of each of these components.
+
+    social preferences:
+        how do people think about themselves and others.
+        Much of classical economics assumes that people are selfish.
+        charity is like 2% of US GDP, hence people do care about others.
+        people can do stuff to feel good about themselves.
+        you could do things for to maintain a social image, that you care about what other people think of you.
+        or you might do stuff because, because doing it is necessary to survive.
+        you might do stuff just to get something in retain, perhaps a favour.
+        or you just don't like inequality in society.
+        

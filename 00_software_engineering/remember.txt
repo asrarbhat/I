@@ -1,0 +1,184 @@
+#PYTHON
+    DICTIONARY
+        keyvalue={'name':"rayon"}
+        keyvalue[2]=3
+        keyvalue[3]=True
+
+        print(keyvalue[3])
+        # print(keyvalue[4]) gives keyError
+        print(keyvalue.get(3,0),keyvalue.get(4,0))
+
+        print(keyvalue.pop(3)) #returns value and removes key
+        del(keyvalue['name'])
+        print(len(keyvalue))
+        print(3 in keyvalue,2 in keyvalue)#for key membership
+        print(list(keyvalue.keys()),list(keyvalue.values()),list(keyvalue.items()))
+
+        print(keyvalue)
+    
+    LIST:
+        arr=[1,2,3,4]
+        print(len(arr),max(arr),min(arr))
+        arr[2]=77
+        print(arr[3])
+        print(3 in arr,7 in arr,arr.index(4))
+        arr.append(3)
+        arr.pop()
+        arr.pop(0)
+        arr.insert(1,22)
+        arr.remove(22)
+        print(arr[2:3])
+        print(arr[::-1])
+        print(arr)
+    STRING:
+        string="0123456789"
+        print(len(string))
+        print(string[3])
+        print(list(string))
+        print(" ".join(list(string)))
+        print(string.split("3"))
+        print(string.strip())
+        print(string.index("456"))
+        print("456" in string)
+        print(string.replace("456","444"))
+        print(string[::-1])
+        print(string[2:4])
+        print(string+"hello")
+        string=string+"hello"
+        print(string.upper(),string.lower())
+
+#JAVASCRIPT
+    Object
+        let map={"name":"rayon"}
+        map[2]=3
+        map[3]=true
+
+        console.log(map[3])
+        console.log(map[77])//gives undefined
+        //you can implement get
+        delete map['name']
+        delete map["hola"]//doesn't give an error
+        console.log("2" in map)
+        console.log(Object.keys(map).length,Object.values(map),Object.entries(map))
+        console.log(map)
+    
+    ARRAY:
+        let arr=[1,2,3,4]
+        console.log(arr.length,Math.max(...arr),Math.min(...arr))
+        arr[2]=77
+        console.log(arr[2])
+        console.log(arr.indexOf(4)) //in opearator doesn't work
+        arr.push(3)
+        arr.pop()
+        arr.shift()
+        arr.unshift(2,3)
+        arr.splice(1,0,56)
+        arr.splice(2,1)
+        console.log(arr.slice(2,6))
+        console.log(arr)
+    STRING
+        let string="0123456789"
+        console.log(string.length)
+        console.log(string[3])
+        console.log(string.split(''))
+        console.log(string.split("").join(""))
+        console.log(string.split("3"))
+        console.log("  hi  ".trim())
+        console.log(string.indexOf("4567"))
+        console.log(string.replace("456","444"))
+        console.log(string.substring(5,8))
+        console.log(string+"hola")
+        console.log("hola".toUpperCase().toLowerCase())
+#JAVA
+    MAP
+        Map<String,Integer> map=new HashMap<>();
+        map.put("hello",1);
+        map.put("there",2);//order is not preserved
+        System.out.println(map.get("hello"));//returns null if key not here
+        System.out.println(map.getOrDefault("hell",3));
+        System.out.println(map.remove("hello"));//removes key and returns value
+        System.out.println(map.size());
+        System.out.println(map.containsKey("there"));
+        System.out.println(map.keySet());
+        System.out.println(map.values());
+        System.out.println(map.entrySet());
+        System.out.println(map);
+    
+    LIST
+        List<Integer> list=new ArrayList<>();
+        list.add(3);list.add(4);list.add(5);
+        System.out.println(list.size());
+        System.out.println(Collections.max(list));
+        System.out.println(list.get(1));
+        System.out.println(list.contains(4));
+        list.set(0,5);
+        System.out.println(list.indexOf(55));
+        list.add(33);
+        list.add(1,111);
+        list.remove(0);
+        list.remove(3);
+        System.out.println(list.subList(0,2));
+        list.clear();
+        list.remove(new Integer(3)); to remove element and not by index
+        System.out.println(list);
+    
+    STRING
+        String string="0123456789";
+        System.out.println(string.length());
+        System.out.println(string.charAt(3));
+        System.out.println(Arrays.toString(string.split("3")));
+        System.out.println(String.join(" ",string.split("3")));
+        System.out.println(string);
+        System.out.println(" hithere ".trim());
+        System.out.println("hi there".indexOf("there"));
+        System.out.println("hi there".contains("hi"));
+        System.out.println("hi there".replace("hi","hello"));
+        System.out.println(string.substring(1,4));
+        System.out.println("hello"+" there");
+        System.out.println("hello".toUpperCase()+"HI".toLowerCase());
+
+#C++
+    MAP
+        map<string,int> dict;
+        dict["hello"]=3;
+        dict["how"]=4;
+        cout<<dict["hello"]<<endl;
+        cout<<dict["how"]<<endl;
+        cout<<dict["what"]<<endl;//returns 0
+        cout<<dict["say"]<<endl;//it creates it first assigns 0 and returns it.
+        map<int,string> mapper;
+        mapper[2]="hi";
+        cout<<mapper[2]<<endl;
+        cout<<(mapper[33]=="")<<endl;//it would create that element first then return empty string
+        cout<<mapper.erase(2)<<endl;//it returns 1
+        cout<<mapper.size()<<endl;
+        cout<<dict.size()<<endl;
+        cout<<(dict.find("say")==dict.end())<<endl;//find returns pointer or end to check membership.
+        dict.clear(); //to clear the dict.
+    
+    VECTOR
+        vector<int> list {1,2,3,7};
+        cout<<list.size()<<endl;
+        list[3]=44;
+        list.push_back(43);
+        list.pop_back();
+        list.insert(list.begin()+2,34);
+        list.erase(list.begin()+3);
+        for(int i=0;i<list.size();i++){
+            cout<<list[i]<<" ";
+        }
+    
+    STRING
+        string str="0123456789";
+        cout<<str.size()<<endl;
+        cout<<str[7]<<endl;
+        cout<<str.find("456")<<endl;
+        cout<<str.substr(3,5)<<endl;//from 3 5 elements
+        cout<<str+"hello"<<endl;
+        cout<<str<<endl;
+
+
+
+learn by doing:
+in java list1.addAll(list2)
+in c++ objects are not passed by reference,they are passed by value,unless you use pointers or references.

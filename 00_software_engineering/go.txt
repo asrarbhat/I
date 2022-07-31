@@ -1,0 +1,96 @@
+why go:
+    go was created by google and it has interesting credentials.
+    they hired ken thompson etc,people who created B,C unix etc.
+
+    it was created for multiple machines,hence it helps with parallel computing.
+    it is superfast.
+
+    it was created to do concurrency and parallelism easily.
+    their website is golang.org
+
+    it is good for networking,system,automation,command-line tools etc.
+
+    it is compiled.
+
+    it is both fast and fun for humans.
+
+    it is procedural,imperative.
+
+    it is static and not dynamic.
+
+development setup:
+
+    golang playground online to run go code.
+    install go
+    go version
+    go env 
+    go help
+
+    checksums are cool.
+go workspace:
+    one folder- any name:
+        it has bin,pkg,src
+    GOPATH should point to this folder
+    GOROOT should point to go 
+
+    install go extention in vscode.
+
+    go run main.go 
+    go get to get code from web.
+
+freecodecamp youtube
+    why new langauge:
+        python,c/c++,java were cool but there are certain challenges.
+        multithreading,etc are little challenges.
+    go:
+        strong and statically typed.
+        execellent community.
+        key features:
+            simplicity.
+            fast compile time.
+            it is garbage collected,no need to manage memory.
+            build-in concurrency,no library to import.
+            compile to standalone binaries,all go dependencies there.
+        golang makes more sense than go online as go could mean anything. 
+
+    eg 
+
+
+            package main //every go application is structured into package,and main is a special package,as it is the entry point of our program
+
+            import (
+                "fmt"   //called as fimt
+            ) 
+
+            func main(){
+                fmt.println("Hello,playground")
+            }//main function in main application is the entry point.
+
+            also add bin to path. GOROOT is upto go not till bin 
+            GOPATH is upto where your project folder, and in your project folder you got bin.
+            go get github.com/nsf/gocode,it gives you autocomplete in go.
+
+            you can add as many to GOPATH as you want.
+
+            workspace needs src folder.
+            bin is where binaries are created.
+            pkg is where intermediate binaries are stored,they are created so they are not compiled everytime.like pycache in python.
+
+            go extention by lukehogan is cool.
+
+            in src create github.com under that asrar and under that first app
+            as when you put it in github and someone downloads,it will create this structure.
+
+            create Main.go 
+                package main
+                import "fmt"
+
+                func main(){
+                    fmt.println("hello go")
+                }
+
+                go run src/github.com/asrar..../Main.go 
+                go build github/    firstapp
+                ./firstapp 
+                
+
