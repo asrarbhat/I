@@ -139,6 +139,12 @@ Lecture 3: Design Concepts
 
 Lecture 4: Diagrams
     analysis is about the problem, and design is about the solution.
-    
-        
+
+Lecture 5: Object oriented Analysis exercise
+    Before you can solve a problem, you need to understand it, this process is called analysis.
+    It is is the first step in Software Engineering.
+
+    OOA: Object oriented analysis
+        it is a requirements analysis technique.
+        modelling real world object based on their descriptions.
 

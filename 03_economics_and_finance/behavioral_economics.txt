@@ -51,4 +51,72 @@ lecture 2: Overview II
         or you might do stuff because, because doing it is necessary to survive.
         you might do stuff just to get something in retain, perhaps a favour.
         or you just don't like inequality in society.
-        
+    people's desire are more than their actual behaviour.
+    it is called present bias: people prefer better things now, instead of in future. And people don't care if you give it at 52 weeks later or 54 weeks later but two weeks today make huge difference.
+        Hence there is emphases on present.
+    Time preference:
+        people are impatient.
+        people are realtively patient for far-off decisions, like wanting to diet in the future. They may say yes to do it in future.
+        people are less patient for immediately relaavent decsions like an immediate sacrifice of diet.
+        it is like, people want gains in present and losses in future, because you overweight present utility function.
+
+    There is a lot of over confidence in the world in many situations. You end up failing.
+    women in india are under confident. You end of not trying.
+    people do think in terms of percentages, if you are buying things of lakhs you don't care for a few thousands here and there, but if it is same amount but half the price of item, you think more about money.
+    hence people do think in relative terms instead of absolute very often.
+    firms do think about psychology of consumer.
+
+Lecture 3: Time preferences
+    the choices between the present and the future.
+    like savings and consumption.
+    you see the utility in different points in time and decide accordingly.
+    every such choice would have cost and benefits.
+    like going to gym.
+    purchasing an expensive software.
+    deactivating a social media account.
+    for all kind like investment, borrowing, sleep, college degree, dating.
+    people are really impatient in short run, and really patient in long run, they want it today than tommorow but they dont mind 1 more day than 300 days.
+    credit card is like 20% interest rate for a year, because people are impatient and they want money now.
+    discount factor tends to be small in short run and high in long run.
+    people don't always follow plans they make for future.
+    like going to gym from monday, or dieting from monday.
+    preferences can change in future.
+    you can help yourelf by controlling your temptation.
+    people are too confident that they got self control.
+    self control devices might help.
+
+Lecture 4: Time preference
+    people are more impatient between today and tommorow than between tommorow and day after tommorow.
+    one that time comes, i change my plans based on my circumstances called dynamic inconsistency.
+    you can restrict your choices for your future self, for him to behave as you want.
+    the goal of learning time preference is to deviate from this model. As this behaviour is irrational.
+    procastination effects total welfare in a bad way.
+    better be sophisticated than naive.
+    naive person things, he will follow the plan, and sophistacated person thinks he can't follow so he does things in present.
+
+Lecture 5: 
+    you can use commitment devices, it might not work though.
+    things often take longer than the time we plan.
+    don't overestimate yourself.
+    don't set early deadlines.
+
+Lecture 6:
+    
+Lecture 7:
+    choices involving risk.
+    risk aversion: tendency to avoid risk, to avoid losses.
+    insurance industry exists to help people reduce risk..
+    people look for ways to reduce risk.
+    risk reduction has its price.
+    people are not risk averse in all situations eg gambling, etc 
+    you can compute expected utility of all situations.
+    a risk averse person rejects all fair gambles.
+    the utility function is concave.
+
+Lecture 8:
+
+Lecture 9:
+Lecture 10:
+Lecture 14:
+Lecture 22:
+    
