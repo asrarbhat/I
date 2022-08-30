@@ -178,4 +178,29 @@ Lecture 4:
         It is the point at which players are playing best responses to each other.
         with number game with 2/3 thing, the nash equillibrium was 1. That doesn't mean people would play at nash equillibrium. But repetition and learning can result to convergence to nash equillibrium.
         
+Lecture 5:
+    Nash equillibrium:
+    defn" a strategy profile(strategies of all players for a given game)(s1 star, s2 star, ...) is in NE if for each player i, its choice is a best response to the other players choices s minus i.
+
+    that doesn't mean that people play at NE.
+    people are not rational enough to play at NE.
+
+    no individual can do strictly better by deviating from nash equillibrium.
+    if someone changes their position, then nash equillibrium would also change.
+
+    nash equillibrium is self fullfilling belief.
+    nash strategy: strategy at nash equillibrium.
+
+    if all people choose nash strategy, then noone would have any regret.
+
+    first elimimate dominated strategies for both players during analysis.
+    and then do further analysis on remainging strategies.
+
+    nash equillibrium form the matrix way of analysing is a box where a box contains best responses for each other not just one part. Hence it is easy to find nash equillibrium from the matrix.
+
+    nash equillibrium doesn't mean that box has equal value.
+    
+    nash equillibrium doesn't need to coincide with the best strategy for you.
+    no strictly dominated strategy could be played in nash equillibrium.
+    
 
