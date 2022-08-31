@@ -157,6 +157,8 @@ Session 2: Present Value Relation I
     time and uncertainty play major role in valuing an asset.
     the value operator : Vt
     in case of uncertainty we use approximations.
+    
+    it is called discount rate as it is a number less than 1, and dollar now is more valuable than dollar tommorow because of impatience.
 
     like you convert two currencies into common currency and then compare,otherwise we cannot. Same thing applies to cashflows on different dates,you need a common date. numeraire is the currency which you convert everything else into.
     Vt is sum of value of all cashflows in common currency.
@@ -218,6 +220,7 @@ session 4: Present value Relations III
         inflation measures purchasing power of money now vs later. it is possible that a dollar buys you more next year.
         time value of money is about impatience.
         there is nominal wealth and real wealth, real wealth considers inflation.
+    creditor is one who gives loan and investor is as in partnership.
     fixed income securities:
         fixed income securities are financial claims with promised cashflows of known fixed amoun t apaid at fixed dates, unlike a stock, they have fixed income. They are the simplest securities.
 
@@ -246,8 +249,11 @@ session 4: Present value Relations III
         by looking at bond prices, you can get an idea of future like what market thinks of discount rates.
         bond <> IOU
         5% 3 year bond means 5% every year and principal at the end.
-        you find price from market and value by valuation.
+        you find price from market and value by valuation. And if there is a difference, then there is an opportunity to make money.
+        to default means to not be able to pay back.
         credit risk: how do you know i am still gonna be around after all those years, that the borrower may not be able to pay back the debt.
+        you can infer interest rates from price of bonds, which is important to make money.
+        you can try to predict future from prices.
 
 lecture 5:
     interest rates can differ over time, as there is market for borrowing where the interest rate is determined.
@@ -261,7 +267,7 @@ lecture 5:
 
         forward transaction: transaction to be done in future, that we agree on today.
 
-        eg if you realize that this bond would pay 5% for year 1 and 7% for year2 which is higher than market rate for both years which is 5% for both years, then you can borrow money at 5% rate and buy the bonds for two years and make money. or it the average could be 7% of which first year is 5% and second year is 9% hence for the second year you make 9%.
+        eg if you realize that this bond would pay 5% for year 1 and 7% for year2 which is higher than market rate for both years which is 5% for both years, then you can borrow money at 5% rate and buy the bonds for two years and make money. or it the average could be 7% of which first year is 5% and second year is 9% hence for the second year you make 9%. And if for second year rate is more than 9% then you are screwed.
 
     coupon bonds:
         intermediate payments in addition to final principal payments.
@@ -270,17 +276,21 @@ lecture 5:
 session 6:
     law of one price: two identical cashflows must have the same price. In other words to assets of same value should have same price.
         as otherwise, i can buy the cheap one and sell the expensive one, hence i would generate money out of nothing.
-        Arbitrage: buying and selling same thing in two different markets and take advantage of price difference.
+        Arbitrage/free lunch: buying and selling same thing in two different markets and take advantage of price difference.
         you can take advantage of it.
-        there are people at firms whose job is to look for Arbitrage.
+        there are people at firms whose job is to look for Arbitrage called Arbitrage desk.
         short sell: you borrow and sell the securities.
         if you can't short sell, you can't take advantage of Arbitrage.
         short sell: for a stock could pressure it to go down as people think it would go down.
+    take advantage of Arbitrage and mispricings.
+    the fastest person does it.
+    you can have fixed income Arbitrage as well, solving system of linear equations to see that.
+
 session 7:
     in corporate bonds, there is a chance that you don't get paid. there is risk.
     bonds are not for high returns. They are used as safe heaven by people.
     a default is when bond issuer fails to pay promised payments (interest+principal)
-    portfolio: collection of secruites.
+    portfolio: collection of securites.
     the longer the period of bond, the higher the chances of default.
     diversification reduces the risks and returns, the expected value is near the original value. And this is what pension funds etc look for.
         you have to make sure, different securities are not corelated in this case.
@@ -289,7 +299,7 @@ session 8: equities
     equity: an ownership in corporate.
     cashflows: dividents(new growing companies don't give dividents), price appreciation of that share.
         dividents can be cash or stock.
-    bondholders of a company only has claim to what the value of their bond is and they are first in line with respect to claim on company, whereas the equity holders get everything else.
+    bondholders of a company only has claim to what the value of their bond is and they are first in line with respect to claim on company, whereas the equity holders get everything else(residual claiment).
     limited liability: you can only lose what you put in stocks.
         you can go bankrupt in 8 companies and win on 9th, that is the power of limited liability.
     you get money from public markets, and give them voting rights for them to have confidence on how the company is run.
