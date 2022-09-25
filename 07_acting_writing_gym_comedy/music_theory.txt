@@ -1,0 +1,96 @@
+YALE:
+
+lecture 1: Listening to music
+    pop music/popular music: all music that is popular, one with mass appeal.
+
+    where in brain is music processed:
+        temporal lobe is where your hearing goes.
+        hence from both sides.
+        music is muscle memory.
+        it is about processing sound.
+        music is intrincically sound.
+    
+    classical music: earlier music.
+    composer:
+        person who writes music.
+        composer produces composition.
+    music director:
+        puts different kinds of music together to build a whole song.
+    you can figure out the emotion from the music.
+
+    two dimentions/axis of music:
+        pitch and time
+    
+LECTURE 2: intruments and musical genres.
+    genre: type of music.
+    symphonies: have 4 movements(parts of song)
+    
+
+
+
+youtube:
+    tempo: speed/pace of song. It could be fast or slow.
+    beat: unit of time in music.
+        hence tempo is measured in bpm or beats per minute.
+        common BPM 40 to 250.
+    
+    note: pitch/frequency and its duration.
+        most pleasant frequencies: ABCEFG 
+        any frequency that is multiple of these is also considered the same note.
+        eg 440 and 880 hz are both A 
+        we distinquish between these by name and octave number, like A4 A5 are from different octaves.
+    
+    on an 88 key piano
+        first key is A0 till G0 and then A1 
+        sharp means going up and flat means going down.
+        gap between two keys is called half step or semitone.
+        there are 12 semitones in an octave.
+        E doesn't have sharp hence F doesn't have flat, and C doesn't have flat.
+        and 12 semitones start with C then 2 consecutive blacks then a gap then 3 consecutive blacks.
+
+    scales is a collection of notes that sound good together.
+        there are usually 2 types of common scales, major and minor. major sounds happy and minor sounds sad.
+        a scale has a root note which it is named after eg. Cmaj
+
+    chords: multiple notes played in harmony at the same time.
+        a chord consisting of three notes is called a triad.
+    
+    chromatic scale: a scale of 12 semitones.
+    modern tones are equally tempered, that is ratio of one note to next is fixed as about 1.059 or twelth root of 2.
+
+jason allen music theory: levels 1,2,3:::
+-----------------------------------------
+    Your ear trumph's the Music theory, that if it sounds cool then it sounds cool. Let your ear be the guide. If you don't break the rules, everything will sound fine and boring.
+
+    staff paper: paper with 5 lines(4 gaps) on it called the staff. You write music on it. Just download staff paper pdf and print it. Or just use a software so you can even play it, eg Sibelius, Finale, MuseScore (free and open source). These programs are called notation editors just like text editors.
+
+    sheet music is just you telling the performer what to do and you are being hyper specific. The dots say what notes to play and the bars say how fast or the rythm of the notes.
+
+    The dots(black dots)/pitch:     
+        the vertical resistor symbol means there is no note there, or rest.
+        we alternate between having a note on the line and in between the lines.
+        FACE are the spaces from bottom up, and you can figure out other from the relative positions. Hence the lines from bottom to up are EGBDF = every good boy deserves fun.
+        and notes cirlce around ABCDEFGABCDEFGABC...
+    
+    Pitch Class:
+        pitches/notes that are multiple of each other belong to same pitch class, there are 7 pitch classes.
+    
+    Octaves:
+        Octave means 8, there are 7 unique pitch class and they repeat with eight. Any note from the same Pitch class are so similar that they sound same.
+        playing same note from different octaves as a chord sounds good.
+    
+    An interval is a space between two notes(in a chord that is vertical distance in terms of frequencies) eg an interval of octave (which sounds good)
+
+    The piano keyboard:
+        piano is the most ubiquituos instrument, you can see the notes.
+        middle C C4 is often written as reference to see in which octave you are.
+        E# and B# do not exist same way Fb doesn't exist and Cb doesn't exist (sharp and flat)
+        accidentals: # or b next to a note.
+        a half step is the smallest amount of space you can move. The alternate is whole step, taking two half steps. E to F is a half step, though typically it is from a note to its sharp. A whole step form E is to F#.
+        half step and whole step are also an examples of intervals.(semitone and tone)
+        consonance and dissonance: consonance is stable whereas dissonance is clash.
+        overtone: other frequencies that you produce along with the fundamental one.
+        last key on 88 piano is C8 and first key is A0, and there are eight iterations. 
+
+    
+    

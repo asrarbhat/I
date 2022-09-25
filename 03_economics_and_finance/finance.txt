@@ -18,6 +18,12 @@ MIT:
 
 session 1: Introduction  and Course Overview
 
+    mortgage backed securities: an institution buying a lot of mortgages(paper) bundle them together and sell as securities to investors.
+    subprime mortgages: giving mortgage to people with low credit score.
+    predatory lending practises: unfair and abusive loan terms on borrowers,high fees, high interest rates.
+    bubble: rapid increase in price driven by irrational Decisons.
+    james simons, warren buffet, jack welch are some good examples of successes from the spectrum.
+    
     The only reason the Finance Industry exists is because of Time and Risks. If you eliminate time and risk, there is no finance market.
     Finance is a term for management, creation, and study of money and investments. Specifically, it deals with the questions of how an individual, company or government acquires money called capital in the context of a business and how they spend or invest that money.
     financial analysis: finding price for things.
@@ -372,6 +378,7 @@ Session 10: Froward and Futures contracts || and options I
     what determines Forward and Futures Prices:
         just like other valuation p(1+r)^T 
 
+    margin call: when you account is about to default.
     options:
         they gives you options, you don't have to participate in final transaction, it gives you right but not obligation to do it.
         
@@ -394,6 +401,10 @@ session 11: options II
     in times of volatility you can be rich.
     you can also do reverse, like make money if prices are stable.
     in fact you can generate any kind of function you want for your payoffs: which is mind blowing, like sigmoid functions.
+
+session 2: options III
+     
+
 youtube:
     financial institutions:
         depository institutions:
