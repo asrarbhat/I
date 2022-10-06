@@ -478,6 +478,90 @@ BRANCHING:
         install git graph.
         better use gitkraken.
         
+REWRITING HISTORY:
+    great but dangerous feature.
+
+    why rewrite history:
+        if bad history, or meaningless or too spread out, or random.
+        we want history to tell a story.
+        make smaller commits into a one big meaningful commit.
+        split large commits into smaller ones.
+        reword commit messages.
+        drop unwanted commits.
+        modify commits.
+        BUT IT IS DANGEROUS.
+    
+    the golden rule of rewriting histoy:
+        don't rewrite public history: commits that are shared with any other people.
+        commits are immutable, if you modify, it creates another one.
+        if you rewrite and push to central repository, then it would be rejected.
+        you can use git push --force
+        if you are modifying the central repositories and rewriting its history then other people wouldn't be able to push any more as the central repo is now different.
+        one public, don't change the history.
+        it is good practise to rewrite private history, before sharing it with the world.
+
+    noise:
+        eg a commit saying fix a typo, etc or sometimes alternate commits are not relavant.
+        eg update terms of service and google version, there are two different things and we should split them.
+    
+    undoing commits:
+        git revert HEAD if shared with other.
+        git reset --hard HEAD~1
+            soft only changes repo, mixed changes repo and staging area, and hard changes all three to that commit.
+            mixed is the default option.
+        for reverting:
+            git revert HEAD~2
+            reverting creates revert commits.
+            if reverting multiple commits:
+                git revert --no-commit HEAD~3.. 
+                    it adds all those to staging area, instead of commiting them.
+                git revert --abort/continue
+    recovering lost commits:
+        if you lose or reset by accident.
+        all objects are kept for a while.
+        git reflog //it shows how head moved.
+        git reflog show feature //for feature pointer.
+        if you want to go back to any of them, just use git reset command.
+    
+    Amending the last commit:
+        git commit --amend //git creates a new commit internally.
+
+    amending an earlier commit:
+        with interactive rebasing.
+        git rebase -i dfhdkjfdh4r534343
+        change from pick to edit ones that you want to edit.
+        all commits after that commit would be recreated.
+        rebasing rewrites history.
+        close the window and rebase operation starts.
+        ammend the commit that you want.
+        do git commit --ammend 
+        git rebase --continue/abort
+    
+    dropping a commit:
+        you might need to solve the conflicts.
+        git rebase -i djfdh38r93ry
+        change from pick to drop or just delete the line.
+        you might get conflict.
+        git mergetool to resolve the conflict even if files are being deleted or created.
+        git rebase --continue
+
+    Rewording commit messages:
+        git rebase -i hdh34343
+        replace pick with reword for ones that you want to reword.
+
+    Re-ordering the commits:
+        use rebase, and re-order the pick lines.
+    
+    squashing commits together:
+        rewrite pick with squash and it would combine it with previous commit.
+        you can even re-order and squash.
+        if you use fixup instead, the messages of these commits is ignored.
+
+    splitting a commit:
+        git rebase -i fhddhh3543 
+        do resetting the changes and commit two different commits and then continue.
+    you can use gitkraken as well for the same.
+
 collaboration:
     github: most popular git hosting platform.
 
@@ -504,13 +588,13 @@ collaboration:
         when we clone our repository, git names our source repository as origin, origin/master is its master and origin/head is its head.
         hence origin is remote tracking branch.
 
-        git remote //to see the remote repositories 
+        git remote //to see the remote repositories, not in current directory.
         git remote -v //v is for verbose, it shows url etc fetch and push 
     
     fetching:
         if there is a commit in remote repo, our local repo will not be aware of that.
         to download that commit and move origin/master forward:
-            git fetch origin branch //branch is optional if you want from specific branch, and you can drop origin as well. 
+            git fetch origin branch //branch is optional if you want from specific branch otherwise all, and you can drop origin as well. 
         but those changes will not show, as our master is not upto date with them.
         to bring those changes:
             git merge origin/master
@@ -528,7 +612,7 @@ collaboration:
     pushing:
         git push //sends our changes to central repo.
         git push origin branch //both branch and origin are optional, if branch is master 
-        you might need to pull before the push, if you local repo is not up to date.
+        you might need to pull before the push, if your local repo is not up to date.
         git push -f //don't use force, it would drop their work
     
     storing credentials:
@@ -571,27 +655,73 @@ collaboration:
         git remote prune origin //to remove remote tracking branches when removed from all places.
 
     pull request:
-        opening a discussion between merging.
+        opening a discussion before  merging branch to master.
+        if you create a branch and implement a feature and push it to github.
+        in github you can compare and pull request. or click on pull requests to create a new pull request.
+        select two branches for pull request.
+        it is just a discussion within a team, before we merge them.
+        you often have conflicts to resolve first.
+        There is a title for pull request when you create it.
+            eg Feature: social login.
+        you add reviewers, they get email for review.
+        the can add their review.
+        you can add comments to each line if you want some changes, by clicking on +.
+        then write general description, you can request more changes.
+        after more changes you can request re-review.
+        you can approve or request changes.
+        after everything you can click on merge.
+
+        some say the person who starts the request shouldn't be able to close them, other people should do it, some say the same person should.
+        it gives you option to choose the kind of merge.
+        you can now delete the branch.
+        delete from your local repository, the branch and remote tracking branch.
+        even if there is conflict you can still have pull request and once done, you can resolve the conflict later in your terminal.
+    
+    github issues:
+        click on issues.
+        create a new issue, give it a title and description, and attach files.
+        you can assign it to multiple people or people can assign it to themselves, and there is label for each issue.
+        you can have conversation about the issue, or you can link it to pull request such that with that pull request the issue is closed, or link it with a milestone.
+        and you can close issue manually.
+        you can assign issue to yourself.
+
+        customize label in issues: 
+            ther are default labels and you can create your own label as well.
+    
+    milestones:
+        to track the progress.
+        you click on milestone and create one, set it a due date, you assign issues to milestones, you can select multiple issues.
+    
+    contributing to an opensource project:
+        go to issues, or create a new issue or select one.
+        fork it your own account/copy to your account that you can modify.
+        now clone it to local machine and work on it and do something cool, you can start a new branch.
+        push it to your github.
+        you can start a pull request, to your own copy and to base/original repo and you can have a conversation over it with the owner of repo. the mainainer can request changes, and finally merge the request. The contributor cannot close the request.
+
+        to keep forked repo up to date:
+            you can add reference to the base repo in your local repo and then push those to your github.
+            git remote //it shows origin.
+            git remote -v for verbose.
+            to add new remote 
+                git remote add upstream urlofbase, //you can name it anything like upstream 
+                now you have two remote repositories.
+                git remote rename upstream base
+                git rm base to remove 
+            
+            git fetch base //by default it is origin.
+            git switch master 
+            git merge base/master //this merges local and base/master
+            now our local is in sync with base.
+            now git push 
+
+pluralsight:
+    
         
 
 
-REWRITING HISTORY:
-    great but dangerous feature.
 
-    why rewrite history:
-        if bad history, or meaningless or too spread out, or random.
-        we want history to tell a story.
-        make smaller commits into a one big meaningful commit.
-        split large commits into smaller ones.
-        reword commit messages.
-        drop unwanted commits.
-        modify commits.
-        BUT IT IS DANGEROUS.
+
     
-    the golden rule of rewriting histoy:
-        don't rewrite public history: commits that are shared with any other people.
-        commits are immutable, if you modify, it creates another one.
-        if you rewrite and push to 
-
     
 

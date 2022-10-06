@@ -1,0 +1,45 @@
+#!/usr/bin/python3
+from sys import argv
+inputs=" = ".join([x.strip() for x in argv[1:]])+"\n"
+path="/home/rayon/rayon/.accounts/accounts.txt"
+import datetime
+if len(argv)==3:
+    try:
+        file=open(path,"a")
+        try:
+            current_time = datetime.datetime.now()
+            file.write(str(current_time)+": "+inputs)
+        except:
+            print("couldn't write to the file")
+        
+    except:
+        print("error while opening the file")
+    finally:
+        try:
+            file.close()
+        except:
+            pass
+    print(str(current_time)+": "+inputs)
+
+elif len(argv)==1:
+    balance=0
+    try:
+        file=open(path,"r")
+        try:
+            lines = file.readlines()
+            for i in lines:
+                print(i,end="")
+                transaction=float(i.split("=")[1].strip())
+                balance+=transaction
+            
+        except:
+            print("couldn't read to the file")
+        
+    except:
+        print("error while opening the file")
+    finally:
+        try:
+            file.close()
+        except:
+            pass
+    print("BALANCE:",balance)
