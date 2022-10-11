@@ -317,7 +317,7 @@ session 8: equities
     bondholders of a company only has claim to what the value of their bond is and they are first in line with respect to claim on company, whereas the equity holders get everything else(residual claiment).
     limited liability: you can only lose what you put in stocks.
         you can go bankrupt in 8 companies and win on 9th, that is the power of limited liability.
-    you get money from public markets, and give them voting rights for them to have confidence on how the company is run.
+    you get money from public markets, and give them voting rights for them to have confidence on how the company is run. Going public is the best.
     short sell: if you know that the price of that stock should be less than what it is, then you can short, and drive it down to where it belonged, and it is very important to let people have the option to short sell. It is very important aspect of market.
 
     how venture capitals think: they want to invest in your company, and have some shares, and when your company goes public, they sell the shares.
@@ -410,8 +410,11 @@ session 11: options II
     in times of volatility you can be rich.
     you can also do reverse, like make money if prices are stable.
     in fact you can generate any kind of function you want for your payoffs: which is mind blowing, like sigmoid functions.
+    check the option prices to see what market thinks of volatility.
+    everything in theory is an option, even the stocks, since bond holders are first in line.
+    
 
-session 2: options III
+session 12: options III
      
 
 youtube:

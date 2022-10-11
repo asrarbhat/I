@@ -716,6 +716,52 @@ collaboration:
             now git push 
 
 pluralsight:
+    development is typically done on feature branch and once done, it is merged to main branch.
+    github is a hosting service based on git.
+    git on windows, comes with git bash.
+    add vscode as env variable in windows.
+    github also offers CI/CD.
+    you can use ssh or https to connect to github.
+    create ssh keys and add to github.
+        ls -al ~/.ssh 
+    make sure ssh agent is running.
+    copy ssh key to github and add in settings: the public key, title like rayon's laptop.
+    ssh -T git@github.com //to confirm if it happened. ssh will add github to known hosts.
+    you can search for anything on github.
+    git push origin main
+    README tells about the project.
+    LICENSE is for license.
+    you can edit github repo details and add topics to make it easily searchable.
+    projects part can be used to create a kanban board.
+    collaborators: core team of the project.
+    contributors: lower permissions.
+    insights is for data analysis.
+    for experiments and bugfixes we create branches.
+    branch is just a pointer.
+    always check the branch first.
+    branching strategies:
+        centralized workflow: all changes to main branch.
+        Gitflow workflow:
+        Forking workflow:
+        GitHub workflow 
+    
+    GitHub Workflow:
+        branches for bugs and features 
+        evolves around pull requests.
+        PR: pull request.
+
+        there is a main branch
+        you create different branches for features and bugs.
+        when you are done, you open a pull request.
+        it gets reviewed, and it gets merged.
+        you delete your branch.
+        conflicts: like modifying same line, or deleting a file.
+        you can revert a pull request that would undo it.
+        you can use git blame in github easily for each line.
+    github actions for automation.
+    wiki is for documentation.
+    readme is for overview only.
+    gist is for snippets etc. like a repo.
     
         
 

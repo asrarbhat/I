@@ -65,6 +65,8 @@ jason allen music theory: levels 1,2,3:::
     staff paper: paper with 5 lines(4 gaps) on it called the staff. You write music on it. Just download staff paper pdf and print it. Or just use a software so you can even play it, eg Sibelius, Finale, MuseScore (free and open source). These programs are called notation editors just like text editors.
 
     sheet music is just you telling the performer what to do and you are being hyper specific. The dots say what notes to play and the bars say how fast or the rythm of the notes.
+    
+    for chords just enter multiple notes vertically.
 
     The dots(black dots)/pitch:     
         the vertical resistor symbol means there is no note there, or rest.
