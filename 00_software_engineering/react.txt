@@ -324,4 +324,10 @@ pagination, filtering and sorting:
             }
     
     make sure that that your components, only raise events, put utility methods, within the class so the component is reusable.
+    create a commons folder in your components folder for reusable components.
+    extract low level stuff into a different component.
+    in a file you can create mulitple classes, one can have utility methods, and one is the main component that you would export.
+    
+
+Routing:
     

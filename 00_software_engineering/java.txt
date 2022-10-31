@@ -1208,7 +1208,7 @@ course 3:
             
             Throwable inherits from Object directly.
 
-            Handling exceptions:
+            Handling exceptions: use try catch for checked and if else for unchecked.
 
                 try{
                     risky code
@@ -1285,7 +1285,7 @@ course 3:
             we wanna throw exception in a method and have the caller of the method handle it.
 
                 this means this method may throw an exception.
-                public void deposit(float value) throws IOException{
+                public void deposit(float value) throws IOException{ necessary for checked exceptions
                     if something{
                         throw new IOException();
                     }
@@ -1371,7 +1371,7 @@ course 3:
         so we have Generics.
         generic is, us making code independent of type.
         public class GenericList<T> { here t is a parameter for class,can use any letter T,E T is used as it stands for Template/Type E is for element.
-            private t[] items= new T[10]; this gives error as it cannot instantiate T, as it does't know what type it is so we use.
+           private t[] items= new T[10]; this gives error as it cannot instantiate T, as it does't know what type it is so we use.
             private T[] items=(T[]) new Object[10];
             private void add(T items){
 
@@ -1665,7 +1665,7 @@ course 3:
 
             Stream.iterate(seed:1,n->n+1) seed and a unary operator to generate the numbers.
             you can apply limit.
-        
+        lazy evaluation: not doing whole operation until calling a long stream.
         Mapping elements:
             map()
             flatMap()
@@ -1683,8 +1683,61 @@ course 3:
 
                 flatMap is used to flaten a stream.
         
+        filtering:
+            movies.stream().filter(m->m.getLikes>10) //it returns a new stream. hence you can pipe it.
+        
+        stream methods:
+            intermediate and terminals
+            intermedaiate: map(), filter() they return new pipe.
+            terminal: they don't return anything eg forEach.
 
+        slicing streams:
+            limit(n),skip(n) to skip or limit used for pagination.
+            or use takeWhile() or dropWhile() for keep taking until this is true or false.
+        
+        sorting stream:
+            by default elements from stream come in same order.
+            movies.stream().sorted((a,b)->a.getTitle().compareTo(b.getTitle)).forEach(print it);
+                           .sorted(Comparator.comparing(Movie::getTitle)) //this also works.
+            
+        Getting unique elements:
+            movies.stream().map(something).distinct().forEach() //distinct return a stream with each with one occurance.
+        
+        peeking elements:
+            movies.stream().filter(whatever).peek(m->sout).map(whatever).forEach(whatever);
+                //peak returns the same stream again, we just get to peek into it.
+            
+        simple reducer:
+            they reduce objects to a single object.
+            eg count() anyMatch(), allMatch() noneMatch() findAny(), max(),min() 
+            count() return number of elements as long.
+            anMatch(m-> m>3); //it returns a boolean, and takes predicate as an input.
+            findFirst() would give an Optional<that type> and you use get() method of it.
+            findFirst().get()
+            same for findAny(), max and min need a Comparator.
 
+        Ruducing streams:
+            .reduce((a,b)-> a+b)  //it takes accumulator as the function.
+            it would return Optional<Integer> use get method to get the real value, optioanl class is to prevent if htere is no value to return as it would throw excpetion if that is the case.
+        
+        Collectors:
+            movies.stream().filter().collect(Collectors.toList()); now we get list of moves, toSet() toMap(m->movie.title as key, m->movie.value as value) and so on.
+
+        grouping elements:
+            movies.stream().collect(Collector.groupingBy(Movie::getGenre));
+            //we get a map of genre, and list of it.
+        
+        partioning based on condition:
+            movies.stream().collect(Collectors.partitioningBy(m->m.likes>20))
+            //it also return map with true and false and list to them.
+        
+        primitive type streams:
+            IntStream, LongStream, DoubleStream.
+            IntStream.of(1,2,3)
+            IntStream.range(1,5) with rangeClosed upper bound is inclusive.
+            
+        
+        
     The executive framework:
         the working with Threads is complex so java 5 came up with this shit.
 
@@ -1719,6 +1772,10 @@ course 3:
 
 
 
+TESTING:
+--------------------------------------------
+    you cannot deploy code to your users without testing.
+    Junit5 is fifth version of testing framework.
 
 
 
