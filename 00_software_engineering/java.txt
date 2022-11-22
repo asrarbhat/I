@@ -33,7 +33,8 @@ introduction:
     camelNamingConvention for methods and variables: apart from first word all start with an upper case.
 
     a package is used to group related usually domain in reverse for base package.
-        eg com.googe
+        eg com.googe.package;
+        why this convention: if we put google first now we canhave google.package1 and google.package2 in same folder under google, and if we use com before that now we can differetiate between same packages from com.google and org.google. This gives our packages a uniqueness.
     
     inside project inside src,inside package Main.java 
 
@@ -44,7 +45,7 @@ introduction:
             System.out.println("hi");
         }
     }
-
+    in intelliJ click on file name and you will see open in terminal.
     System is in java.lang package hence imported automatically.
     f for fields and m for methods in intelliJ 
     System.out is an instance of PrintStream class and println is its method.
@@ -72,8 +73,8 @@ introduction:
 
             invoking jvm from src 
             java com.google.Main
-        
-    
+                when you classes are part of a package, you have to run the whole package and not just the file.
+
     developed by james gosling in 1995 at SUN,acquired by Oracle in 2010.
 
     originally called oak. now java inspired by java coffee,thats why its logo has coffee.
@@ -115,7 +116,7 @@ introduction:
         reference types:
             import java.util.Date //java.sql also provides Data so be careful to choose right package everytime.
 
-            Date now=new Date(); //new allocates memory in heap.
+            Date now=new Date(); //new allocates memory in heap. freed automatically
 
             now.getTime() //10 digit "long" time.
 
@@ -306,7 +307,7 @@ introduction:
             static means this belongs to class and not objects.
             no need to define above main.
         
-        refactor => changing code without changing functionality/behaviour. usually by breaking into methods.
+        refactor => changing structure of code without changing functionality/behaviour. usually by breaking into methods.
 
         if many loops use one method and generalize.
 
@@ -340,14 +341,15 @@ introduction:
         click on grey area to insert a break point.
         can add variables to watch.
         click on rerun to rerun.
+        frames=call stack of stack.
     packaging into jar: java archieve,it is compiled code.
         right click file>project structure>artifacts>+>jar>from modules and select main class >build artifact in build options.
         find it in out in artifacts.
         you get a .jar file.
 
-        to run a jar file 
-            java -jar abc.
-        
+        to run a jar file  
+            java -jar abc.jar
+        module is a group of packages.
         {} is called code block.
         
 ---------------------------------------------------------------------------------------------------------
@@ -1776,6 +1778,29 @@ TESTING:
 --------------------------------------------
     you cannot deploy code to your users without testing.
     Junit5 is fifth version of testing framework.
+
+pluralsight:
+    junit 5 requires java 8 or above.
+    you create a class for your test, with each method being a test, 
+        class ClinicCalenderTest{
+            @Test  //annotations to give metadata about code.
+            void nameOfTest(){
+                //create an object of your target class
+                //call its constructor.
+                //call the method that you want to test.
+                assertNotNull(yourfieldwhereyoustored);
+                assertEquals(1,yourfield.field) //first argument is expeccted value and second one is actual one you got.
+                //you can add as many assertions as you want.
+                //here you first setup your class, then you execute and then you test.
+            }
+        }
+
+        assertSame for same object, and assertNotSame for opposite.
+        assertFalse
+        assertTrue
+        
+
+
 
 
 
