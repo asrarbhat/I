@@ -77,4 +77,3 @@ editing your videos:
     editing tools:
         you can drag videos to the end for merging.
         in timeline, if you click on end points of clips and move, you can crop them that way.
-        

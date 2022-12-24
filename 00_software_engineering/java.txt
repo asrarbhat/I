@@ -1801,8 +1801,9 @@ pluralsight:
         
 
 
-
-
+amigos code junit5:
+ assertj is better than assert.
+ in intellij ctrl+shift+t to create test
 
 
 

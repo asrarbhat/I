@@ -416,6 +416,15 @@ session 11: options II
 
 session 12: options III
      RISK AND RETURN:
+
+
+session 13:
+    if there is a pattern and people know the pattern, the pattern changes, the quicker you find the pattern the faster it changes and if there are a lot of people trying to find the pattern, you get randomness.
+    hence efficient market is random.
+    own idea: see what is going around, and figure out the consequences and find things that you can trade based on consequences.
+    efficient market: no predictability.
+    usually markets are random.
+    
         
 
 youtube:

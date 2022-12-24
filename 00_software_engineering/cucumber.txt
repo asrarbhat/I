@@ -1,0 +1,76 @@
+you can create a features folder and put put files in it like login.feature.
+login.feature 
+
+Feature: feature to test login functionality
+//a feature can have multiple scenarios 
+
+Scenario: Check login is succesfull with valid credentials 
+//now we use ghekin language to write steps 
+
+Given, When, And Then
+
+Given user is on login page
+When user enter username and password 
+And clicks on login button
+Then user is navigated to the home page 
+right click to format it.
+write second scenario 
+you can even use parameters in that case you call it Scenario Outline
+@ is used for tagging 
+# for comments 
+you can directly run the feature file.
+the step definitons are called glue code
+
+you create steps folder for your steps defintions.
+scenario is like when credentials are correct and when they are wrong, these are two different scenario'scenario
+create a class and copy the template glue code.
+import all needed things in your steps file.
+you can even use regex in glue code for feature file lines.
+
+you can create a runner class, you provide location of feature file and glue code.
+here if you just give link to the folder where feature file is then all feature files will get executed.
+you can even create reports.
+each scenario contains steps.
+you can use given, and, when, then in any order.
+
+you create a feature file and create glue code and put sout lines in it just to see if everything is working fine, then all you have to do is code each of those methods properly.
+
+scenario is like one test case.
+
+cucumber is not bdd, cucumber supports bdd.
+feature>scenario>steps 
+
+for data parametrisation:
+    replace scenario with scenario outline.
+    write variables like <username> <password>
+    and at the end of scenario
+        Examples:
+            | username | password |
+            | Raghav | 123|
+            | abc |def |
+and in function use when enters (.*) and (.*)"
+it would run second time from the begining with different values.
+Page object model: pom 
+    you create a class for actions, and for every page elements there is a separate class.
+    in your page class you would create methods like entering username, and entering password, and clicking login, these are not glue code you would create an object of this class in your stepsdefintion class and class these methods, you have to use same driver for everything, so you have to give driver as parameter to each class. same driver is used to maintian the same session.
+    so you use elements from class and decide action from action class.
+
+page factory is also cool, check it out: FindBy(id=somethign) and creaste a webelement beneath it.
+
+tags:
+    you can tag scenario's and choose from different feature files to run those scenarios
+    @assignment 
+    tags are inherited, if you put it above feature, it is inherited by all scenarios.
+
+hooks:
+    blocks of code that runs before OR after each scenario
+    @before @after
+    you can have scenario hooks, step hooks, conditional hooks.
+    used for common code.
+    there is Beforesteps and aftersteps also
+
+background:
+    common steps for all scenarios
+    hooks are invisible, but background is visible for reader.
+    
+

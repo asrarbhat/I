@@ -199,7 +199,12 @@ Listners in selenium:
     used to create logs and reports.
     types:
         web driver listeners and TestNg listeners.
+        you can track different kinds of events, like navigating etc.
+        for this you implement an interface , and instead of driver you use EventFiringWebDriver.
+    you would need TestNG libraries.
+    TestNg listeners like onStart, onTestSkipped, onTestFailure etc.
     
+
     
 
 

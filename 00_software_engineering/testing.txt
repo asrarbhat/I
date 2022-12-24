@@ -1,0 +1,82 @@
+a failure is a manifestation of a bug.
+even if there is a a bug, it may not lead to error.
+errors or mistakes by programmer and faults/bugs/defects are what happens as a consequence it may result in failure.
+errors or mistakes lead to faults/defect/bug and it can result in failure.
+on average 50 bugs per 1000 line of source code by good programmer.
+after thorough testing 1 bug per 1000 lines of source code remain.
+60% of bugs come from spec/design and 40% from code.
+how to reduce bugs:
+    review for code, design etc 
+    testing
+    proper process.
+
+how to test:
+    give some input and see if matches the expected output.
+    if the program does not behave as expected, note the conditions under which it failed(Test report)
+    later debug and correct.
+    testing largest effort among all development activities.
+    largest manpower among all roles.
+    implies more job opportunity.
+    50% development effort on testing.
+    testing can be done parallely.
+    testing is getting more complex and sophisticated.
+    test automation and new techiques are being developed.
+    not anyone can do testing, you have to know how the software works.
+as you test, the number of bugs deep decreasing.
+verification is done at each phase whereas validation is done for whole product.
+verification contains, review, simulation, unit testing, and integration testing.
+static activity: you don't need to run the program. eg review.
+dynamic programming: you need to run the proram.
+
+4 levels of testing:
+    unit testing, integration testing, system testing, regression testing.
+    unit testing for each module mostly done by developers of the module, integration testing for combining modules, and system testing for whole program and regression testing during maintainence.
+    tester detects the error and developer debugs the error.
+
+how to know when to stop testing:
+    when no bugs are detected for days.
+    for seed some bugs and see if all were found.
+
+integration testing is there to find bugs at the interface of the modules.
+system testing is where you find performance related bugs etc.
+unit testing localizes the error.
+
+smoke tests: system test performed daily or several times a week after every build.
+
+system testing:
+    functionality test 
+    performance test
+
+based on who performs testing:
+    alpha: done by developers.
+    beta: by a set of friendly user.
+    acceptance test: by customer.
+
+pesticide effect:
+    errors that escape a fault detection technique can ot be detected by further application of that techique.
+    every software review, inspection, and test step will find 30% of bugs.
+    30% at unit testing, 30% at integration testing and so on. 30% at review.
+    hence you need as many filters as possible.
+all testing techiques are heuristics.
+
+test data: inputs used to test the system.
+test cases: input + state of software + predicted output.
+negative test cases: unexpected or invalid inputs to see if it is responsed gracefully.
+
+set the program ins required state, give the defined input, and observe the output and compare and not in test report.
+
+test report: each test has a case number, if it fails, it has an author, test purpose, pre conditions, test input, expected output, post conditions, pass/fail etc 
+
+testing strategy:
+    each test case should target different fault/bug 
+
+review removes 10% of bugs, and unit testing does 40% and integration testing does 25% and system testing does 15% and customer reported 10%.
+use the testing techique that removes most number of bugs first, and give it more time.
+
+unit testing:
+    best one and most effective one.
+    we need some things for this.
+        driver: simulates the behaviour of a function that calls our unit and possibly some data to the function being tested.
+        stub: simulates the behaviour that has not yet been written.
+        tester writes these two softwares, driver calls our unit and stub is what our unit calls.
+        
