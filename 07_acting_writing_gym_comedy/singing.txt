@@ -7,15 +7,25 @@ chandrani's online music class:
             c5 is sa double frequency.
     week2:
         sur ka taal se jod:
-            beat: taal eg each period clap.
+            beat: taal eg each period clap. fast clapping means fast beat, or high tempo.
             tempo: leh (speed) eg 70bpm (beats per minute) sing each sargam with each beat.
-            4/4:
+            4/4 beat:
                 har measure mai 4 beats honge 1,2,3,4. it is called 4/4 beat.
                 most bollywood songs have 4/4 beat. eg hum tere bin ab re nahi sakhte.
             
             3/4: 3 beats in a measure eg mai agar kahoon
 
             these two kinds can have different tempo.
+    week3:
+        harmonium has 3 octaves.
+    week4:
+        alankaar: ornament=jewellery.
+        permuations of octaves.
+        aakaar: without saying sa re, but aa aaa aaaa 
+        make as high bpm as possible, it sounds cool with aakaar.
+        in aakaar you keep your mouth open.
+        sing saptak in a,e,i,o,u from sa to sa 
+        
     
 youtube:
     in english:
@@ -29,3 +39,18 @@ Lakshmi Madhusudan:
         start with low frequency during practise then go up.
         
 
+bidisha ghosh:
+    svar==notes
+    rhythm==taal
+
+    7 pure notes: sa re ga ma pa da ne sa 
+                  do re mi fa so la ti do 
+
+            sing them in all permutations 
+            there are 5 additional notes.
+            flat==komal
+            sharp==tivar
+
+    
+youtube:
+    

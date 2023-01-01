@@ -41,7 +41,7 @@ to import footage:
     there is no set rules, just follow any convention.
     you can rename things within premier pro as well.
     you can see info about your files, like framerate etc for video and same for audio.
-    media brower in window, if that tab is open it will show you preview of videos that are in your folder so you can know, what is what within premier pro.
+    media browser in window, if that tab is open it will show you preview of videos that are in your folder so you can know, what is what within premier pro.
     
 editing your videos:
     pick the footage that is going to be used the most and drag and drop to the new button on the buttom and it would be added to the timeline.
