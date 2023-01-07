@@ -56,11 +56,11 @@ CREATING A SNAPSHOT
         git commit -m "initial commit" #to move from staging area to repo.
         you supply a message as well for meaningful history, it makes bug fixing easier.
         
-        one you commit the changes the staging area doesn't become empty. It stays there.
+        once you commit the changes the staging area doesn't become empty. It stays there.
         to add files to staging area, git add file1 and now file1 in staging area is modifed if it was not newly created file.
         if you delete a file from working directory then use add command even though file2 is deleted, to stage this change and now that file is also removed from staging area and you can commit it now, and each commit is a snapshot of a project.
 
-        each commit contains an ID, Message, Date/Time Auther, Complete snapshot, unlike other version control systems, git doesn't store the deltas or changes, it stores the whole thing efficiently, it compresses data and doesn't duplicate content.
+        each commit contains an ID, Message, Date/Time, Auther, Complete snapshot, unlike other version control systems, git doesn't store the deltas or changes, it stores the whole thing efficiently, it compresses data and doesn't duplicate content.
 
         staging files:
             git status to see the status of working area that what changed in the project.
@@ -80,7 +80,7 @@ CREATING A SNAPSHOT
                 first line: A short description.
                 skip a line 
                 Long description 
-                if you want to commit start them with # in this file they won't be shown.
+                if you want to comment start them with # in this file they won't be shown.
             
         commiting best practises:
             it shouldn't be too big or too small.
@@ -90,7 +90,7 @@ CREATING A SNAPSHOT
             don't make different things combined in one commit.
             commit messages should be meaningful.
             it should represent single unit of work.
-            in terms of wording, most people prefer Pesent than the past, hence Fix the bug, instead of fixed the bug.
+            in terms of wording, most people prefer Pesent tense than the past, hence Fix the bug, instead of fixed the bug.
 
         skipping the staging area:
             better always stage the changes, there is a reason that it is there.
@@ -102,6 +102,7 @@ CREATING A SNAPSHOT
             if you only want to remove from staging area then use git rm --cached file2.txt 
             git rm file2.txt to remove from both current and staging area.
             git rm *.git 
+            git ls-files to see files in staging area.
 
         renaming or moving files:
             mv file.txt main.js to rename in main directory.
@@ -131,16 +132,18 @@ CREATING A SNAPSHOT
     viewing staged changes:
         git diff --staged //to see the difference between staged area and last commit.
         git diff //to compare staging area and working directory
+        here @@ -1,3 +1,5 @@ means showing 1 to 3 line from first file and 1,5 line from modifed copy 
+        red lines are from old file, green from new and white are common.
 
     visual tools to compared files:
         diff tools:
             there are many tools 
             even one in VSCODE 
         git config  --global diff.tool vscode //to set default diff tool 
-        git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE" //check if the place holders appear in the config file"
+        git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE" //check if the place holders appear in the config file" //this is command to launch vscode.
         in terminal:
             git difftool --staged // or no argument.
-        it gives you amazing comparison.
+        it gives you amazing comparison, one by one.
 
     viewing history:
         git log //to see the history 
@@ -163,6 +166,7 @@ CREATING A SNAPSHOT
 
     unstaging files:
         git restore --staged file1.js *.js  or . for everthing //it moves from last commit to staging area.
+        earlier we used to use reset command but it was confusing.
 
     discarding local changes:
         git restore file.js  //from staging area to working directory 
@@ -173,18 +177,21 @@ CREATING A SNAPSHOT
         git restore --source=HEAD~1 file1.js 
 
     using vscode:
+        click on version control option
         click on file to see the diff 
-        click on + to stage
+        click on + to stage 
         click on - to unstage
         enter message and click on tick
-        if you click on a file and then click on time, you can see all commits that changed that file.
+        if you click on a file and then click on timeline folder below, you can see all commits that changed that file.
         which is cool.
 
     git kraken:
         open a repo or clone a repo 
         it shows you all commits
         you can click on each commit to see the details.
-        you can click on each file to see the diff 
+        you can click on each file to see the diff
+        this is not an editor.
+
         
 Browsing history:
     searching for commits based on author or see the changes made in that commit, or how to restore your project to earier point in time, also we will learn to compare commits, and see how a file evolved.
@@ -193,8 +200,8 @@ Browsing history:
     press space for next page or use up and down arrows and to quit press q.
 
     git log --oneline for summary.
-    git log --oneline --stat or git log --stat you get details about insertions and deletions.
-    git log --oneline --patch to see each line that was inserted or deleted.
+    git log --oneline --stat or git log --stat you get details about insertions and deletions for each file.
+    git log --oneline --patch to see each line that was inserted or deleted for each file.
 
     filtering the hisotry:
         git log --oneline -3 for last 3 commits 
@@ -261,7 +268,8 @@ Browsing history:
         git bisect good
         git bisect bad  //you keep doing it until you find the bug.
     
-        at the end git bisect reset 
+        at the end git bisect reset
+        ti would create refs/bisect/bad and good for your reference
     
     finding contributors using shortlog:
         git shortlog:
@@ -400,10 +408,10 @@ BRANCHING:
 
         git merge bugfix // you get a conflict.
         git status will show you the conflicted files and the merge is still in the process.
-        now open vscode and it will show and guide you to pick one.
+        now open files in vscode and it will show and guide you to pick one.
         you can accept one of them or both, or you can manually edit the file, reorder etc
         don't add new code in merge commit, it is called an evil commit then, but sometimes it might be unavoidable.
-
+        <<<<<<<<< HEAD is called marker and ========= is called divider.
         now add that file to staging area.
         now git commit new changes and merge is done automatically.
 
@@ -497,7 +505,7 @@ REWRITING HISTORY:
         if you rewrite and push to central repository, then it would be rejected.
         you can use git push --force
         if you are modifying the central repositories and rewriting its history then other people wouldn't be able to push any more as the central repo is now different.
-        one public, don't change the history.
+        once public, don't change the history.
         it is good practise to rewrite private history, before sharing it with the world.
 
     noise:
@@ -505,16 +513,17 @@ REWRITING HISTORY:
         eg update terms of service and google version, there are two different things and we should split them.
     
     undoing commits:
-        git revert HEAD if shared with other.
+        git revert HEAD if shared with other. It i will create a new commit that will undo all the changes made i previous commit.
         git reset --hard HEAD~1
             soft only changes repo, mixed changes repo and staging area, and hard changes all three to that commit.
             mixed is the default option.
         for reverting:
-            git revert HEAD~2
+            git revert HEAD~2 //to revert any commit.
             reverting creates revert commits.
             if reverting multiple commits:
-                git revert --no-commit HEAD~3.. 
+                git revert --no-commit HEAD~3..HEAD
                     it adds all those to staging area, instead of commiting them.
+                    skip -no-commit to revert each commit individually.
                 git revert --abort/continue
     recovering lost commits:
         if you lose or reset by accident.
@@ -524,6 +533,7 @@ REWRITING HISTORY:
         if you want to go back to any of them, just use git reset command.
     
     Amending the last commit:
+        stage the changes first
         git commit --amend //git creates a new commit internally.
 
     amending an earlier commit:
@@ -561,6 +571,7 @@ REWRITING HISTORY:
         git rebase -i fhddhh3543 
         do resetting the changes and commit two different commits and then continue.
     you can use gitkraken as well for the same.
+    when you rebase you get all commits after it.
 
 collaboration:
     github: most popular git hosting platform.
@@ -586,8 +597,8 @@ collaboration:
         you will now have two more pointer if you check using git log 
         origin/master and origin/HEAD 
         when we clone our repository, git names our source repository as origin, origin/master is its master and origin/head is its head.
-        hence origin is remote tracking branch.
-
+        hence origin is remote tracking branch. It is there for your reference you cannot switch to it.
+        git branch to see branches that you can interact with.
         git remote //to see the remote repositories, not in current directory.
         git remote -v //v is for verbose, it shows url etc fetch and push 
     
@@ -652,7 +663,7 @@ collaboration:
             git fetch //to get this new branch.
             but it is not there yet in your local repo. It is still remote tracking branch.
             git switch -C feature/change-password origin/feature/change-password //you just created a branch to track the origin wala branch.
-        git remote prune origin //to remove remote tracking branches when removed from all places.
+        git remote prune origin //to remove remote tracking branches that have been deleted on origin by other collaborators.
 
     pull request:
         opening a discussion before  merging branch to master.
@@ -764,7 +775,13 @@ pluralsight:
     gist is for snippets etc. like a repo.
     
         
-
+youtube: github copilot:
+    AI based tool used for pair programming.
+    It comes as an extention for VSCODE 
+    it is based on openai 
+    you write a function name and it autocompletes.
+    even if you write a comment it completes it.
+    
 
 
 
