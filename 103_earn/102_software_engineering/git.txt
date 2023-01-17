@@ -1,0 +1,790 @@
+git is the most popular version control system in the world, it keeps track of different version of a product.
+it keeps records changes in a special database called repository, we can look at the history and see who did what, when and why.
+in centralized system, all connect to central server, but it has single point of failure.
+in distributed system, every member has a local copy and a central copy, or peer to peer.
+git is free, open source, scalable, and fast.
+more than 90% projects use git.
+
+you can use git on command line: fastest and easiest, code editors come with built in support for git or you can use gui tools, Vscode has gitlens. gitkraken is best gui tool.
+better use both GUI and command line for best experience.
+
+installing git:
+    git --version  #2.27.0
+    download from git website.
+    on windows you get git BASH for emulation of unix commands.
+
+configuring git:
+    you should submit, name, email, default editor, and line ending.
+    you can configure these settings at different levels, like systems level for all users, and global level for all repositories of current user, and local level for current repository.
+
+    git config --global user.name "Mosh hamedani"
+    git config --global user.email asrarpsi@gmail.com
+    by default editor is vim.
+    git config --global core.editor "code --wait" 
+        #here wait flag means wait until we close the vscode instance and code is a command to open vscode.
+    it is stored in a text file called .gitconfig
+    git config --global -e #here e means edit.
+
+    end of line:
+        on windows \r\n carriage 
+        return and line feed represent the end of line.
+        on mac and linux \n is enough.
+        property core.autocrlf is for that where crlf means carriage return line feed.
+        git central repo would follow the linux rules, hence if you are using windows then git should append cr when you pull and remove when you push your files.
+        hence set it true for windows.
+        hence for linux if you central repo is using crlf type then git should remove on pull and add cr on push hence set it to input, which means only do so when i pull.
+
+        git config --global core.autocrlf true or set it to input if on mac or linux.
+    google git config if you want to learn about git config.
+    or type git config --help enter space for next page and q for quit.
+    git config -h for short summary.
+
+
+CREATING A SNAPSHOT
+-------------------
+    initializing a repository:  
+        git init #to initialize an empty repository
+            it creates a .git folder to see it ls -a you can see it as it is hidden.
+            it has folder like branches hooks info objects refs  in it, and a HEAD file and description and config file.
+            if you lose .git, you lose everything that was history. Your folder would now be just like any other folder.
+
+    Git WorkFlow:
+        there is your project directory and then there is a hidden git repository.
+        you modify one or more files and you commit those changes to repository, like taking a snapshot.
+        in git we have an intermediatary area called staging area/index, it contains what we are proposing for next commit. It allows us to review our work before making a commit, and we can unstage something that we don't want there.
+
+        git commit -m "initial commit" #to move from staging area to repo.
+        you supply a message as well for meaningful history, it makes bug fixing easier.
+        
+        once you commit the changes the staging area doesn't become empty. It stays there.
+        to add files to staging area, git add file1 and now file1 in staging area is modifed if it was not newly created file.
+        if you delete a file from working directory then use add command even though file2 is deleted, to stage this change and now that file is also removed from staging area and you can commit it now, and each commit is a snapshot of a project.
+
+        each commit contains an ID, Message, Date/Time, Auther, Complete snapshot, unlike other version control systems, git doesn't store the deltas or changes, it stores the whole thing efficiently, it compresses data and doesn't duplicate content.
+
+        staging files:
+            git status to see the status of working area that what changed in the project.
+            file names in area means newly created files.
+            git add file.txt abc.txt 
+            git add *.txt
+            git add . //for entire directory recursively.
+            staging area is not in sync with your working directory.
+
+            to remove a file from staging area git rm --cached abc.txt
+        
+        commiting changes:
+            git commit -m "Initial commit."
+            for detailed message, if you think more should be said.
+                git commit //it opens in default editor that we configured in the begining.
+
+                first line: A short description.
+                skip a line 
+                Long description 
+                if you want to comment start them with # in this file they won't be shown.
+            
+        commiting best practises:
+            it shouldn't be too big or too small.
+            the whole point of commit is to have checkpoints,
+            you may commit 3 to 5 commits a day.
+            each commit should represent a logically separate chainset.
+            don't make different things combined in one commit.
+            commit messages should be meaningful.
+            it should represent single unit of work.
+            in terms of wording, most people prefer Pesent tense than the past, hence Fix the bug, instead of fixed the bug.
+
+        skipping the staging area:
+            better always stage the changes, there is a reason that it is there.
+            git commit -am "message" //here a means all modified.
+        
+        removing files:
+            rm file2.txt from the project directory.
+            git add file2.txt to remove from the staging area now as well.
+            if you only want to remove from staging area then use git rm --cached file2.txt 
+            git rm file2.txt to remove from both current and staging area.
+            git rm *.git 
+            git ls-files to see files in staging area.
+
+        renaming or moving files:
+            mv file.txt main.js to rename in main directory.
+            git add .
+            or instead use 
+                git mv file.txt main.js for both changes.
+
+        ignoring files:
+            telling git to ignore certain files, eg log files or config files.
+            create .gitignore file in your project.
+                in it add 
+                    logs/
+                    configs/
+                    *.txt
+            commit .gitigore file first.
+            you have to add the folder first to .gitignore, if you have git already tracking this directory then it would not ignore it.
+            to solve this problem, you have to remove it from staging area.
+            to see files in staging area: git ls-files 
+            git rm ---cached -r bin/ 
+
+        github.com/gitigore is where you can get various templates for gitignore file for different kinds of projects.
+    
+    short status:
+        git status //for whole 
+        git status -s //for short status 
+        you get two columns staging area and working directory
+    viewing staged changes:
+        git diff --staged //to see the difference between staged area and last commit.
+        git diff //to compare staging area and working directory
+        here @@ -1,3 +1,5 @@ means showing 1 to 3 line from first file and 1,5 line from modifed copy 
+        red lines are from old file, green from new and white are common.
+
+    visual tools to compared files:
+        diff tools:
+            there are many tools 
+            even one in VSCODE 
+        git config  --global diff.tool vscode //to set default diff tool 
+        git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE" //check if the place holders appear in the config file" //this is command to launch vscode.
+        in terminal:
+            git difftool --staged // or no argument.
+        it gives you amazing comparison, one by one.
+
+    viewing history:
+        git log //to see the history 
+        each commit has a 40 character hexadecimal string as id.
+        master: main line of work/ main branch as there could be multiple branches.
+        HEAD is a reference to current branch
+        space for next page and q for quit.
+
+        git log --oneline for short summary of commits.
+        git log --oneline --reverse //for reverse order
+
+        git show d609456  or git show HEAD~1 (for one step back from head)
+        git shows you diff of that commit with commit previous to it.
+
+        git show HEAD~1:bin/app.bin //to see exact copy of that file in that commit.
+        git  ls-tree HEAD~1 //to see directory structure of that commit 
+        the hash is computed from the content of file.
+        files are represented using blobs and directories using trees.
+        git show 454545 type until we get unique 
+
+    unstaging files:
+        git restore --staged file1.js *.js  or . for everthing //it moves from last commit to staging area.
+        earlier we used to use reset command but it was confusing.
+
+    discarding local changes:
+        git restore file.js  //from staging area to working directory 
+        //if there are files that are not yet in staged area, they won't be removed, for files that are not yet in staging area to be removed call git clean
+        git clean -fd to remove untracked files and directories.
+    
+    restoring file to an earier version:
+        git restore --source=HEAD~1 file1.js 
+
+    using vscode:
+        click on version control option
+        click on file to see the diff 
+        click on + to stage 
+        click on - to unstage
+        enter message and click on tick
+        if you click on a file and then click on timeline folder below, you can see all commits that changed that file.
+        which is cool.
+
+    git kraken:
+        open a repo or clone a repo 
+        it shows you all commits
+        you can click on each commit to see the details.
+        you can click on each file to see the diff
+        this is not an editor.
+
+        
+Browsing history:
+    searching for commits based on author or see the changes made in that commit, or how to restore your project to earier point in time, also we will learn to compare commits, and see how a file evolved.
+
+    git log //to see all commits with its id or hash, its author, date and time, one liner message, email.
+    press space for next page or use up and down arrows and to quit press q.
+
+    git log --oneline for summary.
+    git log --oneline --stat or git log --stat you get details about insertions and deletions for each file.
+    git log --oneline --patch to see each line that was inserted or deleted for each file.
+
+    filtering the hisotry:
+        git log --oneline -3 for last 3 commits 
+        git log --oneline --author="Mosh" to see by author 
+                          --after="2020-08-17" or --before 
+                          --after="yesterday" 
+
+        git log --oneline --grep="GUI" to search by commit containg GUI.
+
+        git log --oneline -S"objectives" //all commits that have inserted or removed the word objectives.
+        git log --oneline -S"objectives" --patch //to see the exact changes.
+
+        to filter by range of commits:
+            git log --online fb08184..edb3594 
+                commits between these two hashes.
+            git log --oneline toc.txt //to see commits that modified this file.
+            git log --online -- toc.txt //in case file name is ambiguous.
+            to see the exact changes, use the patch option, but use the patch option before the file name.
+            git log --oneline --patch -- toc.txt 
+
+    formatting the log output:
+        git log --pretty=format:"hello %an" it will print author name for each commit and hello 
+            %H for hash and %h for abbrevated hash.
+            %an commited %h on %cd 
+            %Cgreen for text color. %Creset for resetting.
+
+    creating aliases for frequent commands:
+        git config --global alias.lg "log --pretty=format:'%argument commited %h'"
+        now you can use git lg
+        you can directly add to config file as well.
+
+    viewing a commit:
+        git show HEAD~2 for two stems back from head.
+            it shows all details and diff of all files.
+        git show HEAD~2:sections/creating-snapshots/staging-changes.txt //to see actual file in that commit.
+        git show HEAD~2 --name-only //to show only files that have been modified.
+        git show HEAD~2 --name-status // to see which ones are modifed and which ones are deleted etc.
+    
+    to see changes across different commits:
+        git diff HEAD~2 HEAD //it shows differences from these two.
+        git diff HEAD~2 HEAD audience.txt //to see diffence for particular file.
+        git diff HEAD~2 HEAD --name-only //to see the modifed files 
+                        --name-status for the type of change as well.
+        
+    checking out a commit:
+        to see the complete snapshot of our project at any point.
+        and it will restore our project to that snapshot.
+        git checkout 3ad455r3d 
+            //you will now be in detached head state.
+            master points to last commit in main branch.
+            head is pointer to current branch and where we are.
+            with checkout head moves to new commit and it is detached from master and we should not commit in such situation.
+            as if you do commit, and then you move back to master, there will be no way to go back to it and git will remove it periodically. Every commit points commit before it.
+
+        git log --oneline -all //to see all commits even when in detached mode.
+        git checkout master //to attach back to master.
+    
+    using bisect command to find when was bug introduced:
+        git bisect start 
+            try your code now, and if it is a bad commit 
+        git bisect bad
+        git bisect good ca346644 //to set a reference if you already know it is good. 
+        you head would be somewhere else 
+        git bisect good
+        git bisect bad  //you keep doing it until you find the bug.
+    
+        at the end git bisect reset
+        ti would create refs/bisect/bad and good for your reference
+    
+    finding contributors using shortlog:
+        git shortlog:
+             it shows commits of all users and their messages 
+        git shortlog -n //for sorted by number of commits.
+            -s to remove sommary of commit messages.
+        git shorlog -n -s -e --before="" --after="" //for date range.
+    
+    viewing the history of a file.
+        git log toc.txt
+        git log --oneline toc.txt
+        git log --stat toc.txt
+        git log --patch toc.txt
+
+    restoring deleted files from history:
+        git log --oneline toc.txt // you can use -- to separate if ambiguous.
+            you will get all commits that touched that file.
+        last commit would be when it got removed 
+        git checkout a353553 toc.txt //it would restore the file.
+
+    blaming:
+        finding author of a particular line.
+        we use the blame tool 
+        git blame audience.txt 
+            now for each line you get the author, data and time.
+        git blame -e audience.txt for email only 
+        git blame -e -L 1,3 audience.txt //for only 3 lines.
+    
+    tagging:
+        to bookmark certain points in history, like certain version.
+        git tag v1.0 5333dea3423
+        we can reference using tags now 
+        git checkout v1.0
+         
+        to see all tags:
+            git tag 
+            it is called a lightweight tag.
+        git tag -a v1.1 -m "my version 1.1" //-a is an annoted tag 
+        git tag //to see all tags 
+        git tag -n to see the messages as well.
+        git show v1.1 //works for annotated tags it shows author etc as well so we often prefer annotated tags.
+        git tag -d v1.1 to remove the tag.
+
+    browsing the history using vscode:
+        install extention gitlens.
+
+BRANCHING:
+    to diverge from the main line of work.
+    you compare and merge them.
+    you resolve merge conflicts.
+
+    you can work on something else in isolation, main work space is master and you can work on a feature in isolation in another branch.Better create a separate branch for each feature.
+
+    once the feature is complete you merge it to master.
+    you keep main line of work as stable as possible.
+
+    git branches are superfast and cheap, unlike subversion which takes a whole copy, git branches are just pointers.
+
+    when you create a new branch, git creates a new pointer that can be moved around.
+    there is only one single directory for all branches, and HEAD decides which branch are we working on.
+
+    working with branches:
+        you can create a separate branch to fix a bug.
+        git branch bugfix //it creates a branch bugfix 
+        git branch //to see all branches, you see master and bugfix, * for where the head is.
+
+        always make sure that you are on right branch.
+        git status //also tell to which branch are you in.
+        
+        git switch bugfix //to switch to different branch.
+        git branch -m bugfix bugfix/signup-form   //to rename branch
+
+        git log --online //to you see all branches here.
+        git log --oneline -all //to see commits across all branches.
+        git branch -d bugfix/signup-form //to delete a branch 
+            -D to force delete without merging.
+        
+    comparing branches:
+        git log master..bugfix/signup-form //commits in bugfix but not in master
+
+        to see actual changes
+        git diff master..bugfix/signup-form 
+
+        git diff bugfix/signup-form //to see diff between current branch and bugfix
+
+        git diff --name-status bufix/signup-form //to only see the filenames that were modified.
+
+    stashing:
+        if you have local changes and you want to change the branch, these changes could get lost.
+        and git won't allow you to change branches in such case.
+
+        to stash means to store in a safe place.
+        git stash push -m "new tax rules."
+        and by defualt new untracked files are not included in stash by default.
+        git stash push -a -m "the message" // it pushes all of them.
+        git stash list // to see all stashes.
+        now you can switch to another branch.
+
+        to apply changes from stash.
+            git stash show stash@{1} //to see the changes you get stash number from stash list.
+            git stash show 1 also works.
+
+            git stash apply 1
+            git stash drop 1 //to remove it.
+            git stash clear //to remove all.
+
+    merging:
+        bringing changes from multiple branches:
+            fast forward merges
+                if the path is linear and there hasn't been a diverions, then all git has to do is just fast forward the master to merge.
+
+                git log --oneline --all --graph
+                from your master type:
+                    git merge bugfix/signup-form
+                    git switch -C hola //to create and switch to that branch.
+                    git merge --no-ff bugfix //to say even if fast-forwad is possible, don't do it create a merge commit that combines all the changes in the target branch.
+                    enter a message and done.
+                don't use fast forward, as that is not the true history, although fast forward keeps history clean.
+            3 way merges.
+        
+        git config ff no //to disable fast forward in current repo.
+        git config --global ff no //to all repo's 
+
+        3- way merging:
+            git merge feature/change-pasword //from master or base branch.
+            you get a merge commit 
+        
+        git branch --merged //to see all branches merged to current branch over time.
+        it is better to delete branches once done with them.
+        git branch --no-merged //to see branches not yet merged to current branch.
+
+    merge conflicts:
+        when same line of code has been changed differently in different branches.
+        or when same file is added in different branches but content is different.
+        so there is a conflict and git stops the merging process.
+
+        git merge bugfix // you get a conflict.
+        git status will show you the conflicted files and the merge is still in the process.
+        now open files in vscode and it will show and guide you to pick one.
+        you can accept one of them or both, or you can manually edit the file, reorder etc
+        don't add new code in merge commit, it is called an evil commit then, but sometimes it might be unavoidable.
+        <<<<<<<<< HEAD is called marker and ========= is called divider.
+        now add that file to staging area.
+        now git commit new changes and merge is done automatically.
+
+    better merge tools:
+        kdiff, p4merge, winmerge
+        git config --global merge.tool p4merge
+        git config --global mergetool.p4merge.path "C:Program Files\p4Merge" //similarly for linux.
+        git mergetool //after the conflict to go to merge tool.
+        p4merge is cool.
+        after done, go back to terminal and make a commit.
+        just write git commit, and it i will give you nice default message.
+
+    To undo the merge if conflict:
+        git merge --abort, and now you are back to earlier stage.
+
+    undoing a faulty merge:
+        you can remove the merge commit as if it was never there, but you would be rewriting history, which is okay if you are doing it in your local repo, and not to done that has copies with other people as well.
+
+        instead of doing that, we can revert a commit, that all changes in that commit would be reverted.
+
+        removing the last commit:
+            git reset --hard HEAD~1  going back one commit on master branch.
+                resetting:
+                    soft: staging area and working directory would not be effected.
+                    mixed: only local area is not effected and staging area is also reset to that commit.
+                    hard: all three of them have same snapshot.
+                hence merge commit is no longer in your history.
+                git reset --hard 49rughgyd //also works.
+
+            better if merge commit was local.
+        
+        reverting the last commit:
+            git revert -m 1 HEAD //here 1 means first parent branch that is master.
+            //when you merge, the master moves to merge commit but the other branch name stays where it was forever now.
+    squash merge:
+        say a branch is minor, so squash merge is like you taking all commits of a branch and make a single commit on master branch with those changes and then delete that branch.
+        
+        use it with small shortlived bad history.
+        switch to master:
+            git merge --squash bugfix //it only puts in staging area.
+            now git commit -m " fix the bug on photo upload page" 
+            remove your target branch now, it would create a confusion otherwise.
+            if conflict, resolve the same way.
+    
+    rebasing:
+        changing the root/parent/base of a branch to other commit, and then do a fast forward merge to get a linear history.
+        be careful, because rebasing rewrites history.
+        only do it if whole thing is in your local repo, and you haven't shared branches with other people.
+        it is gonna do it by commiting all those commits again and then change the branch pointer, hence the commits are not just moved, so if someone has made commits to earler kind, it would be lost.
+        
+        switch to target branch:
+            git rebase master // rebase to master 
+            if there are conflicts, resolve them, using any merge tool.
+            git rebase --continue //after conflict is resolved.
+            git rebase --abort //to abort it, you go back to last state
+            now do a fast forward merge from master and you get a linear history.
+            git config --global mergetoo.keepBackup false //if merge tool creates some backup files and you don't want it to do them.
+
+    cherry picking:
+        if you need some specific commit form certain branch in your another branch but not yet ready to merge, without merging.
+        at master:
+            git cherry-pick 4534deatr3534
+            //solve conflicts
+            git commit
+    
+    picking a file from another branch and not a whole commit:
+        from master:
+            git restore --source=feature/send-email toc.txt 
+
+    in vscode:
+        install git lens.
+        install git graph.
+        better use gitkraken.
+        
+REWRITING HISTORY:
+    great but dangerous feature.
+
+    why rewrite history:
+        if bad history, or meaningless or too spread out, or random.
+        we want history to tell a story.
+        make smaller commits into a one big meaningful commit.
+        split large commits into smaller ones.
+        reword commit messages.
+        drop unwanted commits.
+        modify commits.
+        BUT IT IS DANGEROUS.
+    
+    the golden rule of rewriting histoy:
+        don't rewrite public history: commits that are shared with any other people.
+        commits are immutable, if you modify, it creates another one.
+        if you rewrite and push to central repository, then it would be rejected.
+        you can use git push --force
+        if you are modifying the central repositories and rewriting its history then other people wouldn't be able to push any more as the central repo is now different.
+        once public, don't change the history.
+        it is good practise to rewrite private history, before sharing it with the world.
+
+    noise:
+        eg a commit saying fix a typo, etc or sometimes alternate commits are not relavant.
+        eg update terms of service and google version, there are two different things and we should split them.
+    
+    undoing commits:
+        git revert HEAD if shared with other. It i will create a new commit that will undo all the changes made i previous commit.
+        git reset --hard HEAD~1
+            soft only changes repo, mixed changes repo and staging area, and hard changes all three to that commit.
+            mixed is the default option.
+        for reverting:
+            git revert HEAD~2 //to revert any commit.
+            reverting creates revert commits.
+            if reverting multiple commits:
+                git revert --no-commit HEAD~3..HEAD
+                    it adds all those to staging area, instead of commiting them.
+                    skip -no-commit to revert each commit individually.
+                git revert --abort/continue
+    recovering lost commits:
+        if you lose or reset by accident.
+        all objects are kept for a while.
+        git reflog //it shows how head moved.
+        git reflog show feature //for feature pointer.
+        if you want to go back to any of them, just use git reset command.
+    
+    Amending the last commit:
+        stage the changes first
+        git commit --amend //git creates a new commit internally.
+
+    amending an earlier commit:
+        with interactive rebasing.
+        git rebase -i dfhdkjfdh4r534343
+        change from pick to edit ones that you want to edit.
+        all commits after that commit would be recreated.
+        rebasing rewrites history.
+        close the window and rebase operation starts.
+        ammend the commit that you want.
+        do git commit --ammend 
+        git rebase --continue/abort
+    
+    dropping a commit:
+        you might need to solve the conflicts.
+        git rebase -i djfdh38r93ry
+        change from pick to drop or just delete the line.
+        you might get conflict.
+        git mergetool to resolve the conflict even if files are being deleted or created.
+        git rebase --continue
+
+    Rewording commit messages:
+        git rebase -i hdh34343
+        replace pick with reword for ones that you want to reword.
+
+    Re-ordering the commits:
+        use rebase, and re-order the pick lines.
+    
+    squashing commits together:
+        rewrite pick with squash and it would combine it with previous commit.
+        you can even re-order and squash.
+        if you use fixup instead, the messages of these commits is ignored.
+
+    splitting a commit:
+        git rebase -i fhddhh3543 
+        do resetting the changes and commit two different commits and then continue.
+    you can use gitkraken as well for the same.
+    when you rebase you get all commits after it.
+
+collaboration:
+    github: most popular git hosting platform.
+
+    workflows:
+        in distributed systems, every single developer has a separate repository.
+        we use centralized workflow on top of it to collaborate, where everyone has a local repository and then there is a central one as well that you push and pull into, it is used to synchronise their work.
+        you can put central repo in your private server, or you can put it in git hosting serives like github.
+        in an open source project: there are one or more maintaners and many contributors, only maintaners have push access, if you want to contribute, you first fork the repository, then you clone it to local machine, then you commit something and push to your fork, then you send a pull request to contributor, then they can pull, and if happy then they would push it to original repo.
+        this is called Integration-Manager workflow.
+
+    creating a github repository:
+        github.com/username/repository
+    
+    even to your public repo's no one can push or write, you have to give access to them for that.
+        just go to setting of repo and then to manage access and invite collaborators by email or github username. Once you accept the invitation, you will have the push access.
+
+    cloning a repository:
+        taking a copy to your local machine.
+        go to code tab and copy the full url:
+            git clone https://github.com/... 
+            it will create a directory by the same name with all previous commits.
+        you will now have two more pointer if you check using git log 
+        origin/master and origin/HEAD 
+        when we clone our repository, git names our source repository as origin, origin/master is its master and origin/head is its head.
+        hence origin is remote tracking branch. It is there for your reference you cannot switch to it.
+        git branch to see branches that you can interact with.
+        git remote //to see the remote repositories, not in current directory.
+        git remote -v //v is for verbose, it shows url etc fetch and push 
+    
+    fetching:
+        if there is a commit in remote repo, our local repo will not be aware of that.
+        to download that commit and move origin/master forward:
+            git fetch origin branch //branch is optional if you want from specific branch otherwise all, and you can drop origin as well. 
+        but those changes will not show, as our master is not upto date with them.
+        to bring those changes:
+            git merge origin/master
+            we will have a fast forward merge had there been no commits made by our side.
+            git branch -vv //it shows how our branches are diverging
+
+    pulling:
+        fetch+merge //one command for two.
+        if there is divergence, git will do the 3 way merge 
+        but it pollutes the history so some do the rebasing to have the linear history.
+        git pull --rebase //amazing.
+            it will rebase our commits to the current position of origin/master
+        git pull //would do three way merge by default.
+
+    pushing:
+        git push //sends our changes to central repo.
+        git push origin branch //both branch and origin are optional, if branch is master 
+        you might need to pull before the push, if your local repo is not up to date.
+        git push -f //don't use force, it would drop their work
+    
+    storing credentials:
+        git config --global credential.helper cache //for 15 minutes in memory
+            there are credential manager softwares to store for longer time.
+    
+    sharing tags:
+        by default tags are not pushed automatically.
+        tags are by defualt local.
+        git push origin v1.0 //where v1.0 is the tag that you just pushed to github.
+        github automatically generates assets/code for those tags.
+        git push origin --delete v1.0 //to delete a tag.
+            but the tag is still in your local repo 
+            git tag -d v1.0 to delete it locally.
+    
+    releases:
+        it goes hand in hand with tags.
+        go to tags in github, then click on releases, and then on create new release.
+        you can add release  notes, like if you fixed bugs etc.
+        you can attach binary files as well.
+        and check prerelease if this is not the final release.
+        you can always delete a release.
+        it is a github feature, and not a git feature.
+    
+    working with branches:
+        if you create a branch you have to push it.
+        git branch -r //to see remote branches.
+
+        git push -u origin feature/change-password // to set upstream, and push a new branch when it is not there in central repo. here feature is a new branch that we created.
+        for each local branch there is a remote tracking branch and you can see, how much they are ahead of each other.
+        
+        git push -d origin feature/change-password //to delete the branch after you are done with it.
+        but you still have local copy of branch.
+        git branch -d feature/change-password //to delete this branch, switch to other branch before doing this.
+
+        you can create a branch directly on github as well.
+            git fetch //to get this new branch.
+            but it is not there yet in your local repo. It is still remote tracking branch.
+            git switch -C feature/change-password origin/feature/change-password //you just created a branch to track the origin wala branch.
+        git remote prune origin //to remove remote tracking branches that have been deleted on origin by other collaborators.
+
+    pull request:
+        opening a discussion before  merging branch to master.
+        if you create a branch and implement a feature and push it to github.
+        in github you can compare and pull request. or click on pull requests to create a new pull request.
+        select two branches for pull request.
+        it is just a discussion within a team, before we merge them.
+        you often have conflicts to resolve first.
+        There is a title for pull request when you create it.
+            eg Feature: social login.
+        you add reviewers, they get email for review.
+        the can add their review.
+        you can add comments to each line if you want some changes, by clicking on +.
+        then write general description, you can request more changes.
+        after more changes you can request re-review.
+        you can approve or request changes.
+        after everything you can click on merge.
+
+        some say the person who starts the request shouldn't be able to close them, other people should do it, some say the same person should.
+        it gives you option to choose the kind of merge.
+        you can now delete the branch.
+        delete from your local repository, the branch and remote tracking branch.
+        even if there is conflict you can still have pull request and once done, you can resolve the conflict later in your terminal.
+    
+    github issues:
+        click on issues.
+        create a new issue, give it a title and description, and attach files.
+        you can assign it to multiple people or people can assign it to themselves, and there is label for each issue.
+        you can have conversation about the issue, or you can link it to pull request such that with that pull request the issue is closed, or link it with a milestone.
+        and you can close issue manually.
+        you can assign issue to yourself.
+
+        customize label in issues: 
+            ther are default labels and you can create your own label as well.
+    
+    milestones:
+        to track the progress.
+        you click on milestone and create one, set it a due date, you assign issues to milestones, you can select multiple issues.
+    
+    contributing to an opensource project:
+        go to issues, or create a new issue or select one.
+        fork it your own account/copy to your account that you can modify.
+        now clone it to local machine and work on it and do something cool, you can start a new branch.
+        push it to your github.
+        you can start a pull request, to your own copy and to base/original repo and you can have a conversation over it with the owner of repo. the mainainer can request changes, and finally merge the request. The contributor cannot close the request.
+
+        to keep forked repo up to date:
+            you can add reference to the base repo in your local repo and then push those to your github.
+            git remote //it shows origin.
+            git remote -v for verbose.
+            to add new remote 
+                git remote add upstream urlofbase, //you can name it anything like upstream 
+                now you have two remote repositories.
+                git remote rename upstream base
+                git rm base to remove 
+            
+            git fetch base //by default it is origin.
+            git switch master 
+            git merge base/master //this merges local and base/master
+            now our local is in sync with base.
+            now git push 
+
+pluralsight:
+    development is typically done on feature branch and once done, it is merged to main branch.
+    github is a hosting service based on git.
+    git on windows, comes with git bash.
+    add vscode as env variable in windows.
+    github also offers CI/CD.
+    you can use ssh or https to connect to github.
+    create ssh keys and add to github.
+        ls -al ~/.ssh 
+    make sure ssh agent is running.
+    copy ssh key to github and add in settings: the public key, title like rayon's laptop.
+    ssh -T git@github.com //to confirm if it happened. ssh will add github to known hosts.
+    you can search for anything on github.
+    git push origin main
+    README tells about the project.
+    LICENSE is for license.
+    you can edit github repo details and add topics to make it easily searchable.
+    projects part can be used to create a kanban board.
+    collaborators: core team of the project.
+    contributors: lower permissions.
+    insights is for data analysis.
+    for experiments and bugfixes we create branches.
+    branch is just a pointer.
+    always check the branch first.
+    branching strategies:
+        centralized workflow: all changes to main branch.
+        Gitflow workflow:
+        Forking workflow:
+        GitHub workflow 
+    
+    GitHub Workflow:
+        branches for bugs and features 
+        evolves around pull requests.
+        PR: pull request.
+
+        there is a main branch
+        you create different branches for features and bugs.
+        when you are done, you open a pull request.
+        it gets reviewed, and it gets merged.
+        you delete your branch.
+        conflicts: like modifying same line, or deleting a file.
+        you can revert a pull request that would undo it.
+        you can use git blame in github easily for each line.
+    github actions for automation.
+    wiki is for documentation.
+    readme is for overview only.
+    gist is for snippets etc. like a repo.
+    
+        
+youtube: github copilot:
+    AI based tool used for pair programming.
+    It comes as an extention for VSCODE 
+    it is based on openai 
+    you write a function name and it autocompletes.
+    even if you write a comment it completes it.
+    
+
+
+
+    
+    
+

@@ -1,0 +1,163 @@
+//from udemy course
+
+docker build .               //easiest way to build
+docker run -p 3000:3000 id   //have to write port here as well EXPOSE is not enough
+docker stop id/name          //to stop the container
+
+
+images are blueprints and containers are running images
+
+download Docker extention in vscode
+every image has a file system,independent of of you are using an OS in in 
+eg 
+FROM node
+copy . /app
+
+RUN is only  executed during build not during run
+so we don't put RUN node server.js there
+
+RUN npm install
+EXPOSE 80  //it is local port of that container,which it might use 
+CMD node server.js
+
+//integrated terminal in vscode hence integrated terminal it is called
+docker run doesn't give you command prompt back until it stop executing
+
+EXPOSE is not enough to get the port
+docker run -p 3000:80 id 
+
+to restart a container,stop it first
+
+each command in docker file makes a layer and only changed ones are build unless cache used
+
+it is called a layer based architecture
+and CMD is the final layer on top
+if one layer changes,all other are rebuild
+and one instruction might effect another
+
+so you copy package.json first.
+
+docker --help to see all possible sub commands
+docker start   //starts a contianer in detached mode
+docker run by default runs in attached mode
+-d for detached mode
+to get it back attached
+docker attach id/name
+
+
+docker logs will have everything that was printed on console.
+docker start -a id/name to start in attached mode
+
+you can't give input in attached mode like in console 
+you need interative mode for that -i
+-it is interative plus terminal
+same for start use -i  
+
+
+
+docker container prune  //to remove all stopped containers
+FROM node automatically pulls an os as well and a big Os so better use our own kind of os like alpine
+
+if there is a container for an image,stopped or not,you cannot remove it image
+
+
+docker cp to copy files in and out of running container
+docker cp dummy/ name:/test
+docker cp name:/test dummy/
+you can copy log files from container
+
+docker ps also shows port mapping
+
+
+docker run --name hey id to give name to container
+for images use -t 
+
+
+port in expose and app.listen() must match
+docker images prune only removes ones without tags
+
+you can share the folder and Dockerfile or share an image
+
+
+docker login 
+docker logout
+when you push an image it doesn't push whole thing,only things that it needs, like it knows where to get node so node is not pushed
+
+
+
+FROM node:14
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+EXPOSE 80
+CMD npm start
+
+
+
+you still have files in stopped container.
+
+
+
+volumes are folders in host machine mapped to os in docker container.
+hence changes reflect and persist.
+
+volumes are managed by docker.
+docker volume ls 
+
+bind mounts=>to reflect changes without rebuilding a container.
+they are like volumes but you know the host machines location.
+-v absolutepath:/app  or use pwd to get absolute path
+
+mounting overides all files in that folder in container.
+so if locally you don't have node modules then it won't run on container
+you can use anonymous volumes like -v /app/node_modules hence not overidden
+anonymous volumes live as long as the container. 
+and in docker volumes are assigned based on longest path so node modules is assigned to /app/node_modules
+then to /app volume wala 
+
+
+you can share bind mounts accross conatiners as well
+
+by default volumes are read and write 
+you can make them read only by using volume-name:/app:ro now container won't write to local folder
+even here you put more specific anonymous volume if you want some files to be overridden
+
+for volumes files exist in both and are in sync,container overrides local 
+
+
+
+to remove a volume
+docker volume rm firstvolume
+
+you don't use bind mounts in production
+
+you can even use argumenets for dockerfile using ARG in dockerfile,but leave it for now
+put arg near where it is needed
+as even ARG makes its own layer
+
+
+DOCKER NETWORKS
+you can send web requests in your container,if you are sending request to some website.
+
+to send requests to local host replace localhost with host.docker.internal
+COOOOOOOOOOOOL
+
+for container to container,just use the name of container as docker builds internal network of all containers.
+docker contaner inspect cname you would get ip address here as well of that container
+no need to hardcard,just use names of containers.
+
+to create multiple NETWORKS
+docker network create first-net
+docker network ls
+docker run -d --name abd --network first-net mongo
+
+
+
+logs are important for debugging.
+
+
+
+
+
+

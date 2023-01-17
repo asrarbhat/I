@@ -1,0 +1,2164 @@
+google
+
+    the part of economics concerned with large-scale or general economic factors,such as interest rates and national productivity.
+
+missouri state univeristy: principles of Macroeconomics.
+
+class 1:
+
+    father of economics: adam smith
+        he wrote a book in 1776 called the wealth of nations.
+        he was a scottish economist.
+
+        legend say as he crossed the border to england,he realized that everything is better,people were richer,etc and pretty much everything was better,and he asked why,the language and the culture were same,same religion etc. so asked what makes nations wealthy.Up until that we had a system called mercantilism which says what makes a country rich is gold and silver.the idea was you want more gold and silver into the country,hence a lot of exports.you provide products and services in return of gold and silver,and thats what makes a country rich.maximize exports and minimize the imports.adam smith says it is not right.also in 1776 declaration of indepedence also happens,and it is not a coincidence.people in america were like,there is this king and he tells us what to do and we think we can do better ourselves as well. Adam smith says that an invisible hand can solve a lot of economic problems.At that time france had 13000 regulations on how to build a chair. And of course that makes making a chair very hard. Adam smith says you don't need those regulations and people who make good products are gonna stay in business and those who don't will not stay in business. you don't need government with all those regulations,just like in 1776 in america that we don't need people from across the ocean to tell us what to do. we are smart enough to figure things out by ourself. invisible hand is a way to make economy in a state to grow at optimal rate.
+
+    economic problem in detail:
+
+        how to turn resources into goods and servies
+            resoures ------------> goods and services 
+            this is what economics deals with 
+        
+        and these resouces are limited and scarce, and we have to use these resouces to make goods and services,hence goods and services are also going to be limited and scarce,so which goods and services do we produce and how are we going to produce them.and which we use to build those goods and services,hence making economics a decision science.its not about stocks and bonds,they do have stuff to say about that. it is about how and which sets of resouces are we going to turn into goods and services,and how to distribute those goods and services. the study is of the fact how do we get from limited resources to goods and services.
+
+        if your broker knew which stocks to buy,he would not be working.
+
+        terms:
+            scarcity: the fact that there are insufficient resources to produce all goods and services that people want,so we have to make a choice.
+
+            economic goods: things that are scarce and desirable beyond what is freely available,it doesn't have to be tangible. Leisure time is a good that we want.
+
+            economic bads: things that are undesirable,eg pollution,crime.
+
+            economists analyze what economic goods we want and what we don't want and how we are going to achieve that given a limited resources ----cool definition.
+
+            given a pizza that has both peparoni and cheese,and your wife wants cheese only,then the part that has peparoni is an economic bad for her,hence there is no universal definition of economic good or bad and it changes from observer to observer.
+
+            positive economics : looks at "what is" ,these are testible e.g the federal budget deficit is 300 billion dollars,increasing the minimum wage increases the unemployment among black males.it doens't need to be true,it maybe,it should be testible.it is a testible hypothesis,you can collect data and test it.
+            
+            normative economic : looks at "what should be or what ought to be" ,these are value judgements. e.g the federal budget deficit should be smaller,the minimum should be increased.this is not testible.
+
+            so basically you want something and economics tells you how to achieve it and what will be the consequences.
+
+            generally we want to do positive economics.
+
+class 2:
+
+    resources:
+        four kinds:
+            land : all of natural resources,minerals,forests,water,arable land.
+            labour: all of physical and mental talents of men and women. football players,doctors,janitors,computer guys etc.
+            capital: manufactured aids in the production process. capital is not money. boards,chalk,distribution network etc
+            entrepreneurship: combine land,labour and capital to create goods and services,basically the incharge and someone who comes with ideas.
+
+            land is limited.
+            labour is limited.
+            capital is limited.
+            entrepreneurship is limited.
+
+            since they are limited,they need factor payment.land can be used for housing,retail stuff,buildings,farm,park,factory,etc and if we want the land is not used for farm,buildings etc and all alternate purposes we have to rent it. they factor payment for land is "rent".
+
+            similary men and women can do a lot of things like sales,farming,waiter,janitor,etc and to make them do what you only want them to do you have to hire them from these alternatives,the factor payment for labour is "wages". the bigger the list of stuff you can do the better the wages.
+
+            capital: building: for education,homes,mall,gym,day care, etc ,if a lot of uses for a capital better it is,factor payment is called "interest"
+
+            you combine all of them,an entrepreneur combines and gets a factor payment called "profit"
+            the more the uses or highly valuable the output of production,better the profit.
+
+            the factor payment is reflection of alternate uses.
+
+        important ideas that we keep in mind in economics:
+            - opportunity cost: using resources to produce one good,and diverge those resources away from production of alternate goods,these alternate goods sacrificed to create the original good is the opportunity cost to produce the original good.
+
+                    when a big chain stores wanted to open a new store,120 year old tree stood in the way,rather than cutting it down the chain store pain 100k to have it transplaned,the practise has become more popular and it gives positive publicity and attracts the croud.
+
+                        100k to move the tree: the opportunity cost here is 10 dollars to buy a tree hence we could have planted 10000 trees,or just cut it down and saved a lot of money,or just donated that money.
+                
+                    the opportunity cost of me watching this lecture is sleep,watching some good web series etc
+
+                    "the opportunity cost is the highest valued alternative"
+                
+                every decision we make has an opportunity cost,otherwise it wouldn't be a decision.
+            
+            - people know that resources are scarce and will attempt to economize : given a set of choices that have equal cost,we will choice one with highest benefit. or choices with equal benfits we would choose lowest cost.
+
+                    eg same job in different cities,we would choose one near home. we save money on gas and can live with family.
+                
+            - incentives will alter people's behaviour : if grades were given based on random chance nobody would study for exams. if paid based on weight,you would make glass thicker.if based on area,we make it thin. hence incentives decide the behaviour.
+
+            - economic agents (decision maker) make decision at the margin(people examine the marginal benfits vs the marginal cost) marginal means additional.
+                if marginal benefit>marginal cost then we want to do it,otherwise not.
+
+                eg 90 marks gives S so we don't shoot for 100 as it takes a lot more effort than to go for 100.the effort to go from 90 to 100 is a lot more than 10 percent. here the marginal costs are huge and marginal benefits are nothing.
+
+                however going from 0 to 40 doesn't take a lot of effort,but the marginal benefits are remarkable, hence people should make decisions based on MC and MB.
+            
+            - information is important but costly to obtain. we need information to help us make better decision.information helps us to choose and to calculate marginal benefits and marginal costs.
+            collect information until the marginal benefit of collecting the information is more than or equal to marginal cost of collecting the information.
+
+                    eg. do you call all people from gas stations to see who has cheapest gas. the marginal cost of collecting information on all gas station prices is larger than the benefit,as they are only going to vary by a few cents,but it takes time and calling bill.
+
+                    same for choosing the restaurant.
+
+                and you can't necessarily get full information,and you might make wrong decisions,and sometimes you don't have information about the marginal cost and benfits of collecting information itself. hence such wrong decisions are part of not having enough information.
+
+                think of most efficient answer as hitting the bulls eye,it is hard to hit at the center,and with more and more information we get closer and closer to the center and it gets harder and we get closer. margin cost is like trying to hit the bulls eye at the center,and benfit is like how valuable is it to hit the bulls eye.
+
+
+class 3:
+
+    things to do and things to avoid:
+        like last five points in last class.
+        - economic actions can generate long run effects that are different from short run effects.
+            eg. federal aviation admin is considering regulations on children under the age of 2.like child who is younger than 2 doesn't need to have a seat but they want them to have extra seat for safety as it is hard to react when kid is in your lap even in buses.
+
+                but making a child buy seat increases the cost to fly for a person to fly,hence people would drive instead,but flying is safer than driving,flying is even safer than walking. hence admin wanted safety but now kids are in more unsafe environment.
+
+            eg if car milage on average should be 25 in a company,and if they make 15 one then they have to also make 35 one to average out to 25,but it is hard to make 35 one,so you make cars smaller and lighter to get 35,and todays cars the bumper is made up of plastic and is unsafe.and turns out "corporate average fuel economy standards" is responsible for 2000 deaths every year in america. it changes the structure of cars.
+
+            hence you get something entirely different from what you actually intended.
+        
+        - value is subjective: value cannot be measured objectively.
+            if i think my house is worth 300k,you can verify it by checking if someone is ready to buy it at that price.
+
+            if you want to save a tree from being cutting down,your value of that tree is a lot more and if you start living in that tree to save it,you will have immense opportunity cost for it,where as for the guy who is cutting it down,it might be just a piece of wood.
+
+        
+        hence value of things change from people to people,there is no way to put a single value on a thing.
+
+    things to avoid:
+
+        - violation of ceteris peribus: everything else equal.
+            basically look at one thing changing at time.rest should be same.
+
+            eg if you got a field that gives 100kg every year,and next year you apply 10% more fertilizer and 10% more pesticide,and we get 130kg.how much from fertilizer and how much from pesticide? we don't know.
+
+            year after that we put 10% fertilizer only so we can say that fertilizer added 10 but we cannot say that pesticide added 20,as two things are changing and these might be interacting as well,hence the only way to figure it out is to use pesticide only to get the output.
+            say we get 10% by pesticide as well.
+            it is difficult to figure out what is working when there are multiple things at play,we have to isolate and observe changes individually.
+
+        - introducing bias : it would be normative economics.
+            eg. changing scale of the graph to make one guy look better than another guy.
+
+            eg low income people read to children 25 hours from age 0 to 5
+            and middle income people head 1000-1700 hours for the same.
+            and the data came from 22 low income households,and for middle income she used her own child john.
+
+                and certainly this data is highly biased.
+            
+            eg giant wild fire in colorado,burnt around 11000 acres,which is about 17 square miles. hence 4.1 miles of square,hence 4.1 miles doesn't seem that bad where as 11000 miles seems a lot. and you don't care about 4.1 miles.
+
+class 4:
+
+    things to avoid:
+
+        - not defining your terms:
+            otherwise you might be talking about something completely different.
+            eg capital is money for finance people and for economist it has nothing to do with money and money is just and piece of paper and capital is manufactured aids.
+             
+             and if an economist and a finance is talking about capital,they might not be talking about the same thing.
+
+            similary the profit is money left over for finance people,but for economist we also talk about explicit costs like money and implicit costs like opportunity cost.
+
+                for finance profit= revenue-cost
+        
+        - the fallacy of composition:
+            what is true for the individual is true for the group.
+            standing up in a stadium might give you better view,but if everybody stands up it would be good for everyone.
+            sometimes it might be true. the fallacy is in assuming.
+        
+        - post hoc fallacy: correlation is causation:
+            if you things are moving together,maybe in opposite direction,but that doesn't mean one is responsible for the moving of other or causing it.it may be true,the fallacy is in assuming.
+
+            eg. education and income are heavily correlated,which one causes another.in us 20% people with graduate degree earn less than high school kids.
+    
+    graphs:
+
+        graphs allow us to visualize the relationship between the indepedent variable and dependent variable,the indepedent variable changes on its own and the dependent varialbe changes as per dependent variable.
+
+        we can have a positive relationship for negative/inverse or complex.
+        complex has both positive and negative components to it.
+
+        eg number of beers consumed vs blood alcohol conentration,it is positive relationship.we put indepedent variable on x-axis. and we can extrapolate it.the curve can be represented in using some function.
+
+        in two 2d graph everything else remains constant,only those two quantities are under scrutinity.
+
+        complex relationships like parabolic,negative means decreasing strictly and postive means increasing strictly.eg profit might be parabolic.
+            
+class 5:
+    resources ----> goods and services.
+    less resources produce less goods and services.
+    even if we use all resources we will have limited number of goods and resources.
+    
+    production possibilites curve:
+        full employment:
+            using all available resources. we don't want resources idle.
+        full production:
+            use resources where they will have the greatest effect on output.
+            eg oranges cannot be grown in northern canada,even if you use whole employment.hence it would be full employment but not full production.
+        assumptions:
+            the economy is operated efficiently: full employment + full production.
+            resources/factors of production are fixed in quantity.
+            factors of production are fixed in quality/ like the labour are are getting educated
+            technology is fixed : our knowledge of how to turn resources into goods and services.
+                these assumptions can be thought of a snapshot at a time.
+            
+        two goods, pizza and textbooks.
+            if we devote all resources to make textbooks we can make 10 textbooks 0 pizzas , or we can make 4 pizzas, 0 books, 7 textbooks 2 pizzas etc.
+            the graph between textbooks vs pizzas is a linear decreasing graph,and you make it continous as it is possible.
+            this curve is called production possibilites curve.
+        production possibilites curve: the curve for possible productions.
+
+        which one is best:
+            there isn't any best best,it is a normative issue.
+            but anything under the curve would be suboptimal use of quantity of resources and anything over the curve is not possible as the resources are limited.
+            the points on the line are better than points inside the area, and that is not normative, that is positive economics.
+            all points on the line have same preferability.
+        
+            moving from point A to Point B ,you gain 1 pizza, you lose one book,opportunity cost is 1 book.
+            next gain 1 pizza,lose 2 books and son on,hence the curve doesn't need to be linear. opportunity cost may vary fro one point to another on the curve.
+
+            law of increasing opportunity cost:
+                as you make more units of a good,the opportunity cost of making more increases.
+                why? 
+                resources aren't perfect substitutes for each other.pizza and book are made up of different resources.you have to release resources that are good at making pizzas to get resources that would be used to make a book.And people who are good at doing one thing would take time and effort to master another one.
+
+                similarly for healthcare vs education, it is like an inverted parabolic.
+                it remains true only under the above assumptions eg the technology remains same etc.
+
+                eg if a country that only produces pizzas starts making cars,initially the resources are are good at producing cars would be used and then later resources that are not that great woudl be used.
+
+            if level of resources change, or change in quality of resources or level of technology changes or legal or social structures change, our production curve would shift out or in accordingly.
+
+class 6:
+    division of labour:
+        method of breaking down some taskinto their parts. and each person does a part.
+        Allows society to make more goods and services.
+        Allows people to take advantage of their skills.
+        specialize at something and trade that, instead of learning everything.
+        you can produce more as a society if you specialize.
+        worker that specialize and become very skilled at their tasks,eg carepentry,etc. the more time you do them the better you get at them and you get faster.
+        allows to adopt to mass production techniques.
+
+        Absolute advantage:
+            when an econmic agent can make more of a good than another economic agent in a given time ,could be a person,company, country etc.
+        Comparative advantage:
+            when an economic agent can produce a good at a lower opportunity cost than anther economic agent. basically cheaper.
+        Comparative advantage is what decisions are based on. opportunity cost is the deciding factor.
+        buy from an agent that has Comparative advantage over you. eg buy from china at 2 rupees instead of producing at at cost of 5 rupees worth something else. 
+        
+        You should do where you have Comparative advantage and trade with people who have Comparative advantage over you on other things.
+
+        hence trading is a Comparative advantage game.There is demand and supply because of you having a Comparative advantage.
+
+        Hence trade is beneficial for both the parties.
+
+        law of increasing opportunity + Comparative advantage results in trade.
+        eg grow rice in US as US has a lot of land,and land in US is cheap.And land in japan is very expensive as japan is a small country. Japan in turn should focous on Electonics,or nintendos etc.
+        hence in ego don't ignore Comparative advantage.
+        similarly US doesn't have skilled labour,India has skilled labour.Hence people in US want labour from India,China.
+        unskilled labour: factory workers.
+        skilled labour: eg engineers,hence US makes aircrafts and it is capital intensive and india doesn't have capital as india as 3% of capital,as US has more skilled labour than india.
+
+        Economic questions:
+            What is to be produced?
+            How much of each to we produce?
+            How is the output to be produced?
+            How is the output to be distributed?
+            Can the system adapt to change?
+
+            Three answers:
+                Traditional economy:
+                    based on traditions, you would do what people before you did,like father like son.
+                Planned Economy:
+                    beauracrates decide what you do. They decide who is gonna do what,How and where.
+                Market Economy:
+                    based on supply and demand.
+class 8:
+    market: institution/mechanism that brings together buyers and sellers.
+    Demand: is willingness and able to buy at a specific price. its magnitute varies from price to prize.
+            you take data form whole in the market and draw a graph of that for that data and you can get the same data again tommorow and get different curve.
+            demand for one day is quanity demanded. and what happends everyday to curve is demand.
+    law of demand: ceterris peribis, as price increaes, the quanity demanded decreases. it doesn't say anything about demand of that thing in market.
+
+    demand has more to do with, how people feel about it buying it.
+    market demand curve is the demand curve for all businesses added.
+
+    determinants of demand:
+        taste and preference:
+            increase in taste and preference increases the demand.
+        increase in demand means at every price now market is willing to buy more / curve shifts to right.
+        number of consumers: increase the demand, eg if more old people then more heathcare hence more insurances.
+        income of consumers: as income increases , the demand of normal goods increase and the demand of inferior goods decreses.
+        price of related goods also contributes.
+        the quality is assumed to be best when talking of good.
+        when you put high price on iphone you are trying to tell people samsung is not as good as iphone as otherwise people would go for substitutes.
+
+class 10:
+    
+
+##########################################################################################################
+
+class 1:
+    economics is a social science,it is about how people behave, just like political science or history or anthropology.
+    economists develop models of how people interact in market.
+    we economicists always believe people are always motivated by their self interest.
+    we use numbers to measure how things are going like GDP (gross domestic products)
+    we are insterested in government policies, what they do when GDP goes down, to make it grow at steady rate. 
+    terminology in economics might be different from what they mean in daily life.
+    tip: if you know what comes in exams,then with 20% effort you can get upto 70% marks.
+
+class 2:
+    economics: the study of how people use time and material resoures to improve their well being.
+            we study how those decisions affect others in society.
+            we study policies designed to effect economic decisions of people.
+            it is a social science,limited to the aspect of how people behave with respect to the resources they have.
+            microeconomics: looks at the economic behaviour of individuals (consumers,employees,business etc)
+            bahaviour is motivated by self interest. This is an axiom to study economic behaviour.
+            these economic decisions have broader impact.eg pollution,because you choose cheaper car, if you apply for a job,someone else doesn't get that job. Basically decisions act like a chain reaction. Figuring out this chain would be great.This is where Macroeconomics comes up.
+
+            Macroeconomics looks at the overall state of economic conditions.
+            government policies can affect economic activity.
+                eg regulate pollution,so cars that produce pollution should be junked, hence market for new cars would be created. 
+                If government thinks you are not saving enough for yourself,so they take it from your paycheck for your retirement.
+                If we don't make decisions that government thinks is appropriate then government would come up with policy for us to make those decisions,these decisions could be good or bad for us bad certainly government wants it to be good for the whole economy.
+                eg people consume a lot of cigrattes,so lets tax it hugely.
+            economic decisions are made by individuals and not the organisations. And those individuals they are self-interested within the economy.
+            Economic decisions are constraied, you don't get what you want. constraints imposed by nature,laws technology,market conditions (other people). Eg you want to be rich but laws constraint you from stealing. Policy makers might mutate these constraints. Natural constraints are hard to change, laws might be amended.
+
+            resources are required to produce goods and services, nature says we not giving you free stuff from sky. If you want to build cars,you need tools,labour etc 
+
+            resources:
+                productive resources:
+                    land,labor,capital,entrepreneurship.
+                    labor: human resources to do the work.
+                    land: natural resources,fishes,birds,soil,literal land,gold,air,water etc all fall under the land resources.
+                    capital: not provided by nature, not human. eg iron from soil refined to build steel,now stell is a capital good. nature + human => capital resource. To build car you need steel, steel have itself  been build and you want to build something else from it.glass same way.
+                    entrepreneurship: human resource,it is humans organizing resoures and making decisions,hires,designs,plans, sell it.
+                    entrepreneur is the residual claimant. it could be negative.
+                    entrepreneur checks if market is small or large.
+
+                    productive resources are limited in quantity.
+                    workers are limited.we have child labour laws also, we have old people.
+                    term: social security: money government takes to give you back when you get old,like a pension monthly.
+
+                    some people have used all clean air by pollution, some people have used all water by dumping waste in water. Hence clean air is a limited resource.
+
+                    gas stations abondoned are not bought by anybody because say there has been an oil spill and government if checks the soil would ask of you to clean it which would cost a lot of money. Hence even there is limit to clean soil.
+
+                    if population is not growing: then even labour force might be shrinking.
+                    labour force contains all people that can work,whether it is an engineer or a janitor.
+    
+    scarcity: desires of people outstrip resources, it doesn't mean shortage, it means we want more than what is produced.scarcity leads to choice,we have to choose.Hence there ain't no such thing as free lunch. if you want something you have got to give something up. if there were no scarcity we would get everything we want.
+
+    own definition of economics: it is about how people make decisions in a world where they can't have everything.
+
+class 3:
+    everything has a cost due to scarcity. In a day there are 24 hours, and you cannot be at two places simultaneouly, hence you choose and decide.
+    prodution possibilty curve:
+        if you can produce X, or Y. how much X and Y you could produce that is production possibilty curve. you could make only X or only Y or both to some extend. the graph is linear and decreasing.
+
+    opportunity cost: what you give up, now that you made a decision of what to do.
+
+    the price of going to college is increasing rapidly.
+    the price of health care is increasing rapidly.
+
+    the more valuable something is the more the price.
+    because of scarcity a rationing/allowance mechanism is needed: some way of deciding who gets what and how much. eg first come first served, religion, political affiliation eg communist countries, physical attractiveness, strongest, market economy: willingness to pay highest: probably the best one. 
+    Being rich doesn't mean you can have everything, even you limited resources, and you have to make choices. To overcome the shortcomings of market economy as poor might not get a shot,government comes up with policies.
+    market failure:  when market fails to do what most people think it should do. when allocation of goods and services produces net loss in economy.
+
+class 4
+    people base their decisions on a comparsion of benefits and costs.
+    people care about marginal(incremental) benefits and costs.
+    economic theories are complex stories explaining econmic behaviour,based on facts and assumptions,concepts (like opportunity cost) and we develop an explaination or prediction.
+    sometimes economic theories work and sometimes they don't .
+    economic laws: theories that stand the test of time.
+    law of demand: other things equal,price goes up,people buy less.
+    logical falacies:
+        fallacy of composition: understanding the parts you don't understand whole thing and vice versa.
+                                the whole is not sum of parts,it may be true sometimes but not always.
+    positive econmics: what is and prediting. eg inflation will be more next year.
+    normative econmics: what should be. eg taxes should be halved next year.
+
+    positive econmics is like mathematics.you don't care who is the president.
+
+class 5:
+    The production possibilties model:
+        it is concave to the origin(below linear curve), ideally it should be linear.
+        if the resouces are same for both products, the curve is linear then.
+        eg the resources at producing wheat are not as effective at producing houses.
+        the opportunity cost increases as we increase the size of resources to be utilized.
+        ideally we want constant opportunity cost.
+
+        lesson: you can be better at one thing and you should do that thing, instead of something that you are not good at.
+
+        anything outside the surve is unattainable,and points on curve and below it are attainable.
+
+        if point is below curve it means resources are staying idle/unemployed.
+
+        the points outside curve represent scarcity.
+        the point you choose on curve is the the choice you make.
+        hence you have to make choice,there is scarcity,there is opportunity cost,and there are a bunch of optimal resources of resources which we have to choose from.
+
+        when the economy grows the curve moves out. Now something that was unattainable is now attainable.
+
+        us econmomy grows say 2/3 % every year.
+        the rule of 72: tells how long it takes for a variable to double in value, this is a rule of thunb, 72=R X T where R is percent.
+
+        what makes an economy grow:
+            more resources (it ships curve up)
+            better technology
+
+            land isn't growing as a resource,the labor force is not increasing, hence in modern world they aren't the ones boosting the economy.
+
+            entrepreneur are the source of econmomy.
+            capital also contributes to econmomy eg computers,hammers,trucks
+                capital good is a good produced by people and used to produce other goods.
+            
+            government might give entrepreneurs benefits like no tax just to boost an econmomy.
+
+            human capital: comes under capital,it is the idea of investing in workers in order to make the worker more productive. eg education etc 
+
+            you have to make a balance between the resources you use for consumer goods and capital goods.
+            it is also concave to the origin. capital goods would lead to growth in econmomy but to do so you have to invest less in consumer goods hence there is an opportunity cost.
+
+class 6:
+    accumulation of capital would lead to economic growth.
+    every human has a production possibilty curve within his/her head.
+
+    how does an economist know if a public policy is a good or bad one?
+        benefit,and opportunity cost are the two things to weigh based on.
+        eg heathcare policy: increase taxes for better health system, but now people cannot buy things. How about an Employer should pay for the heathcare of their employees, He/she won't hire new employees and exising employees would work extra time, hence less jobs. or Lets have doctors who work half an hour for free, people would no longer want to be doctors. 
+            Hence if there is a policy, there is a cost.
+            hence after careful analysis of a policy based on cost and benefit we choose a policy.
+            in political policies politicians only talk about good things and hide the opportunity cost.
+        
+        production possibilty frontier tells you, given resources what can you have.
+
+        inflation is an increase in prices.
+
+    Trade is between two countries, if it is within a country we call it commerce or buying and selling.
+    you can achieve something outside production possibility frontier by Trade, you can have best of all worlds, if you are good at something produce it and trade within other countries for what you are not good at.
+
+    or just produce something that you are really good at and produce it more than needed and trade the surplus.
+
+    trade:
+        specialize in producing the good for which the nation's opportunity cost is lowest.
+        it is the law of Comparative advantage: produce things where you have Comparative advantage.
+        trade is great for both the nations.
+        trade off your surplus.
+        it is important to trade after specialization.
+
+        if your country has abundance of certain kinds of resources then you should specialize or trian people for that resource.
+
+        trade allow you to have maximum of both outputs without opportunity cost.
+
+        you need to know which country has Comparative advantage over you and trade with that country the resources where you have Comparative advantage to all.
+
+        in trade both sides win.
+
+    Three questions every country much answer:
+        what will be produced?
+            pick a point on Possibility frontier curve.
+        How to make it?
+            laws, institutions to do it, customs, etc 
+        goods are made for whom?
+            a rationing mechanism. eg highway for everybody with toll booths.
+        
+        even socialist,communinist countries also have to answer these questions.
+        US had a great deal of sucess with answering these questions and people adopt also the same policies.
+        US uses market econmomy.(it uses supply and demand as parameters to decide)
+
+class 7:
+    what goods will be produced?
+    how will it be produced?
+    who gets to consume these goods?
+
+    in US we leave it upto market price (buyers and sellers) that is the the government policy for the most part. There are some non market decisions also.
+
+    we let consumers decide what to be produced which then producers produce.
+    business people decide how to produce these goods.
+
+    market: market is not a square where everybody comes to buy things.
+        market is all buyers and sellers of a particular good or service.
+        it is a collection of people.
+        these people could be located anywhere.
+        market for econmics is not confined to place.
+        think of market in terms of people.
+        market exchanges are volantary 
+        people trade at market places,you can always say no to a deal.
+        positive sum exchanges: both sides expect to gain.
+        zero sum game: one persons gain is another persons loss.There is nothing new added.
+        negative sum game: net is negative.
+
+        trading is a postive sum game.
+        volantary actions are positive sum game.
+
+        in trade both parties want to do ahead, for each transaction. in most of the cases that happens. Unless there is come sort of fraud.
+
+        there are billions of transactions happening everyday from something something as simple as buying a pepsi.
+
+        people in market:
+            a buyer,a seller, or neither.
+            neither are ignored.
+
+        the behaviour of buyers is described by the law of demand.
+            as the price of the good rises,the quantity demanded declines and vice versa.
+            own question: does it apply to necessities like medicines.
+            it is not a universal truth. But it works for most of the times in real world. since it works most of the times, it is called a law.
+            since it is a law you don't need to verify it, it has already been verified.
+
+            demand curve is linear and decreasing.
+
+            why? 
+            self interest, if car costs too much i don't want to buy it. Where as it is less than earlier the opportunity cost is less hence i can buy it now.
+            less price means the purchasing price of your money is more.
+
+            substitution effect of a price increase : if a good's price goes up, people tend to buy less  of it and substitute othe goods.
+
+            there are substitutes for pretty much everything.
+            if this car is expensive i will buy a basic car that is cheap.
+
+            higher price invokes lower demand.
+
+        law of supply:
+
+            as the price of a good rises, the quantity supplied of that good increases and vice versa.
+            this is how sellers behave.
+
+            here we are dealing with cause and effect:
+                price changes and it causes suppliers to react.
+            
+            here we have a postive or direct relationship between price and quantity.
+            higher price invokes higher production.
+
+            why?
+            it means marginal cost is lower than marinal benefit.
+            also it is not about one company,it is about market,so if price increases new players would start producing.
+            more price means more money coming in, means more resources for money.
+            it is linearly increasing.
+            think of it as supplier's goal is to produce and with more price he/she would have more money to produce,it is just a matter of having more resources.
+            
+            even at low price, a peron would make more and more but he/she can't as the resoures as limited but as the price increases the resources also increase.
+
+            note: a shop has to comply to prices in the market,doesn't matter for how much a shoperkeeper bought it for.
+
+            both in a same graph gives you supply and demand curve. where supply is of all sellers not just of one seller and same for demand of all buyers.
+
+            higher price would lead to higher production,but less demand so you get surplus of resoures.hence you produce more than demand.
+            and surplus is sold at sale, sale means price goes down,hence you produce less and now there is less surplus,and it keeps happening until you reach point of intersection.
+
+            similarly if price is less and you produce less,there is deficit/shortage of that good as the demand is more and supply is less. so now same thing is sold at higher price because of too many people there to buy until we hit the point of intersection of the two curves.
+
+            the key is to know these two curves,as in where they lie on the graph. 
+            as long as there is surplus,the price is too high.
+
+            supply curves tells us the behaviour of seller,and demand curve tells us about the behaviour of buyers.
+
+            quantity demanded = quantity supllied.
+                the market is in equillbirum.
+                equillbirum price: the price where quantity supplied equals quantity demanded.
+
+            if supply is less than demand, you raise the price and vice versa, thats how you find the equillbirum price, you don't need a curve to do that.
+
+            it reality it is difficult to know the equillbirum price beforehand.
+
+        this is how pricing works in our economy.
+        for a long time people couldn't determine what drives the price of things. We didn't have model of it.
+
+        karl marx: Labour theory of value : something got value, because it was produced by labor. which certainly is wrong. he gave socialist and communist theory of econmomy. if it produces two hours then its value is twice as that thing that takes 1 hour.
+
+        some even said, how useful something is determines its value.
+
+        Alfred Marshall: about near 1908 he had seen what others have said, he said labour is as good as supply and usefulness/desire is as good as demand and both of them determine the price, it is not supply alone and it is not demand alone,both supply and demand determine the price of a good.
+
+        the price will change if these two curves shift.
+
+        like airtel,jio, price was high and we got jio also and as production increased the price came low.
+class 8:
+    supply and demand curves move sometimes on daily bases and sometimes on minute by minute.
+
+    shifts in demand:
+        if it moves outwards,it means for a given price buyers now want more goods. the price-quanity curve shifts outwards.it means demand curve shifts right.
+        change in quantity demanded: you increase or decrease price the demanded quantity changes. We just move along the curve, it is easy to explain as the price changed now the consumer demand reduced.
+        change in demand: means shifting the whole curve.
+            law of demand talks about quantity demanded similary law of supply talks about the quanity supplied,they don't talk about demand and supply (the curves as where they would be) 
+
+            price effects quantity demanded and supplied. everything else effects supply and demand.
+
+        what causes a change in demand? or what causes the shift in demand curve.
+            1. change in consumer income. More income means more people can afford, hence demand goes up and curve moves right (earlier i might have said curve moving right is not a good thing.which is not right )
+                normal goods: good for which there is this postive relation between consumer income and price. Means higher income means greater demand. 
+
+                if income decreases then the demand goes down,hence the demand moves to left.the positive relation remains same between income and demand.
+                
+                inferior goods: income increases and demand decreases, we buy more inferior goods if our income is low, eg potatos, or other low quality food when you grow poor. or a loan.
+                here there is negative relation between the income and demand. eg beer is an inferior product. so when economy goes down, income decreases then the demand of inferior goods increase. Inferior goods sell a lot during economic recessions and prices increase.
+
+                there is a little more to it,as one mans inferior good is another mans normal good and vice versa, and sometimes the change in income is not clear as if it increases for one section and decreases for another so change in demand is little hard to predict.
+
+            2. changes in total number of consumers: eg if population increases hence the demand increases at that price,hence the curve shifts to right.or if now more people come to know about cryptocurrency then its demand increases at same price. same way if population goes down.
+
+            3. changes in the price of related goods:   
+                things that cause the demand curfe to shift:
+                    complements:
+                        goods that are consumed together,eg gasoline and tires, if tires become expensive people want them less hence i won't drive that much hence less demand for gasoline. price of tires increased, decreses demand of gasoline.
+                        if tuition increases,then fewer people go and demand for books go down.
+                        if gasoline price goes up then demand for cars hence demand for tires goes down.
+
+                        hence in business you have to be familiar with complementary goods as they effect the demand.
+                    
+                    substitutes:
+                        goods that replace each other. they provide the same services and satisfy the same wants. eg two car companies, if one makes their car cheaper then people might buy their car more and demand curve for other car decreases.
+                    
+                    market size: how much does it sell eg 100 billion.
+                    substitutes are also called competitors.
+                    hence in a business you have to worry about both substitutes and complements.
+                    if one university decreases tuition then demand for it increases.
+            
+            4. changes in expected future prices:
+                if it is anounced that the price woudl go up next week, then the demand would increase and vice versa. 
+                shift in demand curve to right means more people want it for the same price, the curve is between price on y axis and quanity on x axis.
+                eg i know the share price would increase tommorow so i buy it today.
+                eg people buying petrol today as it would be expensive tommorow.
+                during inflationary period people realize that prices would increase day by day so lets buy today hence increase in demand.
+        
+    shift in supply curve:
+        change in price of good changes quantity supplied,it doesn't shift the curve.
+        quantity demanded and quantity supplied are the values under constant market size whereas supply and demand are the curves under varying market sizes.
+
+        supply is about changes in quantity supplied when price is kept constant,and demand is quantity demanded when price is constant.
+
+        these things are not about a company they are about the whole market.
+
+        1. change in the number of suppliers.if new company is created the curve shifts to the right, the supply increases for the same price. If the number of suppliers decrease then the supply curve shifts to left.
+        2. change in technology: better technology means more prodution. it is a knowledge of how to use/combine resoures. eg digging using showel or tractor, mail and now email. Resource are same,you just find a new way to combine these resources. gold mined in last 50 years is more than that from whole history. Deteriorating technology means less production, it could happen, eg to protect the environment or if forced to not use modern technology.
+        3. change in resoure prices. land--rent,labour--wage,capital--interest,entrepreneur--profit.
+            increase in prices shifts the curve to the left.
+        4. changes in taxes or subsidies. subisidy is aid by government or any other organisation.
+            if tax on prodution increases, the supply curve shifts to left. supply curve could have zero value for production even if price is non zero.
+            increase in tax, decreases the supply.
+            subsidies increase prodution hence sometimes government uses it to boost the economy.
+            government might provide fewer subsidies to save money.
+    
+
+    increase in demand: equillbirum price increases, increase in equillbirum quantity.
+    decreses in demand: equillbirum price decreases, decrease in equillbirum quantity.
+    increase in supply: equillbirum prices decreses, increase in equillbirum quantity.
+    decrease in supply: equillbirum price increases, decrease in equillbirum quantity.
+
+    these are four cases where if you know effects you can figure out the causes.
+    althogh sometimes both the curves can shift. so might need more effort to figure out.
+
+class 10:
+    shift to supply curve:
+        5. change in resource productivity. eg what if workers become more productive, it is similar to technology, eg education makes workers more productive, more experience also helps.
+            hence the production increases. vice versa can also happen example if all workers get paid the same then most productive workers will no longer work hard.
+            although land and capital don't become less productive 
+        
+    if price changes: quantity demanded changes. only price causes this change. 
+    change in demand is the shift in curve. now even at same price the demand increases or decreses.
+
+    demand curves are concepts,they don't exist our there, we just use them to understand stuff.
+
+    change in demand is not motivated by price change,it is motivated by something else like income.
+
+    same for supply curve.
+
+    this distinction is very important
+    
+    what causes prices to rise and fall ?
+        a change in demand causees cahnge in price.
+        a change in  supply causes change in price.
+        these are of more interest to economists, as they are the deciding factors.
+
+        a change in quantity demanded is the result of change in price.
+        a change in quantity supplied is the result of change in price.
+        anybody can do these two manually. Economists don't study this, in fact these things are also dependent on supply and demand.
+
+        in practise the quantity demanded and quantity supplied curve doesn't exist as suppy and demand might change every minute.
+
+        quantity demanded or quantity supplied is like a snapshot of a market where the market size remains constant and the price is the only  determining factor.
+
+    the role played by prices:
+        redistributes wealth between buyers and sellers. it takes money from one person and gives to another.
+        it sends a signal to resource owners.
+            that take resouces to place where they are more valuable.
+            hence from fixed resources you get more value.
+            it helps to improve efficiency.
+            if oranges in my place are destroyed,the signal is send oranges here as the price is going to  be up.
+            and works automatically.
+
+        command economy : like socialism or communism, unlike market econmomy, somebody makes decisions it is not about supply and demand. That person has to know where to send it. we need a lot of information for this. it is hard but market economy has easy mechanism of signals. That is why soviet union fell apart, as decisions were coming from moscow. It can lead to black market.It command economy you would have to have information about every aspect of economy.
+
+        it rations goods and resources among consumers. 
+            it could have been first come first served,
+            but in market economy we ration by price, the people who pay more get the good.
+            it is an efficient mechanism as there is no line now.
+
+        among these things general problem only know about first thing price does. 
+        
+        black market: market where you get things for less price because they are stolen or smuggled.
+    
+    price ceiling: a legal maximum price.price cannot go anyhigher than that.
+        if it is above equillbirum price,then it doesn't matter as it as good as not having price ceiling.
+        but if it is below equillbirum price, then there is less supply and more demand,but now we cannot increase price, we have shortage. Hence if there is a law that sets a max at price, it would lead to shortage, eg apartment rents in new york city have rent control,hence there will be shortage of apartments. class room space is another example, where the tuition fee is same but only 100 people can register. 
+
+        hence price ceiling is the reason for shortage.
+        if you cannot afford it doesn't count as shortage as you can have it if you buy for higher price.
+        in shortage you cannot buy it for more money.
+
+        or with respect to hours when to work or take classes, more people don't want to work at night,but both kind get paid the same.
+
+        english: take it or leave it.
+
+        market clearing price/equillibirum price: is price at which market supplied is market demanded
+
+        movie tickets cost more during lesiure hours, becuase they decide price on supply and demand to make profit but a university doesn't as they are not for profit.
+    
+    price floor:
+        a minimun prce gelow which the prcie may not go.
+        if equillbirum price is above it then nobody cares, if if equallibrium price is below it, then it would lead to surplus.
+
+class 11:
+    supply and demand etc are microeconomic concepts.
+    minimum wage is an example of price floor and it creates unemployment.
+        where there is supply of employees and demand at a given price. high demand at low price.
+        here suppliers are people 
+        hence causes unemployment for low skill people.
+        hence minimum wage effects low skill people the more.
+        is it good ,is it bad, that is normative economics.
+     same for if agricultural goods have price floor, then we would have surplus. Usually government would buy that surplus. then the government would store it somewhere or do something with it.
+     if government doesn't buy, then the surplus is sold at black market at the equallibrium price, or use surplus somewhere else or destroy it.
+
+     if equallibrium wage is 5 dollars and the minimum wage is 6 dollars, then government could force them to make it 6. Does it violate 5th amendment. does government owe this money to the Employer. But the government doesn't give it, but the law says it should, thats how the supreme court interprets the laws. Hence when it comes to serving the public you don't get paid. Many of government policies is basically taking private property to public and you don't get paid that from government.
+        5th amendment to constitution: gives you right to stay silent under oath, nor shall private property be taken for public use without paying just compensation.
+        it is called the Takings Clause of the 5th Amendment.
+        congress passes the law, president signs the law.
+
+    government policies have really high effect on majority of the things you do in market economy.
+    sometimes the government does pay.
+
+    hence government has to be careful as the constitution could backfire, the court could ask the government to pay and there could be hundreds and millions of cases hence the government has to pay billions.
+
+    price ceiling,price floor, these are government policies which could have different effects.
+
+    another policy: supply constraint.
+        a policy that limits entry into market to suppliers, or it asks existing suppliers to reduce or limit the supply, or both.
+
+        the supply curve shifts to the left and prices go up.
+        eg federal communications commision, it restricts entry into communications industry. it could be becuase of agreement between the first company and government. 
+        eg  not having nude in tv is a restriction.
+
+        there is same kind of stuff about entry to airline industry, in return government gets to decide the prices.
+
+        own thing: the curve doesn't shift if limit is more than equallibrium quantity. if below then there would be more demand than supply hence the price goes up.
+
+        blue laws: everybody country gets to decide, what could be sold on sundays, or if shops can stay open on sundays.
+            supported by people who go to church etc. But econmically it is a big thing.
+            if you are the only one then you lose, whereas if everybody does it then you get that money on monday. Hence retail people were all for it. It was customers against it.
+        
+        tabacco allotment: permission to grow tobacco. 
+
+    limiting supply doesn't mean a thing if it is above equallibrium point. Hence most of the times it is indended to be below.
+
+    supply and demand are not that easy to understand, it can get really very hard.
+
+class 12:
+    so far we have been talking about microeconomics.
+    Macroeconomics: examines overall economy.
+    we live in microeconomic world, for most of us.
+    although Macroeconomics climate does effect us, which most of the people don't understand. And we usually blame ourselves when the Macroeconomy is the one to blame.
+    similarly you might be doing good but it was Macroeconomy responsible for it.
+
+    contraction <> recession 
+    in general the economy goes up. it would reach a peak, then trough(recession) little but then expand and reach higher peak, overall it kind of increases linearly.
+    in long term economy grows.
+    this peak to peak is called a business cycle. some say it takes 5 years to go from peak to peak.
+    but business cycle can go for 8 to 10 years. And we spend more time in economic expansion.
+
+    Three concepts in Macroeconomy:
+        1. consumer price index (CPI)
+            index number that allows us to trace changes in consumer prices. 
+            if it costs more to live, then CPI is going up.
+            policy makers want price stability. That is major goal in Macroeconomy. 
+            it is a kind of average, it is not for individual products.
+        2. unemployment rate:
+            "low" employment rate or "full" employment rate is desirable to policy makers.
+        3. Real Gross Domestic Product (R-GDP)
+            growth to it is desirable by policy makers.
+        
+    overall RGDP/economy is going up over years.
+
+    Consumer Price index (CPI)
+    --------------------------
+        index of prices paid by the typical urban consumer.
+        it is the ratio of consumer spending on a specific basket of goods in the present period relative to base period.
+            CPI = (spending on basket in present period / spending on the same basedk in base period) X 100 
+        base period <> base year.
+        urban city is where it is done.
+        in base period, price is computed by multiplying frequency of each item with its price.
+
+        1. Bureau of Labor Statistics (BLS) calculates it in US. in india it is The Ministry of Statistics and Programme Implementation (MOSPI)
+            it is calculated monthly. In india is is computed for both urban and rural population seprately.
+        2. thousands of samples are taken to get data about consumer basket, from several different stores in different cities.
+        3. in USA 80% population is urban.
+        4. base period is 1982 thru 1984 = 36 months and averages them out. bais in CPI, it overstates inflation (it makes inflation seem worse than it is. eg Products improve, hence price going up makes sense but cpi doesn't care. Another bias is the places where people shop, if you take sample from an expensive shop but people buy from cheaper place ). In india base period is 2012 for 100.
+
+            Boskin commission in US said : the CPI overstates inflation by about 1.3% a year.
+            after some careful stuff, even now CPI overstates about half a percent.
+
+        THE CPI IS NOT THE COST OF LIVING, cpi is just about that basket, it doesn't include cost of living. maybe cost of living increases but it necessarily mean so.
+
+        inflation rate: inflation refers to increase in CPI, inflation rate is percentage change in CPI level.
+        inflation occurs when overall increase in price happens, not just for a specific product.
+        inflation means it costs more now to go to store.
+        then workers ask boss to increase in wage, it happens in every industry, and similary the tax rate also increases. rents go up and so forth. inflation makes people invest to make it up for it, eg gold, silver etc. eg if inflation is 6% then i would invest in land for 10% hence. inflation cause the same increase in income as well. But people with fixed income are harmed by inflation.inflation has harmful effects on economy hence it is very important for policy makers to keep prices stable, and federal reserves have the power to stablize the prices.
+            inflation = (CPI(T+1)-CPI(T))/(CPI(T)) x 100 
+        
+lecture 13:
+    
+    inflation rate:
+    ---------------
+        annual percentage increase in the CPI.
+        inflation rate= delta CPI divided by original CPI multiplied by hundred.
+        it is nice to compare with you pay increase with inflation rate to check if you are gaining or loosing.
+        you can also compare GDP increase with inflation rate, to see what percent you are producing more. just subtract inflation percentage with the GDP increment.
+
+        real income = money income/(CPI/100)
+            it gives you, income on base year, with respect to buying power.
+        
+        that market masket has hundred's of goods in it.
+
+    unemployment rate:
+    -------------------
+    to produce more goods, more workers are required and that suggests a lower unemployment rate.
+    hence usually GDP and unemployment rate are inversely related.
+
+    1. civilian ( not military ),non-institutional population (not in jail etc ), age 16 and over, can work. This is the pool of people who are potential to work.
+    2. civilian labor force, are people who have jobs and those looking for jobs.
+        this is about 2/3 of population.
+    3. labor force participation rate (LFPR)= 67% here as two thirds. CLF/population
+
+lecture 14:
+    in US 133 people were employed among civilian labor force or labor force, and 7 million were unemployed.
+    unemployment rate is only counted from civilian labor force.
+    the unemployment rate = (number of unemployment(want to work)/ the number of poeple in the civilian labor force) X 100 
+
+    it is usually below 5%
+
+    labor deparment would survey households say every month to gain data about it.
+
+    why is there unemployment?
+        types of unemployment
+            1. frictional unemployment: when people are between jobs, eg you get fired, or you quit the work, in the time that person finds job, That person is frictionally unemployed.
+                This is not a big problem, in fact it is a good thing. This way people work at the most efficient places for them.
+            2. structural unemployment: shifts in demand, eg price of oil went up, people started driving smaller cars, only foreign cars were small so poeple started buying them. Hence people who could produce big cars couldn't find place to work.Hence you thrown out of work, and there is no job for you, nobody wants to hire you. You don't have right skills. It results in people going back to school sometimes. It is more severe problem. And changes in production cost can also do the same. Wages increase so lay off some people. In japan and in certain european countries company cannot lay you off even if demand shifts, it could result in Employer not hiring new people , hence job market in europe is small as it is hard to fire them, but in US it works the other way around.
+            3. cyclical unemployment: most concerned with in this course, it is Macroeconomic unemployment, first two were because of microeconomic causes.
+                it effects everyone. it happens because of changes in Macroeconomic conditions.
+                the cause: when economy reaches its peak and we are into a recession. GDP starts decreasing, demand is less, people aren't buying and companies don't produce so people lose jobs. 
+                to fight structural unemployment or frictional unemployment you need microeconomic policies.
+                but we need Macroeconomic policy to fight cyclical unemployment.
+
+                frictional unemployment rate, calculated same way , frictionally employed people /  total labor force. same for structural unemployment rate, same for cyclical unemployment rate.
+
+                total unemployment rate is the sum of these three unemployment rates.
+
+                natural rate of unemployment U(n)= U(f)+U(s)
+                    structural + frictional.
+
+                natural rate in US is usually 4-5 percent.
+                more than that means there has been a recession.
+
+                natural unemployment rate doesn't change much over years.
+                we will discuss Macroeconomic policies to bring down cyclical unemployment.
+            
+            full empoyment: there is no cyclical unemployment.
+                all employment is natural.
+            
+            full employment act of 1946: 
+                a recession is when my neighbour is out of work, a depression is when i am out of work.
+
+                united state government would make sure that unemployment rate doesn't go too down/ we would take care of recessions. And now president would have econmic advisors for that economy is performing good.
+
+                people didn't study economy those days and people didn't learn Macroeconomics but microeconomics only.
+
+                as we learn more about economics, the chances of recession decrease.
+
+                eg of recession: big bank doesn't get money back from germany so small banks do not get money, word gets out and people try to get back money from big bank and then people panic and also do the same for their banks. Now everybody gets money from banks. But there is no money for companies to borrow, so companies cannot pay their empolyees so they fire them and so on. Usually banks failing is pivotal to recession.
+                
+                Bankrupcies, corporate failures also result in econmic miseries.
+            
+            unemployment insurance/compansion: if you are full time worker and after certain time, you get eligible for insurance if you lose your job out of no fault of yours. Hence workers recieve a few dollars a week.
+                it may lead for employees to bargain for higher wages and result in unemployment.
+            
+            misery index/ discomfort index = inflation rate + unemployment rate 
+            
+lecture 15:
+    Gross domestic product (GDP)
+    ----------------------------
+        it is the market value of all newly produced final goods and services within a  one year period.
+        GDP depends on geographic location.
+        Gross National product depends on national resouces and people, even if you are working in foreign location. but if you work in foreign country it contributes to their GDP.
+        Gross National product is no longer a worthy metric of anything.
+
+        final goods: ready to be consumed. eg car.
+        intermediatiary goods: used in production of other. eg windshield for cars is not final good as we sell it to another company.
+
+        GDP doesn't include:
+            1. the value of used goods. eg. second hand things don't contribute to GDP.
+            2. labor service in the home. eg cooking your own food etc.
+            3. underground economic activity, where transactions are not recorded.
+                        illegal activities eg drugs. 
+                        not recording the transactions, eg to save text.
+            4. purchases and sales of financial securities (financial securities are not goods and services, they are assets eg. stocks: it is only counted at the time it is issued by the company. similarly the bonds etc).
+            5. the value of leisure. 
+            6. damage to the environment. eg a factory damages air.
+                poor countries tend to pollute more, rich countries have policies and poor countries cannot afford it. And rich countries are services based, whereas poor countries are production based.
+        
+        GDP  is not a measure of happiness or well-being.
+        per capita GDP : capita means head. GDP / population
+        there is more to life than making money.
+
+        history:
+            National income accounting: GDP or GNP
+            they were developed by simon kuznets in 1930's
+            the US deparment of commerce measures GDP using surveys and other methods.
+                they ask businesses and people questions about it.
+        
+lecture 16:
+    simple model of economy
+    2 sectors:
+        household and business sector.
+        household provides resources, business sector sends resouce payments to households. There is supply and demand. 
+        household trades money/expenditures in turn of goods and services. This is also determined by supply and demand in goods and services market.
+
+        this diagram is called circular flow model of the economy. And things effect each other in circle.
+        expenditure: dollar value of production.
+         goods and services: Real Gross Domestic Product.
+         resouce payments: value of factors.
+
+        value of production = gross domestic product = total factor income 
+            you can observe any of them to monitor the economic activities.
+        
+        leakages and injections into the circular flow:
+            eg household puts 20% of income in savings, But 100% left the businesses and only 80% came in. Hence some money left the flow. Now the businesses better cut back at prodution, so they spend less on households. Hence as soon money leaves the circular flow, it would imbalance the flow. leakages could happen if you purchase from imports, it is another leakage. if you put money in credit market<> bank. Now it acts like a supply and demand. Hence banks give you interest and takes the interest by loans. Now there is no leakage as households and businesses borrow that money. Hence it gets injected back to the circular flow diagram.
+
+            leakages cause the economy to slow down and injections cause it to speed up.
+            exports are like injections.
+
+
+    GDP:
+        how to measure it:
+            1. expenditure approach: value of goods and services (GDP)=total money value of spending. 
+                consumption by households  (C)
+                    spending on : durable goods (life 1 year or longer say, can be repaired, and people usually buy when they are doing good financially eg a car), non durable goods (dinner,food etc, you do it everyday, there is no cycle for them, it just increaes slowly with increase in economy. whereas durable goods behave just like the whole economy), services (haircut, dryclean, etc, even these are not effected by market and act very much like non durable goods, but services is growing more rapidly than non durable, although just like non durable goods). services have been growing more rapidly than manufacturing counterpart.
+                investment spending by busininesses. (I)
+                purchases by government. (G)
+                net exports  (X)
+
+
+                durable goods is where most money is, then services and then the non durable ones.
+
+lecture 17:
+    durable and nondurable goods are called manufacturing.
+    services are not tangible.
+    durable goods are sold usually at big cities.
+    hence economy in cities goes via cycles very often.
+    house comes under investment.
+    inventory: a product produced but not sold. it also comes under investment. eg if a car is made but not sold this year. it is also part of GDP.
+    there is very often ripple effect in economy.
+
+    government purchases of goods and services:
+        it doesn't mean government spending. eg social security check is spending but it is not buying anything.
+        it includes goods and services, government cunsumption and government investment in capital goods.
+        highway is a purchase, as it is buying cement and buying a highway.
+        it doesn't include transfer payments.
+            unilateral payments, one way payments.
+        
+        buying weapons adds to GDP
+        federal spending in US 1.7 trillion of which 450 billion dollars is purchases of weapons.
+        rest is federal transfer payment. transfer payment even includes giving money like donations or funds or schemes.
+
+        tranfer payments do not add to GDP.
+        transfer payments comes to households as income, and households expend it so we already have counted it.
+
+    net exports:
+        exports-imports measured in dollars.
+        exports and imports of goods and services.
+
+        exports will inject money and stimulate the economy.
+        with imports money leaks to foreign producers. Dollars are leaking the flow.
+        financial transactions are not included, we only talk about goods and services.
+
+        exporting food. US produces far more food than it needs.
+        US produces and sells a lot of airplanes, like by boeing.
+        US also exports higher education.
+
+        imports, clothing and cars. a lot of clothing from china and cars from germany and japan.
+
+    there are two approaches to measuring GDP, expenditure and income approach.
+
+lecture 18:
+    the other way is to measure GDP is by measuring the income of factors of production.
+    income approach:
+        wages (labor) + rent (land)+ interest (capital)+ profits (entrepreneurship)
+        
+        compensation of employees
+            money wages 
+            fringe benefits (hospitalization insurance, sick days, vacation times, pensions)
+                health insurance is the hardest thing for companies.
+        profit measure:
+            propierters profit (eg from your farm)
+            corporate profits (from sales)
+                there is corporate income tax for it.
+                taxes+dividents+undistributed profit (retained profit) as companies need cash.
+        rental incomes persons:
+            houses, building, farm land, all sorts of assets.patents, copyright 
+        net interest:
+            recieved by households and governments minus the interest they paid.
+            banks and all other financial institutions come under corporate.
+            eg national debt has certain interest.
+        
+        the expenditure approach is more common.
+        national income:
+            compensation of employees.
+            propritetors income 
+            corporate profits 
+            rental income of persons 
+            net interest
+        gdp = national income + CCA (capital consumption allowance, also called depreciation, some capital wears out,businesses bear it)+ indirect business taxes(mainly sales,property taxes)
+
+    real vs nominal GDP:
+        real means physical part of production.
+        nominal means dollar value, it considers inflation.
+        real means if prices hadn't gone up.
+
+lecture 19:
+    real gdp is better than nominal gdp.
+    nominal is just current value without considering inflation.
+    real gdp says what would gdp have been in 2 years if prices had remained unchanged at their year 1 levels.
+    nominal gdp rises due to increase in value of what i produced or due to inflation.
+
+    gdp price deflator:
+        an index of prices for all newly produced goods and services.
+        =(nominal gdp/real gdp) x 100
+        = (p2/p1)X100 since quantity remains same all we care about is prices.
+    net domestic product= GDP-CCA  where CCA (captial goods worn out in the production process)
+    CCA is also called depreciation. it is capital no longer usable for production.
+    some say ndp is better as next year you have to replace those first.
+    in us people only save 6% of desposible income.
+    the sooner you start saving, the better it is.
+
+    what policy makers like ?
+        price stability (CPI) we don't like inflation.
+        low unemployment rate about 4-5 % which is natural unemployment
+        growth in GDP 2-3 % a year in real GDP.
+    during a recession people save money and the investments reduce. 
+    two consecutive decrements in GDP is called recession.
+
+lecture 20:
+    Aggregate demand, Aggregate supply 
+        Aggregate refers to Macroeconomy, it means total demand and total supply of all.
+        Aggregate supply and demand is not exactly like for individual product.
+        the falacy of compostion, something true for individual doesn't make it true for whole.
+        Aggregate supply and demand is Macroeconomic concept.
+        it is not all little supply,demand curves added up.
+
+        what determines GDP?
+            what forces determine it?
+        
+        Aggregate demand
+        ----------------
+             a curve showing various quantities of real GDP that will be purchased at various price levels.
+             it is decreasing like 1/x 
+             if price is higher, then demand is low.
+             if price level goes down, then people buy more.
+
+             who purchases real GDP?
+                consumption spending (households), investment (businesses : factories etc), government (government purchases ), net exports (business with foreigners)
+            
+             total expenditures is sum of these all.
+
+             a curve is just between price and RGDP everything else kept constant.
+             if you now change other things, the curve would shift.
+
+             in microeconomics when a price prices go down and people buy more. They now buy less of something else, and Macroeconomy remains uneffected. that is not the case here. As we are talking about RGDP. 
+
+             why does Aggregate demand have a negative slope ?
+
+                1. aggregate spending constraint.
+                    if you spend same, but prices increase, you get to buy less.
+                
+                2. real balance effect.
+                    currency holdings of people : inflation imposes a tax on currency balances (and lower its value) you become poorer and you even buy less than spending constraint.
+                    and vice versa.
+                3. international trade effect.
+                    if price level goes up then sales to foreigners goes down. And purchases from foreigners goes up, and vice versa.
+                4. used goods effect 
+                    gdp refers to newly produced stuff, if prices go up, people would fix their refrigerator instead of buying new, and vice versa.
+                
+                spending constraint is the most important one.
+            
+            what determines the position of Aggregate demand curve ?
+            or when does that curve shift left or right.
+
+
+lecture 21:
+    total expenditures = C + I + G + X(n) , one of these shifts the curve to left or right.
+    the earlier curve was between CPI and NGDP
+    change in consumption:
+        change in household wealth.
+        change in household income.
+        future price prediction.
+        expections of future income.
+        change in interest rates : we buy durable goods on time. But if interest rate goes up then we don't buy it, if interest rate goes down, we might buy now.
+        change in taxes, if taxes are going up, you have less income to spend now.
+    
+    change in investment:
+        factories, machines etc 
+        change in interest rate.
+        change in expectations regarding future sales.
+        change in business taxes.
+    change in government spending:
+        fiscal policy: government spending in taxing policy.
+        tensions on border / war 
+        to stablize economy.
+    net exports:
+        if imports from other countries goes down or exports increase.
+        if incomes rise, people start buying from other countries.
+        atmanirbhar bharat.
+        foreign currencies appreciate or your currency depreciate (value decreases), now you can't buy foreign goods easily you have to pay more, and it looks like an increase in price.
+        more imports if your currency appreciates.
+    
+
+    change in money supply( monitary supply)
+    increase in money supply increases spending and investment and vice versa.
+
+    Aggreagate supply:
+        CPI vs RGDP 
+        an aggregate supply curve shows various quantities of RGDP that will be offered for sale at different agggreagate price levels.
+        it is an increasing curve like supply curve in microeconomics.
+
+        profit per unit = price per unit - cost per unit.
+
+        increase in price per unit rices, then profit per unit rises as aggregate. and as profit rises, people try to produce more.
+
+        what causes the curve to shift?
+            change in wages:
+                about 70% cost of running a business.
+                hence if wages go up, then prices rise hence curve shifts to left. And vice versa.
+            change in other factor prices.
+                eg interest etc, but the effect is smaller.
+            changes in productivity of factors (workers,machines)
+                shifts to right if better.
+                unit labor cost: cost of labor per unit of output.
+                wages and productivity, usually change together and the net effect is counted.
+            supply shock:
+                eg hail storms destory supply of resources hence curve shifts to left,
+                or beneficial supply shock would be you finding a new way of pumping oil.
+            
+lecture 22:
+    usually thinks are linked like a chain and if one thing is disrupted, the effects are collosal.
+    supply shock would increase the price shokingly.
+
+    put together aggregate supply curve and aggregate demand curve and they intersect at point of equillibrium.
+    high prices and high supply results in inventories. It would result in stopping further production.
+
+    the goal eventually is the equallibrium point.
+    more gdp means more employment as more production needs more workers.
+
+    the great depression of 1930's was worst econmic downturn in U.S history. unemployment was 25%.
+    natural real gdp: gdp at full employment.
+    
+lecture 23:
+    three aggregate supply curves:
+        1. horizontal supply curve.
+            it is parallel to x axis, it reflects conditions in a "depression" (severe recession)
+            you can't raise prices.
+        2. kinked AS curve 
+            first horizontal and then perpendicular to x axis after some rgdp.
+            the point of turning is called natural real gdp.
+            the unemployment is at full. the prices may increase but the production wouldn't .
+        these are two extreme and rare cases.
+        3. three stage AS curve:
+            horizontal,linearly increasing,perpendicular.
+        perpendicular means,economy is at full employment and more production is not possible.
+    
+    LONG RUN EQUILLIBRIUM FOR AN ECONOMY 
+    ------------------------------------
+    an economy in equallibrium is " at rest", economic conditions are stable from month to month.
+    short run equallibrium is an equallibrium for an instance/day for supply and demand.
+        next time, other parameters change and equillibrium changes, eg if unemployment is high and the need to have less and hence the current equallibrium is not stable and is not stable.
+    you find short run equallibrium and ask if it is sustainable. eg at long term equillbirum the unemployment rate should be equal to natural rate of unemployment.
+
+    at long run equillbirum our gdp would be natural real gdb.
+    if gdp< natural real gdp then we have a recessionary gap. and the economy is bad.
+        that if unemployment is more than natural rate of unemployment.
+        as a result wages will fall (surplus of labor), the aggregate supply would shift to the right( as greater proifits for producers) and finally wages will fall by enough that real gdp is natural gdp and unemployment rate is natural. and we reach long run equallibrium.
+
+    at long run equallibrium point AS and AD are same and U= U(N) 4% etc 
+    this is not by government, this happens automatically within the labor market.
+    hence economy can heal itself. But ofcourse with policy we can make it happen in less time than in natural.
+
+    if wages don't fall, the recession continous.
+    how to increase price : just reduce the production, but people would loose jobs.
+        increasing the price of beef could be achieved by killing a lot of cows.
+
+    the general attitute of supreme court is that almost everytime the government is right.
+    hence your economic rights are not as good as your political rights.
+
+    some economists believe that wages won't go down at high unemployment. Hence government has to come to do something to achieve long run equallibrium.
+
+lecture 24:
+    it would takes year for wages to go down, as workers usually have contract for years.
+    low wages is how economy solves the problem of unemployment.
+    but generally monetary policy and fiscal policy is used to shift demand curve to achieve natural real gdp and decrease unemployment.
+
+    inflationary gap:
+        equallibrium RGDP> Natural real GDP.
+        unemployment rate is low, it takes no time to find the job.wages start to increase, supply curve shifts to the left, new equallibrium is achieved and eventually we reach natural rate of unemployment. But then we have inflation as companies started raising prices. And finally we achieve natural equallibrium.
+        people resist decrement in wages. The ones who already have the job. hence it is slower process.
+        but for inflationary gap, it is filled quickly.
+
+
+
+lecture 25:
+    economic instability:
+        economy not performing upto standards.
+        caused by recessionary gap.
+        it could last for decades.
+        economy didn't automatically reset itself in 30's 
+        classical economicsts told: economy will solve itself.
+            adam smith, jean baptiste say, alfred marshall.
+            they thought wages will go down and solve itself.
+            it was microeconomic view.
+            surplus of labor hence wages go down and everybody gets the job. it works in microeconomics.
+        but fallacy of composition comes into play.
+        if it works in microeconomy, that doesn't mean it would work overall.
+
+        the most successuful critic of it was John Maynard Keynes (kainz) (1883-1946)
+            he was a british economist, and he is known as the father of modern Macroeconomics.
+        
+        keynes criticized classical economists, he said wages would not decline enough to pay "high" wages. workers would not allow wages to go down. whereas classical economists believed it would happen. 75% people who have jobs won't allow rest of the 25% to have edge over them hence we will have unemployment that continues.
+
+        keynes said we can have unemployment equallibrium in economy : an unemployment that doesn't go away anytime.
+
+        recent new group : new keynesians : most of what keynes said is right.
+            with 50 more years of research.
+            it is efficient to pay "high" wages : efficiency wage theory.
+            if you pay high, you have choice to choose employees and you can choose best one.
+            and even the workers would work harder to keep their job. Hence increase the profit.
+            hence profits go up if you pay more than that of market price.
+
+            long term contracts : people make employees sign long term contracts.
+                hence they prevent wages to be flexible, people know how much they are gonna get paid today.
+                hence wages won't change.
+            hence new keynesians say not just employees but employers also don't want decrement in changes.
+        
+        they say it won't happen forever.
+        they say it takes so much time that we cannot afford to wait.
+        hence  "economy is not self correcting" , it doens't come out of recessions on its own.
+        the economy is inherently unstable. its basic nature is to be unstable.
+            every one in a while, shit will break lose and it won't come out of it easily on its own.
+        keynes advocated ongoing government policies to stabilize the economy.
+
+    
+        intermediate position:
+            wages will go down, but it would be really very slow.
+
+        classical economists say, government policies are usually ineffective and possibly harmful.
+            eg during 1930's they tried to raise the price by restricting production.
+            hence patientce is the way out.
+            laissez-faire policy (lay zay fare) : to let (people) do (as they choose)
+                basically no policy, let it correct itself.
+        
+        thats why Macroeconomics was created in 1936.
+        they used to mix micro and macro concepts.
+
+        in 1961 keynesian approach took over washington DC 
+            president kennedy, he brought keynesian economy with him.
+            thats been the approach ever since.
+        
+        they don't let the economy run itself.
+
+        it worked and prosperity was there.
+
+        keynesian says how economy goes wrong and how to come back from it.
+            he said drop in aggregate demand caused rise in unemployment and hence recession.
+            classical and keynesian disagree on pretty much everything.
+            classical economists:
+                Say's law : supply creates its own demand.
+                            if you have money, you will spend it, just like a barter system.
+                            you can't only sell in barter system, you have to get something in return.
+            but Keynsian say, we are not barter system, i sell something and i get money and i don't spend it. and i save it. Hence we can have a situation where supply is more than the demand.
+
+            but if you store in bank, bank gives loans at lower interst rates, and hence people will borrow and buy stuff and hence demand doesn't go down with spending.
+
+            it takes each group to come up with a response.
+
+            keynesian : that interest rates will not necessarily go down.
+        
+lecture 26:
+    keynesian model of economy:
+    ---------------------------
+        classical economy: you cannot have surplus, if there is surplus, prices will fall and we would reach equallibrium.
+        then keynes wrote the "the general theory (of money and unemployment) in 1936" This waw the start of modern Macroeconomics. He said that is not the case. Before keynes people would apply microeconomics to Macroeconomic like supply and demand.
+
+        he said there is deficicent spending that causes recession.
+        the solution is to increase the spending.
+        who increases the speinding? government.
+
+        in keynesian model the relationship is between, total expenditure and total prodution.
+        TE is basically GDP. C+I+G+X 
+        C= services + durable goods + non durable goods , it is about 70% of total expenditure.
+        C is most heavily influenced by family income after taxes.
+
+        consumption function:
+
+            c=(c0+MPC X Y(d))
+
+            Y(d) is disposible income (income after taxes).
+            MPC is marginal propensity to consume: the fraction of an additional dollar of income that is spend.
+            disposible income is either spent or saved.
+            c0 is autonomous consumption spending: unrelated to income.It is what you spend nomatter what your income. eg 5 dollars a day to survive.
+
+            c0 is called autonomous spending 
+            other portion is called induced spending (income goes up,it goes up)
+            if MPC is 0.80 and your income is 200, then induced spending is 160 dollars then you would spend 210 dollars if 50 is autonomous.
+
+            as income increase, it is the induced part that makes the difference.
+
+            under some assumptions we can say this is the relation between GDP=C and income.
+
+            C + savings = disponsible income.
+
+        saving function:
+            S= disposible income - c
+        dissaving <> negative savings.
+        MPS= 1-MPC 
+        S= MPS (Y(d))- C0 
+
+        assume that I (investments) is autonomous and it doens't depend on income.
+        assume the same for government spendings.
+        also assume the same for net exports.
+
+        hence total expenditure is a linear function of disposible income.
+        value of total production = GDP 
+
+lecture 27:
+    autonomous spending: independent of income or gdp.
+    total prodution and total expenditure are both linearly increasing curves of different slopes.
+    where on X axis we have income/gdp and on y axis we have money spent.
+    total production y=x curve,where as total expenditure is as eariler.
+    the point of intersection is equallibrium.
+
+    if spending is more than supply then sales from inventory, so more prodution, hence more hiring, in case of lower gdp than equallibrium.
+    if spending is less than production, there is surplus, hence bigger inventories. hence unemployment. hence less production.hence gdp will decline to equillbirum.
+    own thing: you don't need production curve to find equillbirum point.
+
+    in case of a recessionary gap where gdp is less than natural gdp (full employment). And it won't correct itself by low wages.
+    hence you might have to live with recession forever.
+
+
+    multiplier effect: someone buys more than usual and now someone elses income increased unusally so he starts spending unsually and so on.
+
+lecture 28:
+    autonomous spendings is effected by change in price, change in taxes, bunsiness attitutes, interest rates. fiscal policy (change in government spending), purchases of public goods (goods that provide benefits to everybody eg police, public health). changes in exchange rates. stronger dollar reduces exports and more imports.
+    over long time, stock market goes up.
+    fiscal policy is government spending to get out of recession.
+
+    FISCAL POLICY
+    -------------
+    delibrate manipulation of government spendings and taxes in order to bring about desired changes in economic activity.
+
+    if equillbirum gdp is less than natural real gdp, and unemployment rate is higher.
+    and we now have a recessionary gap.
+
+    government spending = government purchases of good and services + transfer payment.
+    transfer payments are dollars shifted from one person to another. it might not effect total spending as instead of first person, now second person is spending the same.
+
+    taxes are unilateral payments by persons or organisations to the government. they say you get roads, protection etc in return and everybody gets them.
+    unilateral <> only one party involved.
+
+    government budget: government spending - tax revenues
+    US budget is close to 2 trillion dollars, and tax revenue is about 1.8 trillion dollars.
+
+    if government spending is exceeds tax collections its budget is in deficit, otherwise surplus.
+
+    national debt= accumulation of deficits over the years - surpluses 
+
+    deficits and surpluses are one year measures the national debt accumulates over time and is from the begining of that country. For US it is 5.8 trillion dollars, say at 5% that is more than 1000 dollars for every single person in US every year just to pay the interest.
+
+    expansionary fiscal policy increases TE and causes real GDP to rise.Contractioany fiscal policy lowers TE and cuases real GDP to decrease.
+
+    before keynes:
+        old time fiscal religion:
+            balanced budget: no debt for government.
+            do not manage the economy: no fiscal policy, government shouldn't try to increase or decrease gdp.
+            increases in government spendings should be accompanied by increaes in taxes, that if you want hospital you pay extra taxes.
+
+lecture 29:
+    keynes in 1936 said the government could end the depression by increasing it spending on goods and services, with no regard to tax revenue. But the leaders went on with balancing the budget.
+    in 1940's US got into world war and government started spending huge numbers in weaponary etc. And the economy came out of recession and the recession ends and they didn't do it following keynes but what keynes said had worked.
+    1950's US went back to balanced budget, they tried to pay the debt.
+    1960's kennedy came as president and he was fan of keynesian economics. Hence eventually america became keynesian. And it took 25 years. It took old economists to die.
+    after 1961 government engaged in deficits spending nearly every year to stimulate the economy.
+    the bigger the deficit the more stimulated the economy is and the vice vera.
+    it can be done either by reducing tax revenue or increase government spending.
+    and have surplus to slow down the economy.
+    they thought they have figured it out and there would be no recessions anymore.
+    they thought they got rid of business cycles and now it is only going to grow.
+    they were too arrogant about it.
+    in 1970's and 1980's congress and the president prefer deficits over suplus and the deficits increase by increasing government spending and decreasing in taxes. They get more votes by spending more and by reducing taxes.
+    politicians love deficits. It gets them re-elected.
+    and now they ignore surplus and they want deficit forever.
+    the national debt rose from 290 billion in 1960 to 6 trillion in 1999.
+    politicians always wanted it, but now they were backed by economists.
+    1980's to 1990, government spend all cash it had. And financial institutions were like, they government is borrowing a lot every year, and the debt is piling up. The interest rate were high for governments, hence policies were put in place to reduce government spendings.
+    At the end of 1990's the budget began to show surpluses with less government borrowings. interest rates declined. It would make easier to buy a home, start a new factory. and private individuals borrow more and spend more so economy gets stronger. Hence there was something missing in keynesian as with surpluses there was supposed to be a recession. it increased business spendings.
+
+    hence deficits may help to stimulate the econmy but over doing it weakens the econmy as the interest rates would increase. It should be used on selected occasions, hence fiscal policy loses its effectiveness if used every year.
+
+    in old days:
+        government provide public goods- goods that benefit everyone in society rather than individuals.
+            eg national defense.
+        they don't give a damn if you are poor. Work hard !
+        laissez faire : government shouldn't get involved.
+    
+    now 
+    government responsibilities:
+            provide public goods
+            transfer wealth within society.
+            stablize the economy.
+                prevent another depression
+            hence now government has a wider range of responsibilities.
+            and they got added up over years.
+
+    the general idea behind fiscal policy:
+        if real gdp is less than natural gdp(full employment), we have a recessionary gap. 
+            increase total expenditures to close the gap. decrease taxes or increase spending.
+                increase autonomous spending: shift curve up in keynesian graph.
+                    it is as good as shifting the demand curve.
+            government cannot force you to spend more, hence they do so by changing things they control.
+        if real gdp is more than natural gdp then we have inflationary gap.
+            reduce total expenditures to close the gap. increase taxes or decrese spending.
+
+lecture 30:
+    in keynesians model the production curve is at 45 degrees, that is the assumption that the producers can satisfy any demand.
+    government spending or tax can change autonomous spending.
+    balanced budget fiscal policy: government spending and taxes rise by the same amount.
+    taxation has multiplier effect so it shifts curve less,but government spending shifts more the curve as it doesn't effect people.
+
+    Balance budget theorem:
+        if G and T increase by equal amounts,(10 dollars) real gdp will increase by the same 10 dollars.
+        and vice versa.
+        hence multipler is 1.
+    
+    but keynesian model is not as effective as it seems/
+    increases in currency demand increases its value.
+
+    limitations of keynesian fiscal policy:
+        aggregate supply curve has a zero slope.
+            it doesn't consider the possibily that if we increase the demand, the prices may rise.
+            hence it ignores the inflation.
+        crowding out:
+            increase govt. spending decreases private spending,so the curve shifts down.
+                direct crowding out: eg if govt. opens library for free, you stop buying books. same for heath care etc.
+                indirect crowding out: changes in interest rates, government spends more, hence borrows more, hence interest rate hikes, hence individuals don't borrow, so you don't buy house.
+    
+            increase in national debt means increase in future taxes, hence increase savings to pay future taxes, hence decrease in consumption spending.
+
+            complete crowding out: multipler =0 which means you nullify what government does.
+            incomplete crowding out : multipler is little bit greater than 0.
+        lags: takes time for things to happen:
+            data lag: you don't know you are in recession and when it ended.
+                so you might be fighting a recession that doesn't even exist.
+                there could be sampling error.
+            transmission lag:
+                it takes time to plan and act on the policy, by that time it could have been too long.
+                it might take several months.
+            effectiveness lag:
+                corruption etc.
+            hence it might take years for fiscal policy to come into effect.
+            and if recession lasts not as long as the time for policy to come into an effect.
+
+            you might be worseinging the economy and spending when economy is already doing good.
+
+    these days fiscal policy is rarely used to stabilze the economy. That's becuase policy isn't very effective due to lags. crowding out, and other factors.
+
+    supply side fiscal policy:
+        policies that increase aggreagate supply by improving incentives.
+        shift supply curve to the right by lowering marginal tax rates, deregulate the companies to allow for them to be efficient. hence people invest more and people are hired etc.
+        this way we don't have inflation, that is a positive thing.
+        marginal tax rate: the % of tax paid for one more dollar of income.
+        turns out these are very effective for economic booms.
+        and to decrease inflation.
+
+    laffer curve:
+        its a curve between total tax revenue on y axis and marginal tax rate on x axis and it is like inverted parabola with zero value  at 0 and zero value at 100.
+        and some place at between it has maxima.
+        hence initially the revenue would go up, but then go down.
+        as incentives to work and earn would go down beyond a point.
+
+        T= tax rate X BASE,  (BASE: what is being taxed )
+            tax rate goes up and T goes up : arithmetic effect 
+            incentive effect: tax rate increases the BASE would decrease hence T goes down.
+
+        Hence if you decrease taxes, the base would grow so much that T increase because of incentive effect.
+        Hence Taxation is the most important aspect of an economy.
+
+lecture 31:
+    money and banking
+    -----------------
+        the supply and demand of money impacts the economic activity.
+        the supplier of money is federal reserve, and the banking system.
+
+        what is money?
+            money is anything that is generally accepted (for all kind of good and services) payment for goods and services.
+            it doesn't need to be tangible(eg bitcoin), it just needs to be generally accepted.
+            generally is the key term here.
+
+            money is generalized purchasing power.
+
+            if you can only buy specific things with it, then it is barter then it is not money.
+            Barter refers to a system where one purchases goods with other goods, rather than money.
+            A lot of things have served as money, like shells, tobacco, feathers etc.
+            
+            on pacific island of Yap limestone rocks are used as money.
+
+            more money means more aggregate demand for good and services hence result in inflation.
+        
+        why people use money ?
+            money performs certain functions, it provides certain services, and people like these services:
+                1. unit of account. (metric to measure market value of things)
+                    a measuring rod of value, we use money to compare value of things.
+                    it provides standard way of measuring values.
+
+                    in barter system we have n choose 2 / n(n-1)/2 number of relative prices(around half a million for just 1000 goods, and there are more than 1000 goods in an general store) for n products. hence it is a hard to keep track of every potential price, and it is highly volatile and prone to scams, as it is hard to figure out if the deal is good or not whereas when price is told in dollars, comparison is earier to figure out if it is a good or bad deal. And it needs heavy information requirements. hence it has high transactions cost. Hence people would avoid market transactions whenever possible. Hence buying things would become less common.
+
+                    in around 2500BC in sumer(iraq) people started using silver as their unit of account.
+                    hence they would write prices in terms of silver. Because barter system was inconvinient. they would price things in terms of silver but they might pay using other goods with equivalent price.in money economy you only keep track of n prices for n goods.
+
+                2. it is a medium of exchange.(exchange becomes easier)
+                    it is the thing used to carry out exchange. you hand over money for goods and services.
+                    in barter system, you might want some shoes in exhange of fruits but the person with shoes might not want fruits, hence the requirements for transactions are 
+                        "double coincidence of wants"
+                    but for money you only want single coincidence.
+                    in barter system you would like to have a good that is generally accepted for any exhchange and nobody rejects that good. And that is the definiton of money.
+
+                    hence before trade you want something generally acceptible in return of your good and then you would want to spend it for what you want.
+
+                    the green paper of money is valuable becuase it is generally accpeted for any trade and it makes easier to buy anything.
+
+                    without medium of exchange, there is a lot of cost of transaction, it is time consuming to find a match. hence you would spend more time on exchange than actually producing goods.
+                    you would need to find a trading partner.
+
+                3. its a store of value.
+
+lecture 32:
+        in barter economy the production cost would be more as we add transaction cost to it, hence it would shift supply curve to left and prices would be more.
+        in money economy prices get lower and production curve shifts to right, hence money increases standard of living, for people who pariticiple in these tranactions.
+
+        money makes it possible to have more production hence better world.
+    3. money is a store of value.
+        you can store money. although you can hold stocks, perls, diamonds etc as well. so money is not unique here.
+        if prices go up, then money is not a great store. Hence for long time, money is not a good store. In russia they spend their currency but they don't store in their own currency.
+    
+    money evolved in the marketplace, it was not invented by government.
+
+    other desirable characteristics of money:
+        portable,
+        durable,
+        limited quanity, (total quanitity to be limited, otherwise prices would go up highly)
+        interest bearing,
+        uniform (it should look the same, so we recogize it)
+        access funds anytime, any place,
+        anonymity
+
+    money is always changing: like a car, so make it even better. People invent new kind of money with more desirable features. more convineint etc.
+
+    coins came in 640 BC in turkey.
+    with Alex the great he saw these coins, he conquers and finds a lot of gold and stamped a lot of coins. Hence coin was now even in india by 330BC because of alex, to even middleeast, africa etc Hence Alex spread the idea.
+
+    paper currency came in china in 900AD.
+        but they printed too much and destroyed their economy.
+    
+    bank deposit money:
+        in italy, venice.
+        you put money there and you get interest.
+        and banks would make money acting as exchange for different kind of currencies.
+
+        in england in 1600 AD 
+            goldsmiths, they would store gold in vault, so goldsmith started taking some fee.
+            you get a reciept.
+            later on they would become the banks.
+        
+        in US 1789 
+            they had banks, that would take gold and silver and give money or checkbook.
+        
+        EFTS :
+            electornic funds transfer service.
+            liek ATM etc 
+        and now we have crypto.
+        
+lecture 33:
+    government controls money in modern day.
+    Forms of Money:
+        currency (C) paper notes and coins.
+        checking deposits:(if you can write check to withdraw money)
+            commercial banks
+            savings and loans 
+            mutual savings banks 
+            credit unions 
+            all these are called depository institutions (they accept money from customers)
+
+    M =money supply
+    M = C+ DD , demand deposit, demand deposit is what you can get anytime, wheras savings deposit you pledge to put it there for some time. or you can use check to pay to someone else.
+
+    in us M = 1.1 trillion dollars.
+        450 billion is currency and 650 billion dollars is DD 
+        that is 4100$ per person. which is a lot.
+        some of this money is overseas.
+        panama uses US dollar as its currency.
+
+    russians uses their currency to spend but dollar to store as their currency is under inflation.
+    half of above is outside US right now(cash outside US about 250 billion dollars).
+
+    where does currency come from:
+        US federal department
+            on cotton and lenin. That is 40% of total but what about the rest of 60%
+    total reserves of Banks(TR):
+        vault of cash(on premise) plus deposits at the Federal Reserve (the fed ) called the reserve deposit.
+        it is the cash they have. Bankers put reserves in fed.
+    the required reserve ratio:
+        set by Fed, eg 0.10 is 10% in US.
+        if you give bank 100 dollars, they have to put 10 dollars in reserve they can do whatever with rest of money.
+        required reserve= r X DD 
+    excess reserves:
+        total reserves - required reserves
+        90 dollars in above case.
+    
+    excess reserves are bad for bank, they want it to do something for them. it doesn't have to be in reserve. They would make a loan of excess reserves for interest.
+
+    Assets:
+         things of value owned by a person, business or other organisation.
+         we use dollar value to keep track of what they are worth.
+    liabilities:
+        the dollar value  of what is owed to others in dollar values.
+    networth/wealth/capital:
+        assets-liabilities 
+    
+    fundamental identity of accounting:
+        Assets = liabilities + capital 
+        or capital/networth= assets - liabilities
+            by definitions.
+        double entry bookkeeping:
+            every single transaction has two entries. if you buy a car,you can give money and take car,so you get a car as an asset and you give money as an asset, or you can buy car as an asset and have debt as a liability.
+            two columns: Assets on one side, and liabilities and capital on another.
+            eg 
+                    assets          liabilities+wealth
+                    -10000 Tom's DD 
+                    +10000 car 
+
+                    +10000 car        +10000 liability
+            developed in venice in 1300's
+
+    Assume that:
+        people hold no currency 
+        banks hold no excess reserves 
+        only one bank 
+        
+        now money supply is 1000 thrown out from helicoper by fed.
+        deposit the 1000 at banks.
+
+        increase in money supply : 1000 dollars 
+        now you deposit and you get checkin money.
+        bank keeps required reserve of 10% and loan rest.
+        loan is an asset of bank.
+        now money supply is 1900 dollars.
+        but now even this person would save 900 dollars in bank and process repeats.
+        
+        hence each dollar injected into the economy by the Fed gives rise to a money supply that is several times as large as the original 1. Hence there is a multiplier.
+
+        the multiplier is 1/r 
+
+lecture 34:
+    money supply = currency hold by public + checkin deposit by public.
+        = 1.1 trillion dollars 
+    dd/checking deposit is created by banks.
+    and currency is created by federal reserve 
+
+    fractional reserve banking:
+        you reserve a fraction of cash.
+    
+    each loan increases money supply 
+    DD = TR/r , where TR is total reserves and r is reserve ratio.
+    1/r is called simple deposit multiplier.
+    1/r is under assumption that people don't hold money and banks have no excess reserves.
+
+    to do in reverse:
+        fed sells a bond to public.
+        you pay 1000 dollars to fed and money supply would go down by multiplier.
+
+
+    the federal reserve system 
+    --------------------------
+        started in 1913, because banking systems were not stable. Economy would fall every now and than because of banks.
+        it was supposed to provide an elastic currency (the supply should grow and shrink to meet the demand)
+        Act as lender of last resort to banks experiencing runs. ( for banks who are running out of money )
+            as if you don't lend, that bank would run out of cash and it would close its door and the panic would pass to next bank.
+
+            1929-33, the fed failed to step in and lend cash to banks experiencing runs, in this episode 1/3 of all banks faield the result was The great Depression.
+
+            it took fed upto 1950 to figure out how to do things.
+        we got more modern fed in 1935 by laws. Now it has responsibilities to manage economy, fight inflation etc.
+
+        responsibilities:
+            it is governments bank.
+            it does check clearing.
+            provides currency.
+            loans to member banks.
+            regulates member banks.
+            conducts monetary policy.
+            holds reserves of member banks.
+
+        at top there are board of governers( 7 members, 14 year term (to insulate them from politics, as we don't want political control over monetary policy, as politicians want to print more and more and do jobs to get re-elected  ).)
+            there is a chairman and six others. The chairman is chosen by president.
+        then there are federal reserve banks (regional, eg boston, newyork, chicago, total 12)
+        member banks -> ordinary commercial banks, privately owned. about 3500 banks.
+        federal open market committee: 7 members plus 5 presidents of reserve banks. 
+            they are main policy making group.
+        they put money in economy by buying bonds from banks. Hence new dollars enter the economy.
+        the fed would sell bonds to take money out of system.
+        there is multiplier effect both times.
+        more supply of money makes demand for goods and services high and prices rise.
+        the fed has three main policy tools:
+            1. open market operations: carried out by FOMC 
+                    purchases and sales of government securities (bonds) by the Fed.
+                    it is the most used policy to control the money supply.
+                    FOMC meets 9 times per year.
+                    interest rates decline when Fed purchases bonds. and price of bonds increase.
+                    internest rates go up if Fed sells bonds. prices of bonds decline.
+
+lecture 35:
+
+            2. discount rate policy
+                Fed loans to banks(when they need it) = discount loans. The interest rate for these loans decides how much banks will take loan. This interest rate is called Discount rate.  
+                this changes a few times a year.
+                it is set by federal reserve banks.
+                each federal reserve bank sets its discount rate.
+            3. reserve requirement
+                increasing or decrease reserve ratio.
+                 it changes almost never say after 10 years.
+                10% for medium sized banks.
+                3% for small banks.
+                money deposit multiplier 1/r
+                in reality there is always some currency outside bank as well and there is some cash sitting there for bank as well the multiplier then is Money supply/C+TR  which could be 3 etc.
+            all these to control money suppy in market.
+            if less discount rate,more money supply,or just purchase bonds.
+            if more discount rate, less money supply,or just sell bonds.
+
+    MONEY AND ECONOMY
+    -----------------
+
+        the equation of exchange:
+            MV=PQ 
+            key element of classical economics.
+            money supply X velocity of spending( number of times a year an average dollar is spent) = price X quanity
+            MV is total expenditure per year.
+            PQ is total reveunues recieved.
+            p is price level
+            three equal sign means equal by definiton.
+
+            spending = selling 
+
+            it was used for the quanity theory of money (classical macro model)
+
+                MV=PQ 
+                if V and Q are constant(as gdf grows slowly say 5% a year. but if you increase money supply by 300% there will be inflation), then increase M and P increases and vice versa.
+                change M and P changes proportionally.
+
+                keynes was like production increases without change in price, that Q would increase with increase in M. if demand increases, and aggregate supply was parallel to x axis at certain price.
+
+                classical view would win under full employment, as there can't be more production.
+
+                it is a good rule of thumb. It is close but not completely true.
+            
+            from data it is known that if you increase money supply, there would be high inflation.
+
+        
+        modern quanitity theory of money:
+            the econmoist who use this theory are called Monetarists.
+            they believe money has big impact on economy.
+            they advocate laiizez faire policy.
+            stable monetary policy. eg 4% money growth each year.
+            let the private sector determine Q, and other economic conditions.
+
+            MV =QP 
+            M=K x GDP , where k is 1/V 
+            where M is money demand and not money supply.
+
+            it is theory of money demand and not money supply.
+
+lecture 36:
+     hence money demand is directly proportional to income/gdp.
+     this is 1950's stuff.
+     the gdp here is nominal gdp.
+
+     money supply curve would be a horizontal constant curve set by fed.
+     at equallibrium, money supply is equal to money demand = k gdp 
+
+     if there is excess money supply in the economy. say you already have desired amount of money in bank and a lot in hand so you would want to spend that money, extra sales revenue happens so they hire more workers, gdp increases, it would grow until we reach equallibrium.
+
+     if gdp was more than equallibrium, then we would have deficient money supply, you would cut your spending so the gdp decreases until we achieve equallibrium,and people would lose job.
+
+     hence quanity of money would determine gdp as per them.
+
+     shifting curves:
+        money supply would shift by fed policy.
+        if money supply increases, gdp would increase.
+        if money supply decreases , gdp would decrease.
+    k shows strength of money demand. increase in money demand(1/v) would mean high slope would mean decrease in gdp as people now want money to have.
+
+    what makes people want more money balances:
+        reduced interest rates on bonds and savings accounts.
+        reduction in inflation rate.
+        people are paid once a month than once a week.
+
+    everything said so far is always true as we are talking about nominal gdp, hence within gdp we don't know if it is Q increasing or price. hence even inflation increases gdp.
+    
+lecture 37:
+    there would have been no inflation had the production curve been horizontal line,at certain price.
+
+    but in real life, the production curve (Q vs P)  is not horizontal, it is increasing hence when the demand curve for Q( decresing slope)  shifts right, the gdp increases but prices also increase. in aggregate curves.
+    at constant price level only q would increase but supply q is not horizontal.
+
+    in most of economic theories, people ignore the supply side and assume that supply can increaese indefefinitely.
+
+    with increase in demand of money, prices so up/ inflation.
+    gdp also goes up, unemployment rate decreases.
+    hence there is a tradeoff between unemployment and inflation.
+
+    phillips curve:
+        the inflation/unemployment tradeoff resulting from a change in aggregate demand.
+    
+    If AD increases, Real Gdp rises and unemployment declines,(short term effect )
+    eventually wages( as economy is strong and demand for labor is high) and other factor prices  will increase so SRAS decreases. hence supply curve shifts to the left.(this is long run)
+
+    in short run (increase in AD) : more inflation,less unemployment. say for 12 months
+    in long run: natural unemployment, even more inflation. And it might last for a few years. 2-3 years.
+
+    hence there is short run tradeoff between inflation and unemployment.
+    in long run inflation increases.
+
+    inflation:
+        an ongoing increase in the general price level.
+        can be measured using CPI. or GDP deflator.
+
+        two kinds of inflation:
+            one short inflation:
+                it is one time thing, eg workers demand higher wages, and hence price also goes up, or if there is no harvest and price goes up. it happens for one time. and then everything is now the new normal. 
+                if aggregate demand goes up we get higher prices.
+                it is not a problem as per most policy makers.
+            continuous:
+                this is what policy makers struggle with.
+                shift in curves very often not just one time.
+                by increase in money supply, decreasse in money demand.
+                
+        effects of inflation:
+            penelizes savers.
+            encourages borrowers.
+            redistributes wealth from savers to borrowers.
+            diverts resources from produtive activities. people are more concerned about inflation now.
+
+lecture 38:
+    International economy
+    ---------------------
+    trade: goods in return of dollars.
+    foreign exchange market:
+        a british guy sends pounds and you get dollars.
+        here you have exchange of currencies.
+        demand and supply decide price.
+        and it is a huge market, about 1 trillion per day.
+        most active market in the world.
+
+    there are exports and imports in trade.
+    there is also trade in services not just goods. And US sells a lot of services.
+
+    credits : positive sign
+    debits : negative sign 
+
+    credits: funds flowing into US.
+    debits: funds flowing out of US.
+
+    credits and debits have to balance at the end.
+
+    Balance of payments: (all credits and all debts summed at the end and they are equal at the end.)
+        1. balance on current account.
+            trading good and services
+            exports of goods/services is credit (you get paid), and imports is debit
+            income from US assets overseas is credit, eg if you own a home in foreign country that is on rent. payments for foreign assets in the US is debit.
+            net unilateral transfers abroad: could be credit or debit, a gift etc. 
+
+            for 1998 671 billion of exports of goods and 919 billion dollars of imports.
+            balance of trade -248 billion dollars.
+            a lot of people think it is a bad thing. that we are not selling as much as others are selling us. But they leave out services.
+            exports of servies  260 billion dollars, 182 billion dollars of imports.
+
+            balance on current accounts -200 billion dollars.
+        2. balance on capital account.
+            imports and exports of financial assets.
+            inflow of currency to pay for U.S financial assets, busninees etc and loans to U.s
+            then it is credit.
+            outflow of currency to pay for foreign financial assets, companies, and loans to foreigners then is treated as debit.
+            net would be sum of them.
+            266 billion dollars for that year. that means foreigners like to investing in US.
+        3. official reserve balance.
+            gold,foreign exchange as government has to pay for it(debit) etc 
+        4. statistical discrepancy.
+            sort of error term.
+
+    up until 1973 had fixed exchange rate.
+    now market decides.
+        the final number has to be 0. after you sum all of them.
+
+    in foreign exchanges:
+        we have supply and demand of currency in a foreign exchange market.
+        and you have equillibrium exchange rate.
+        federal reserve would intervene to stablize the price of their currency.
+    
+    balance of payments:
+        at the end all have to sum to zero. except for the foreign reserves etc 
+        if current account is negative, that doesn't mean you are bad at producing. since the payments have to balance and both curent and capital accounts can't be positive.
+        higher investment in US would increase the exchange rate, as a result you can't sell to many goods at that price to foreigners.
+        the stronger the dollar the more US people want to invest in other countries as stocks etc are cheaper. same for goods.
+
+    exchange rate: rate of a given currency.
+
+
+wikipedia:
+    money:
+        commodity money: money whose value comes from a commodity of which it is made.
+        representative money: money that has no value intrinsically, but represents value.
+        fiat money: money that is not backed by any commodity such as gold or silver. It derives its value from being declared by a government.
+        counterfeit money: currency produced without the legal sanction of the state or government.
+        currency: notes and coins.
+        total money = currency + money in banks 
+        barter 100000 years old.
+        commodity money gave rise to representative money when banks gave reciepts for commodity money and those reciepts started to act like money.
+        gold standard: backing your paper notes by gold.
+        after world war 2 most countires adopted fiat money.
+        modern money theory people state fiat money is backed by taxes, as the taxes create demand for currency they issue.
+        fungible: interchangeable, mutual substitution.
+        money supply: money that people can spend at any point in time.
+        money: m1 is currency plus demand deposits, nm2 is m plus savings accounts and time deposits,m3 is m2 plus large time deposits. m1 is only most liquid financial instruments.m0 is the actual money issued by central bank of the country.
+        creation of money:
+            central bank minting coins / printing banknotes M0 called narrow money/legal tender.
+            bank money or broad money it is M1/M2 created by banks.
+        liquidity: how easily can something be traded for another.
+            money is most liquid asset, and for high liquidity there is low transaction fees.
+        representative money could be backed by commodity.
+        the value of fiat money comes from who is issuing it.
+        in us 1 trillion is m0 and 9 trillion m2 
+        when gold was used as backing the money supply would only increase if gold back increased. And whenver new gold was found it would cause inflation. If rate of gold mining couldn't keep up with econmic growth it would cause deflation. Deflation was more common during those days.
+        control of money in economy in fiat money: monetary policy. The goal is maximum employment, stable prices, moderate long term interest rates.
+        money system can fail and result in barter system.
+
+        money laundering: concealing the origin of money, obtained from illegal often.
+
+    monetary policy:
+        increase money supply to increase empoloyment during a recession. it would result in inflation also. and exchange value will be low so other countries can also invest.
+        decrease money supply to reduce inflation, it results in unemployment and possibly a recession.
+        
+        
+
+ideas:
+adam smiths invisible hand: who should make products : to grow econmomy or to allow people make great products, allow people to do whatever they want to do with mininal regulations, eg apple,samsung and it would lead to better outcome.
+
+company Statistics:
+    revenue/net sales: all the revenue it hs generated over a given stretch of time.
+    
+    gross profit: revenue-expenses of production (raw material,wages in factory also known as cost of goods sold)
+    
+    operating profit: operating expenses or SG&A(selling,genereal and administrative expenses) there are its overhead, companies cannot just make product and collect the proceeds,they need to hire salespeople to bring goods to market and executives who help chart etc. advertising etc or buildings for office,
+            operating profit= gross profit - operating expenses 
+    
+    net profit: 
+        extraordinary gains and losses eg sale of a building or business unit. they are not part of core business. then there are taxes etc. Once they are deducted from operating profit, the investors arrives at hte net income or net profit or net loss.
+
+
+GINI COEFFIECIENT:
+    IT measures the spread of household income.
+    the loorentz curve describes it the best.
+    it increasing al most like a squared curve. it would  linear if everybody had same income. it was graph between people and income. on x-axis we go from 0 to 100% of population from low income to higher. y axis is 0 - 100% of income.
+
+    gini coefficent= Area A/ (Area A + Area B)
+    where Area A is the area between linear curve and the lorrentz curve and Area B is the rest of the area in the triangle.
+
+    higher Gini means more income inequality.
+
+HDI: human development index 
+    it is a measure to evaluate how developed a country is . how satisfying it is to live in a country.
+    in a way it summarizes happiness in a country.
+    it uses health index: life expectancy at birth
+    education index: mean years of schooling  
+    income index: GDP per capita
+
+    it is between 0 and 1, higher HDI means better life.
+    it is used to help country.
+    higher hdi means higher opportunites to live a quality life and live like a human.
+
+GDP PPP 
+    purchase power parity 
+    we see what the purchasing power of a currency is.
+    it define how much you can buy with that much.
+    eg in us you can buy it for 2 dollars and in japan you can buy it for 6 dollars.
+    hypothesis: doesn't matter where you are, it should cost the same in a common currency, but there are deviations from it. But it is decreasing at 15% per year.
+    
+---------------------------------------------------------------------------------------------------------
+International trade:
+    comparative advantage:
+        absolute advantage: 
+            when you can produce more in terms of magnitute.
+            it doesn't account for the things for how much resources were spent to have absolute advantage.
+        lebron james is better labor than you, that is absolute advantage, but he can do better things.
+        comparative advantage means having lower opportunity cost.
+        hence trade is about lowering everyone's opportunity cost.
+        just draw a table of all possibilites and enter opportunity cost in terms of other goods they could have instead produced, like opportunity cost of one computer produced, or one shirt produced.
+        
+        trade increases aggreagate wealth, that doesn't mean all are in profit. As a whole it is good for the groups.
+
+        sources of comparative advantages:
+            climate/geography/ natural resources 
+                a place can have comparative advantage in mutiple industries.
+            Factor proportions:
+                low skill/ high skill labor 
+            trade causes division of labor, and it leads to specialization, and afte specialization they get comparative advantage.
+            institutions:
+                finance: banks if you need a lot of money 
+                labor market flexibility 
+        trade results in variety and variety results in overall welfare of each individual of population.
+        trade reduces prices as each product is made for larger population.
+        places start to look similar with trade.
+
+        gravity equation:
+            the further away two countries, the weaker the trade attraction.
+            Trade = G E1 E2 /D^2 
+            as cost of trade would be high.
+            trade cost vary from product to product.
+            trade cost is usually about 170% 
+            if tariffs go up, the company would register itself in your country and start producing within to avoid tariffs.
+            in trade there are movement of goods, capital and people and companies choose one of these depending on the circumstances.
+        tranportation costs fall over time.
+        during 19th century tariffs were really high, now they are smaller.
+
+    the shipping container has been the big breakthrough. The cargo container is also stardardised for cranes etc to work easily with standardization. It helps in loading and unloading, otherwise it was done by men, that did cost a lot of money. Now a days port doesn't have much men there. It increased trade by 730% , this is an amazing technology.
+
+    trade could destabilize the prices within the country and people within the country can lose jobs, thats why tariff laws are chosen accordingly.
+
+    tariffs increase prices.
+    if you import high taxes on imports that country would impose high taxes on your exports.
+    freer trade is associated with high economic growth.
+    tariffs could be for government revenue than for other things within country.
+
+    why are there tariffs:
+        overall tariffs fall over time.
+        worker protection 
+        foreign policy 
+        tariffs would be high on imports if the supply is inelastic.
+    
+    trade increase demand as prices go down at world scale.
+    tariffs raise the world price.
+    because of tarrifs, domestic comsumption falls and domestic production increases and both decrease the welfare.
+    government policies can be highly irrational for a economist.
+    tariffs vs quotas: both used to protect the domestic industries by artificially raising the prices in the domestic market. Quotas restrict the quantity of a good imported from anotehr country. Tariffs are a charge levied on teh value of goods imported from another country. Tariffs generate revenue for improting country's treasury, but the value of quota aka quata rent, goes to the foreingn exporters whoa re aboel to sell goods at higher prices. In both cases the domestic consumers of the importing country pay the costs of tariffs and quata rents. Tariffs are collected by a customs authorites as goods enter a country.
+
+    WTO: world trade organisation
+         oversees trade agreements that countries part of WTO sign.
+         Forum for negotiating settling and enforcing trade disputes.
+         It is kind of court and you can be fined.
+         eg if europe gives subsidies to european airlines in contract to boeing which is american airline.
+         155 members.
+         based in geneva, switzerland.
+         they might ask to lower the tariffs.
+         TRIPS is part of it that looks for Intellectual properties.
+         They want Non discrimination, transparency.
+         process takes 5 years to join.
+         The goal is to make trade as free as possible.
+         The goal is to increase trade.
+         Tariffs happen to be biggest barrier for trade.
+         Does WTO even make a difference? apparently free trade is happening closer anyway.
+
+    The Green Revolution:
+        many people are fed because of it.
+        it means increment in agriculture.
+        by the use of innovations and science.
+        using mechanised vehicles, fertilizers,etc 
+        and allow industries to take care of food prodution.
+        And it resulted.
+        it resulted in higer yields, about 4 times.
+
+    Multinational corporations: MNEs 
+        when a company sets up factories and retail outlets in different countries.
+        Foreign direct investment: putting a plant in different countries.
+
+        raises wages, productivity, in the country they operate in and they spread useful products around the world.
+
+        you can have single factory and then you export, or if trade costs are high you can setup factories at other places. This way you avoid tariffs.
+
+        setting plant somewhere else: horizontal FDI 
+        vertical: you build each part of your product from a place where it is cheap to build and assemble somewhere. eg apple manufctures parts from different countries and assembles in china.
+        as china has cheap labor. r&d where skilled labor is cheap, production where less skilled labor is cheap.
+        veritcal MNE"s growing faster than horizantal.
+
+        gains of multinationals:
+            higher wages.
+            infrastructure improvement.
+            spread skills.
+
+    two myths about multinational:
+        their market capital is more than that of country, they are bigger than countries gdp's. Don't confuse stocks and flows, GdP is flow each year. capitalization is a stock, look at the sales to compare with gdp.
+        exploitation in poor countries: of labor, paying small amount. But they get to have the job. Singapore is one that was poor and allowed multinationals and now they are rich.
+        Haiti is place where foreign investors went away and now they are poorer.
+
+    To means beurocratic rules and nepotism results in lower productivity in firms.
+    
+    industrial cluster: multiple factories/industries in a small place.
+        eg hollywood, silicon valley etc 
+        usually first firm enters eg california is good for filming all year around, but it could also be random.
+        A second firm sees that by locating near the first firm, it can take advantage of specialized labor, supplies, shippers, and ready made infrastruture so a second firm enters at same location.
+        and so on.
+        eventually we get a cluster.
+        cluster becomes the lowest place for cost.
+        costs fall first in clusters.
+
+    similar countries tend to trade more.
+    when a country produces something in abundance, they export the surplus.
+
+    intra firm trade:
+        same firm trading goods across countries from its plants.
+        about 1/3rd of world trade is intrafirm trade.
+
+    intra industry trade:
+        exporting and importing same kind of good.
+        example importing ferrari and exporting tata.
+
+    supply chain:
+        old idea:
+            build supply chain within your country.
+            supply chain is the sequence of processes involved in production and distribution of goods.
+            it is hard to achieve.
+        now a days a country produces just a part.
+        those who try old idea usually fail.
+        
+
+
+
+introduction to advanced Macroeconomic Analysis:
+
+lecture 1:
+    you use Macroeconomics to decide if you should invest in that country.
+    a model of anything is its map, no map is the place, but it helps to navigate.
+    theories are about causes and consequences.
+    

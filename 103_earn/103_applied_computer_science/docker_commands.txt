@@ -1,0 +1,441 @@
+
+//installation
+
+    to install docker => sudo apt install docker.io      //right now new version is 20   //size 39.9MB
+    to remove docker  => sudo apt  remove docker.io
+
+//to check version
+
+    docker --version
+    docker version  //better
+
+//to execute docker commands without being root
+
+    sudo chmod 777 /var/run/docker.sock
+
+//dockerise=> to add Dockerfile
+        it contains instructions to convert to an image
+    
+    app+Dockerfile =>image + run =>c ontainer
+    image contains everything you need even the env variables
+
+//you can push your images to dockerhub and pull anywhere
+
+//Dockerfile commands      //order of commads can be any sensible order
+
+    FROM linux or FROM node:alpine  //node usually comes with linux,alpine is one of the distro of linux,it is called base image
+    COPY . /app   //copies current folder to /app in image
+    WORKDIR /app     //working directory in image for all commands to be executed
+    CMD  node /app/app.js  //no need to prefix if WORKDIR used
+
+//to build
+    docker build -t hello-docker .  //t is for tag where hello-docker is the name of our image.and . for where Dockerfile is
+    docker images or docker image ls  //to see all images
+    docker run hello-docker //can run from anywhere
+
+//by default latest tag added to images and tag is used for versioning
+//play with docker is an online docker to play with docker.
+//each image has unique id
+
+
+//to pull an image
+    docker pull asrarbhat/hello-docker   //asrarbhat is username on dockerhub and hello-docker is an image in the repository
+//now it will be in images
+
+//you can run image anywhere if you have docker.
+
+//
+    docker ps //to see running processes
+    docker ps -a //to see even stopped ones//exited ones
+
+docker run -it ubuntu //to open in interative mode,opens a shell
+
+
+//apt => advanced package tool
+        apt install,remove,search,list
+        apt list to seel all you can see which ones are installed
+        package database in your system so always update it.
+        apt search docker.io
+
+
+docker start -i 8738yehrg //the id of container to start a stopped container wehre -i is for interative
+without -i bash output doesn't show
+
+//stopped container still have data and state but images don't
+
+
+to login using specific user into our image
+
+docker exec -it -u john 244rhfdfgf bash  //after ps -a
+
+
+//BUILDING AN IMAGE 
+what happens in one container is invisible to other
+you can create multiple contianer from same image
+
+FROM
+WORKDIR
+COPY
+ADD 
+RUN 
+ENV 
+EXPOSE 
+USER 
+CMD  //EVERYTIME A CONTAINER STARTS
+ENTRYPOINT //SAME AS CMD
+
+
+eg 
+FROM node:14.16.0-alpine3.13  //for base image ,can be python,find in tags in dockerhub.
+//alpine is about 40mb
+//docker run -it reat-app sh//sh is command you want to execute
+//by default FROM uses latest tag so always be specifc only use FROM node only
+//use ctrl f in dockerhub to find 
+//to copy files
+COPY package.json /app  //can copy only from current folder
+COPY a.txt b.txt /app/ //need / for directory end
+COPY . /app/
+
+can put 
+WORKDIR /app
+COPY . .
+if space 
+COPY ["hello world.txt","."]
+
+ADD . . //same as COPY but we can add url also 
+eg 
+ADD https: .....json  .
+ADD f.zip . //unzips automatically
+//better use COPY
+
+folder in which Dockerfile is there is called context as in copying the context
+
+
+//to exclude files .dockerignore
+docker engine<>docker daemon
+
+
+RUN npm install
+RUN apt install python //alpine doesn't have apt
+
+
+//setting ENV variables
+ENV API_URL=https://www.google.com
+ENV AAA="hithere"
+
+//exposing port
+EXPOSE 3000 //tells host which port one container might listen on. as each container is a system in itself so each can have any port
+
+
+//by default docker run with root user
+hence create users
+RUN command to create users with groups
+and then 
+USER guest 
+now everything else is executed as guest
+and even build as that user
+put user on top so you have access to copied files
+
+docker run react-app npm start //here npm start is entry point, better use CMD
+can use a script for CMD
+only one CMD executed, if multiple only last one executed
+CMD ["npm","start"] //better form as no extra shell process created
+
+ENTRYPOINT ["npm","start"]
+can use shell form as well this one is exec form //shell form creates new shell process
+same as CMD but CMD as be overridden when given command as argument but you cannot override ENTRYPOINT easily
+use ENTRYPOINT it is better don't use both
+
+//RUN is only executed during build hence build time instruction and CMD is runtime instruction
+
+//keep commands that modify image at bottom for optimization
+
+docker history react-app //to see layers and each instruction creates a layer,read bottom to top
+
+so copy package.json before and run npm install at top
+once layer is rebuild,everything else is rebuilt on top of it and nothing is used from cache
+
+//removing images 
+docker images
+ 
+docker image prune //to remove dangling images/redundant images
+docker container prune // to remove all stopped containers
+docker image prune is run after docker container prune
+
+now only those images remain that you created or got from dockerhub
+
+
+docker image rm name/id name/id
+ to remove any image
+
+
+ //TAG 
+
+ all by default have latest tag
+ docker build -t abc:3.5 .
+
+ to remove by tag
+ docker image remove abc:3.5
+
+ //to tag after
+ docker image tag react:latest react:3.15
+ always use tags
+ //to change tag
+
+ docker image tag bo53433 asrabhat/react:2
+
+
+ //to push
+ docker login
+ docker push asrarbhat/react:2 where asrarbhat/react is image name and 2 is tag,image name should match with dockerhub repository
+
+ same image can have multiple tages like latest and one you put etc 
+ one repository is about only one container 
+
+
+ //saving and loading images
+ docker image save -o abc.tar react:3
+ docker image load -i abc.tar
+
+ docker image rm aaa:tag to remove tag if multiple tags to same image
+
+
+
+ docker run -d react-app  //to run in detached mode
+ ctrl c to stop a container
+ docker run -d --name blue-sky react-app//giving name to a container //by default a random name given
+
+
+ //viewing logs
+docker logs id
+docker logs -f id //to follow real time changes
+docker logs -n 5 id
+docker logs -n 5 -t id //for timestamps as well
+
+
+//publishing ports
+docker run -d -p 3000:3000 react-app  //on host: on container
+
+docker ps to see ports as well
+
+
+to execute command on a running container
+docker exec cont1 ls //ls is the command
+docker exec -it cont1 sh //to open a shell you can exit it and container doesnt' stop 
+
+
+//to stop and start a container
+
+docker stop c1 
+docker start c1 //to resume  
+with docker run we start a new container we do not resume
+
+
+//removing a container 
+docker container rm c1
+or docker rm c1
+docker rm -f c1 //force or stop it first
+
+search a container ps -a | grep c1
+
+docker container prune, to get rid of all
+
+
+
+//contaner file systems
+each contianer has its own non persistent file system
+
+
+//persisting data using volumes
+docker volume create app-data
+docker volume inspect app-data //you can see mount point in it which is the local directory for it
+
+docker run -d -p 3000:3000 -v app-data:/app/data react-app //creates a volume if not there
+now /app/data things will persist in volume
+make /app/data using RUN by user as it is by default owned by root
+
+you can map same volume to another container as well
+multiple containers can share a volume
+volume is a directory in host or cloud
+
+
+//copying files from container to host
+docker cp id:/app/log.txt .
+
+docker cp abc.txt id:/app/  for otherway
+
+
+//publishing changes
+for production build a new image EVERYTIME
+for devopment create a mapping b/w directory on host and docker so changes reflect
+docker run -d -p 5001:3000 -v $(pwd):/app/ //mapping
+can use multiple -v, for named volumes or for mapping
+
+//docker logs to see what is happeing at terminal of contianer also
+
+
+
+RUNNING MULTICONTAINER APPLICATION
+install docker-compose ,it is build on top of dockery
+sudo apt install docker-compose
+it is also by docker
+
+docker-compose --version //newer 1.28
+
+
+//cleaning the space
+
+docker image ls -q //to only see ids 
+docker iamge rm $(docker image ls -q) //to remove all images 
+same way docker container rm -f $(docker container ls -aq)
+remove all containers first
+
+
+yaml file
+
+first line =>   ---
+name: Asrar bhat
+price: 2.99
+tags:   //like a list
+    -first
+    -second
+author: //like an object
+    first-name: hi there
+    hi: helo
+
+indentation for hierarchy
+
+put docker-compose.yml file in folder where your frontend and backend folder are
+
+
+docker-compose up //it runs whole thing ...all containers
+
+//creating compose file
+docker-compose.yml
+
+version: "3.8" //important and has to be in "" as docker engine expects it to be string as otherwise number,it is version of docker-compose
+services:
+    volumes:
+        vidly:      //no value for this property
+    web:      //can be anything
+        build: ./frontend   //here is our Dockerfile for it
+        ports:
+            - 3000:3000
+    api:
+        build: ./backend
+        ports:
+            - 3000:3001
+        enviroment:
+            DB_URL:mongodb://db/vidly or - DB_URL=mongodongowhatever   //docker creates network of these and db will refer to db's ip address same for web
+    db:
+        image:mongo:4.0-xenial   //getting from dockerhub directly. instead of build.
+        ports:
+            - 27017:27017 //it is called port mapping,can have multiple port mappings
+        volumes:
+            - vidly:/data/db
+        
+        
+
+
+BUILDING
+// docker-compose build //in that folder
+docker images to see all images created
+docker-compose build --no-cache //to build from scratch
+ names vidly_frontend //prefixed by diretory we are in
+
+ docker-compose up  //to start
+ docker-compose down  //to stop
+
+docker-compose up --build //build and run 
+docker-compose up -d for detached mode
+
+docker comes with dns server and each container has ip 
+docker-compose ps //to see all running 
+
+
+viewing logs
+docker-compose logs
+docker logs id //for each container separately
+ 
+
+ to publish changes we can use mapping also 
+ api:
+    volume:  you can have mulitple volume mappings
+        - ./backend:/app  /can pass relative path here also
+
+
+docker-compose is just a way to execute all containers in one go,nothing more or less
+
+
+
+//DEPLOYMENT
+
+cluster/swarm  => group of servers to deploy to, can use docker swarm or kubernetes  called orchestration tools docker swarm is built inside docker
+or you can deploy to single host
+VPS => virtual private server
+use ssh to do stuff or docker-machine
+
+for prodution you might remove tests and mapping as it is no longer needed
+you can create docker-compose.prod.yml //could be any name
+
+under each service
+restart:no  //if crashes don't restart ,other options    always,on-failure,unless-stopped  better use unless-stopped
+
+
+/reducing size of images
+run npm build to get optimised front end
+we don't need node or npm anymore
+
+create Dockerfile.prod
+#comments in dockerfile
+FROM node:wahtever  AS build-stage
+do copyying etc install dependencies 
+run npm build in it also
+
+#second stage,since we don't need node
+FROM nginx:1.12-alpine
+RUN adding groups etc
+USER app etc
+COPY --from=build-stage /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD nginx -g daemon off;
+
+
+
+docker build -t immm -f Dockerfile.prod .
+to build it 
+we get a really small image
+
+im compose file
+build:
+    context: ./frontend
+    dockerfile:Dockerfile.prod
+and update ports
+
+
+docker-file-f docker-compose.prod.yml  build
+
+majority of problems are permission problems hence run nginx as root
+
+in compose file
+under each app under services
+image: vidly_web:1.1.1  //for tagging etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

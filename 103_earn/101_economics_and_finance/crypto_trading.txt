@@ -1,0 +1,391 @@
+maker/taker: taker is an order that trades at a market price. "maker" is an order that trades at a limited price.
+order of makers goes to order book, takers fill orders made by makers.
+makers are incentivized to provide liquidty, so they have lower ffes for their orders.
+order of takers doesn't go on order book.
+spot market: real time market, the trading there is called spot trading.
+
+
+
+
+udemy course 1:
+    cryptocurrency: digital money, where crypto refers to cryptography. your private key is your seed phrase. when you generate a wallet you get a seed phrase of words, it is your private key. your public key is your wallet address. 
+    every other coin than bitcoin is called an altcoin.
+    2140 is when all bitcoin will be under circulation.
+    mining: solving puzzles and more bitcoins are put into circulation (proof of work)
+    blockchain: digital record of transactions.
+    gas: transaction fee. if network is busy the gas fee is more. the gas fee goes to miners.
+    ethereum allows you to build on top of it.
+    stable coins: value is 1 dollar. there is no volatility. you but your profit here, when the market is down.
+    market cap: total value of all supply. price X supply 
+    volume: how much is being traded.
+    volatility: how up and down it is going.
+    investing/HODL : long term buying, hold on for dear life.
+    trading: day(for a day eg when it gets listed on exchange) /short term(a few weeks)/ swing trading (buying at low and selling at high and again do the same) 
+    TA: studying the pattern by traders.
+    breakdown: going below support
+    breakout: going above resistance
+    fundamental anlysis: how good is that crypto.
+    bull market: people are buying.
+    bear market: people are selling.
+    retail investors: normal investors.
+    institutional investors: banks and companies eg tesla,paypal bought bitcoin.
+    wallets: hot wallet, readily available, soft wallet, like in your hard drive etc, cold wallet is hard to hack.
+    centralized exchanges are like binance and it is run by a company. you pay fee for each trasactions.
+    decentrilized exchange eg uniswap, there is no ceo etc.
+    IDO: initial dex offering, buying crypto before it goes to market. eg ASTRO was there 
+    launchpad: where you buy it.
+    metaverse: virtual reality.
+    DEFI: decentrilized finance.
+    apy: annual percentage yield.
+    NFT: non fungible tokens, it is a collectable item.
+    memecoins: it is a joke coin.
+    utility: what is it used for.
+
+section 2: 
+    coinmarketcap.com for crypto research eg market cap, volume etc 
+    you also get relavant news.
+    you also get ranking of top 100 based on market cap.
+
+    large caps: above 10 billion market cap and more 
+    mid cap: above 250 million
+
+    you can go into each crypo there as well.
+    you can see course code.
+    whitepaper shows the original vision of the coin.
+    circulating supply means current supply.
+    liquidity=volume 
+    coingecko is same as coinmarketcap 
+
+    exchange types:
+        spot and DEX 
+            spot exchange: they hold your token.
+            DEX: you hold your token.
+        spot means buying at current price.
+        derivatives means buying etc at future prices. you can go long or go short.
+        DEX are decentrilized exchanges. you buy and sell directly from your wallet.
+    fiat gateways: coinbase/binance/kraken/kucoin 
+        from normal money to fiat money.
+        binance supports 46 different kinds of fiat 
+        you select your currency to pay with for fiat money.
+        you can also sell fiat for normal money.
+    
+    14715 different crypto currencies on binance.
+
+    centralized exchanges: coinbase/binance/gate/ftx 
+        a third party website, you typically store in native wallet of theirs and they are custodians of your crypto.
+    try alts in spot market in binance to not always get busd first.
+    gate.io is where you can buy newer crypto currencies.
+    binance and coinbase only take reputable coins.
+    decentrilized exchanges: uniswap for eth based /pancakeswap for binance smartchains/ radium for solana based. you can also buy in paypal etc.
+        you hold in your own wallet. And you can swap your crypto for other.
+        metamask is a wallet for various kinds of crypo currencies on different networks.
+    
+
+    most of coins value is speculative, which means it is not backed by any evidence.
+    usually new coins come with promise that it will solve some problem.
+    if people lose believe then they sell.
+    rekt <> wreked
+    cryptos can crash suddenly and for no obvious reasons.
+    if bitcoin does well everyone does well and if bitcoin crushes everything crushes.
+    markets are driven by greed and fear.
+    with greed prices go up, and with fear prices go down.
+    most people buy high and sell low.
+    you can't always win, the trick is to win more times than you lose.
+
+    multipliers: 
+        eg sell at 100x or 2x etc based on what you want.
+        it is hard for bitcoin to double than any new crypto.
+        look for next big potential crypto.
+        but lower the value, greater the risk.
+        greater risk with low volume coins.
+        you can wait till 100x 
+    what effects price:
+        events/rumours - launch/updates/listings/parternships.
+            listings can be pumped and dumped.
+        blue chip crypto <> ones with large market capital.
+        marketiing, relavance, liquidity, and investor confidence.
+        market forces bull/bear market and bitcoin /alt season.
+        utlity and benefits: dirves demand and adoption.
+        narratives/trending : Defi,Nft,Scaling,Meme coins 
+        technical/chart analysis : predicting moves, traders make move collectively.
+        milestones: Testnet means they are just testing.
+                    Mainnet is the final version.
+                    Listing when they are being listed.
+                    product launch 
+
+                    for these check roadmaps of these coins on their websites.
+                
+        influencers on social media, promoting coins.
+        celebrity endorsements: i.e elon musk.
+        venture capitalists/institutional buyers. as money tend to follow smart money, more people invest there.
+        network effect: a lot of crypto depends on ethereum.
+        scams, lies, deslistings,closures, rug pulls(swipe all the money, malecious code, team takes all the money).
+
+    DYOR:do your own research.
+        don't invest blindly.
+        telegram groups, twitter etc.
+        coindesk news etc.
+        google etc 
+        coinanalysis etc 
+        don't gamble.
+        check if that crypto solves a problem.
+
+    emotions:
+        don't fall in love with an invested project.
+        avoid fear of missing out FOMO (buying high), greed and fear.
+        look at the behaviour of other investors to figure out what is going on.
+        stick to a plan (buy price and a sell price )
+        anticipate the highs, don't chase the highs.
+    
+    market cycles:
+        bull and bear markets follow cycles.
+        last from 18 months to 2 years.
+        euphoria and despair indicate TOP and Bottom, ideally you enter at bottom. and exit at euphoria.
+        bull market is accelerated by media and new investments.
+        bear market accelerated by fear from both.
+        new investors buy at the top.
+        bull market lasts longer than bear market.
+        bull trap, bear trap and brief bull or bear market.
+
+        don't sell in despair and don't buy in euphoria.
+        glassnode.com is cool to see the market cycles.
+    
+    alt coin <> alternative coin to bitcon.
+    whales are top 1 % 
+    alt coins and bit coin follow each other, whales would sell bitcoin at euphoria and then move to alt coins and they would go up.
+
+    money flow in crypto: fiat to bitcoin to large caps to mid caps to low caps to bitcoin to fiat.
+    tether is a stable coin. in increasing order of risks.
+    bitcoin is digital gold: it would appreciate over time.
+    alt coin go up immediately after bitcoin.
+    after alt coins they freeze in fiat.
+    going all in: going all in on a single coin.
+
+    ICO : initial coin offering, before it is listed.
+    USD : united states dollar.
+    coinmarketcap.com is also cool.
+    smart money: money of whales, people who know stuff, not the retail investors.
+    for low cap/ new projects check if there is any smart money and follow.
+    smart money follows smart money.
+    be the early investor.
+    going all in can result in life changing wealth.
+
+    researching the coin:
+        to find hidden value of a crypto currency.
+        start with coingecko or coinmarketcap 
+        check trading volume.
+        check market cap and see how much is trading volume, usually it should be 20% or more.
+        telegram is cool, they would have official group.
+        you can search in that group like google.
+        check how good has it been doing.
+        what has been trading volume in histoy.
+        what is the coin about.
+        check if that cryto is backed by venture capitalists,use cypherhunter.com for that.
+        check their medium page.
+        check youtubers.
+        make sure the volume is consistent.
+
+    narratives: the stories/ the emerging technologies / the trends.
+        eg bitcoin : digital cash, decentrilized  
+         ethereum : ecosystem, building it provided technology and it enables for other to build on top of block chain.
+         ICOs: new industries/ utility tokens / scaling  new coins coming that can be used for particular platforms, there are usually ethereum based.
+         DeFi and NFTs (2020 onwards) nfs are non fungible/exchangable tokens that can be collected.
+         Defi: it enables people to be their own banks, you have savings and you have yields, you offer loans etc yield kinda starts at 10%, yield is so huge.Defi based crypto are blowing now.
+         Defi is usually on ethereum blockchain, hence gas/transaction fee has increased.
+
+         there are 8000 crypto to buy, buy ones that fit the narratives.
+
+    long term investments:
+        go for venture backed investments.
+            they have more confidence.Although there is no guarantee.
+            whale investor network (money attracts money)
+            connection: exchanges / top tier partners /influencers 
+            expertise and marketiing.
+            it mitigates risk.
+        
+            top venture capitalists:
+                pantera, ngc, fenbushi, gbg capital, gbic, arrinton, andressen, polychain, coinbase ventures, binance labs 
+            mid 10 vcs:
+                kenetic alamedda research, moonwhale, 3 commas, CMS, AU21, LD capital, paradigm, genesis.
+            low vs:
+                master ventures hashed, vendetta moonrock, woodstock,morningstar, spartk digital capital.
+
+            you can find their vcs from the website of the website of the crypto currency under early supporters and parternships.
+            or go to cypherhunter 
+
+    take profits:
+            objective: protection/hedging agaisnt volatility.
+            take out what you have invested after  3-5x so even in worse you don't lose anything.
+            sell all at 20x to 100x.
+            even banks are planning to sell when it goes to the peak.
+            smart money gets in at the bottom and then the institutional investors like banks and then they sell at the top.
+            use people's overenthusiasm./ too good to be true, and sell.
+            sell into bitcoin or usdt to freeze your profit.
+            it is one of the hardest part. once you make profit, don't look back.
+            don't be disappointed even if it looks even higher.
+            sometimes all you need is a big win.
+
+section 3: understanding cryptocurrency
+    what is cryptocurrency:
+        it is digital currency and it is independent of banks.
+        all transactions happen through something called a blockchain.
+        stored on digital ledger, owned by private key.
+        distributed network acts as consensus.
+        decentrilization removes 3rd parties.
+        there is less trust on a centralized entities.
+
+        supplies:
+            mined and minted supplies.
+            minting is deciding maximum supply and you can produce it on demand.
+        Crypto is treated as Asset class and spendable(converted) and less like a currency.
+
+    what is bitcoin:
+        original and main cryptocurrency.
+        thought up in 2009, when the original whitepaper was published.
+        it is called digital gold as it appreciates
+        Main buying cryptocurrency for alt coins.
+        even ethereum is an altcoin.
+        most likely to be adopted by mainstream.
+        most consistent growth.
+
+    what is ethereum:
+        Main Alt coin
+        currency of value and buying alts and ICOS 
+        early stage crypto projects use ethereum blockchain to build their system.
+        it is not just a currency, it is a software platform, you can create software on top of it.
+        can create DApps<> decentrilized applications using ethereum.
+        smart contracts: a software that runs on it own.
+        crowdfunding platform for ICO's 
+        with bitcoin you can't create a software.
+    
+    what are altcoins:
+        Any cryptocurrency other than bitcoin.
+        can be bought with btc,eth,usdt, etc 
+        higher volatility and multipliers
+        own communities/fanbase and features.
+
+    why is crypto hot:
+        freedom: no need for third party.
+        volatility/multipliers: making significants gains.
+            come for gains stay for technologies
+        innovation: banking tech and currency 
+        eary and new like early dotcom boom 
+            only 1% is in it.
+    the risks:
+        volatility: significant and fast ups and downs.
+        unreliable and unpredicable prices 
+        security infrastructure: there are scams all the time.
+        but the blockchain is immutable.
+        gambling: percieved speculative value 
+
+        people enter the crypto market bullish.
+
+    sats: satoshis, 1 bitcoin is 100 million sats 
+
+    coins vs tokens:
+        every bitcoin is a coin. 
+        ethos is a token.
+        token is more like for a specific utility.
+        eg to pay for games for for network.
+        whereas coins is more like making transfer of payments.
+
+section 3:
+    what is blockchain:
+        the technology under the cryptocurrency technology.
+        it is a growing list of records(blocks) linked by Hash cryptography.
+        immutable digital ledger of data (permanent records)
+        Data= Financial transactions, software transactions and documents.
+        decentrilized: processed by a P2P network of nodes.
+        consensus protocol: speed and security, they verify the transactions.
+        new block is created when previous block block is done and the chain carries on.
+
+    what is SHA256:
+        it is bitcoin hashing algorithm.
+        secure hash algorithm: SHA 256 bits in memory.
+        unique hash to each block (digital fingerprint)
+        Block: Number,Nonce,Data,Prev. Hash,Present Hash 
+        Miners solve Nonce to create current hash 
+        computational power protects network, when you solve the nonce.
+        for blockchain to get hacked, 51% network has to attack.
+
+        data is just a bunch of transactions.
+        you put computational power to compute current hash by trying to compute hash.
+        you idea is to figure out the Nonce that creates current hash with 0000 in the begining.
+
+section 5:
+    investestment setup:
+        fiat <> feeyet
+        exchange is not the best place to store as there are always hacks.
+        go to coinmarketcap.com to check which exchange has it.
+        you can deposit and withdraw to other addresses.
+        order books could just have orders to make you panic.
+        don't sell at the dip.
+
+    DeX: decentrilized exchanges, no need for kyc.
+        eg uniswap.com for ethereum based.
+            you need a metamask wallet.
+            the gas fee could be high.
+        another one is pancakeswap. for binance smart chain.
+            you would need metamask wallet for this also. you can trade bnb etc 
+            pancakeswap is cheaper.
+
+section6: lauchpads
+    initially we had ICO's before they entered the exchanges.
+    these days we have launhpads.
+    there are different for different crypto environments.
+    it is very important to get into these markets at the earliest.
+    IDO, intial dex offering, same as ICO.
+    there are various launchpads: eg polkastarter for polker eco system , bsc launchpad etc
+
+    launchpads are decentrilized way for projects to get funds.
+    most top project launch via launchpads= blue chip lauchpads 
+    retail investors invest at lowest price (private) like crypto VC's 
+
+    top lauchpads:
+        VelasPad: it has guraranteed allocation.
+        Gamezone: it is guraranteed.
+        Seedify, this is guraranteed.
+        DaoMaker, lottery based allocation.
+        polkastarter, lottery based allocation.
+
+    try buying from all launchpad for a coin.
+    BlueZilla launchpads are also good.
+
+    but high initial capital: pay to play. 500 to 500k 
+    in bear market they don't do good. lack of demand hence selloff.
+    high demand so it is lottery based.
+    greater DYOR to vet opportunities.
+    KYC is required, restricted countries cannot pariticipate.
+
+    launchpad process to invest in IDO:
+        buy launchpad tokens for a tier.
+        and stake your tokens first.
+        at launch, use USDT or BUSD to invest in IDO, from metamask wallet.
+        it is first come first served.
+        hence project launchs on DEX hence called IDO 
+        you would get 10% airdrop first.
+        you can just buy in DEX instead of going for lauchpad whole thing.
+        BSCPAD is also cool.
+        when a crypto currency is launched, prices go high for first few hours.
+        it is very competitive.
+        flipping: selling as soon as on exchange.
+        cypherhunter for details related to IDO's.
+        go to BSCpad.com to see stuff.
+        it is the best way to make nx.
+        with ones improvement and impressive VC's etc 
+        relavant, trends launches.
+        top marketing.
+        launched on polkastarter/bscpad.
+section 7: metaverse related crypto tokens.
+    metaverse: virtual reality, with VR glasses + Augumented reality: virtual + real .
+        NFT's as avatars, 
+        assets like computers within metaverse. or even digital land.
+        eg metawars, wilderworld, star atlas, gamezone, axie infinity.
+        
+
+
+
+
+
+
+

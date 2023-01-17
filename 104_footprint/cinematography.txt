@@ -1,0 +1,230 @@
+video production:
+    first thing, you need is a camera.
+second thing is a subject or story.
+next thing you need is light, which could be aritifical or natural.
+next important thing is audio.
+the next step is post-production/editing.
+next step is the distribution of your video.
+
+what kind of video is decided by the goal and the target audience.
+vimeo for creative filmmakers.
+
+first step is to have a really good story.
+your video should be as long as the story needs.
+people prefer scenes with multiple shots.
+
+pre-production: making a plan. Whats where and how, the whole timeline and budget.
+have a nice title.
+you would have crew and equipment: it could be a single person or multiple people.
+
+you can buy a dslr, and lenses.
+lenses are very important. you get different kinds of shots from it.
+
+audio is as important as video.
+use external microphone.shortgun microphones are very good.or use studio microphone for podcasts.
+drone are amazaing.
+
+exposure: your video is bright enough, how much light is in the frame. decided by shutter speed, ISO, aperature/fstop
+shutter speed: slow shutter speed allows more light. but it also decides how blurry motion is. 1/50th shutter is nice. slow shutter speed means more blurry motion.
+F-Stop/ aperture: how much light are you allowing in. More aperature means everything is in focus, and it increases the depth.
+
+ISO means sensitivity to light, or how bright things would look.
+
+aspect ratio: the size of your frame: 16:9 is how tv's and screens now a days are, threatres are even more wider.
+shots can be wider or medium by zooming in.
+wider shot is used to show the viewer where you are, medium shot is used to make the viewer connect with your character, used for interview and dialogues, then there is close shot with complete zoom. You can zoom in digitally and lose some quality, with closeup there are more emotions, and more connection as you see the eyes the face etc. Insert shot is zoom shot on different things to give the user about the details of the things like the title of the book etc.
+
+if you are shooting yourself, put camera at your eye level, that is best place to put it, and put yourself in the center or in one third if background is important, and put yourself in medium shot so you are not too small or too big to look at.
+you can use something as tall as you for reference when you are shooting yourself.
+
+you can buy a background paper roll for your plain background.
+A-ROLLvs B-ROLL: the main footage are A-Roll, and B-ROll are other relavant stuff as inserts, you don't have to do both simulataneously. Just shoot everything that would help to tell the story.
+hence having a second camera can always be very helpful.
+
+get a shotgun microphone.
+resolution: like 1080p etc.
+fps: 24 frames for movies and 30 for tv and 60 for slow mo.
+first two things you check are resolution and fps, then come the shutter speed, F-stop and iso 
+for 24 fps, best shutter speed is 1/48 or 1/50 basically double the fps.
+wave hands in front of camera to check for motion blur.
+in dream sequence you though want motion blue.
+for photography you may want to have even higher shutter speed but not for video as the things would look too sharp and not give a good feel.
+fstop defines how much would be in focus, less means only a few things and rest blurred.
+look at the camera instead of yourself.
+you can keep using same lens even if your camera changes.
+you can buy paper lamp for lights.
+H286 codec is good to export.
+if the aperature is big, it will give you shallow depth of focus, it is cinematic.
+small aperture means more in focus.
+on lens you just shift aperature hence the focus.
+24-70 lens is industry standard.
+
+Next level Filmmaking- An Advanced Videography Course
+    dynamic range: how well can a capture capture details of shadow and light i guess, human eye has 20 units and most camera's have 14. It is about details. DSLR's have higher dynamic range.
+
+    Histogram: it shows you pixels and their frequency from 0 to 255, ideally it should touch both like a bell curve. It means well exposed image. It could be shifted to one. If there is less black the image is going to be too bright, and if there is no 255 then the image is going to be too dark. spikes would mean loss of data.
+
+    color temperature: measured in degrees kelvin, it runs from 2000K to 11000K 
+                        2000K is like candle, it is reddish, 11000K is like sun.
+    auto white balance struggles when there are multiple light sources.
+    storing files in RAW are flexible during editing. It is plane unprocessed files.
+    RAW is better for color grading later.
+    
+    marker settings are used to figure out where is center or 80% in the frame.
+
+    aspect ratio's: 4:3 16:9 etc 
+        you can change it in during editing also
+    if you can do something in camera, do it there, don't leave it for post production.
+
+    composition:
+        depth of filed: the range or area in fron tof the camera that is in focus.
+        focus distance is the distance between camera and main thing that we are shooting.
+        we have have deep or shallow depth of field.
+        it is determined by aperture, focal length, and distance between camera and subject.
+        more focal length of lens: less DOF, 105MM is cool blur.
+        aperture f/1.4 less DOF, big aperture means more DOF
+        aperture f/22 more DOF, small aperture means more DOF
+        think of aperture as how big the whole of camera is
+        small distance to subject: less DOF 
+        bigger distance: more DOF
+        if you want a shot with a background, keep your acting far from background wall and now take closeup from small distance with focus on his face. AMAZING.
+        pulling focus: changing focus point as the subject moves.
+        never use autofocus for closeups.
+        shots:
+            extreme close up 
+            close up
+            medium close up
+            medium
+            medium wide
+            wide
+            extreme wide
+        camera angles:
+            high angle: like a bird watching, this makes subject look smaller in all shots.
+            low angle: worms eye view, it makes subject look big and superior.
+            dutch ange: when camera is at angle and not paralle to ground, it is used to create discomfort in the scene.
+        
+        camera movements:
+            PAN: when camera remains in one place and you rotate it, it on tripod, you can pan left or right.
+            TILT: same for up and down.
+            ROLL: rolling in circle.
+            pedestal shot: when camera moves up and down the Y axis also called crane shot.
+            tracking shot: moving alng the X axis.
+            dolly shot: towards or away from subject along the Z axis, it should not be confused with zooming in and zooming out.
+            zooming shot: is done by adujusting the focal lenghth.
+            Arc shot: like tracking shot but it moves in circle.
+            static shot: if camera doesn't move at all.
+            POV: camera takes place of an object like a security camera or a vehicle, or characters eye.
+                you usually show charater looking at something called the setup short and then you cut to their pov. these shots should neigther be shaky nor too long, as it can cause motion sickness.
+            the faster the movement, the more enthusiatic.
+            the slower means suspense.
+            closer things would appear to mvoe faster,Hence to make things move master have things close.
+            or move in oppsite direction to make it move faster.
+
+        stabilization:
+            for rotatory: use tripod or hand held, both work, use three point contact etc, and move your torso.
+            gimbal is good to have stabilization, that is that stick like thing.
+        don't use slow motion, but it is not needed.
+    
+    filters:
+        these are glasses that you put on your camera.
+    
+    lighting:
+        exposure: means how much light is hitting.
+            it could be under exposed or over exposed.
+            high shutter speed could result in under exposed image.
+            details can get lost becuase of wrong exposure.
+            you can look at Histogram to see if it is under exposed or over exposed.
+
+            it is decided by aperture, shutter speed and iso.
+            bigger the aperture means more light.F32 means less light than F2 
+            high shutter 1/1000 means high shuter speed means less ligt will enter 1/2 means more light will enter.
+            
+            ISO: how senstive to light senser is. small number means low senstivity hence would need more light.
+
+        you first select your frame rate, then shutter speed as double your frame rate, hence choose your iso, hence select your aperture based on depth of field you want.
+        to avoid blue we set shutter speed higher.
+        three lights are used.
+        backlighting is best ofr cinema.
+        it is okay to have shadows.
+
+Filmmaking 101:
+    How to operate a camera:
+        There is a camera and you can attach lens to it. You can have zoom lens etc.
+        Exposure: amount of light that we are allowing to go to the sensor, we don't want over exposed or under exposed.
+        film: that earier thing which was used to take pictures, it would be empty and shutter would open and light would hit it. Shutter would open and it would expose the film hence the amount of time for which shutter remains open would decide exposure.
+        now a days we don't have film, we have digital sensors.
+        shutter speed decides how long shutter curtain would remain open.
+        aperture: it is like iris of camera, it also has effect on how your photo looks.
+        for video the rule for shutter speed: double your frame rate. if 24fps then shutter speed should be 1/48 that is shutter remains opens 48 times in a second.
+        the higher the shutter speed, the lower the light entering, the slower the shutter speed the more light would enter.
+        the bigger the aperture the more light would enter however the way it is numbered is like division hence f5 aperture is bigger than f6. This also effects depth of field.
+        press your camera half way to focus and full press to capture.
+        on your lens there are you rings you can move, one is to zoom and then is to focus.
+    
+    Editing:
+        in action, cuts are quick, in romantic scenes, cuts are slow.
+    Lighting:
+        lighting can evoke emotion.
+        one light is not gonna cut it.
+        three point lighting:
+            key, rim, fill
+            key is the main light, fill is to remove the shadows, and back light is the rim light.
+            the are all three at angle.
+            the bigger the surface area of light, the softer the shadow.
+            blue=cold 
+            orange= warm 
+
+    visual effects:
+        sound stage: stage with green screen.
+        blue or green screens are used: because it is very uncommon color for clothing.
+        transparent background after removing green: alpha background
+    
+    color grading:
+        you shift rgb values for all pixels.
+        correct your lumanance.
+        fix your white balance.
+        and then color grade.
+        you can even download some already colorgraded video to have same color grading.
+
+    resolution:
+        shoot at best resolution and then you can export later what you want to.
+        resolution means number of pixels, on length and width.
+        aspect ratio is the shape of your film. we use 16:9 on TV and movies.
+        480p is called SD 
+        720p is called HD 
+        1080p is called full HD, hence length is 1920
+        1440 is called 2K 
+        2160 is called UHD 4K ultra HD 
+    Aspect ratios:
+        21:9 for widescreen films.
+        16:9 for online videos and movie theatres.
+        9:16 for instagram, tikok etc 
+        
+martin scorsese:
+
+david lynch:
+    be true to your voice.
+    the goal is to produce an art.
+    write down your ideas.
+    
+youtube:
+    shoot slomo at 60fps
+    ISO is fake light, it is you deciding light on your camera.
+    ISO can produce grain/noice in your images.
+    above 1600 you start to get noice.
+    low shutter speed can cause blur, it can be used to have dream or faint.
+    white balance is you telling your camera what is pure white.
+    set your white balance first, by taking picture etc.
+    indie filter is really good for correct exposure.
+    lens is for our camera to focus on subject.
+    zoom lenses zoom and they have a ring to zoom.
+    prime lens don't zoom the focal length hences same, hence it is focal length that is used to zoom.
+    focal length is that mm thing on lens, lower the number wider the shot higher the number more zoomed the shot.
+    zoom lens would have two number on it telling you the range eg 24-70
+    wide angle lens: 8mm to 35mm
+    telephoto lens: 70 to 200mm+
+    rest is mid range: 35 to 70 and are standard for video.
+    you can also find the lowest your aperture can be also on the lens written.
+    lower the f value, higher the vlaue of lens like f1.2 is too valuale than f1.4
+    35mm f1.4 is amazing.
+    

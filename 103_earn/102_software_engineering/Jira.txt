@@ -1,0 +1,96 @@
+Jira:
+    issue tracking and project management tool.
+    word comes from gojira, japanese for godzilla.
+    used for Agile methodology. Could be Kanban, Scrum, or any other.
+    we get Agile Board.
+    sprint: predetermined amount of time where team decides what to do. Them comes the sprint meeting.
+    you drag tickets from one column to another on board.
+    issue type: Story: represents user story: like 
+        As a _______, I want ____________, so that ___________.
+        eg: As a driver, I want my car's dashboard to be voice activated so that i can get directions safely while driving.
+        you use user stories to break your work.
+        you Break an Epic into mulitiple user stories.
+        eg core functionality for our notetaking app is an epic, that you would break into multiple stories.
+        stories == user stories.
+        epic == a group of related stories.
+    JIRA terminology:
+        Issues: containers for fields, and fields hold all your data for your issue like Description, Summary, Assignee, Due Date.
+        they are like posted noted that you can pin on board, they are empty and the n you fill them with fields like summary and asssignee etc.
+        you write your stories and bugs as issues, and an Epic consists of multiople stories and bugs.
+        you can have custom issue types.
+        you can have custom fields for an issue. Eg OS field for bug issue type.
+        project in Jira:
+            projects are containers for issues. Eg WEb Dev, Marketting etc.
+            issues live in project.
+
+Jira interface:
+    yourwebsite.atlassian.net/jira
+    confluence: atlassians wiki tool for documentation.
+    given a jira account you can have different administrative permissions.
+    there is assigned to me button on homepage.
+    even dashboard shows what you have been assigned.
+    you can start a team etc in people.
+    you click on create to create an issue.
+    there is search bar to search stuff.
+    there is also a notification button to see notifications.
+    
+Types of projects in Jira:
+    Team-managed projects and Company managed projects.
+    team managed projects are newer ones, you dont' need admin projects to create them.
+    company managed projects need admin privilages, and entities can be shared across other company-managed projects. Eg issue types can be shared where as in team manged projects that is not possible.
+    team managed projects have prject scoped entities hence no need for special permissions to create a project as it effects nothing.
+    team managed prjects is a new feature and was introduced in 2018.
+    team managed prjects are easy to setup and maintain.
+    
+To create a project, click on project and then create project.
+    now you choose the type of prject, like kanban, scrum etc.
+    some templates you need to buy.
+    workflow: eg To-do, inprogess, done, basically the name of columns.
+    you can't convert team manged to other type and vice versa.
+    key means, what would be the name of issues like if key is web then the issue names would be web-1, web-2 etc.
+    on board you click on your name nex to search bar and it only shows issues assigned to you.
+    group by None to go back to default look.
+    type C to create an issue or click on create.
+    check create another button, if you need to create multiple issues at once hence click on create gives you another screen.
+    click on configure fields to customize what fields you need or add an field.,
+    if you click on issue, you can add comment, or assign it or label it etc.
+    to add an issue type, go to project settings then issue types and then you can add or remove one.
+    you can even customize fields for each issue there.
+    you can add Due date field.
+    on details in setting you can rename your project, and change key change default assignee etc.
+    in setting you can edit board as well.
+    you can even add multiple status's  in one column so you don't have to maintain separate column for each single status. And you can move to specific status in a column.
+    you also have access setting for who can see your board and project.
+    there is setting for notification.
+    there is setting for features, that you want in your dashboard.
+    there is some automation built in jira.
+
+
+company managed project:
+    you need jira adimistrator privilage to do so.
+    in company managed projects you can have as many boards as you want.
+    roadmap is 1000 foot view of the epics.
+    you get backlog for scrum project.
+    active spring contains day to day activity.
+    under reports you get burnown chart etc, it contains all the statistics.
+    in code you can link it to git etc.
+    project pages is link to confluence.
+    you need administrative permissions to see settings here.
+    click on board to create a new board.
+    scrum board shows remaning days for sprint.
+    insight shows you sprint progress.
+    click on complete the spring to complete the sprint.
+    issues that were not completed can be send back to backlog.
+    or you can add them to next sprint.
+    in backlog you create new sprint and add issues to it by drag and drop.
+    then you click on start the sprint.
+    filter tell jira what you want to see on board, it could be only progress.
+
+you can star a board so it is easy to search.
+you can create releases for a project and it will have snapshot of the board at that point in time.
+in roadmap you can create epic and child issues under it.
+you can add these issues to upcoming sprints.
+
+
+for user management you can create groups for same kind of access.
+    

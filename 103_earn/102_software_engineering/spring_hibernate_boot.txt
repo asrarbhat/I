@@ -1,0 +1,138 @@
+introduction:
+    building java application with spring and hibernate.
+    these are most popular frameworks in java.
+
+spring overview:
+    for enterprise java applications.
+    similar to j2EE.
+    we had servlets and jsp in 1999 in j2EE.
+    but j2ee was too tedious and error prone, and poor performance.
+    hence we got spring finally.
+    we got spring in 2004, and spring 4.3 in 2016.
+    skill is most sought after java skill set by employers.
+    you can learn spring or you can learn java EE or you can learn both.
+    better learn both, they are similar.
+    spring 5 was released in 2017
+        they upgraded java requirements to java 8 or more.
+        and MVC now use servlet api4.0
+    this will cover mostly spring 4.
+    official website: www.spring.io 
+    spring simplifies java enterprise development.
+    goals of spring:
+        lightweight development with java POJOs (plain old java objects)
+        dependency injection to promote loose coupling.
+        declarative programming with Aspect-Oriented-programming(AOP)
+        minimize boilerplate java code.
+
+    core containers:
+        beans, core, spEL, Context.
+        core container is the main thing in spring.
+        factory for creating beans.
+        manage bean dependencies.
+    
+    infrastructre:
+        AOP, Aspects, instrumentation, messaging.
+    
+    Data Acess Layer:
+        to communicate with database.
+        it has jdbc, orm, transactions, oxm, jms.
+    
+    web layer:
+        servlet, websocket, web, portiet.
+        for mvc.
+    
+    test layer:
+        unit, integration, mock 
+
+    spring projects:
+        add ons on top of spring,
+        spring cloud for cloud, etc even there is spring for andriod.
+    
+
+setting up development environment:
+    spring5 requires java 8 or higher.
+    java application server: tomcat
+    ide: eclipse.
+    
+    tomcat 10 was released in 202.
+    tomcat9 works with spring5.
+    download tomcat.
+    tomcat runs on 8080 by default.
+    and tomcat would run as a service at port 8080.
+    downlaod eclipse for EE.
+    you can connect your tomcat to your eclipse for easy deployment of applications from your eclipse.
+    click on servers in the bottom and add tomcat 9.
+    you can manually download spring jar files or use maven.
+    create a java project in eclipse, don't create any module, create a new folder named lib in your project, go to spring go to artifacts and download spring recent dist.zip and copy all jar files from libs and paste in your lib folder. and add jar files to java build path in properties and java build path and then click on classpath and click on add jar and select all jar files.
+
+spring inversion of control:
+    IoC: the approach of outsourcing the construction and management of objects, and object factory handles objects.
+    create a new package in your src eg com.abc.spring
+    create classes in it.
+    POJO: plain old java object. //normal kind of java.
+    to be configurable means to have to make a change at configuration file and everything is done underneath. Interface gives us some kind of polymorphism.
+    but in spring we have object factory, and we use configuration files to do our tasks.
+
+    Spring container:
+        primary function:
+            create and manage objects (inversion of control)
+            inject object's dependencies(Dependency injection)
+        configuring spring container:
+            XML configuration file (legacy, but most legacy apps still use it)
+            Java Annotation (modern)
+            Java Source Code (modern)
+
+            we will cover all three.
+    
+    Spring development process:
+        configure your spring beans.
+        create a spring container.
+        retrieve beans from spring container.
+    
+        step1: configure your spring bean:
+            <beans ...>
+                <bean id="myCoach" class="com.abc.BaseballCoach">
+            </beans>
+        step2: create a spring container:
+            spring container is generally know as ApplicationContext 
+            Specialized implementation:
+                ClassPathXmlApplicationContext
+                AnnotationConfigApplicatonContext
+                GenericWebApplicationContext
+                others...
+            
+            ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        step3: Retrieve Beans from container by our application.
+    
+            Coach theCoach = context.getBean("myCoach", coach.class);
+                here myCoach relates to the bean id and Coach.class is the name of the interface that BaseeballCoach implements.
+        
+    what is spring bean:
+        a spring bean is a java object. When java objets are created by the spring container then spring refers to them as spring beans. they are created from normal java classes.
+    
+    in src paste applicationContext.xml 
+        in it you define your beans:
+            <bean id= "myCoach" class="com.company.CricketCoach"> </bean>
+    
+        within the package in your src, create a HelloSpringApp class with main method.
+
+        public static void main(String[] args){
+
+            //load the spring configuartion file 
+            ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml"); //it could have been any name for configuration file. ClassPathXmlApplicationContext must be imported first.
+
+            //retrieve bean from spring contaniner.
+                Coach theCoach=context.getBean("myCoach",Coach.class); //here Coach is the interface.
+                System.out.println(theCoach.getDailyWorkout);
+            //call methods of the bean 
+            //close the context
+            context.close(); //to do the cleanup.
+        }
+
+        now run it as java application.
+        now to configure, all you have to do is change the class to BaseballCoach in configuration file, we made no changes to code, which is amazing.
+        
+
+            
+

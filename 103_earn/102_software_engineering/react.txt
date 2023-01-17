@@ -1,0 +1,333 @@
+Introduction:
+    React is a javascript library for building fast user interfaces.
+    developed by facebook, it is the most popular one.
+    the other two players are angular and vue.
+    at the heart of it is components, a component is a piece of the UI.
+    we build independent isolate components and then compose them to build our application.
+    every application has one component, which we call root component/ App, it represents the entire application and contains other child components.
+    every react application is essentially a tree of components.
+    these components are reusable.
+    these components are implemented as a class with some state and and a render method.
+    state contains the data that what want to display when the component is rendered.
+    and the render method is responsible for what the UI should look like.
+    React keeps a light weight DOM in memory called the Virtual DOM, and it has React elements in it, this virtual DOM is cheap to create. React checks if something is changed in virtual dom and then it would update a part of real DOM in browser. 
+    We no longer have to work with DOM api directly.
+    REACT: when the state changes, then react reacts to those changes.
+    Angular is a framework and complete solution, but react is just a library.
+
+setting up the system:
+    install node, as it comes with npm etc which we need.
+    npm i -g create-react-app@1.5.2
+        i is for install and -g is for global.
+        create-react-app is used to setup the react project.
+    in VScode download extentions: simple react snippets, prettier for fomatting and enable format on save.
+    create-react-app project1
+        it installs react and all third party library needed, like a development server, webpack for bundling, babel for js compilation, so that we don't need to configure things.
+        if you want to configure things on your own, then use npm eject
+        npm start would launch a development server. at port 3000.
+
+        it creates a few folders, like node_modules for downloaded dependencies.
+        public folder for public assets like icon and index.html
+        in index.html we have single div with id "root" and it is the container for our react application.
+
+        there is src folder with basic App component.
+        that Html like syntax in react is called jsx= javascript xml.
+        babel converts jsx into plain js code that browser can understand.
+        jsx is not a string, it is a type in itself, and bable converts it into React.createElement("h1","hello world"); or something like that.
+        what jsx you return from render method is rendered.
+        you can import css files into components like, import "./app.css";
+        index.js is entry point for our application.
+        registerServiceWorker.js is automatically created by react, it is used for cacheing.
+    
+    React code from scratch:
+        delete everything from source folder.
+        create index.js
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        const element = <h1> hello </h1>
+            since bable will replace it with React.createElement we had to import React.
+        projects created with create-react-app have hot module reloading so you don't nee to refresh.
+        ctrl + shift +I for console. 
+        jsx is an Object.
+        to render jsx:
+            ReactDOM.render(element,document.getElementById("root"))
+                //it means render in root element in index.html 
+                it would get inserted there after the whole compilation.
+        in real world, we would render an App component there.
+    
+    custom configs:
+        in package.json you would see under scripts the commands like start, build, test, eject.
+        in create-react-app project, you only have dependencies on react,reat-dom, react-scripts.
+        we don't see references to webpack etc under dependencies as those complexcities are hidden.
+        npm run eject, and we will see all those dependencies as well.
+        now you can see all dependencies under package.json dependencies.
+        and we get a config folder as well for configurations.
+    
+    in js we can use . operation or [] to get property values.
+    in react strict mode is enabled by default.
+    in javascript function are objects.
+    arrow functions do not rebind this, they take it from parent.
+    you can use spread operator on objects as well.
+    
+Components:
+    npm start to start the application.
+    install bootstrap:
+        css library for modern look and feel.
+        ctrl + backtick for terminal.
+        npm i bootstrap@4.1.1 
+        import it in index.js as : import "bootstrap/dist/css/bootstrap.css" 
+    
+    creating our first component:
+        in src folder create components folder
+            add counter.jsx there, use camel notation to name files.
+            jsx extention comes with better code completion.
+            imrc + tab : import React, {Component} from "react";
+            cc + tab to create class component.
+
+            class Counter extends Component{
+                state={}
+                render(){
+                    return <h1> hello world </h1>
+                }
+            }
+
+            export default Counter;
+
+            press esc to stop multi-cursor editing.
+            Component class has a bunch of methods that we inherit.
+            you have to import React in all modules where you are using jsx expressions.
+            as babel compiles them to React.createElement.
+
+        in index.js:
+            ctrl + p to have search bar for files so we can switch to them.
+            import Counter from "./components/counter";
+            ReactDom.render(<Counter/>, document.getElementById("root"));
+                babel would replace it with what render method has to return.
+            
+        jsx expression must have one parent element, as React.createElement takes one argument for element type.
+        so enclose such cases with <div> or use <React.Fragment> to avoid creating extra div's 
+        put () after return if using multipline, as javascript as automatic semicolon insertion so js might read the whole thing as nothing.
+        for multiple cursor editing select a piece of code and keep pressing ctrl + d to keep adding other instances.
+    
+    embedding expressions:
+        state is a special property in react.
+        state={
+            count:0,
+            address={something}
+        }
+        in render return <h1> {this.state.count} </h1>
+        in between {} we can add any javascript expression.
+
+        you can call methods as well.
+        you can add methods to your component class.
+        formatCount(){
+            return this.state.count==0?"zero": this.state.count;
+        }
+
+        use object destructing:
+            const {count}= this.state;
+            now use count instead of this.state.count 
+            call this.formatCount();
+            you can return a jsx expression as well.
+    
+    setting attributes:
+        you can put image urls in state.
+        <img src={this.state.imageUrl} />
+        attribute names are like: className as class is already a keyword in javascript.
+            className = "badge badge-primary m-2" you can add multiple classes by space separation.
+        
+        applying styles:
+            use classes or style= plain javascript object,
+                eg style={{backgroundColor:"green"}}
+                or create an object styles in your class and then styles={this.styles}
+
+    rendering classes dynamically:
+        just call some function at className={some function} and in that function write the logic for classes.
+        eg if count =0 then yellow and otherwise green.
+        even in render before the return, you can have logic, infact as much as you want, but don't pollute render, better use separate methods.
+    
+    rendering lists:
+        you got a list of stuff:
+            this.state.tags.map(tag=><li key={tag}>{tag}</li>)
+            you need key for iterators for react to identify them easily, during re-rendering. it has to be unique, only within the list.
+    conditional rendering:
+        you can add separate helper method for filtering or conditional rendering.
+        if you want nothing you can return null.
+        or you can use ternary operation or use logical and &&
+
+    Handling events:
+        based on standard dom events:
+        like onClick, onKeyUp etc 
+        in button onClick={this.handleIncrement}
+        create a method:
+            handleIncrement(){
+                
+            }
+            in this method "this" doesn't point to the current object. as we are giving it as an input to some other event handler, hence it becomes part of that event handler, hence that event handler would call that method, and by default this references to window.
+            to solve this problem:
+            create a constructor:
+                constructor(){
+                    super();
+                    this.handleIncrement=this.handleIncrement.bind(this);
+                }
+            
+            or you can use arrow functions as they take this from parent.
+            handleIncrement = ()=>{}
+        
+    updating the state:
+        this.state++;
+        this.setState(this.state);
+        //setState is a method we inherit from Component class.
+    
+        when the state changes, react schedules an aynchornous call to render method, it will return a new updated react element, react compares new and old virtual dom and figures out what has been modified, and then updates the dom in browser only where it is needed. So whole thing is not rendered again in browser.
+    
+    passing event arguments:
+        onClick={()=>this.handleIncrement(1,2,3)}
+        or create a method with no arugment and within it call the handleIncrement method.
+        better use inline.
+    table.table>thead>tr>th*4 to have a table with class table, instead that thead and inside that tr and inside that 4 th's. This is called zencoding.
+    
+composing components:
+    <Counter key= {id}/>
+    passing data to components:
+        <Counter key={id} value={this.state.counter.value} selected ={true} /> 
+            //by default selected is true so you don't need to put it.
+            within that component: 
+                this.props
+                this is a javascript object within each component.
+                within eachc component:
+                    count: this.props.value 
+    passing children:
+        special prop, for when we want to pass something between opening and closing tags of component.
+        <Counter>
+            <h4> hi there {this could be dynamic}</h4>
+        </Counter>
+
+        {this.props.children} to render it.
+        key is the one for uniqueness, id is just like any other prop.
+    
+    download react developer tools extention for chrome and firefox: it is good for debugging.
+        in chrome developer tools you will see a tab for react now when you click on >>
+        you can see tree of components and you can expand each component.
+        you click on component to see props and state.
+        this makes visualization easy.
+        when you select a component you get $r, type $r on console, you get the whole component printed.
+        you can even do $r.render() $r.click() etc.
+    
+    props vs state:
+        state is local and internal.
+        props is what you get from other component.
+        props are read only. as they are from upper component.
+        to change the prop you call the method of upper component, that you get as a prop.
+        the component that owns the state, should be the one that modifies it.
+        to modify you raise an event to your parent.
+        Counter would raise an event and Counters would handle it.
+        add new prop to Counter as onDelete= {this.handleDelete}
+        key prop is used internally, and you won't be able to access it.
+        instead of using separate props, you can pass the whole object, or whole data about that object.
+        this.props.counter.count where counter is the whole object.
+
+    single source of truth:
+        don't keep a local state, use props to update and read data.
+        don't initialize your state using props.
+        even the methods to handle handleIncrements etc should also be in parent.
+        when two components share data and if they are parent child then lift state to parent or if they  are not parent child, then lift the state to common parent among them.
+        just draw and tree to figure out, the events that could be raised and the state that to be created.
+        a component that get data as props only and doesn't have a state is called a controlled component.
+    
+    stateless functional components:
+        if there is just a single render method and there is no state, we can convert that into stateless functional component.
+
+        const NavBar=(props)=>{
+            return <jsx>
+        }
+        you don't extend anything.
+        some developers prefer functions for stateless components.
+
+        sfc to create stateless functinal component.
+        export default NavBar;
+        it takes props object as an argument.
+
+        you can use object destructing in render before return, to only have those properties that we need.
+    
+    Lifecycle hooks:
+        our component goes through different phases, and we call call functions at those phases and these phases are called lifecycle hooks.
+
+        mount: when instance of a component is create and inserted in dom.
+            constructor(), render() , componentDidMound() called in that order.
+        update when state or props change:
+            render(), componentDidUpdate() in that order.
+        unmount:
+            componentWillUnmount() 
+        
+        there are more, but we rarely need them.
+    
+        if you class component has constructor then it has to call constructor of parent by putting super() as first line.
+        constructor is only called once when the component is created, you can intialize state there 
+        using this.state.something you can't use this.setState in constructor as the component hasn't rendered even once before.
+        constructor(props){
+            super(props)
+        }
+        you have to get props as argument.
+        otherwise you can't access props in constructor.
+        now access props using this.props.
+
+        componentDidMound(){
+            you can have ajax calls to get data from server.
+            then this.setState(new data)
+        }
+        when a component is rendered, all its children are rendered recursively.
+        there are no lifecycle hooks in stateless functional components.
+
+        when there is an update:
+            componentDidUpdate(prevProps,prevState){
+                //can make ajax calls for updates.
+                if no state then value would be null.
+            }
+        
+    unmounting phase:
+        componentWillUnmount(){
+            //called just before component is removed from dom.
+            //can be used for cleanup to avoid memory leaks.
+        }
+
+    you can disable a button.
+
+pagination, filtering and sorting:
+    before designing a component, think of the inputs that it is gonna recieve, and the best way to decide it is to use it before implementing it.
+    eg use <Pagination itemsCount={50} pageSize={4} currentPage={this.state.currentPage} onPageChange={this.handlePageChange} />
+    instead href, you can onClick event.
+    create a utils folder for all the algorithms.js files like pagination or filtering algorithm.
+
+    type checking with PropTypes:
+        npm i prop-types@15.6.2
+        in your component:
+            iimport PropTypes from 'prop-types';
+
+            after we define pagination:
+            add a new property to our component as:
+                Pagination.propTypes={
+                    itemsCount: PropTypes.number.isRequired,
+                    pageSize: PropTypes.number.isRequired
+                    onPageChange: PropTypes.func.isRequired  
+                };
+        now you get an error in brower console.
+        this also acts as the documentation.
+    
+    fewer props means better props.
+    you can set default value for props.
+        after you define the component:
+            ListGroup.defaultProps ={
+                textProperty: "name",
+                value:"_id"
+            }
+    
+    make sure that that your components, only raise events, put utility methods, within the class so the component is reusable.
+    create a commons folder in your components folder for reusable components.
+    extract low level stuff into a different component.
+    in a file you can create mulitple classes, one can have utility methods, and one is the main component that you would export.
+    
+
+Routing:
+    

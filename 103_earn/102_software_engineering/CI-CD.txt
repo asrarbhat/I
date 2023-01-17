@@ -1,0 +1,19 @@
+SDLC is an infinite loop of plan, code, build, test, release, deploy, and operate and it keeps working in cycles.
+
+the main point is frequency, today it can be done in seconds.
+
+ CI: contineuous integration is the development practise where you integrate your code into shared repository several times a day, the code is verified by an automated build, and here project owner detects problems early on.
+
+in CICD pipeline got is pushed to central repo and then analysed, and then followed by automated testing, unit testing, validation testing, format testing, these are run everytime you push to master branch, it is efficient to make testing automated since code comes from all over the places, tools like jenkins gitlab, github Actions are used to do so. The goal is to have things automated
+
+workflow:
+    you got source got => you build it/compile it, the release deploys app to web server, in build pipeline you would add unit testing and to the release pipeline your add integartion test and UI test, 
+    
+cycle time becomes shorter.
+
+each commit triggers CI server for tests and stuff. eg using github actions foir automation.
+
+
+    
+    
+    

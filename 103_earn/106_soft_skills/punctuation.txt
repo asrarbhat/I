@@ -1,0 +1,135 @@
+To write correct english without making mistakes.
+
+terminal pucntuation: used to end a sentence.
+    period/full stop (.)
+        AmE means american english and BrE means british english.
+        used to mark end of declarative and imperative sentences.
+        i teach English.
+        We had pizza for dinner last night.
+        If it rains tommorow, I'll bring my umbrella.
+        these were declarative sentences,they declare something and give us some information.
+        imperative sentences are like commands.
+        Please don't feed the animals.
+        Let me know waht time your flight arrives.
+        If it rains tommorow,bring your umbrella.
+    exclamation mark  (!)
+        to convey strong emotion or feeling.
+        I'm really excited about my new job. (no emotion)
+        I'm really excited about my new job! (exitement)
+        you're fired! (anger)
+        you can express any emotion with exlamnation mark.
+        you can use with both declarative and imperative sentences.
+        Johnny,don't play with your food! the sentence is imperative here
+
+        it is also used after interjections like Ouch! or Wow! 
+
+    question mark     (?)
+        used to mark the end of a question.
+        if the sentence is a question put the question mark.
+        Are we allowed to feed the animal?
+        Why are yo still here? i told you to get out !
+
+    there is no space between the last letter of a sentence a a terminal pucntuation mark.But you put a space after the terminal mark and begin with a capital.
+
+Pauses: tell the reader to stop briefly and then continue reading.
+    comma (,)
+        1. to separate items in a list.
+            we need to buy milk,eggs,flour and sugar for the cake.
+            the job of comma is to show these pauses.we pause after reading each name in the list.
+            you can include or not the comma before the and like eggs,flour, and something else.
+            if you only have two items use and and avoid using ,
+            if more than 2 items are there,put comma after every item except the last and use and before the last item.
+            there is no space before , but one after it.
+
+            the list could be verb phrases.
+                Why don't you go upstairs, take a shower, and get read to leave?
+        2. to separate words that are not part of the sentence.
+            Unfortunately, he missed his flight.
+            Unfortunately is an extra,it is called a sentence adverb eg sadly, hopefully etc.
+
+            Forms of address:
+                Emma, can you come here and help me with this?
+                Sir, please have a seat.
+                Ma'am, can I get you something to drink?
+        
+        3. to separate linking words : however,therfore,for example, etc.
+                Her parents wanted her to be a doctor. However, she had other plans.
+                In fact, it is one of the best i have ever read.
+                She, however, had other plans.
+        4. Clauses : independent clause: complete sentence,dependent clause is one that is not complete sentence.
+                eg. When Rahul gets home from work is a dependent clause.
+                When Rahul gets home from work, he watches TV for an hour.
+                hence we use comma after a dependent clause/subordinate clause.
+                even if you use two independent sentences in a sentence you must put a comma after first one eg. They offered him a promotion, and he accepted it immediately. you also use a conjuction here as well,and the conjuction is necessary to connect two indepent clauses.
+
+                if the independent clause comes first then you don't use comma, eg I was so happy when I heard the news!
+                you don't use comma with essential relative clause also e.g That lady is the scientist who won the Nobel this year.
+                you use comma with non essential realtive clauses. eg People love to celebrate New Year's Eve,which is the last day of the year.
+                you can have more than 2 clauses in a sentence.
+
+    semicolon(;)
+        used to combine closely related sentences
+        instead of using having a new sentence we can use conjuction and a comma or separate using ;
+        eg. I went to see a movie with my wife. I thought it was amazing,but she thought it was terrible. or use I thought it was amazing; she thoguht it was terrible.
+        we can also use however,in fact etc.
+        ; makes whole thing a one sentence.
+
+    colon (:)
+        Lists 
+        it introduces new information after an independent clause.
+        Danny's seafood restaurant specializes in four items: prawn, shrimp, crab, and lobster.
+        Whenever you drive, you must do the following: war your seat belt, obey traffic laws, and keep your eyes on the road.
+
+        Clauses:
+        Let me make this very clear: if you fail another test,I'me taking away all your video games.
+        i can but there is a big problem: i don't speark any English!
+
+        instead of : in lists we can use in  eg it specializes in prawn,shrimp,crab and lobster.
+
+
+Apostrophe (')
+1. Mark contraction:  I'm is I am ,She's is She is He'd is He would doesn't don't .
+    you can only contract two words at a point 
+    They're not coming or use They aren't coming.
+2. Possesion: brother's birthday. world's etc 
+    used with nouns. 
+    if word already ends with s eg Thomas' or Thomas's both are correct for singulars,But for Plurals only put Apostrophe at the end like girls' years'
+    juse be consistent.
+
+    it is not used with possesive pronouns like ours,theirs,hers,its,yours,
+    That room is hers,is this book yours?
+
+    It's is     it is 
+    Its is possesive like the dog wagged its tail.
+
+
+Quotations marks " " are used to indicate direct speech  eg "i love to read a book" said Stacey. "Waht did you do yesterday?" asked Lucy.
+Parenthesis () are used for extra information from the rest of the sentence.
+    On the weekends I visit James (my best friend).
+    Yesterday (Firday) was the last day of school.
+
+Square brackets [] used by the editor to indicate extra information technical.
+The book states that "When climbing it [mountain], it is important to be very safe".
+
+Slash / to indicate OR and is read as OR.
+but also used for date.
+Hyphen - is used to join words to separate syllables in a word.
+    She is very self-confident.
+    Her son is going to be four-year-old.
+
+dash for range 1999-2005 ,Dubai-Uk
+Ellipsis ... to ommited words or to add effect to a sentence. 
+She waked into the shop... then walked straight bak out.
+
+
+CAPITALISATION RULES:
+    start of a sentence.
+    after full stop.
+    Noun. Hridaan ,New York. English,Hindi,French.
+    I am British.
+    My father was born in June.
+    where is Mom,My mom.
+    First word of a quote.
+    I is always capital as it is a proper noun.
+    with common noun you can use lowercase.
+    you but if if it is at the begining of the sentence then use You.

@@ -1,0 +1,701 @@
+introduction:
+
+    hortonworks sandbox:
+        
+        it is a platform with hadoop and all other related tech installed.
+        you can install virualbox,and hortonworks sandbox(HDP -> hortonworks data platform ),select virualbox while installing,it is 15GB.
+        open it and it will open in virtualbox,and click on import and start
+        like anything else in virtualbox,it has centos inbuilt.
+        it gives you ip addresses to open in browser to acceses it via ambari.
+
+        login: maria_dev password is also the same.to open ambari on port 8888
+        and you can do stuff using ambari,without knowing what happens underneath.
+
+        hortonworks merged with cloudera.
+
+        #english -> tab delimited data.
+
+        in hive view you can upload table with any delimited character from choices. it creates a table within hive.you can now run query on it.
+
+        #english -> drum roll please
+
+    grouplens.org 
+        for free datasets
+    
+    hadoop:
+        came in 2006
+        maskot of hadoop is a yellow elephant.
+
+        distributed storage and distributed processing system.
+        it is an opensource software platform.
+        since it is distributed so ofcourse it needs a cluster to work on.
+        it is horizontal scaling.
+            horzontal scaling hopefully linear.
+        it is not just for batch processing anymore.there are ways to expose it for OLTP.
+
+        foundation of hadoop is GFS for HDFS and mapreduce both by google.2003-2004
+        hadoop was built by yahoo.
+
+        hadoop was the name of the creators son's elephant toy.
+
+        why:
+            data is darn big.
+            verical scaling doesn't cut it.
+            horizontal scaling is linear.
+        
+    hadoop ecosystem:
+
+        hdfs,yarn,mapreduce are inbuilt in hadoop everything else is an add on.
+
+        at bottom is HDFS:
+            hadoop distributed file system.
+                makes all hard drives look like one and keeps copies of data.
+    
+        on top of HDFS we have YARN:
+            yet another resource negotiator:
+                for the management of processing resources during processing.it decides what gets to run when,which nodes are availabe etc.
+
+        on top of yarn is mapreduce.
+            mapreduce is programming model for processing across a cluster.
+        
+        pig and hive sit on top of mapreduce:
+            hive is like sql and makes everything look like a sql database.
+            pig is high level sql like scripts without writing python or java,and gets converted into mapreduce.
+        
+        apache ambari :
+            gui tool for cluster view etc so see what is going on,and to analyse the resources.
+            you can manage cluster using this.
+            it sits on top of everything,you can execute queries as well.
+        
+        MESOS: alternative for yarn,sits on hdfs.
+
+        SPARK: sits at same level as mapreduce,to run query on data,scala is used
+                to do so preferrably. can be used for ML,streaming etc.extremely fast.
+        
+        TEZ: like spark,more optimal,used with hive,hive with tez is faster.
+
+        apache HBase: nosql database,it is fast and for very large transactions
+                      it can expose data stored in your cluster,it is on top of hdfs,can be used for oltp.For very large transactions.
+        
+        apache storm: to process in time streaming data,like from sensors.
+                      it is on top of nothing,it is alternative to spark streaming.
+
+        oozie:  a way of scheduling jobs in your cluster,when there are many steps.
+        zookeper: for co-ordination in cluster which nodes are up etc and which are down.keeping track of shared state.
+        
+        data ingestion:
+            getting data into your  system.
+                kafka : collects data from any source.
+                flume  : for weblogs to your cluster.
+                sqoop  : tieing your hdfs with relational database.
+        
+        external data storage:
+            mysql
+            mongodb
+            cassandra
+
+            you can import and export data b/w these and hadoop
+        
+        query engines:
+            like hive but not too closely tighed to hadoop
+
+            hue : for cloudera,it is like ambari of cloudera
+            apache drill : for nosql
+            presto
+            zeppelin
+            apache phoenix.
+
+
+hdfs:
+    hdfs youtube:
+        128MB size blocks.
+        3 replicas by default.
+        gfs under hdfs and gmr under mr
+        file system is a software that is an interface between your hardisk and you.
+        s3 is also like hdfs.
+        ntfs block size is 16kb
+        of ext block size is 512kb
+        opposite of distibuted is standalone.
+        two types of distributed systems, master and slave and peer to peer.
+         is a peer to peer.
+        in master slave there is single point of failure/communication(spoc/spof)
+        hadoop is master slave distributed system.
+        now we have hadoop 2 and 3.
+        cluster is a bunch of machines and each machine is called a node.
+        64mb block size in hadoop 1
+        block size is configurable.
+        replication is also configurable.
+        3 replicas hence 1 original and 2 copies.
+
+        in a cluster choose one as master and rest as data nodes.
+        install hadoop in all machines and the configurations decide master and slave.you install hadoop on say ext file sytem.
+
+        make one machine as master by running jp1 process in it and run jp2 process in data nodes.
+
+        you also have edge node to recieve client requests.and then request goes to specific node.
+
+        you install hdfs on top of ext file system.
+
+        during write the master divides the data into blocks in meta data and does replications and creates meta data for where to saves the meta data,and client would get this meta data.
+
+        the nodes acknowledge each other about write sucess.
+
+        client and slave sent heatbeat every 3 seconds,it is called heartbeat communication.depending on failure it called by dealt.
+
+        in case of failure,it would replicate the failed node on alive nodes.
+        hence keeping replicas still 3.
+
+        zookeeper keeps track of all namenodes and heartbeat is what it uses to do so.
+
+        installation:
+            prerequisites:
+                jdk atleast jdk8
+                java --version
+            download hadoop
+            tar xzf abc.tar.gz to unzip
+            add to bashrc
+                export HADOOP_HOME=/home/hdoop/hadoop3.1.2
+                export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+                source ~/.bashrc
+            in HADOOP_HOME/etc/hadoop/hadoop-env.sh
+                give java path 
+                export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
+            
+
+
+    hadoop distributed file system
+    to handle big data:
+        broken into blocks of each 128MB blocks.
+        split across computers,for parallel processing.
+        in order to handle failures,we replicate.
+        can run on commodity computers: normal basic computers,no gpu etc
+    hdfs architecture:
+                        name node
+            
+            data node      data node       data node
+
+        name node keeps track of files and edit logs and it keeps track of what is
+        on data nodes.
+
+        reading:
+            client library interacts with name node to get data and figures out where data is stored
+            and then gets data from data nodes.
+
+        writing:
+            tell the name node
+            write to data node  and data nodes talk to each other for replication.
+            and acknowledgement sent via client to namenode
+            namenode records.
+
+        namenode resilience:
+            backup metadata:
+                namenode write to local disk and NFS mounts,and we can start new namenode,if you can tolerate some down time.
+            or use secondary namenode
+                maintain copy at all time.
+                although at a time only one active namenode.
+        HDFS federation:
+            if one namenode is having too much of load.
+            each namenode mangages a specific namespace volume/directory.
+            although this is not namenode resilience type.
+            
+        HDFS high availability:
+            hot standby namenode using shared edit login
+            zookeeper track of active namenode.
+            uses extreme measures to ensure only one namenode is used at a time.
+        
+
+        using hdfs:
+            UI : ambari,drag and drop to copy files into and out of hdfs
+            command line interface
+            HTTP/HDFS proxies
+            java interface
+            NFS Gateway
+
+        hadoop is written in java underneath the hood.
+
+        click on hdfs in ambari to copy data.
+            it also shows you namenode and datanodes.
+            click on file view,to create directory or copy files etc.
+            you can rename etc,pretty much everything and also download.
+
+        using command line to use hdfs.
+            to connect to hortonworks
+                maria_dev@127.0.0.1 at port 2222 using ssh
+            
+            hadoop fs -ls        to list files.
+            hadoop fs -mkdir     first 
+            
+            you can use ambari to do the same using gui 
+
+            uploading to hdfs
+            hadoop fs -copyFromLocal u.data first/u.data
+            hadoop fs -rm first/u.data
+            hadoop fs -rmdir first
+            hadoop fs to see all commands.
+            hadoop fs -copyToLocal first/u.data ./
+            or hadoop fs -get first/u.data ./
+            fs here is generic,we should use dfs but hadoop dfs is now depricated so use use hdfs dfs.
+            can change the permissions as well. 
+
+mapreduce:
+    one of the core pieces of hadoop along with hdfs and yarn.
+
+    distributes the processing of data on your cluster.
+
+    divides your data up into partitions that are mapped/transformed and Reduced/aggregated by mapper and reducer functions you define.
+
+    an application master monitors your mapper and reducers on each partitions,hence resilient to failure.
+
+    conceptual model:
+        MAPPER converts raw asource data into key/value pairs.
+        data => mapper => k1:v k2:v k1:v
+            keys can be duplicate.
+        next step is shuffle and sort.
+            output is same key but value now is list of values.
+        now the REDUCER processes each key and does something on it.
+
+        RAW INPUT -> MAPPER -> KEY/VALUE -> SHUFFLE AND SORT -> KEY/VALUE -> REDUCER -> KEY/VALUE
+
+    how mapreduce works underneath:
+
+        mappers run on different nodes in the cluster,each mapper processing a partition of data.
+        for shuffle and sort(like merge sort ),cluster has to communicate.
+        reducers also run on cluster and processes a given set of keys.
+        final result is also communicated by whole cluster if it is to be written,and copies to be made.
+
+    ANATOMY OF A MAPREDUCE JOB:
+        client asks YARN Resource manager (it decides what runs where)
+        anything that runs a mapreduce job has a NodeManger installed in it,that keeps track of what that node is doing,is it up etc.
+        node manager has Mapreduce Application master which keeps track of every map and reduce task running on that node.
+        YARN resource manager talks to Node manager of each node.and keep eye on each node.
+        node manager also gets data from hdfs.
+    
+    MapReduce is natively written in java
+    Streaming allows interfacing to other languages (i.e Python)
+
+            MapTask/ReduceTask -> key/values -> streaming Process -> output back to MapTask/ReduceTask. done using stdin and stdout.
+    
+    Handling failure:
+        Application master monitors worker tasks for errors or hanging
+            restarts as needed
+            preferably on a different node.
+        
+        what if the application master goes down:
+            yarn can try to restart it.
+        
+        what if an entire Node goes down:
+            this could be the application master
+            the resource manager will try to restart it
+        
+        what if the resource manager does down:
+            can set up high availability using zookeeper to have a hot standby.
+        
+    sometimes it can be hard to conform your problem to map reduce.
+map reduce is building block but it is not used in practise.
+writing the mapper using python.
+
+from mrjob.job import MRJob   //abstracts away streaming,mr means mapreduce. 
+from mrjob.step import MRStep
+
+class RatingsBreakdown(MRJob):
+
+    def steps(self):
+        return [
+        MRStep(mapper=self.mapper_get_ratings,
+               reducer=self.reducer_count_ratings)
+        ]
+    def mapper_get_ratings(self,_,line):           //  _ is a key
+        userID,movieID,rating,timestamp=line.split('\t')
+        yield rating,1
+    
+    def reducer_count_ratings(self,key,values):
+        yield key,sum(values)
+    
+if __name__=="__main__":
+    RatingsBreakdown.run()
+
+
+
+installing python,mrjob:
+    pip3 install mrjob
+    you can install it on sandbox as well.
+    mrjob is for streaming to run python code.
+to run the job:
+    to run locally for checking:
+        python3 RatingsBreakdown.py input.txt  //test on small data
+    to run on hadoop:
+        python3 RatingsBreakdown.py -r hadoop --hadoop-streaming.jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar input.txt or hdfs://data/input.data
+
+        if you give local file,it gets copied to hdfs first.
+    
+sort and shuffle can be used for sorting data.
+
+    multi-stage jobs:
+        you can chain mapreduce:
+            def steps(self):
+                return [
+                    MRStep(mapper=self.mapper_get_ratings),
+                    reducer=self.reducer_count_ratings),
+
+                    MRStep(reducer=self.reducer_sorted_output)
+                ]
+            
+
+"abc".zfill(5) in python fills zeros at the begining to make length 5
+
+
+PIG:
+    can use ambari to execute pig
+        in ambari dashboard gives you all stats.
+        ambari can be used to install all big data services.
+        you can just directly install ambari.
+        hosts shows are machine in cluster.
+        from admin tab you can see what is intalled.
+        go to pig view for pig scripts
+    
+
+    what is pig:
+        it is a scripting language called pig latin built on top of mapreduce and makes things easier.
+
+    apache pig:
+        it is sql like syntax to define your map and reduce steps.
+        highly extensible with user-defined functions (UDF's)
+        pig is procecural unlike sql.
+
+        pig on TEZ is faster than mapreduce alone.
+        it sits on top of mapreduce and TEZ
+        pig latin gets converted into map reduce programs.
+        TEZ uses directed acyclic graphs.
+
+        Tez is say 10 times faster than mapreduce
+        you can use pig outside big data as well.
+
+    running pig:
+        Grunt: REPL interpretor
+        script:writing files of pig and running it 
+        Ambari/Hue: write and run and save and load scripts.
+    
+    eg find the oldest 5-star movies:
+
+        ratings=LOAD '/user/maria/fold/abc.txt' AS
+                (userID:int,movieID:int,rating:int,ratingTime:int);
+        
+        //the data is csv type with four numerical columns
+        //we loaded data into a relation,now we got a rating relation.
+        //AS clause gives it a schema during writing the script.
+        //by default pig expects TAB delimited data.
+        //we get a tuples of data,one tuple for each row.
+
+        metadata=LOAD '/data/def.txt' USING PigStorage('|') AS 
+            (movieID:int,movieTitle:chararray,releaseDate:chararray,imdbLink:chararray);
+        //PigStorage to define the delimiter.
+        //chararray is basically string.
+
+        DUMP metadata;//it is like head in pandas,it givies you view of what the data looks like.
+
+        nameLookup=FOREACH metadata GENERATE movieID,movieTitle,ToUnixTime(ToDate(releaseDate,'dd-MMM-yyyy'))  AS releaseTime;
+        //now we get nameLookup relation.
+        //you can discard columns that you don't need.
+
+        ratingsByMovie=GROUP ratings BY movieID;
+        DUMP ratingsByMovie;
+        it creates a bag 
+        //the name of first attribute is group and second one is ratings 
+        like  (1,{(807,4,112),(....),(....)})
+               (2,{     ............       })
+        avgRatings=FOREACH ratingsByMovie GENERATE group as movieID,AVG(ratings.rating) as avgRating;
+        //group as movieID is renaming.
+        DESCRIBE ratings; to see the schema of any relation.
+
+        filter:
+            fiveStarMovies=FILTER avgRatings BY avgRating>4.0
+        
+        JOIN:
+            fiveStarsWithData=JOIN fiveStarMovies BY movieID,nameLookup BY movieID;
+        
+        //double is also a data type.
+
+        //naming convention fiveStarMovies::movieID,nameLookup::movieID etc 
+
+        ORDER BY:
+            oldestFiveStarMovies=ORDER fiveStarsWithData BY nameLookup::releaseTime;
+        
+        DUMP oldestFiveStarMovies
+        //first movie is the answer.
+
+        you can download the result.
+
+        you can use STORE command to store the data in hdfs as part of script.
+
+        big latin commnads:
+            LOAD,STORE,DUMP
+                STORE ratings INTO "/data/abc.txt" USING PigStorage(":");
+            FILTER,DISTINCT,FOREACH/GENERATE,MAPREDUCE,STREAM,SAMPLE
+            JOIN COGROUP GROUP CROSS CUBE
+            ORDER RANK LIMIT
+            UNION SPLIT 
+        //you can use mapreduce in pig as well.
+
+        digagonostics:
+            DESCRIBE,EXPLAIN,ILLUSTRATE
+        
+        UDFS:
+            REGISTER,DEFINE,IMPORT 
+        OTHER FUNCTIONS:
+            AVG CONCAT COUNT MAX MIN SIZE SUM 
+        
+        PigStorage
+        TextLoader
+        JsonLoader
+        AvroLoader
+        HBaseStorage etc
+
+        //you can also work with json etc.
+
+APACHE SPARK
+------------
+    for processing very high quanity of data.
+    the power and speed is remarkable.
+    a fast and general engine for large scale data processing.
+    it is very flexible.
+    it lets you do ml,data mining,etc
+    its scalable
+
+                               ------------------------->executor process (cache,tasks)
+                              |                          |^   |^v
+    driver program/spark context -------->cluster manager -->executor(cache,tasks)
+                                           (spark,yarn,mesos)
+
+    cache is the key to performance.
+    unlike disk based solutions,sparks is a memory based solution.
+    it tries to keep as much in ram as it can and it used DAGs  
+
+    runs programs upto 100x faster than hadoop mapreduce in memory or 10x faster on disk.
+    DAG engine optimizes workflows.
+
+    it is not hard like mapreduce.
+    it uses DAG to find fastest way to get there.
+
+    amazon yahoo,nasa ebay and many other use it.
+
+    can code in python,java or scala.
+
+    built around one main concept: the Resilient Distributed Dataset (RDD)
+
+    an object that represents a dataset and you can call many fucntions on it.
+
+    
+    components of spark
+
+                spark streaming,spark sql,MLLib,GraphX
+                ---------------------------------------
+                            spark core 
+    
+    spark streaming for getting input in real time as it is getting produced and put output in database etc.
+    spark sql,sql interface to spark.
+    MLLib is for machine learning and data mining.
+    GraphX,graph as in graph theory and you want to analyze it.
+
+    lets use python.
+    why:
+        its a lot simpler and this is just an overview,no need to build jar files.
+    but spark is written in scala,scala functional programming is good for distributed processing.
+    scala compiles to java bytecolde.
+    python is slow in comparison.
+
+    although scala  is better,to use spark.
+
+    though scala and python are very similar.
+
+    RDD:
+        Resilient
+        Distributed
+        Dataset
+
+        its an abstraction for distributed data so we see it as a single file.
+    
+    the SparkContext,it is an enviroment where your program runs.
+        created by your driver program.
+        is reponsilbe for making RDD's resilient and distributed.
+        creates RDD's 
+        The Spark shell creates a sc object for you.
+    creating RDD's:
+        nums=parallelize([1,2,3,4])
+        sc.textFile("file:///c:users/abc.txt")
+               or hdfs:// or amazons s3s://
+        can be created from:
+            JDBC
+            cassandra
+            Hbase 
+            elasticsearch
+            JSON,CSV,etc
+    
+    tranformations in RDD's:
+        map
+        flatmap
+        filter
+        distinct
+        sample 
+        union,intersection,subtract,caretesian 
+    
+    map for one to one relation.
+    flatmap for not one to one relation.
+    filter to get the subset,or subset of rows.
+    distinct gives distinct.
+    sample is done randomly
+    and union etc as it says.
+    
+    very similar to pig but spark is more powerful.
+
+    map example:
+        rdd=sc.parallelize([1,2,3,4])
+        squaredRDD=rdd.map(lambda x:x*x)
+        this yields 1,4,9,16
+        map is applied to each row.
+        can even use function names instead of lambda expressions.
+        
+        def squareIt(x):
+            return x*x
+        rdd.map(squareIt)
+    
+    RDD actions:
+        to reduce the size of rdd 
+
+        collect: take rdd and build and python object in memory that you can whatever you want it for.
+        count: to give number of rows in rdd.
+        countByValue:how many unique values.
+        take: take top ten for example.
+        top: like take or head.
+        reduce: it allows you to do reduce like in map reduce.
+         and more...
+    
+    lazy evaluation:
+        nothing actually happends in your driver program until one of these functions is called.
+        until calling any action,all it is doing is building these DAGs 
+        when action is called it would find the most optimal way to do so.
+        until action is called,nothing actually happens.
+        that is one of the main secrets to spark speed.
+
+    
+    using python:
+
+    from pyspark import SparkConf,SparkContext
+    #pyspark is a python library to do spark stuff in python.
+
+    conf=SparkConf().setAppName("worstMovies")
+    sc=SparkContext(conf=conf)
+
+    lines = sc.textFile("hdfs:///user/abc.data")
+    #convert to (movieID,(rating,1.0)) #it acts as key value pair.
+    movieRatings=lines.map(parseInput)#parseInput is my own function.
+    #reduce to (movieID,(sumofRatings,totalRatings))
+    ratingTotalsAndCount=movieRatings.reduceByKey(lambda movie1,movie2:(movie1[0]+movie2[0]),(movie1[1]+movie0[1]))
+
+    #map to (movieID,averageRating)    
+    averageRatings=ratingTotalsAndCount.mapValues(lambda t:t[0]/t[1])
+
+    #sort by average ratings
+    sortedMovies=averageRatings.sortBy(lambda x:x[1])
+
+    #taking the top 10 results
+    results=sortedMovies.take(10)
+    for result in results:
+        print(result[0],result[1])
+
+
+    to run:
+        spark-submit abc.py
+    
+
+SPARK SQL:
+    DataFrames and datasets
+    spark 2.0 extended RDD to a "DataFrame" object.
+    DataFrames:
+        contain Row objects
+        can run SQl queries
+        has a schema (leading to more efficient storage)
+        Read and write to Json,hive ,parquet.
+        communicates with jdbc tableau etc.
+the ideal in big data is to make sql like syntax run on the platform for processing.
+
+    using sparksql in python is easy.
+
+    from pyspark.sql improt SQLContext,Row
+    hiveContext=hiveContext(sc)
+    inputData=spark.read.json(dataFile)
+    inputData.createOrReplaceTempView("myStructredStuff")
+    myresult=hiveContext.sql("select foo from bar order by foobar")
+
+    dataframe is a lot like pandas dataframe.
+    DataFrame is build on top of rdd and you always have access to underlying rdd.  
+
+    DataSets:
+        in spark 2.0 a dataframe is really a dataset of Row objects.
+        Dataset is a general term encompossing Dataframe.
+    you can expose a jdbc server to your dataframe in spark sql.
+    sparksql is so cool.
+
+working with relational data:
+----------------------------
+hive:
+    lets us write standard sql queries on a distributed file system,
+    it can run on mapreduce or tez jobs on cluster.
+
+    HiveQL is very familiar to mysql
+    interactive.
+    easy OLAP 
+    higtly optimized.
+    can use jdbc with it.
+    it is not for OLTP 
+
+    pig,spark allows more complex stuff .
+    it work on a text file.
+    high latency in HiveQL 
+    pretty much MySQL with some extentions.
+    has views.
+
+    eg.
+    for hive you would need database.
+    upload table,you can upload csv from hdfs or local,give name to columns.
+    these files come under default database,as tables.
+
+        select * from ratings
+        where movieID>2;
+    
+    can do joins etc as well.
+
+    learn hive and spark as your goto tools.
+
+
+    how hive works:
+        data copies from a distributed filesytem into hive.
+    we can store data in partitioned subdirectories,can be used for optimization if you want to work on specific partitions.
+
+    to save query .hql file.
+
+
+    INTEGRATE MYSQL AND HADOOP:
+        mysql is used for oltp.
+        sqoop is used to import or export data to and from relational database.
+        it kicks off a mapper as in mapreduce to do so where multiple mapper map from mysql to hdfs.same for exporting.
+
+                          mysql
+        mapper mapper mapper mapper mapper mapper 
+                           hdfs
+        
+        its is a command line thing.
+
+        to import 
+
+        sqoop import --connect jdbc:mysql://localhost/movielens --driver com.mysql.jdbc.Driver --table movies
+        
+        for directy importing into hive. just add --hive-import at last.
+                    movielens is database here.
+        
+        for export:
+            sqoop export ........... --export-dir /apps/hive/movies
+        
+    
+    
+        
+

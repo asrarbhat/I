@@ -1,0 +1,98 @@
+groovy is a programming langauage.
+openjdk is opensource implementation of java.
+java --version to see the version of java.
+
+to switch between java version in intellij, click on project structure button on right side, now here you can select your project sdk, you can add new if you save downloaded that and open in folder that has bin folder in it.
+
+to create a project click on create project, and you select project sdk, you select java project, the project name is the folder name, and base package as com.companyname.package. it creates a folder with src folder in it.
+
+click on bar on left hand side to open file explorer.
+
+sout + tab for system.out.println
+click on play button on right side to run main.
+
+out folder for compiled code.
+.idea file in your project is for your intellij settings and you don't touch this folder.
+
+for settings click on intellij idea and then on preferences, there you can see updates as well.
+
+in file you can open new project.
+in view you get presentation view.
+
+navigate is to go to different parts of code like different classes.
+
+to create a new class, click on folder name and click on new and then click on class, and then you can select if it is class or interface or enum etc.
+
+classes in same package do not need to be imported.
+
+
+same way you can create a package.
+
+you can drag files to move them and it might automatically refactor code to fix it.
+
+package name should be lowercase.
+you create a Main file in com.abc and then packages like com.abc.models and com.abc.service in that folder.
+
+you can change font size in preferences and editor. and click on font, same for font type.
+
+you can change console font size as well there.
+
+you can select font type there as well.
+
+in preferences you can select key mapping as well for your keyword.
+you can select visual studio and then you can use visual studio shortcuts.
+
+on view you can switch themes between dark and white.
+
+you can install plugins for themes.
+in preferences you find plugins and you can install and search there.
+
+to get github repo as your project: 
+    click on VCS and then then checkout from verion control then paste url. test and clone. it downloads all dependencies as well.
+    
+you can see it in projects now.
+
+press shift two times to search everywhere for something.  you can there serach for files, classes etc as well.
+
+you can serach for clasess with the intials in pascal naming convention.
+even *.sql
+
+to look for words ctrl + shift + f and you can find words in whole project.
+
+to see structure of a file, open the file and click on structure at the bottom left side and you can see its methods and fields there easily. and you can navigatge to them.or click on navigate and click on file structure.
+or click shift and f12.
+
+to see where in the entire project a method is being called, click on navigate and click on call hierarcy. or you can click on method and click on find usage,but call hierarchy is better.
+
+
+ctrl+enter in class to generate code like constructor, getter, setter, tostrinf,etc
+this way you generate code.
+
+select text and enter ctrl shift and v to extract that into a variable.
+ctrl + shift + m to extract some code into a method.
+
+ctrl + shift +p to extract a field jntk a parameter of a method.
+
+shift command t creates test for thay class file.
+or click on class and then click on test.
+you can select testing library.
+
+
+click on play button on test to run the test.
+
+
+to run single test just run that test.
+
+
+click on line number and then annotate yo see who write which line.
+
+you can click on database to connect to database and run queries within ingellij.
+
+click on maven to see all plugims jmstalled
+
+to add jar files: 
+    click on file, then project structure,then on modules then on dependencies, then click on plus sign and then on jar then select jar files and you are done.
+
+in eclipse you just click on project and then on properties and then in build path you add to libraries all the jar files.
+    
+    

@@ -1,0 +1,212 @@
+you can use vscode or intellij for spring-boot
+download java extension pack for java, also download sprint-boot extention pack.
+spring initializr generates a spring-boot project
+group id: the name of your company eg. com.google in lower case.
+artifact id: the name of your project, eg wice-e2e, this should also be in lowercase and separated by -
+
+directory structure: source code in src/main/java/group id/artifact-id/Application.java
+resources in : src/main/resources/(static for images etc, templates for dynamic content, application.properties file for configuring your application)
+for tests: src/test/java/group-id/artifact-id/ApplicationTests.java 
+
+running your project:
+    the file with @SpringBootApplication annotation with main method is the file that begins your application.
+    mvn spring-boot:run
+    it compiles and runs
+    compiled code goes into target class.
+    you can use maven wrapper like mvnw spring-boot:run 
+    or you can just simply click on the run button next to main method.
+    mvn clean spring-boot:run to delete the target first.
+    spring boot has an embedded HTTP server within it, which processes requests for you.
+    you spring application prepares and response and http server sends it back.
+    spring boot by defualt listens on port 8080
+    spring web dependency gives you an http server.
+    central maven repository contains downloadable dependencies.
+    spring-boot-starter-web is the dependency that contains tomcat http server
+    127.0.0.1 loopback address
+    whitelabel error page: if you haven't written any code for response, you get this on page.
+    localhost==127.0.0.1
+    you can add index.html into static folder.
+    when spring boot is responding to request by defualt it would look for index.html
+    to change the port where to listen from:
+        in application.properties 
+            server.port=9090
+    dependencies: packaged library of files i.e jar files 
+    local maven repo .m2 
+    spring boot devtools dependency gives you hot refresh, which is cool, if you ever find an issue then press ctrl+c and restart usually devtools is the culprit in that case.
+    
+MVC design:
+    model stores the data, view represents the visual elements of web page.
+    controller ties everything together.
+    template is dynamic html.
+    view is what the user sees.
+    model is the data needed by the view.
+    controller glues model and view together, it manages the model and sends the view.
+    requests go to controller, controller maps the request to a handler method, the data is stored inside the model, controller sends the model to view, and the the whole view is responded.
+
+    Annotations:
+        spring boot uses annotations to create magic.
+        annotations add logic to an application without any code.
+        eg @Controller @GetMapping @PostMapping @RequestParam uses PascalNaming convention.
+
+        @Controller converts a class into a controller.
+            when you annotate a class with @Controller, it becomes an entry point for web requests.
+            each handler method within it can respond to a request.
+            eg 
+            @Controller
+            public class ControllerClass{
+                @GetMapping("/grades")
+                public String getGrades(){
+
+                }
+
+            }
+        
+        you have to annotate your class with @Controller otherwise spring-boot will not recognize it.
+        browser search input sends get request.
+        controller uses path to judge which method to run.
+        @GetMapping converts a method into Get handler method, it an respond to get requests only.
+             it takes path as argument.
+             it returns some data.
+        controller is the entry point for all kinds of requests, controller is the first thing a request encounters.
+
+        for a get request that returns string, you can return "grades" and it would return html file grades.html from the template folder, if request is sent from browser using url.
+
+    Model:
+        the handler method has direct access to Model.
+        the handler method can use POJO to create data (plain old java objects) just by creating the objects using constuctor.
+        handler can add the attribute.
+        POJO: a class with private fields, a constructor, public getters and setters.
+        create a POJO grades, and you now you can create Grade object using constructor anywhere.
+
+        post request:
+        @PostMapping("/submit")
+            public String submit(Gradle grade){
+                    string internally creates a Grade object and populates data with payload it receives, you can see it call the constructor and setters
+                return "redirect:/grades"; //to redirecty your request.
+            }
+        if you return an object of some class, spring-boot would convert it into a json first.
+        if get request has parameters like after ?
+            GetMapping("/")
+            public String getForm(Grade grade, @RequestParam String name){
+
+            }
+            if you want to make parameter optional then use @RequestParam(required= false)
+
+        creating unique id field.
+            this.id=UUID.randomUUID().toString(); //to generate a unique id. it is very long though
+        you can create multiple files with @Controller annotation.
+
+        if you have a Date field in your Model.
+
+        @DateTimeFormat(pattern='yyyy-MM-dd')
+        private Date date;
+        now in your setter your parameter can be Date even though post request sends string of that type.
+
+    field validation for data:
+        we use annotations 
+            like Max Min NotBlank NotEmpty Email and so on.
+            add spring boot validation dependency for your version of spring-boot 
+
+            @NotBlank(message= "name cannot be blank")//message is optional 
+            private String name;
+            invalidate cache option in intellij is a saviour.
+            @NotEmpty accepts a few blank spaces but NotBlank doesn't 
+        
+        when you submit the request, regardless of inputs, it would create the object.
+        now we add @Valid annotation to check if it is valid.
+        public String submitForm(@Valid Gradle gradle, BindingResult result){
+            //BindingResult carries the result of validation, it must come after the object that is being validated.
+            result.hasErrors() gives a boolean output.
+            you can even read the errors.
+            result.errors() is an array.
+        
+        custom validation annotation 
+            create a java file
+            Target(ElemenatType.FIELD)
+            @Retention(RetentionPolicy.RUNTIME)
+            @Constraint(validatedBy=ScoreValidator.class)
+            public @interface Score{
+
+            }
+            now apply this annotation to your fields.
+            create ScoreValidator.java
+            public class ScoreValidator implements ConstraintValidator<Score, String>{
+                //here Score was annotaiton, and String is its type.
+                override isValid method 
+                @Override 
+                public boolean isValid(String value, ConstraintValidatorContext context){
+                    return value.equals("34");
+                }
+            }
+
+            you would need to do a little bit more in interface part you can google it.
+
+    Three layer architecture:
+        one layer for presentation, one for business logic and one for data access.
+        service==business.
+        service interacts with data and sends response to controller.
+        repository makes crud.
+        only repository can access data store.
+        create three folders, controller, service, repository
+        repository class would give you methods that you can use.
+        in controller you call service and in service you call repository.
+        you create repository object in service and service object in controller.
+        do validation in controller class.
+
+    Beans and dependency injection:
+        Bean is an object that spring stores and manages for you.
+        When you run your spring boot application, it scans the whole project and it would create objects for all classes that have @Component annotation.
+        A spring container called ApplicationContext stores and manages the object. The object lives  within it.
+        Beans allow for dependency injection.
+        you inject objects instead of creating them.
+        this way we achieve loose coupling.
+        coupling makes unit testing impossible.
+
+        we annoate the class with @Component and spring boot creates bean of it in Spring container.
+        @Autowired inject ethe bean into the dependent class.
+        eg 
+                @Autowired
+                GradleService gradeService;
+
+        now never use dependencies by creating objects.
+        @Component annotaiton is generic, you can use @Service, and @Repository 
+        you can use any of them, better be specific.
+        even @Controller dervives from container. Hence their objects are also created, thats why it looks like magic when it directly serves requests from there.
+        you can also register using @Bean annotation.
+            to use it you create a method and annotate it with @Bean and it would return the object of dependency.
+            and you have to add the class with annotation @Configuration, it marks the class as a source fo Bean defintions.
+            and you do it the same way using Autowired just declare a varialbe of the kind that Bean method returns.
+            when using Bean annotation the return type objects are created and then added to spring container.
+            while running your varialbes just point to the objects in spring container.
+
+    Testing:
+        dependency injection is very important for unit testing.
+        less dependencies means easily testable.
+        we should unit test the business logic as it is more prone to errors.
+        for class GradeService, we create GradeServiceTest
+        for method add in it we create addTest, all tests are type public void with @Test annotation 
+        the issue with dependencies is that when you test the container and its dependencies are not there so it is not possible to use it.
+        so we inject a Mock, that can behave like the dependency we control the mock from test class.
+        a class that can run tests is called a runner class eg MockitoJUnitRunner.cass 
+        so annotate your test class with @RunWith(MockitoJUnitRunner.class)
+        you need JUnit dependency for it.
+        use @Mock to create a mock of the Repository or anything that you want to mock
+        @Mock 
+        private GradeRepository gradeRepositoryMock;
+        //it will have no logic of its own
+        // we are testing grade service 
+        @InjectMocks
+        private GradeService gradeService;
+        //we do this because beans don't exist for testing, so we mock and inject them in test.
+        
+        @Test
+        method {
+            when(gradeRepository.getGrades()).thenReturn(Arrays.asList(new Grade(1,2,3)));
+            List<Grade> result=gradeService.getGrades();
+            assertEquals(expected, gotten);
+            you can put  multiple asserts for a test, testing multiple.
+            only unit test something that has logic, and not the ones that just call something else and do nothing else.
+            @SpringBootTest for integration test.
+            you can autowire controller class in integration test.
+            `
+        }

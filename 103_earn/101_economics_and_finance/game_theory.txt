@@ -1,0 +1,206 @@
+yale
+leture 1: introduction, first five lessons.
+    what is game theory:
+        a method of studying strategic situations.
+        eg motor industries, ford has to be worried what tesla is doing.
+        strategic means when your outcome doesn't only depends on your actions, but also other people's actions.
+        it applies to law, politics, sports, biology etc 
+    
+    grade game:
+        you choose one and your randomly selected pair selects one of alpha and beta.
+
+                          pair 
+                   alpha       beta 
+        
+    me      apha    B-,B-        A,C 
+
+            beta    C,A         B+,B+  
+
+            this is outcome matrix.
+
+        
+        english: swinging <> to much change from high low etc.
+        objective: goal 
+
+        game theory helps you when objectives are clear.
+
+        in above the objective can be to increase your grade or to increase the collective grades of both and strategy would change accordingly.
+        
+        definition: my strategy alpha strictly dominates my strategy beta if my pay off from alpha is strictly greater than that from beta regardless of what others do.
+
+    lessson 1:
+        do not play a strictly dominated strategy(a strategy for which there exists a strictly dominant strategy)
+    lesson 2:
+        rational choice can lead to outcomes that suck. (dominant strategy)
+    this game is called prisoners dilemma.
+        eg two prisoners asked to rat each other out in different rooms to get free or to get sentenced.
+    there are hundreds of prisoners dilemma examples in real life.
+        eg firms deciding prices for their products.
+    remedies to prisoners dilemma: contract eg if you don't lower your prices, then i won't lower mine, but it is against the law. But it would work with roommates to tidy up the room. you can communicate.
+    it is possible that there is no dominant strategy, as in dominant strategy it for all has to be better, then you choose based on your goals and payoffs.
+
+    pay offs matter as well.
+    any kind of information is important and information would change your decisions. Eg if you know the opponent is evil or an angel.
+
+    the best lesson is to put yourself in others shoes and try to figure out what they will do. Figure out their dominated strategies or if they are evil or angel.
+    it is much easier to figure out your payoffs than that of your opponents.
+
+    out there in real world, roughly 70% percent chose alpha and rest choose beta. 30% could be stupid.
+    in yale it was 85% alpha.
+
+    just communication won't work with prisoners dilemma, it should be a contract as the payoffs then change.
+
+    game number 2:
+        choose a whole number between 1 and 100.
+        one whose number is closest to 2 thirds of the average would win 5 dollars - difference between result and his number in cents.
+
+lecture 2: putting yourself into other people's shoes.
+    even carbon emmision is a prisoner's dilemma, a lot of real world problems are prisoners dilemma.
+    formal stuff: ingredients of a game.
+        1. we need players represented by i,j,k etc 
+        2. strategies represented by s subscript i is the particular strategy of player i. capital S i is the set of possible strategies of player i. it could be set of all possible strategies.
+        3. s without an i would mean partiucular play of the game. it is the move of all players at an instance. it is called a strategy profile/vector/list. one strategy for each player. it is the strategies they did make.
+        4. payoffs: ui representing utility. ui for i depends on s of all. in earlier numbers game it is 5 dollars - the cents difference or 0.
+        for some time we will assume that everyone knows these things, although it is not a realistic assumption.
+
+        s subscript -i is a choice for all except person i.
+    
+    game:  
+        two players 1, 2
+        player 1 has 2 choices, top and bottom.
+        player 2 has three choices, left, center, right.
+        and payoffs for six possiblities are
+            5,-1        11,3        0,0
+            6,4          0,2        2,0 
+        
+        players: 1,2
+        strategy sets: S1={top, bottom} for S2{L,C,R}
+        payoffs: u1(T,C)=11, u2(T,C)=3 
+        here player 1 does not have any dominating strategy. For player 2 right is a dominated strategy, as center always does better than right, hence center strictly dominates right, hence player should not choose right.
+
+    def: player i's strategy si` is strictly dominated by player i's strategy si , if ui(si,s-i)> ui(si`,s-i) for all s-i
+
+
+    game:
+                                           attacker 
+                                easy pass           hard pass 
+                  Easy path     1,1                      1,1
+
+    defender    
+                 hard path     0,2                       2,0
+
+                 these are the battalions they lose 
+                 from the point of view of attacker easy path weakly domintes hard pass, as he does as least as well or better than hard path.
+                
+    def: player i's strategy si` is weakly domnated by her strategy si if ui(si,s-i)>=ui(si`,s-i) for all s-i and is greater than for at least for one strategy.
+
+    you don't need to find the strictly dominating strategy always, even elimimating few weak strategies is  also helpful to come up with the decison.
+
+    never choose a weakly dominated strategy as well.
+    in this case we now know that attacker would never choose hard pass as easy pass is weakly dominant strategy for hinm so so have choose easy path.
+
+    hence always put yourself in others shoes and check their strategies and see if they have a dominating strategy.
+
+    for whole number game:
+        choosing a number over 67 is strictly dominated choices.
+        hence now choices above 67 are irrelavant as if they don't even exist.
+        now we have 1 through 67.
+        now the similary arugment rules out strategies bigger than 45, once we delete all above 67.This time we put ourself in other people's shoes to elimimate 45 and above.
+        now repeat again the same after deletion, while putting ourselves in other people's shoes while they are putting themselves in other people's shoes. hence in shoes in shoes strategy.
+        now try in shoes in shoes in shoes strategies 
+        and we finally get 1
+
+        being rational rules out choosing above 67.
+        for the rest of it, it requires more than rationality.
+        to rule out second slice, we need to know that others are rational.
+        to rule out third slice, we need to know that other people are rational and other people know that other people are rational.
+        rationality R, KR is knowledge of rationality, KKR, knowlege of knowledge of ratinality.
+
+        you would choose a number like 45 if you think rest of the people are dumb.
+         and you would choose, near 34 if you think rest of the people are rational.
+
+        common knowledge: i know, you know, i know you know, you know i know , you know i know you know etc. till infinity.
+
+        turns out the average was 13.3 and 2/3 of average was 9. which is the right answer.
+
+        the answer is not 1 because it takes a lot for everyone to think that deep.some people gave up in certain levels.
+        hence you need to think how sophisticated are other people at playing the game, then you decide how deep do you need to go.
+
+        you need to know what other people know and how they know that. Hence common knowledge is a subtle thing, mutual knowledge is not always same as common knowledge. mutual knowledge is both both know.
+
+        repetition results in learning, and hence choices closer to more and more rational.
+
+Lecture 3: Iterative deletion of dominated strategies
+    finding dominated strategies and removing those strategies from considerations.
+    and this could converge to one choice in the end.
+    you delete dominated strategies for yourself as well as by putting yourself in others shoes and delete their dominated strategies as well, although it can result in overthinking and you may lose.
+    usually it would boil down to single strategy.
+    try to find dominated strategies of all players and then delete.
+
+    application from politics: model of politics
+        there are two candidates:
+            strategies are: going to choose the position on the political spectrum, which has 10 positions from 1 to 10.
+            1,2,3 are left wing positions, and 8,9,10 are extreme right, and so on.
+            assume there are 10% voters at each position.
+            and voters would vote for closest candidate to their own, and if there is a tie then voters split evenly.
+            payoffs: candidates aim to maximize their share of the votes.
+            2 dominates 1, as 2 gives higher share of votes than choosing 1, no matter where other candidates position is.
+            2 strictly dominates one.
+            2 is not dominated by 3, as i would get higher share of votes if i choose 2 if other candidate chooses 1. But if we delete strategies 1 and 10 then 3 dominates 2. as no rational agent would choose 1 or 10.
+            2 and 9 are not dominated, but they are dominated once we realize, 1 and 10 won't be played.
+            hence eventually 5,6 are left after iterative deletion. Hence candidates choose 5,6.
+            it is a famous model in political science called median voter theorem.
+            the prediction is that candidates crowd to center.
+            thats what politicians in US do.
+            gas stations also do the crowding. Hence firms crowd together.
+            simultaneous discovery: when different people discovery something at the same time.
+            in reality: the voters are not evenly distributed, and we assume that everyone votes, there is more than just position, there are things like foreign policy, character etc, and in reality there could be more candidates, and your position may not be believed.
+            even if voters distribution were bell curved, it still remains the same.
+
+    new tool after putting yourself into other people's shoes: 
+        different approach to analysing games: Best Response:
+                if there are no dominating strategies, just choose one with highest expected value, based on known probability distribution.
+
+Lecture 4:
+    often there are no dominated strategies, so you check for best expected value.
+    in soccer, do not shoot to the middle.
+    Defn: Player i's strategy si hat is a best Response to strategy s minus i of the other players, if the payoffs u(si cap, s minus i) >= U(si prime, si minus 1) for all si prime in Si 
+    or in other words, the expected value is optimal.
+
+    you might even need calculas to find maximas or minimas.
+    throw away strategies that are best responses to strategies that are never played, you can do it in loop after throwing away these strategies.
+
+    remember the best strategy is for your opposition, that doesn't mean the work that you are doing won't be inefficient. A strategy makes you win against your opponent, that doesn't mean the work if you are doing together might not be efficient. Maybe because your extra effort would result in profit that you would need to split with other people.
+
+    Nash equillibrium: 
+        point of intersection of utilities of different agents, with respect to their strategies.
+        neither point has an incentive to deviate from that point.
+        It is the point at which players are playing best responses to each other.
+        with number game with 2/3 thing, the nash equillibrium was 1. That doesn't mean people would play at nash equillibrium. But repetition and learning can result to convergence to nash equillibrium.
+        
+Lecture 5:
+    Nash equillibrium:
+    defn" a strategy profile(strategies of all players for a given game)(s1 star, s2 star, ...) is in NE if for each player i, its choice is a best response to the other players choices s minus i.
+
+    that doesn't mean that people play at NE.
+    people are not rational enough to play at NE.
+
+    no individual can do strictly better by deviating from nash equillibrium.
+    if someone changes their position, then nash equillibrium would also change.
+
+    nash equillibrium is self fullfilling belief.
+    nash strategy: strategy at nash equillibrium.
+
+    if all people choose nash strategy, then noone would have any regret.
+
+    first elimimate dominated strategies for both players during analysis.
+    and then do further analysis on remainging strategies.
+
+    nash equillibrium form the matrix way of analysing is a box where a box contains best responses for each other not just one part. Hence it is easy to find nash equillibrium from the matrix.
+
+    nash equillibrium doesn't mean that box has equal value.
+    
+    nash equillibrium doesn't need to coincide with the best strategy for you.
+    no strictly dominated strategy could be played in nash equillibrium.
+    
+

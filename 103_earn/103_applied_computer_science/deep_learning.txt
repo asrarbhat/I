@@ -1,0 +1,28 @@
+one fourth labs:
+----------------
+accracy is (tp+tn)/(tp+fp+tn+fn)
+precison is tp/(tp+fp)   ==    
+recall is tp(tp+fn)      ==    true positives/actual no of postives 
+there are four boxes in confusion matrix. tp,fp,fn,tn 
+precison : how many selected(positive) items are relavant.(what fraction of selected positives are correct )eg applying brake and dog was there.
+recall : how many relavant items are selected.(what fraction of actual positives were selected).
+
+accuracy gives us data, but we want to know more, like how our model feels about positives and negatives.
+these metrics are related to binary classification.
+type I errror: false positives.
+type II error: false negatives. 
+
+confusion matrix is a 2x2 matrix of True false on x axis are actual results, and True false on Y axis are predicted.
+                            Actual 
+                    True           False 
+               
+                True 
+    predicted
+               False 
+
+
+precision is accuracy among gusssed positives.
+recall is accuracy among real positves.
+
+f1 score= 2* precison * recall /(precison +recall)
+

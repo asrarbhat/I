@@ -1,0 +1,61 @@
+Kanban lecture by Eric Brechner: 
+    It is an Agile Project Management method.
+    there are no sprints.
+    It is more productive than Scrum.
+    You can do a lot more with a lot less people.
+    It has a board called kanban board. It is center to the approach and there isn't mroe than it to it.
+    there is a backlog(as one of the column), it is the list of things you gotta do, and it is ordered in some way.
+    the next column is breakdown column with unequal sized things in backlog to equal sized stories in breakdown column.
+    then comes the answer column for each question and then the validate column to validate your answer.
+    there could be more or less customized columns.
+    breakdown column is usually named as specify and answer column as implement.
+    each column has two sub columns as active and done columns.
+    where each done column has Done rules( defintion of done) eg each question should be answered in 2 minutes,  you need to reapeat the question first and then anaswer in coding langauge it would be steps like code reviewed and tested.
+    there is a daily standup meeting and no more meetings.
+    new things come to backlog.
+    you do prioritization with your team together.
+    you can use insertion sort to order backlog.
+    
+    WIP LIMIT: work in progress limit, this is the main principle of kanban that is there is limit to each column for how many tickets can be there for in it. WIP limit is there such both both active + done are less than it, for longer steps the limit should be small so they are not overloaded say number of people plus a few just in case they want to do something else,and  set wip limit for other columns such that they always have to do something.
+    bugs also go through the same process.
+    you can estimate based on how many tasks you complete everyday that when would you complete a set of backlogs hence release.
+    if there is something that has dependency on somewhere else, you put it on the third sub column track and it is a sign that this needs a something else and when that thing is done it also moves.
+    track tasks don't add to wip limit.
+    as soon as it gets unblocked it moves forward as it is the top priority item.
+    you are finishing tasks all the time, hence you can release them all the time but it would be silly so you do it as a part of larger collection or a due date, you might wait for related stickies to come to an end.
+    there are no specific roles in kanban, but there is role who runs standup everyday, some members might focus on certain steps, like if you have a testing team.
+    if the pipeline is not working efficiently, you swarm and help each other out and modify the pipeline a little bit.
+    design is done even before we follow the pipeline.
+    tasks get assigned to people who are avaialble, ofcourse sometimes there are tasks that only certain people can do, and you can move such tasks to track.
+    people can swap the task as well.
+    a team should not depend on a single person for something.
+    a team can be as good as 70 people.
+    even 4 to 10 people are also cool, containing all kind of roles.
+    you break big teams into small teams.
+    you can have hierarchy of kanban where a set of teams have their kanban and each team has their own kanban.
+    kanban is Japanese for visual signal.
+    kanban cards: tickets
+    your cards can have due date.
+    a task should take a week.
+    flow: the moving of these cards.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
