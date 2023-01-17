@@ -1,0 +1,37 @@
+Confluence:
+    to be more productive.
+    Confluence server is going away.
+    Confluence cloud is SaaS.
+    confluence is a wiki application.
+    software designed for collaborative editing in a browser.
+    eg wikepedia is one of the wiki applicatoin.
+    you need separate licences for jira nad confluence.
+    this is where you store information.
+    confluence stores standards and processes. eg naming conventions, brand logos etc.
+    you can put changelog in confluence.
+    you do documentation here.
+    
+    Confluence terms:
+        pages: pages are where content lives
+        macros: dyanmic content on pages.
+        spaces: where pages live. it is to Confluence what project is to jira.
+    
+overiview of the interface.
+    create button to create a new page.
+    personal and team spaces:
+        spaces are a way of organising documents.
+        personal spaces can be creasted by anyone.
+        people use personal space before moving their pages to team spaces,.
+        team spaces are global and created by admin and has limited access.
+    
+    by default anyone can see your personal space, go to setting of a space and edit it manually.
+    edit permissions there.
+    you can archieve pages.
+    a page is a draft up until we publish it.
+    it keeps saving all the time. you don't need to save.
+    to see drafts click on drafts in home page or anywhere else.
+    one you publish a page if you make changes now they are under unpublished until you don't publish them.
+    you can revert the page to last published version.
+    confluence means where two rivers meet, or two things merging.
+
+
