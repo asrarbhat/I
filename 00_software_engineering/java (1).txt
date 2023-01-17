@@ -1,8 +1,0 @@
-javac -d . packagename/*.java
-
-java packagename.Main //to run
-
-project == name of your folder where everything will be.
-
-src/main/java for main code.
-src/main/test for test

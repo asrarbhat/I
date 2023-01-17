@@ -1,2 +1,0 @@
-keep trade amounts constant for a day, and then change next day.
-better have weights associated with each trade.
