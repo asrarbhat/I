@@ -331,3 +331,42 @@ pagination, filtering and sorting:
 
 Routing:
     
+
+Authentication and Authorization:
+    while registering if it registers same again, you can respond with 400 response code and message that says user already registered.
+    you can respond whichever way you want.
+    200 code means success.
+    During login the backend can respond with JWT: jason web token, it is a string.
+    we store jwt in local storage, that every browser has.
+    const {data: jwt}= await login(whatever);
+    localStorage.setItem('token',jwt);
+    you can find it in browser ctrl+shift+i in application storage, local storage.
+    in http: when you see a header that starts with x it means it is a custom header.
+    the server can return jwt in header also, so you might have to read it from there.
+    for client to read custom header, the backend has to set access-control-expose-headers and put the headers that client should be able to read there.
+    to get the value response.headers['x-auth-token']
+    jwt uses sha256
+
+    to get values from localStorage:
+        npm i jwt-decode@2.2.0 
+        import jwtDecode from 'jwt-decode'
+        const jwt=localStorage.getItem('token');
+        //a url has only access to token under it.
+        jwtDecode(jwt);//it returns current user object.
+        you can set state from this.
+        wrap it in try catch:
+        since if the token is not there it would give an error.
+        window.location='/' causes full reload of page.
+        localStorage.removeItem('token') to remove it.
+    
+    calling protected api's:
+        in services file of yours.
+        axios.defaults.headers.common['x-auth-token']=your token.
+        now with every request this would be added.
+        and if tokens is not there, it would give undefined hence header would not be set.
+        different kinds of tokens can be given different kinds of access.
+        protecting routes: but a condition in route for the component it would render, if user is not logged in then i would redirect else go to the original component.
+        you can create a ProtectedRoute component and make it resusedable for all routes that you want to be protected. and check based on data stored in localStorage.
+        for redirecting user to page it wanted to go to but it had to login in, watch 21 lecture it is about in login instead of going to homepage check in lacation property if it wanted to go somewhere else.
+        in login page, if it is already logged in redirect to somewhere else.
+        
