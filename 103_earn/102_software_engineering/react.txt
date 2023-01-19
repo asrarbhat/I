@@ -358,7 +358,7 @@ Authentication and Authorization:
         since if the token is not there it would give an error.
         window.location='/' causes full reload of page.
         localStorage.removeItem('token') to remove it.
-    
+
     calling protected api's:
         in services file of yours.
         axios.defaults.headers.common['x-auth-token']=your token.
@@ -369,4 +369,3 @@ Authentication and Authorization:
         you can create a ProtectedRoute component and make it resusedable for all routes that you want to be protected. and check based on data stored in localStorage.
         for redirecting user to page it wanted to go to but it had to login in, watch 21 lecture it is about in login instead of going to homepage check in lacation property if it wanted to go somewhere else.
         in login page, if it is already logged in redirect to somewhere else.
-        
