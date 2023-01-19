@@ -1,0 +1,162 @@
+Getting started:
+    A state management library for javascript apps.
+    you can use it with react, angular, vue, or even vanillajs 
+    it doesn't care what library you use to build front end.
+    other solutions are flux,mobx
+    we store everything in a repository.
+    we will get a single source of truth.
+    used to synchronize data across components.
+    hence redux centralizes application's state.
+    redux dev tool extention for chrome is neat.
+    state is stored in a javascript object.
+    it is based on functional programming.
+
+Functional programming:
+    redux is build on top of functional programming.
+    invented in 1950's.
+    composing and piping.
+    install lodash.
+    import compose and pipe from it.
+    compose(third, second, first) it returns new function.
+    pipe(first, second, third)
+    pure function: same argument, same output.
+    immutablility: you don't update an object, you can create a copy by spread operator.
+
+Redux Fundamentals:
+    you store your state in a single javascript object called store.
+    it is the single source of truth and is accessible to all components of UI.
+    we can't directly modify the store.
+    our store is an immutable object.
+    so we have to take it as an argument and return updated store.
+    such a function is called reducer.
+    the reducer takes action as second argument, which is an object which describes what to be changed.
+    we can have reducer for each field in store separately.
+    reducer is a pure function.
+    we do not call reducer directly, we just work with store.
+    store calls reducer, and notifies UI component about the update.
+
+    steps:
+        design the store.
+        define the actions.
+        create reducers.
+        setup the store.
+
+    npm install redux@4.0
+
+    designing the store:
+        to decide what we keep in store.
+        eg an object that contains a list called bugs to track bugs, and an object current user to have details of current user.
+
+    defining the actions:
+        example add a bug, mark a bug resolved, delete a bug etc 
+        an action is just a plain js object that describes what just happened eg an object with two properties, type that describes the type of bug in str, and description as text to describle text value of it.
+        type is compulsary property everything else is optional.
+        type could be string or number, better use string.
+        eg type: "ADD_BUG" use this convention.
+
+    creating a reducer:
+        create a file reducer.js 
+            lets say state is an array.
+            function reducer(state, action){
+                if (action.type==='ADD_BUG')
+                    return [...state,{new bug}]
+                else if (action.type==='REMOVE_BUG'){
+                    do your thing here
+                }
+                return state
+            }
+
+    creating a store:
+        create a file store.js 
+        import {createStore} from 'redux';
+        import reducer from './reducer'
+
+        const store=createStore(reducer);
+        export defualt store;
+    
+    dispatching action:
+        import store from './store';
+        store is an object with a few inbuild properties.
+        there is a method getState, there is no method for setState as you have to dispatch an action for that.
+        store.getState() would return an empty array int this case.
+        store.dispatch({
+            type:'bugAded',
+            description: 'whatever'
+        })
+        //cool 
+
+    subscribing to the store:
+        store.subscribe()
+        this function gets called everytime the state of the store changes.
+        store.subscribe(()=>{
+            console.log(whatever)
+        })
+        we use this to refesh the UI.
+        it returns a function unsubscribe that you can use to unsubscribe, when you move to different page.
+        unsubscribe();
+    
+    when we dipatch an action, our store would call the reducer, and update state, and call subscribers methods that we have.
+    redux has small api to learn.
+    you can create a separete js file for action types so there is just one place to modify from.
+    create a function that will create action object for you, call it actionCreator, instead of writing whole thing again and again.
+    you can add as much to action as you want.
+
+    you access the internal state using getState, hence internal state is private.
+
+Debugging redux applications:
+    install redux devtools extention to chrome.
+    you can find it under >> 
+    in createStore give the argument needed for the extention. like wondow.something
+    it is an amazing tool.
+    log monitors shows you logs of all actions taken.
+
+writing clean redux code:
+    structuring files and folder:
+        UI and state are different so create a different folder for store.
+        create a folder store in src, and in it create actions.js, actionTypes.js, and reducer.js 
+        the names of your folders should be their role and not the library you are using.
+
+        ducks pattern:
+            create a store folder.
+            create one store in each file for as as many stores you need.
+            eg bugs.js 
+                at top //action Types
+                    export const BUG_ADDED='bugAdded' //no need to export as they are internal.
+                    and so on for all action types 
+
+                    //actions
+                        function that returns action object.
+                    
+                    //reducer 
+                        reducer should be your default export.
+                    
+                    keep a separate file for store in  store folder.
+
+    redux toolkit:
+        for simplifying your redux code.
+        npm i @reduxjs/toolkit@1.2.5
+        it provides a bunch of utility functions to simplifying code.
+        import {configureStore} from '@reduxjs.....
+
+        const store = configureStore({redicer});
+        //automatically connects to redux dev tools.
+
+        similiary createAction method that takes type and returns a funciotn,and then you call that function with describption to get the action.
+
+        //creating reducers.
+        createReducer(initial state, {
+            actions: funcitons that handle those actions
+        })
+        the function would take two paramters:
+            (state, action)=>{
+                you can write mutating code here 
+                underneath it uses inner to make it immutalbe code.
+            }
+
+
+integrate redux into react:
+    unmounting component doesn't only mean delete it means not in viewport.
+    put unsubscribe in componentwillunmount.
+    
+
+

@@ -1,0 +1,76 @@
+Guido van rossam was the "benevolent dictator for life" of python till 2018, as he was the sole programmer.
+
+Functions:
+    def is used to define the function.
+    first line of function can be a docsting in """
+    some tools use it to produce documentation.
+    its a good practise to put a doc string. eg """Print a Fibonacci number up to n.""". In present tense.
+    make it a habbit.
+    first variables are looked at in local symbol table, then in global and then in built in.
+    Thus, global variables and variables of enclosing functions cannot be directly assigned a value within a function (unless, for global variables, named in a global statement, or, for variables of enclosing functions, named in a nonlocal statement), although they may be referenced.
+    variables are passed by value, for objects it would be a reference.
+    A function definition is as good as creating a variable of that function name and assigning the function to it and we can assign a function name to ther variables as well.
+    functions are also objects.
+    all functions by default return None.
+    default arguments are evuauated at the time of definition of function, so if you assign some value in definition as default value and later change that variable and then call the function, it will still have the previous value.
+    the defualt value is only called once, so if you assign a list to default value and keep using defualt value over and over again, and your that list is changed, it would keep on changing in every function call. Even if you give default argument like [], and add a few to it, in next call they added would still be there, so default arguments with reference type gets tricky.
+    named arguments == keyword arguments
+    *listname or *tuplename can be used to unpack.
+    **dictionary to unpack dictionary.
+    lambda functions are just syntactic sugar over regular function.
+    lambda x,y:x*y, syntactically restricted to single expression.
+    they can reference varialbe in a containing scope.
+    documentation:
+        if you want to give a summary as well.
+        """A sentence starting with capital and ending with period.
+           blank line
+           your summary
+        """
+    
+    
+    function annotation:
+        it is completely optional
+        def f(ham: str, eggs: str = 'eggs') -> str:
+        Intermezzo: Coding Style¶
+            Now that you are about to write longer, more complex pieces of Python, it is a good time to talk about coding style. Most languages can be written (or more concise, formatted) in different styles; some are more readable than others. Making it easy for others to read your code is always a good idea, and adopting a nice coding style helps tremendously for that.
+
+            For Python, PEP 8 has emerged as the style guide that most projects adhere to; it promotes a very readable and eye-pleasing coding style. Every Python developer should read it at some point; here are the most important points extracted for you:
+
+            Use 4-space indentation, and no tabs.
+
+            4 spaces are a good compromise between small indentation (allows greater nesting depth) and large indentation (easier to read). Tabs introduce confusion, and are best left out.
+
+            Wrap lines so that they don’t exceed 79 characters.
+
+            This helps users with small displays and makes it possible to have several code files side-by-side on larger displays.
+
+            Use blank lines to separate functions and classes, and larger blocks of code inside functions.
+
+            When possible, put comments on a line of their own.
+
+            Use docstrings.
+
+            Use spaces around operators and after commas, but not directly inside bracketing constructs: a = f(1, 2) + g(3, 4).
+
+            Name your classes and functions consistently; the convention is to use UpperCamelCase for classes and lowercase_with_underscores for functions and methods. Always use self as the name for the first method argument (see A First Look at Classes for more on classes and methods).
+
+            Don’t use fancy encodings if your code is meant to be used in international environments. Python’s default, UTF-8, or even plain ASCII work best in any case.
+
+            Likewise, don’t use non-ASCII characters in identifiers if there is only the slightest chance people speaking a different language will read or maintain the code.
+
+    lambda functions are anonymous functons.
+    help(functionname) returns docstring.
+    postional arguments and keyword arguments.
+    if you assign value to global variable it would create a local variable, but you can call for its value.
+    global keyword to get variables from global or to create global varibles.
+    or use globals()['a'] to get it.
+    globlas() returns a dict
+    filter(functionname, sequence)
+    list(filter())
+    same for map 
+    
+
+
+
+
+
