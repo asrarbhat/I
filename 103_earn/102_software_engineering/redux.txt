@@ -124,8 +124,31 @@ Debugging redux applications:
     install redux devtools extention to chrome.
     you can find it under >> 
     in createStore give the argument needed for the extention. like wondow.something
+        createStore(reducer, window.__REDUX____something)
+        this is called store enhancer.
     it is an amazing tool.
-    log monitors shows you logs of all actions taken.
+    log monitors shows you logs of all actions taken and their payload.
+    inpsector monitor is most popular one.
+    right click and reload frame to refresh.
+    you can even see diff.
+    you can see state after that action.
+    npm i redux-devtools-extension
+        now we an simplify store configuration.
+        createStore(reducer, devToolsEnhancer({trace:true}))
+        now if you click on trace in devtools you will see the line of code that caused that action.
+
+    source maps: mappings between our bundle and source code.
+        in webpack.config.js 
+            add 
+                devtool: "source-map"
+        restart your server.
+        it now creates another file apart from your bundle for mapping
+        on devtool click on settings and click on external editor type vscode and type aboslute path of your project directory.
+        now in trace if you click on line, it would open in vscode.
+
+    you can download state and upload again.
+    just click on download icon for download and upload button to upload state.
+    it stores in json file.
 
 writing clean redux code:
     structuring files and folder:
@@ -135,8 +158,8 @@ writing clean redux code:
 
         ducks pattern:
             create a store folder.
-            create one store in each file for as as many stores you need.
-            eg bugs.js 
+            create one store in each file for as as many stores you need.//bundlling everything together.
+            eg bugs.js //each such file is called a duck
                 at top //action Types
                     export const BUG_ADDED='bugAdded' //no need to export as they are internal.
                     and so on for all action types 
@@ -155,25 +178,205 @@ writing clean redux code:
         it provides a bunch of utility functions to simplifying code.
         import {configureStore} from '@reduxjs.....
 
-        const store = configureStore({redicer});
-        //automatically connects to redux dev tools.
+        const store = configureStore({reducer});//or reducer: nameofreducer.
+        //automatically connects to redux dev tools. you don't need enhancer to import anymore.
 
-        similiary createAction method that takes type and returns a funciotn,and then you call that function with describption to get the action.
+        similiary it gives createAction method that takes type and returns a funciotn,and then you call that function with describption to get the action. with payload, second argument is value for payload. The function that is returned after entering type, has attributes like .key, .toString() to see the action that was provided.
+        in reducer you can use in switch case bugAdded.type where bugAdded=createAction("bugAdded")
+        select text and type a brace to have brace on both sides.
 
         //creating reducers.
-        createReducer(initial state, {
-            actions: funcitons that handle those actions
+        createReducer(initial state like [], {
+            action: funcitons that handle those action
+            [bugAdded.type]: (state,action)=>{} //check if it works without []
         })
         the function would take two paramters:
             (state, action)=>{
                 you can write mutating code here 
-                underneath it uses inner to make it immutalbe code.
+                state.push(wahtever)
+                underneath it uses immer to make it immutalbe code.
+                you don't need to return anything.
             }
+    
+    creating slices:
+        import createSlice from @redux something.
+        const slice=createSlice({
+            name: 'store',
+            initialState:[],
+            reducers:{
+                bugAdded: (state,actions){
 
+                }
+                bugRemoved:samething 
 
+            }
+        })
+        it automatically creates actions and action generators.
+        it creates a object, with actions, reducer etc in it.
+        you can export the actions in it and the reducer and use in store and everywhere else.
+        in dev tools you will see name of actions as nameinslice/nameofaction
+        we don't need to create actions now.
+
+designing the store:
+    redux state vs local state:
+        you can store only global data in store, or you can store local data as well.
+        better put everything in store.
+        and store can be used as cache.
+        and easier debugging and testing.
+        exception: when submitting a form, there is no need to store them in store, if it doesn't impact state, so store it locally.
+        change only when the submit is clicked, what needs to be there.
+    
+    structuring the store:
+        can use an array or an object or whatever.
+        better use object.
+        objects allow fast lookup, but they don't preserve order.
+        so choose accordingly.
+        you can use combination of both as in object.
+        you can have objects within the object, where each object within is related to different features etc.
+    
+    combing reducers:
+        lets say you have two slices, bugs and projects 
+        and each one has different reducer.
+        combining multiple reducers to form a tree of reducers.
+            import {combineReducers} from 'redux';
+            import bugsReducer from './bugs';
+            import projectReducer also
+            export defualt combineReducers({
+                bugs: bugsReducer,
+                projects: projectReducer
+            })
+            
+            if you pass this combineReducers to combineReducers we would get structure like root-->node then two children.
+
+            you can pass this reducer to configureStore now.
+
+    normalization:
+        should not duplicate data in store.
+        there should be only one place to update.
+        try to avoid nesting in store.
+        used refernce to do so.
+
+    selectors:
+        create a function in your slice file to select certain data from your store.
+        as the logic could be across different components so we write the function here.
+
+        export const getUnresolvedBugs=state=>{
+            state.entities.bugs.filer(wahtever)
+        }
+        this is called selector function, it takes state as input and returns computed state.
+        reselect is a library for memoization.
+    
+middlewares:
+    allows us to call api's.
+    dispatch acts like a pipeline via which actions go and root reducer is at the other end.
+    we can put a middleware, that is executed before root reducer.
+    eg log, auth etc.
+    
+    creating middleware:
+        create middleware folder in store
+        add file logger.js in it to log every action.
+            const logger=store=>next=>action=>{//currying
+                    console.log(store, next, action)
+                    next(action)
+            }
+            export default logger;
+        
+        configureStore({
+            reducer,
+            middleware: [logger]
+        })
+        store is an object that looks like store not exact store, and next is a function.
+        you have to call next()
+
+        if you are using @redux toolkit.
+            createStore(reducer, applyMiddleware(logger));
+            import applyMiddleware from redux.
+    
+    parametrizing middleware:
+        const logger= param=>store=> and so on.
+        put logger("console") now instead of logger
+    
+    dispacting funcitons:
+        create middleare function
+            const func= soter adn so on.
+            {
+                if (typeof action=='function')
+                    action();
+                else
+                    next();
+            }
+        
+            in middleare array they are executed in order.
+
+            now you can even give funciton as an argument to dispatch.
+            in the function:
+                after api call and getting result.
+                store.dispatch(your data as action) //you might not have access to store, so get it form store parameter in curry and take that as an arugment for your function, since your function was is just called and doesn't have access to store parameter in curry directly.
+
+        we don't have to create this function, we already have Thunk libary for this.
+            we automatically get this with redux toolkit.
+            middleware: [...getDefaultMiddleware(), your middlewares]
+
+calling API'S:
+    never call an api in reducer, reducer should be a pure function.
+    with the help of thunk, our action can be a function, so we call api's there.
+    redux thunk automatically passes two properties, dispach and getstate to your action function.
+    function(dispatch, getState){}
+    you get your api call and then you dispatch your action.
+    if you don't want getState you can skip that paramter.
+    if your arrow funciton returns an object put it in () 
+    in the function, you just call teh api, if resolved the promise, then dispatch accordingly, and if rejected then resolve accordingly.
+
+    if you need await in your middleware, then you need to put async action =.{
+        await and stuff.
+    }
+    you can make api call by taking object as action with payload having url and stuff.
+    with api calls use try catch blocks.
+    you can put next() for original action and below it have your api call and both actions would be dispatched till the end.
+    properties in store like loading: false to have that spinner, and lastFetch: time, to have autorefresh after some time are cool.
+    you can cache by checking when was last api call, and then not fetch if it was less than 0 minutes ago.
+
+we can use react hooks for api calls instead of thunk.
+    
 integrate redux into react:
     unmounting component doesn't only mean delete it means not in viewport.
     put unsubscribe in componentwillunmount.
-    
+    you provide store using provider, react context.
+    in class components you don't need to use consumer, you can directly use the context.
+    use subscribe function in componentDidMount
+        you can set local state in it.
+        call the unsubscribe it returns in componentwillunmount
+        for funciton in componentDidMount to run you don't have to run componentDidMount everytime, it is now listening for change forever.
+    npm i react-redux
+        import Provider from 'react-redux'
+        <Provider store={store}>
+        use this provider instead of one from context.
+        you don't need context.
+        now store is passed as a prop to the component.
+        and you don't subscribe or unsubscribe in your component, instead:
+            const mapStateToProps = state=>({
+                bugs: state.entities.bugs.list
+            })
+            const mapDispatchToProps= dispatch=>{
+                loadBugs: ()=>dispatch(loadBugs())
+            }
+            export default Bugs = connect(mapStateToProps,mapDispatchToProps)(Bugs)
+            here Bugs is a component, and now in Bugs you can use this.props.loadbugs()
+            and this.props.bugs 
+        
+        you don't need to worry about subscribing and unsubsibing.
+
+    hooks:
+        in functional components:
+            useEffect() hook.
+            const dispatch=useDispatch();
+            now you can use dispatch();
+            arr= useSelector(state=>state.list) 
+            to get store data 
+            no need to use connect etc.
+    no need to subscribe, changes reflect automatically when we use react-redux
+
+
+
 
 
