@@ -1,14 +1,15 @@
 Getting started:
     A state management library for javascript apps.
-    you can use it with react, angular, vue, or even vanillajs 
+    you can use it with react, angular, vue, or even vanilla js 
     it doesn't care what library you use to build front end.
     other solutions are flux,mobx
-    we store everything in a repository.
+    we store everything in a central repository.
     we will get a single source of truth.
     used to synchronize data across components.
     hence redux centralizes application's state.
-    redux dev tool extention for chrome is neat.
+    redux dev tool extention for chrome is neat. You can jump to certain state of UI from history, it is called time travel debugging.
     state is stored in a javascript object.
+    60% react projects are done with redux.
     it is based on functional programming.
 
 Functional programming:
@@ -19,9 +20,24 @@ Functional programming:
     import compose and pipe from it.
     compose(third, second, first) it returns new function.
     pipe(first, second, third)
-    pure function: same argument, same output.
-    immutablility: you don't update an object, you can create a copy by spread operator.
-
+    Currying: a function that takes a few argument and returns a function to take other.
+    pure function: same argument, same output, it doesn't take dependencies or global variables. Their result can be cached.
+    immutablility: you don't update an object, you can create a copy by spread operator. JS objects are not immutablile, immutalbe makes it easy to detect a change, hence makes everything easy. Thats why redux uses it.
+    for objects you can use spread operator. but still it will do a shallow, for objects in objects do spread operator for each property, or use some library.
+    For arrays we can use spread operator, or use functions like slice, map, filter etc
+    Immutable, immer, Mori provide immutable  ds as js objects are not immutable.
+    Immer is mostly used.
+    Map from immutable library gives you a map.
+    it has get method etc.
+    toJS() would return js object
+    set()  returns new Map.
+    
+    Immer: 
+        produce function in immer.
+        Give it a js object, and functions that mutate that object.
+        it internally does whole thing, you don't need to worry about anything.
+           produce would return the updated object.
+           
 Redux Fundamentals:
     you store your state in a single javascript object called store.
     it is the single source of truth and is accessible to all components of UI.
@@ -65,6 +81,7 @@ Redux Fundamentals:
                 }
                 return state
             }
+            give state a default value so first time there js no state so give empty object or array.
 
     creating a store:
         create a file store.js 

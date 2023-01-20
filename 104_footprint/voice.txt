@@ -158,7 +158,9 @@ Science:
         womens voice at round 200 cycles per second.
         by default the vocal folds are open and hence no voice.
         after vocal cords, the air is in vocal tract.
-        tongue, lips uvula, etc are the ones that make sound articulate.
+        tongue, lips uvula, etc are the ones that make sound articulate
+        Vowels provide a free passage to air and consonants provide some kind of obstruction.
+        
 
     
 
