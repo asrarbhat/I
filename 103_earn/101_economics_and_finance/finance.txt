@@ -424,6 +424,108 @@ session 13:
     own idea: see what is going around, and figure out the consequences and find things that you can trade based on consequences.
     efficient market: no predictability.
     usually markets are random.
+    efficent market: market where it is hard to make profit with certainity, it is not predictible, and it is a good market to trade in.
+    it market is predictible, it is either rigged, or there aren't enough people in the market.
+    more risk gives more expected return.
+    small stocks seem to do better than large stocks.
+    stocks tend to move together.
+
+    portfolio:
+        combination of securities.
+        you can also short.
+        you can have long and short positions in portfolio to have balance.
+        portfolio should be diversed.
+        eg if IT is going to do good, have some stocks from different companies from It.
+        we want high return and low risk.
+        mean is return and standard deviation is risk.
+        when you add a new stock to your portfolio, you check how much is it adding to return and how much to risk.
+        just map all stocks on risk and return in 2D graph.
+
+Lecture 14:
+    the means are easy to compute in portfolio theory but the risk/std isn't linear and that is the real deal.
+    sometimes you get the more return and less risk when you look at the graph, which is amazing.
+
+Lecture 15:
+    basically draw graph for all possible portfolio's choose the best one.
+
+
+
+
+
+
+
+
+
+Financial markets yale:
+
+Lecture 1:
+    finance is a pillar of civilized society.
+    you sponser ventures, you incentivise people to do certain things.
+    we will talk about banking, insurance, securities, derivatives, etc.
+    finance is an engineering that works with people.
+    to be rich you need to do things at large scale, and for that you need to know finance.
+    you need to give your money away if you are rich after you turn 55, it is your moral obligation.
+    things can turn bad, and we need regulators.
+    portfolio theory assumes independence and a financial crash, breaks that assumption and whole portfolio goes down.
+    rich people get to take risk and if they fail, govt. bails them out to avoid financial crash.
+
+Lecture 2:
+    probability theory is fundamental to finance.
+    bubble: an event with which people are very excited about.
+    markets can collpase, corporations can collapse.
+    capital gain: price t+1 - price t 
+    return: percentage increase in value.
+    geometric mean: multiply n terms and then take nth root.
+    you can take return from mulitple times and take arithmetic mean or geometric mean to make sense of it.
+    geometric mean would make more sense as if one of the return is -100% then you have lost everything so arithmetic mean doesn't mean anything after that.
+    these are all measures fo central tendency.
+    covariance is a measure of how two different random varialbes are moving together.
+        positive both both change in same direction and negative if opposite, and 0 if no relation.
+    corelation is scaled covariance.
+    Value at Risk VaT: like 5% chance that we will lose 10 million this year.
+    Law of large numbers: with large sample, it would be closer to average. uncertainty vanishes with large sample, it is the idea behind insurance.
+    but it needs independence of events.
+    var(x1+x2)=var(x1)+var(x2) if x1, and x2 are independent.
+    usually things go south becuase we assume these to be independent and they are not independent.
+    VaR came in 1987 for companies.
+    CoVaR: came later 
+    usually people split stocks when prices increase too much.
+    you have to be a risk taker to make it big.
+    random shows to stock market are cauchy distributed, they are both bell shaped, cauchy has more chances for outliers.
+    independence fails during crashes, as everything goes down.
+
+Lecture 3:
+    average of independent variables of any distribution is normal.
+    financial inventions:
+        options, futures, swaps, electronic trading.
+    if risks are independent then we can pool them and they go away.
+    risk management: returns with certainity.
+    
+    invention in finance:
+        shares and going public is an important invention.
+        corporation: comes form latin word corpus which means body.
+            limited liability corporation, you as a share holder are not liable if everything fails.
+            now anybody can start a compnay with limited liability.
+            began in 1811 in new york.
+            it made new york the financial capital of US, as capitilists had no liabilities.
+            it is like a lottery ticket, it was exciting.
+        townships in china: you go to mayor of your town you raise money form town and you share profit with town.
+
+        inflation indexation:
+            there is inflation risk, becuase of uncertainity of prices.
+            indexed bond: bond would pay you so and so and it would be increased if there is inflation.
+                1780's it was introduced in masschuttesetts
+            not so popular anymore.
+        
+        swap:
+            contract between two parties to swap cash flows at certain rates.
+            hugely used.
+        
+Lecture 4:
+
+            
+
+
     
         
 
