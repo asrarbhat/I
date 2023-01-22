@@ -1,6 +1,6 @@
 adobe premier pro  video editor.
 if  your video is shaky:
-    open premier pro, click on new project, type name for you project, import media to start, add it to new timeline(video sequence) click on effects, search on warp, under distort click on warp stabilizer, and drag and drop it onto your video clip, it opens effect control panel, now if you play it it would be smooth buttery motion, you can click on fx button to turn on and off the effect, you can change from smooth motion to no motion.
+    open premier pro, click on new project, type name for you project, import media to start, add it to new timeline(video sequence) by dropping it on that icon, click on effects, if there is no effects panel just click on window and enable effects by clicking on it, search on warp, under distort click on warp stabilizer, and drag and drop it onto your video clip, it opens effect control panel, now if you play it it would be smooth buttery motion, you can click on fx button to turn on and off the effect, you can change result from smooth motion to no motion.
 
     this is one of the many effects that we will learn.
 
@@ -22,12 +22,13 @@ top right is the program monitor: it shows you the video result so far that you 
 you can press space bar to play or pause.
 
 top left is the source, effect control and audio track mixer tabs.
-source monitor is where you preview your clips, you double click on your clip and it opens in your source monitor for both audio and video.
+source monitor is where you preview your clips, you double click on your clip or audio and it opens in your source monitor for both audio and video.
 effects control is where you change settings of an effect that you are applying.
 to add audio track mixer, just go to window and click on audio track mixer.
 you can drag and drop tabs from one panel to another.
+close tabs by right clicking and clicking on close.
 
-you can even create a new panel for your tab.
+you can even create a new panel for your tab. by dropping it on right or left part of exising panel.
 you can click on window and then save the workspace that you can open same way later by clicking on window and then on workspaces to apply.
 
 to import footage: 
@@ -37,7 +38,7 @@ to import footage:
     you can create new directory from here by clicking on new bin in premier project and move stuff there.
     create a folder for video, audio, photos and then import them.
     within video you can create multiple folders for multiple camera's 
-    you can create b-roll folder for video's for footage that describes what the narrator is taking about, or the footage that one cuts to.
+    you can create b-roll folder for video's for footage that describes what the narrator is taking about, or the footage that one cuts to, also called cut away footage.
     there is no set rules, just follow any convention.
     you can rename things within premier pro as well.
     you can see info about your files, like framerate etc for video and same for audio.
@@ -45,21 +46,24 @@ to import footage:
     
 editing your videos:
     pick the footage that is going to be used the most and drag and drop to the new button on the buttom and it would be added to the timeline.
-    in sequence tab you can see sequence settings, like frame rate, frame size etc.
-    you can move video and audio clip from one track to another by dragging, like from v1 to v2 and so on.
-    you can zoom in and zoom out in timeline.
-    you can click on file and new and then new sequence to add the video to timeline as well.
-    you can set frame rate and frame size for you sequence.
+    in sequence tab at top, you can see sequence settings, like frame rate, frame size etc.
+    you can move video and audio clip from one track to another by dragging, like from v1 to v2 and so on. or from left to right.
+    you can zoom in and zoom out in timeline, by clicking on end of slider to get zooming slider or by pressing + -
+    you can click on file at top and new and then new sequence to add the video to timeline as well.
+            you can set frame rate and frame size for you sequence there, audio sample rate etc, you can name a sequence there.
+            it will open new timeline.
+            better create sequence this way and then keep adding stuff to it.
     you can drag your video to empty space to create say 4th video track.
     now you can drag other videos to timeline
-    multiple tracks are like multiple cameras they are at same positions in different tracks.
+    multiple tracks are like multiple cameras they are at same positions in different tracks. you can click on eyeball button to enable or disable that track's video.
     you now need to sync these tracks, first you zoom in on timeline using + button 
-    to synch audio from both tracks, you click on space right of S and it expands the wave forms, and you can sync them.
-    or you can synchronize by setting two of them and then right click and then synchronize and then audio. works best with two audio files.
+    to synch audio from both tracks, you double click on space right of S for audio and it expands the wave forms, and you can sync them.
+    or you can synchronize by selecting two of them and then right click and then synchronize and then audio. works best with two audio files.
     instead of selecting one by one, you can click and drag to select multiple.
     ctrl + Z to undo.
-    you can play the video in source tab, and from there you can move audio only or video only to timeline or add only small part of video to timeline. you click on mark in and mark out.
-    from source you can insert and it would insert into v1 whereever your timeline ponter is and you can override and it would be added to new track.
+    you can also zoom on the waveform the same way to synchronize later using + 
+    you can play the video in source tab, and from there you can move audio only or video only to timeline or add only small part of video to timeline. you click on mark in and mark out. so basically v2 overrides v1 and so on, same for audio.
+    from source you can insert and it would insert into v1 whereever your timeline pointer is.you can overwrite and it would be added to new track. but what was at its place would be replaced.
     if you want them directly on new track, then you hae to click on first column and make them v1 for both audio and video. and then override or insert.
 
     syncing audio and video:
