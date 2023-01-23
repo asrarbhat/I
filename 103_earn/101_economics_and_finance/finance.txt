@@ -522,6 +522,36 @@ Lecture 3:
             hugely used.
         
 Lecture 4:
+	Stock market was just a game with limited liability, hence people were very interested, some would short and some would go long.
+	the geometric mean for us stock is  7 percent after even inflation considered.
+	equity premium puzzle: stocks seem to be doing better than other things like bonds etc, and the reason is risk.
+	stocks almost seem like the best investment.
+	markowitz in 1952: thought of whole thing is a statistics problem, he said giiven the data and we can compute mean, variance, covariance etc of different stocks, what is the best portfolio we can get. Nobody had thought about it his way. It is a well defined problem. The assumption being, we don't know which company would do good in future. Thats how portfolio analysis came into existence.
+	before that all people knew was, don't put all your eggs in one basket. But nobody said how to diversify.
+	let rf be the riskless interest rate: like bonds etc or borrow at that rate.
+	let some stock has average return of 20% and standard deviation of 40%
+	you draw a graph between sigma which is standard deviation of your portfolio and R is expected return of your portfolio.
+	eg 5% with 0 risk hence 0 standard deviation.
+	you can take loan for 5% and buy the stocks and you can do that.
+		this is called leverage.
+		there is no optimal portfolio, it is just about tradeoffs between risk and return.
+		in the hyperbola the point fo changing direction and above is where you have choice below it everything is suboptiomal.
+		the more the number of stocks in a portfolio higher the hyperbola moves, which is amazing and optimal.
+		the hyperbola is called efficient portfolio frontier.
+		and it also moves to left with diversification.
+	even governments need to have diversified portfolios.
+	you don't have to choose the point with least risk you can talk some risk on frontier and have higher returns.
+	mutual fund theorem: optimal is the one that which tangent meets the hyprbola.
+	this is called capital asset pricing model.
+	
+LECTURE 5:
+	insurance: risk mangement industry.
+	risk pooling: a lot of risky stuff when put together almost does what is average.
+	more like law of large numbers.
+	moral hazard: people doing things on purpose to get insurance.
+	Sometimes, insurances fail, people of too many incidences like during 2008.
+	
+	
 
             
 
