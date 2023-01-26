@@ -522,12 +522,153 @@ Lecture 3:
             hugely used.
         
 Lecture 4:
+	Stock market was just a game with limited liability, hence people were very interested, some would short and some would go long.
+	the geometric mean for us stock is  7 percent after even inflation considered.
+	equity premium puzzle: stocks seem to be doing better than other things like bonds etc, and the reason is risk.
+	stocks almost seem like the best investment.
+	markowitz in 1952: thought of whole thing is a statistics problem, he said giiven the data and we can compute mean, variance, covariance etc of different stocks, what is the best portfolio we can get. Nobody had thought about it his way. It is a well defined problem. The assumption being, we don't know which company would do good in future. Thats how portfolio analysis came into existence.
+	before that all people knew was, don't put all your eggs in one basket. But nobody said how to diversify.
+	let rf be the riskless interest rate: like bonds etc or borrow at that rate.
+	let some stock has average return of 20% and standard deviation of 40%
+	you draw a graph between sigma which is standard deviation of your portfolio and R is expected return of your portfolio.
+	eg 5% with 0 risk hence 0 standard deviation.
+	you can take loan for 5% and buy the stocks and you can do that.
+		this is called leverage.
+		there is no optimal portfolio, it is just about tradeoffs between risk and return.
+		in the hyperbola the point fo changing direction and above is where you have choice below it everything is suboptiomal.
+		the more the number of stocks in a portfolio higher the hyperbola moves, which is amazing and optimal.
+		the hyperbola is called efficient portfolio frontier.
+		and it also moves to left with diversification.
+	even governments need to have diversified portfolios.
+	you don't have to choose the point with least risk you can talk some risk on frontier and have higher returns.
+	mutual fund theorem: optimal is the one that which tangent meets the hyprbola.
+	this is called capital asset pricing model.
+	
+LECTURE 5:
+	insurance: risk mangement industry.
+	risk pooling: a lot of risky stuff when put together almost does what is average.
+	more like law of large numbers.
+	moral hazard: people doing things on purpose to get insurance.
+	Sometimes, insurances fail, people of too many incidences like during 2008.
 
-            
+LECTURE 7:
+	efficient markets: a theory that is half truth.
+	that markets efficiently incorporate all the information, that is there.
+	that is you cannot beat the market, market has all the information.
+	but it is not completely true.
+	some people have beaten the market, and some say they just got lucky.
+	sharp ratio: it corrects for risk taking, you can get any return you want at the expense of high risk.
+	sharp ratio shows, how much risk you took to have that return.
+	some people would take a huge risk and move to brazil if it fails.
+	you can manipulate the sharp ratio, with a few tricks.
+	fine print: legal documents.
+	
+	efficient market hypthesis:
+		stock market is like a voting machine, and its price is the best judgement.
+		i. e smartest people keep using stock market until it reaches a point where it cannot be abused.
+		hence you can't beat the market.
+		there is no prediction you can make.
+		hence market is gambling.
+		the advantage of being even 5 minutes ahead is enormous, that has created an industry of people who are faster than the rest of the word.
+		now a company makes an announcement, and it is all over the internet.
+		people analyze quick and decide, where it would go somewhere for a few minutes, and then it would stablize again.
+		everything happens within a few minutes, you can't be 24 hours late.
+		you gotta be fast.
+		own idea: keep an eye on everything, and see if there is an anamoly.
+		markets are almost efficent all the time, that you can't see anyway to make the money.
+		efficient market: security prices accurately respresent information, and it reacts to new information quickly. That doesn't mean there aren't dumb and smart people.
+		but apparently sometimes asset prices go way out of line.
+		sometimes people find a counter in research but they say look again maybe we missed something as a result that aspect of research doesn't get publised.
+		Technial analysis: trying to predict price based on charts.
+				eg resistance level: eg trouble crossing a 1000, as that is a milestone.
+				some say all you need is the charts and trends to figure out where it would go.
+				many studies show that TA doesn't work.
+				own idea:assume that people do TA and take some decision based on that, what would happen as a consequence is where you put money.
+				there is some truth to it, but overall it cannot be used to make money.
+	if price only change predictably when there is news, then for the rest of the time it would move random walkly, and on average it would stay where it is.
+	there are no patterns, people get false sense that there is a pattern, but in reality random walk can generate the similar pattern.
+	You can get fooled by randomness, and you think there is a pattern.
+	the point being if i generate a random pattern, you would find trends in it.
+	and random walk looks a lot like stock market.
+	
+LECTURE 8: Theory of Debt
+	everything is half true.
+	interest rate is the intersetion of supply and demand curve for savings.
+	people have savings supply and banks have demand for money.
+	
+LECTURE 9: corporate stocks
+	for a company to be big, it has to be on stock market.
+	equity=shares, equity means each share is equal.
+	shareholders vote for board of directors, each share is one vote.
+	you would have annual shareholders meeting where sharehoulders meet.
+	there is one CEO chosen form the board usually.
+	there is also the chair of the board.
+	board members have duty to shareholders only. You are representative of public. These are usually smart people, with no shares in company.
+	in a board meeting they can fire the CEO.
+	if you buy enough shares, you might get to be a board member.
+	there are for profit and non profit corporation.
+	universities are usually the non profit.
+		here profits go back to yale, and there are no shareholders.
+	some people serve on multiple boards of different companies.
+	the number of shares you own are meaningless if you don't know how many shares are there.
+	board members can decide to pay dividents.
+	the purpose of company is to pay divident.
+	young company usually don't pay divident.
+	they don't have to pay dividents.
+	when they pay out divident the share price usually falls, as they paid out the money they had.
+	or because people get rid of stocks after they get the divident.
+	you can issue more shares.
+	or your compnay can usse bonds or take loans.
+	if you company has debt they would pay dividents only after debt is paid back.
+	companies don't usually issue mor shares to expand, they usually save money for it.
+	dilution: issuing more shares, your ownership decrease but the value of your compnay increases hence value of your shares increase.
+	there are common stock and preffered stock.
+	preffered stock: they don't have vote, but they get the divident first.
+	common is more important than preffered.
+	once you start paying dividents, you can't stop, as people woudl feel something is wrong.
+	usually board of directors decide to have constant percent of profit as dividents.
+	a company stock price cannot be below its stockholders equity, as otherwise someone would buy all the shares, and sell the whole stockholders equity like buiildings and gain profit. hence market cap must always be more than assets - liabilities 
+	a company can buy stocks for other companies.
+	somtimes it could be 5 times more.
+
+Lecture 10: Real Estate.
+	mortgage: mortuus vadium: meaning death pledge.
+		people would mortgage their property or their slaves a thousand years ago.
+	corporates are taxed separately from individual, so to avoid taxing two times, people often don't call themselves corporate, hence call it a partnership, and law allows you to declare yourself as parntnership in a few fields.
+	government has rules for what is partnership, as it wants you to pay tax twice.
+	down payment: your part that you didn't borrow to buy a house.
+	there is also mortgage insurance available.
+	there are organizations who would buy mortgages, and banks would sell so they can have money that they don't have right now, eg fannie may would buy in US, same was freddie mac.
+	as banks can't have money somewhere for decades.
+	then these companies would be sold to public as other securities like bonds.
+	In 2008 both freddie and fanny went bankrupt, although these companies were initially founded by govt but then they went private, byt govt saved them.
+	mortgage securitization: converting mortage into security that you sell to people.
+	dadd frank act: regulations to make sure shit doesn't go real again.
+	
+LECTURE 11: BEHAVIOURAL FINANCE AND PSYCHOLOGY
+	companies care about their image, so they don't try to con as it wouldn't be good in the long run.
+	people are not completely selfish.
+	people love praise, and be praiseworthy.
+	people can very conscious of little changes about their wealth but after a point it doesn't matter if  you gain more or if you lose more.
+	even though probability of something is so low, we think it would still happen.
+	People are often over confident especially women.
+	Ceo's are not geniuses.
+	Fooled by randomness: you feel that you understand randomness.
+	You tend to believe in info that confirms your belief.
+	Eg. People not selling cause they feel it will go up and they ignore the evidence that it will go up.
+	Manupulating stocks is a felony.
 
 
+LECTURE 12: REGULATIONS
+    to make sure people are not being exploited.
+    to make sure there are not monopolies.
+    usually government bails out corporates whose failure can result in disruption, it is like am insurance.
+    Respect the regulators, seek a job there.
+    There are regulations within an organizations then there are ones among organizations and then there are ones by local govt to national to international.
+    board of directors could be thought as board of regulators.
+    Tunelling: cheating stock holders and putting money in your own pocket, like selling an asset to your brother at low price,  or paying too much to your brother in law for some contract, or paying too high salaries, insider trading: buying or selling based on information that people don't have buying shares if you price will go up and sell if you know it goes down.
+    hence board has duty of care and duty of loyalty to shareholders.
     
-        
 
 youtube:
     financial institutions:
