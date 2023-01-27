@@ -1,0 +1,46 @@
+Harvard
+-------
+
+Lecture 1:
+    How does govt. policy effect the economics.
+    How should be optimally design policies in order to maximize the welfare.
+    price interventions: taxes, welfare, social insurance, public goods.
+    Regulations: min wages, labor laws, min education laws, environment.
+
+    Govt. directly employs one sixth of US workforce.
+    tax reforms immediately affect millions.
+    we want to understand the role of govt. in society.
+    govt expenditures 1/3 GDP
+    higher than 50% in some european countries.
+    10% in US at state local level and 20% at federal level.
+
+    federal revenues:
+        income tax 44%, corporate tax 23%, payroll 37% and then there are others.
+        payroll taxes, taxes that are automatically deducted, and not via ITR. eg for health, accident etc from your salary.
+    federal spendings:
+        social securities 20%, health 23%, net interest 12% 
+        education, welfare 10%.
+        US has very less Value added Tax=VAT= tax at sale.
+            it is tax at every stage of supply chain, hence increasing the government revenue, about 160 countries use it.
+            In VAT, when you buy you pay what is asked + say 10% as VAT, and when you sell and you would get the price and the buyer would also give you VAT, you would give the VAT to government but after deducting what you had paid during buying, In a nutshell you pay all the VAT that you get from buyer and nothing more.
+            so the total tax that government gets at the end is what VAT the end point pays.
+            this is called consumption tax, some countries prefer consumption tax over income tax, and some use both.
+            VAT in india is 12.3%
+            sales tax is when you pay whole thing at the end when you sell the product both VAT and sales tax can raise same amount of money.
+            these are called indirect tax.
+            GST is a comphrensive for all value added tax.
+                one nation, one tax.
+                CGST: what you pay to center.
+                SGST: what you pay to state of consumption.
+                this bifurcation is done by them on their own.
+                IGST: for inter state trade, integrated GST, you only get this one. this one is shared 50/50 between center and the state where buyer is.
+                when you cross the threshold you have to register under GST. eg When your Turnover is >40L
+                if you are selling online, it is mandatory to be registered under gst.
+                you pay GST as a seller every month.
+                it is one unified consumption tax.
+                states get to have this gst.
+                but poor people are also paying tax this way.
+                101 ammendment.
+                rates decided by gst council,by finance minsisters of all states and central.
+
+            because of consumption tax, the income tax slabs are lower.
