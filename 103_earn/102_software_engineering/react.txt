@@ -369,3 +369,203 @@ Authentication and Authorization:
         you can create a ProtectedRoute component and make it resusedable for all routes that you want to be protected. and check based on data stored in localStorage.
         for redirecting user to page it wanted to go to but it had to login in, watch 21 lecture it is about in login instead of going to homepage check in lacation property if it wanted to go somewhere else.
         in login page, if it is already logged in redirect to somewhere else.
+
+
+
+
+
+
+REACT: udemy
+
+React is a javascript library used to create reactive web applications.
+You do do by splitting web pages into components, like header, sidebar, content, headline etc
+you build these blocks in isolation, and we bet managable web page.
+reactjs.org
+
+ReactDOM is about rendering what you created to real dom.
+you need babel to convert react code to vanilla js first.
+you have to write component names in capital, even if it is a functional component.
+jsx in javascript would not work, if you hadn't added babel as a processor.
+
+function Person(props){
+    return <div> {props} </div>
+}
+
+ReactDOM.render(<Person name="hi" />, document.querySelector('#p'));
+<Person/> would be a block level element like all react components.
+this is syntactic sugar to call the render method of it.
+
+Why web apps over applications: because you don't want to download thousands of applications.
+Two kinds of Applications:
+    single page application: only one html page, content is re-rendered on Client, everything is managed by js. No way to send requests for UI to backend. You just parse the route, and re-render.
+    Multipage Applications: Multiple Pages, Content is rendered on Server, there are links etc.
+
+The basics:
+    bundler like webpack, takes your modules and gives one output file. Web does babel thing and minification also.
+    next gen js: ES6 and above.
+    yarn is alternative to npm
+    npm start to start a development server.
+    it has hot module reloading.
+    package.json has general dependencies.
+    package-lock.json locks the dependencies.
+    react the the framework depedency.
+    react-dom is for rendering to real dom.
+    react-scripts is for development server etc, build, test, eject
+
+    public folder has your single page, that is index.html, you inject everything to it.
+    src has index.js that would be the main file that injects to your html file.
+    you don't need .js extention while importing.
+    but for css file or any other file, you have to write extention eg ".app.css" 
+    export default YourComponent
+    typically you only use ReactDOM.render once and put one composed component there.
+
+    class App extends Component{
+        render(){
+            return jsx;
+        }
+    }
+    it inherits from Component
+    we need to import React, becuase during compilation, render returns React.createElement('div', null, 'h1', "hi") if you have more components in div you have to pass React.createElement has third argument and so on. the null argument is css styles can put {className: "hi"}
+    even though we are not using React directly we still need to import it becuase of above reasons.
+
+    Functional component:
+        name your folder in capital for your components.
+        usually create a separate folder for each component.
+        try to always use ES6 to create functinal components.
+
+        import React, from 'react';
+        const Person = ()=>{
+            return <p> hello there</p>
+        }
+        export default Person;
+        //you have to use uppercase as lowercase are reserved for inbuilt html.
+        you can now use <Person> <Person/> 
+        if no children then use <Person/>
+    components are highly re-usable.
+    to execute javascript in jsx we put it in {}
+
+    working with props:
+        to pass data, and make component configurable.
+
+        <Person name="hi" age="29"/>
+                import React, from 'react';
+        const Person = (props)=>{
+            return <p>{props.name}</p>
+        }
+        export default Person;
+
+        //props means property, you can use anyname though.
+        if you pass something as child to a component, to access it use props.children
+
+    to have state within the component and not have it has props.
+        within a class you don't create properties like let name= something.
+        since it is an object you directly use name = something.
+
+        in class components you can have special property state, as there are methods in Component that would expect this property.
+
+        state = {
+            name: "rayon"
+        }
+        access state using this.state.name
+        this refers to current object, or the context of object where we are at.
+        if state changes react automatically re renders that component, thats why it is a special component.
+        but onClick ={this.switchNameHandler or use this.handleSwitchName}
+        use arrow notation to declare your functions within class as otherwise they won't have access to this.state if they are across as in onClick.
+        use variable=()=>{}
+        don't directly mutate state, use this.setState({})
+        this.setState is when react identifies changes and rerenders.
+        react hooks: a bunch of functions provided by react.
+        react 16.8 and above uses hooks, eg useState to mange state in functional components.
+        const [state, modifier funciotn]=useState({current state, could be an object.})
+        just put event handlers above return keyword in your functional component.
+        useState function replaces the whole state, whereas this.setState modifies.
+        better use useState muliple times to get different functions for each value in your state.
+        I prefer class based components.
+        prefer to use this.functionname.bind(this, arugment) in a function to pass argument instead of ()=> this.functionname(arugment) as the earlier is efficient.
+        all event handlers by default take event, or e as an argument.
+        e.target.value is the value after every change in it for onChange event. you onChange={props.changed} and changed funciton would have e as an arugment, passed by default.
+        to set value for an input element: value={varialble name}
+
+        adding stylesheet:
+            just write a css file and import it.
+            the css files are not limited to that component, it is global.
+            webpack handles it by injecting to html page directly in head, import just makes it aware that such style file exist.
+
+            inline style: just assing style property to a js object.
+            better use css files.
+
+Rendering content dynamically.
+    you can use if etc in jsx, only simple statements, you can use ternary operatons thought.
+    use ternary operations, and if you can nothing to be rendered, then return null.
+    {this.condition? <div> </div>:null}
+    to turn true to false or false to true: value: !previousValue 
+    everything in the render method gets executed when rerendering happens, and not just the return part.
+    if there is an array of jsx objects within jsx, then react automatically pulls them out of it in order.
+    directly manipulating the state can result in unpredictable errors, even if it works.
+    be careful if your copy is a shallow copy.
+    key prop is important for renderding list, it helps react update efficiently, which otherwise is highly inefficeint for react.
+    so basically without key, it sees whole list as one compnent and doesn't know what changed so it would re-render whole list, which is inefficent if list is long, but if you use keys, ti would treat every element is separate hence in case of changes only those are re rednered.
+    key should be unique, don't use index as index would change with change in size or if something removed from list, it does't need to be a number. better have some kind of id in data.
+    for event handler with mulitple arugments use (event)=> this.someting(event, arguments)
+    Object.assign or spread operator to copy an object.
+    instead of conditonally render in jsx, you can create jsx conditionally before return and then use it in jsx. or use separate function.
+    basically ask yourself, what belongs where, like in return, or in render above return or in separate function.
+
+styling react components:
+    inline styles to limite to that compnent.
+    dynamic styling is easir with inline styling object, as you can directly modify it using js.
+    to dynamically render a class, just put all applicable classes in a list and you can add and remove to it and join it before return and pass as a property.
+    in inline you cannot use pseudo selector like hover. in css you can but it would be globally applied, we can use unique ids but it is nto prefferable. There comes a library to use pseudo selectors inline 
+    npm install radium 
+        it allows inline styles with pseudo selectors.
+        import Radium form 'radium'
+        at the end export default Radium(App); //higher order component, component taking other compnent argument. Can use with both functional and class compnent.
+        now in inline style put any property within ':hover':{whatever you want to change} you have to use '', it also allows you to use media querties. '@media (min-width:500'):{}
+        but for media queries wrap your whatever you return within <StyleRoot> </StyleRoot> compnent by radium 
+    
+    but i wish there was a way to scope a css file to specific component only.
+        we can remove random.
+        we can create scoped css files.
+        you need to run npm eject.
+        we get scripts folder and config folder.
+        in config folder go to webpack.config.dev.js 
+            under module find css-loader and under options add modules:true, localIdentName: '[name]__[local]__[hash:base64:5]'
+        do same for poduction file.
+        now in your files your import anyname from './App.css'
+        now all your styles are as objects in anyname.class1 or whatever yoru classname is in css file.
+        you can assign to your inline class.
+        you can also have access to media queries as well this way without needing to do anything.
+        same way for pseduo class selectors etc.
+
+Debugging:
+    sources in browser shows your files that are there for frontend.
+    you can go to sources, and click on line right side to start debugging in browser.
+    react developer tools is better.
+
+Component Deep Dive:
+    render() method should be lean.
+    create a components folder in your src.
+    and have index.js in your src folder.
+    3 videos seen.
+
+
+
+
+
+learning from doing:
+    at the end of the day, you whole react app boils down to index.js and bundle.js file.
+    css files are added to the head in style element recursively.
+    defer boolean attribute is used by react, and it means download the script parallely and run it after the parsing of page is done.
+    your whole app is put inside the div with root id.
+    but after build, it creates css files and links them, instead of copying to head.
+    react dev tools doesn't work on build.
+    your bundle contains all your dependencies as well.
+    
+
+
+
+
+
+
+
+

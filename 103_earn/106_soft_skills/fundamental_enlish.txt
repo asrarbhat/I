@@ -1,0 +1,13 @@
+A letter is a type of grapheme, which is a functional unit in a writing system: a letter (or group of letters) represents visually a phoneme (a unit of sound that can distinguish one word from another in a particular language). Letters are combined to form written words, just as phonemes are combined to form spoken words. A sequence of graphemes representing a phoneme is called a multigraph. A digraph is a case of polygraphs consisting of two graphemes.[3] Examples of digraphs in English include ch, sh, and th. Some phonemes are represented by three letters, called a trigraph, such as sch in German.
+
+Specific names are associated with letters, which may differ with language, dialect, and history. Z, for example, is usually called zed in all English-speaking countries except the US, where it is named zee
+
+accent is that thing on letters for some langauges like in naive, godel etc.
+The English alphabet has 26 letters that are used individually in various combinations to represent between 42 and 44 different speech sounds! A range of 42 and 44 is used because experts don't agree on the exact number of phonemes found in the English language 
+
+Phonemes are speech sounds. Letters are used to represent sounds. This will be especially important when we begin counting the phonemes in words. For example, the word book has four letters, but three phonemes: /b/-/oo/-/k/.
+
+Phonemes are conventionally placed between slashes in transcription, whereas speech sounds (phones) are placed between square brackets. Thus, /pʊʃ/ represents a sequence of three phonemes, /p/, /ʊ/, /ʃ/ (the word push in Standard English)
+
+vowel is when you keep your mouth open and you close for consonants.
+syllables are units of sound, each syllables has a vowel in it, basically it is how many times you close and open your mouth.
