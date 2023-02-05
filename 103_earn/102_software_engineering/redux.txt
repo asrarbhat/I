@@ -198,10 +198,10 @@ writing clean redux code:
                 you don't need to return anything.
             }
     
-    creating slices:
+    creating slices: //to create both reducer and action at same time.
         import createSlice from @redux something.
         const slice=createSlice({
-            name: 'store',
+            name: 'store',//name of slice
             initialState:[],
             reducers:{
                 bugAdded: (state,actions){
@@ -212,7 +212,7 @@ writing clean redux code:
             }
         })
         it automatically creates actions and action generators.
-        it creates a object, with actions, reducer etc in it.
+        it creates an object, with actions, reducer etc in it.
         you can export the actions in it and the reducer and use in store and everywhere else.
         in dev tools you will see name of actions as nameinslice/nameofaction
         we don't need to create actions now.
@@ -275,7 +275,7 @@ middlewares:
     creating middleware:
         create middleware folder in store
         add file logger.js in it to log every action.
-            const logger=store=>next=>action=>{//currying
+            const logger=store=>next=>action=>{//currying SNA like dna
                     console.log(store, next, action)
                     next(action)
             }
@@ -285,11 +285,11 @@ middlewares:
             reducer,
             middleware: [logger]
         })
-        store is an object that looks like store not exact store, and next is a function.
+        store is an object that looks like store not exact store it just has few properties from store like dispatch etc, and next is a function.
         you have to call next()
 
-        if you are using @redux toolkit.
-            createStore(reducer, applyMiddleware(logger));
+        if you are NOT using @redux toolkit.
+            createStore(reducer, applyMiddleware(logger));//applyMiddleware is one of store enhancer.
             import applyMiddleware from redux.
     
     parametrizing middleware:
@@ -297,8 +297,9 @@ middlewares:
         put logger("console") now instead of logger
     
     dispacting funcitons:
+        actions by default should be an object.
         create middleare function
-            const func= soter adn so on.
+            const func= store adn so on.
             {
                 if (typeof action=='function')
                     action();
@@ -330,13 +331,13 @@ calling API'S:
     if you need await in your middleware, then you need to put async action =.{
         await and stuff.
     }
-    you can make api call by taking object as action with payload having url and stuff.
-    with api calls use try catch blocks.
+    you can make api call by taking object as action with payload having url and stuff instead of using functions as actions. Better never use functions as actions.
+    with api calls use try catch blocks. if in catch update state accordingly.
     you can put next() for original action and below it have your api call and both actions would be dispatched till the end.
     properties in store like loading: false to have that spinner, and lastFetch: time, to have autorefresh after some time are cool.
     you can cache by checking when was last api call, and then not fetch if it was less than 0 minutes ago.
 
-we can use react hooks for api calls instead of thunk.
+    we can use react hooks for api calls instead of thunk.
     
 integrate redux into react:
     unmounting component doesn't only mean delete it means not in viewport.
@@ -352,9 +353,9 @@ integrate redux into react:
         <Provider store={store}>
         use this provider instead of one from context.
         you don't need context.
-        now store is passed as a prop to the component.
+        now store is passed as a prop to the component. like props.store
         and you don't subscribe or unsubscribe in your component, instead:
-            const mapStateToProps = state=>({
+            const mapStateToProps = state=>({//could use any name for functions.
                 bugs: state.entities.bugs.list
             })
             const mapDispatchToProps= dispatch=>{
@@ -363,6 +364,8 @@ integrate redux into react:
             export default Bugs = connect(mapStateToProps,mapDispatchToProps)(Bugs)
             here Bugs is a component, and now in Bugs you can use this.props.loadbugs()
             and this.props.bugs 
+            above you mapings describe what part of store are you interested in.
+
         
         you don't need to worry about subscribing and unsubsibing.
 

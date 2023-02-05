@@ -546,8 +546,225 @@ Component Deep Dive:
     render() method should be lean.
     create a components folder in your src.
     and have index.js in your src folder.
-    3 videos seen.
+    stateful: could be class or functional, also called container component.
+    stateless: presentational component.
+    try to have as less components as possible that manage state, that way presentational compnents only show stuff and we know where state is.
+    since react 16 even functinal components can have state.
+    functional components do not have lifecycle hooks, they have access to state though.
+    use class components if you need to manage state or access to lifecycle hooks and you don't want to use react hooks, otherwise use functinal.
+    sending props eg appTitle="person"
+    lifecycle compnents only available for class components.
+        first constructor(props)
+                super(props)
+                is executed.
+                if you have constructor.
+                you can use this to setup initial state.
+    make sure your methods are not causing infinite re-rendering.
+    use this.props in class components.
+    you can set state based on props in constructor.
+    google or ask chatgpt: i want a function to call when my prop is changed, and it will give you the lifecycle hook etc, this is how you code in react.
+    hooks in functional components:
+        useState to create a state.
+        useEffect:
+            all lifecycle hooks in one hook.
+            by default it runs for every render cycle, hence as good as componentDidUpdate
+            it also runs when compnent is created, hence also as good as componentDidMound
+            note: react first checks if it needs to touch the real dom or not.
+            it takes second argument as a list and it would only run when your date in array changes.
+            if you pass an empty array, it has no dependencies hence it can't rerun hence it would only run the first time.
+            componentWillUnmount for cleanup in class components.
+            for functinal components return from useEffect an anonymous function that would run everytime component unmounts if it has empty array as arugment, if there is no array as second arugment or non empty, it would run on every time that changes.
+            you can use multiple useEffect().
 
+    how react updates dom:
+        it compares old virtual Dom and re-rendered virtual dom, and it checks if there are differences, it then only updates places where update are made. real dom is only touched if needed, virtual dom is very fast.
+    
+    react allows your render to return array as long as they have unique key as array is still a single element, hence if you use commna after each compnent you can return muliple elemnts, but better use React.Fragment.
+    hoc: higher order components ones that take other components or returns other componets.
+        it can be use to create React.Fragment like element that just returns props.children.
+        React.Fragment is a hoc that returns children.
+    
+    create a separete folder for hoc.
+    hoc, just wraps other compnents, or appends anything to it.
+    naming convention: WithSomething.
+        you take imput as props.children for hoc.
+        you can pass multiple components as children.
+        if you create a regular function to take compnent as argument, it has to start with capital.
+        hence you can create a js function as hoc that takes component as arugment and returns a functional or class component with your arugment compnent and might as well take props if needed.
+        you can add logic to your hoc.
+        you usually export with hoc in that file.
+        {...props is cool}
+        setState is asynchornous and it is scheduled.
+        when you new state depends on old state.
+            use this.setState((prevState,props)=>(
+                return{something: someting, a:prevState.changeCounter+1}
+            ))
+            this solves the problem of it being asynchornous.
+
+    
+    to make sure props are being used correctly use proptypes, it is build by react people.
+    you add property to your component:
+        Person.propTypes={
+            click:PropTypes.func,
+            name:PropTypes.string
+        }
+        people would get warngings.
+    
+    Refs:
+        just set ref property in any component.
+        ref={(inputEl)=>{this.inputElemment=inputEl}}
+        now you can use anywhere this.inputElemment.focus() or anything.
+        or better use React.createRef() to create a reference.
+        and set ref={this.varialbeNameForRef}
+        this.varialbeNameForRef.current gives you ref you can call focus etc on it.
+        for functioal compnents.
+            const toggleButtonRef=useRef(null);//null is intitial value 
+            you can now use it as you want.
+
+    Context: to not pass props via multiple layer if middle layers don't want it.
+    const c=React.createContext({
+            optional initial value.
+    }) 
+    export c 
+    it is  plain js object.
+    wrap your componets which you want to have context to and its children in <AuthoContext.Provider value={{the value for context if you din't pass initial vlaue}}>//the value is a prop and it would update these values in your initial state.
+
+    whereever you want to consume it use .consumer component, if it takes function as a child, that takes context obect as an argument.
+    you return your jsx code.
+
+    better way to use in class componets:
+        instead of consumer
+        add in your class static contextType=AuthConext;
+        it allows you to access the data using this.context.whatever, the name has to be contextType
+    
+    in functional compnents:
+        const abc=useContext(AuthContext)
+            abc.wahtever now use 
+            useContext hook is for functional compnents.
+    
+    redux also helps us with this.
+
+planning a react application:
+    1. plan the component tree/component structure.
+    2. application state(data)
+    3. components vs containers.
+
+    draw a tree of components on paper.
+    summarize state for whole application separately as json object, and then decide what would be put where, always put at the parent of all components where it is needed, all other components should be stateless.
+    App compnent is for layout.
+    create a folder for each component that starts with capital.
+    you can use propTypes on functional components as well.
+
+Http requests in React:
+    react and server communicate using json.
+    componentDidMount is best place to send http requests.
+    axios.anything() returns a promise.
+    within then you can call this.setState
+    componentDidUpdate can send infinite request, so use a conditional statement in it to send request only once.
+    you can use .catch for promise to handle error or use try catch.
+
+    in index.js 
+        import axios.
+        axios.interceptors.request.use(request=>{
+            //make edits
+            return request; //you always have to return the request otherwise you are blocking it, all requests go throught this.
+        },error=>{
+            if error happens.
+            return Promise.reject(error);
+        })
+        can do the same for responses as well.
+        you can add headers to requests here for requests that you send, or set some global configurations.
+        eg axios.defaults.baseURL("http..com")
+        now send request to /posts or something.
+        axios.defaults.headers.common["Authorization"]="Auth Token";
+        axios.defaults.headers.post['Content-type']="whatever"
+        you can create instances of axios to have configuration for specific parts and not others.
+
+Testing React Apps:
+    Writing automated tests.
+    Writing units tests for apps created using create-react-app
+    Testing: build app, test manually, then ship it to server, but we can automate tests after manual tests.
+    everytime before we send to server, these tests run.
+    or during we build and before manual testing.
+    test driven development: write tests before code, all tests fail initially then as you build, tests start to pass.
+    we write tests for components.
+
+    Testing tools:
+        Test runner: executes our tests and provides validation library.
+        we use jest, it comes with create-react-app you can also install it if not here.
+        testing utilities: simulates the react app like react test utils, enzyme
+    
+    What to Test:
+        don't test the library, third party libraries etc are not tested.
+        you test what you wrote.
+        you fake data that you get from database.
+        don't test complex connections.
+        do test isolated units.
+        do test your conditional outputs.
+
+    
+    Writing Test:
+        make sure npm start is not running.
+        npm install jest 
+        npm install enzyme react-test-renderer enzyme-adapter-react-16 
+        most of functions are functional components and they only depend on props.
+        create ComponentName.test.js //has to be this name for command to find it.
+
+            import {configure,shallow} from 'enzyme';
+            impor Adapter from 'enzyme-adapter-react-16'
+            configure({adapter:new Adapter()});
+            import ComponentName form'./componentName';
+            improt React from ..
+            describe('<ComponentName/>',()=>{
+                it('should render two <somecomponent/> elements if not authenticate',()=>{
+                        const wrapper=shallow(<componentName/>)//this is shallow renders that is children are not rendered.
+                        //now write your expectations.
+                        expect(wrapper.find(SomeComponentName).toHaveLength(2));//to have it two times there.
+                })//just some meaningful test.
+
+                //enzyme allows us to render just that component.
+
+            })
+        defualt exports can be named anything while importing.
+        run the test script npm run test.
+        copy it function and paste it below first one, and write second test case.
+        you can give props directly there to functional components.
+        just save and hot module reloading would do the trick.
+        there is a beforeEach method that takes a function with no arguments and you can do some ttuff ther and also have a AfterEach is also there.
+        for wrapper you can set props using wrapper.setProps({props})
+
+    
+    testing class componets would be same assuming redux works perfectly.
+    just export your class, even though it is your default export as well, but default export has connect in it so export it separately as well.
+    and test it similarly, set props etc as that.
+
+    to test redux:
+        reducers are what you want to test.
+        reducers are pure functions hence easy to test.
+        import reducer.
+        and import action tests.
+        now write your tests.
+        
+Hooks:
+    from react 16.8
+    functional components only take props.
+    lifecycle hooks can be hard to use.
+    use in useState means it is a hook. we use array destructing with it.
+    useState returns an array.
+    in hooks you can directly use old state while setting.
+    try to use different useState for every varialbe.
+    you can only use useState inside your functional component at top level, you can't use it in conditional and you cannot use it in funciton within component.
+    useEffect takes a function that runs when component gets for the first time after render.
+    keep your render function as clean as possible and as fast as possible.
+    keep your things in useEffect
+    useEffect runs after render always, if you give second arugment as array, it only render when things in that array change, if you keep it empty it only  runs once.
+    if you want to cleanup you can return a function and it would run everytime as well affter the main function in useEffect. you undo stuff you did within the function that you had in useEffect, but it still runs everytime with other funciton, if you give second argument as empty array to this, it would only run when the component gets destroyed.
+    
+redux:
+    there is only one reducer, you merge multiple to one ultimatelly.
+    by defualt value of store is undefined.
+    you can give intitial state in reducer.
+    create store in index.js better.
 
 
 
@@ -560,8 +777,40 @@ learning from doing:
     but after build, it creates css files and links them, instead of copying to head.
     react dev tools doesn't work on build.
     your bundle contains all your dependencies as well.
-    
 
+
+    
+jest:
+    JavaScript Testing Framework.
+    It can be used with frontend and backend.
+    npm install jest //save as development dependency.
+
+    create file, filename.test.js
+                it("should add 1+2 is equal to 3",()=>{
+                        const result=sum(1,2);
+                        expect(result).toBe(3)//this is called a matcher, there are multiple matchers available.
+
+                })
+                you don't need to import it or expect.
+                npm run test
+            
+            you can group related tests in describe.
+
+            describe("name of tests",()=>{
+                it("what your test would do",(=>{
+                    expect(result).toBe(expected)
+                }))
+                  it("what your test would do",(=>{
+                    expect(result).toBe(expected)
+                }))
+            })
+
+            to run specific test suite just run that file in node.
+            toBe doesn't work for objects equality, but toEqual does.
+            expect(n).toBeTruthy() or toBeFalsy() 
+            expect(n).not.toBeFalsy();
+            you can put multiple expects in a test.
+            describe is a test suite.
 
 
 
