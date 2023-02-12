@@ -6,10 +6,11 @@ spring overview:
     for enterprise java applications.
     similar to j2EE.
     we had servlets and jsp in 1999 in j2EE.
+    J2EE had beans also.
     but j2ee was too tedious and error prone, and poor performance.
     hence we got spring finally.
     we got spring in 2004, and spring 4.3 in 2016.
-    skill is most sought after java skill set by employers.
+    spring is most sought after java skill set by employers.
     you can learn spring or you can learn java EE or you can learn both.
     better learn both, they are similar.
     spring 5 was released in 2017
@@ -17,6 +18,7 @@ spring overview:
         and MVC now use servlet api4.0
     this will cover mostly spring 4.
     official website: www.spring.io 
+    think of java EE has another framework like spring.
     spring simplifies java enterprise development.
     goals of spring:
         lightweight development with java POJOs (plain old java objects)
@@ -35,7 +37,7 @@ spring overview:
     
     Data Acess Layer:
         to communicate with database.
-        it has jdbc, orm, transactions, oxm, jms.
+        it has jdbc, orm(object relational model to access database like jpa etc ), transactions, oxm, jms.
     
     web layer:
         servlet, websocket, web, portiet.
@@ -54,7 +56,7 @@ setting up development environment:
     java application server: tomcat
     ide: eclipse.
     
-    tomcat 10 was released in 202.
+    tomcat 10 was released in 2002.
     tomcat9 works with spring5.
     download tomcat.
     tomcat runs on 8080 by default.
@@ -71,7 +73,7 @@ spring inversion of control:
     create classes in it.
     POJO: plain old java object. //normal kind of java.
     to be configurable means to have to make a change at configuration file and everything is done underneath. Interface gives us some kind of polymorphism.
-    but in spring we have object factory, and we use configuration files to do our tasks.
+    but in spring we have object factory, and we use configuration files to do our tasks, eg what implementation of interface we would use would be decided by configuration file, instead of us creating the object of specific implementation.
 
     Spring container:
         primary function:
@@ -94,7 +96,7 @@ spring inversion of control:
                 <bean id="myCoach" class="com.abc.BaseballCoach">
             </beans>
         step2: create a spring container:
-            spring container is generally know as ApplicationContext 
+            spring container is generally known as ApplicationContext 
             Specialized implementation:
                 ClassPathXmlApplicationContext
                 AnnotationConfigApplicatonContext
@@ -134,5 +136,5 @@ spring inversion of control:
         now to configure, all you have to do is change the class to BaseballCoach in configuration file, we made no changes to code, which is amazing.
         
 
-            
+section 5:
 

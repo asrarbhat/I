@@ -210,3 +210,59 @@ MVC design:
             you can autowire controller class in integration test.
             `
         }
+
+
+spring-boot:
+    the goal of spring is to minimize the manual configuration.
+    it provides inbuilt server like tomcat, jetty etc
+    no need to install server separately.
+    if you make jar of your app it would have tomcat in it, hence it is self contained.
+    spring boot uses spring boot underneath.
+    snapshot means versions that are alpha or beta.
+    maven wrapper automatically downloads correct verions and runs your program.
+    spring-boot-starter-web is just a bunch of basic dependencies.
+    @SpringBootApplication enables, auto configuration, component scanning, additional configuration.
+    component scan annotation automatically scans all packages recursively.
+    configuration annotation registers beans.
+    only scan sub packages so make sure your main file is at top and other packages are next to it in a directory.
+    if your packages you somewhere else, you would have to give explictly where else to scan, in your main file that has main method.
+    by default, properties are read from application.properties in src/main/resources
+    you can add spring boot properties here, you can even add custom properties.
+    to read any value from there in your say Rest controller, you can inject it like:
+        @Value("{$server.port, or name or whatever}")
+        private String coachName;
+    there is static folder also in resources for html and there is templates folder also.
+    thymeleaf is a template engine.
+
+    spring boot starter is a curated list of maven dependencies.
+    you simply select web in spring initializr to get it.
+
+    spring boot actutor to monitor health of our application, /health, /info automatically added to your application, /beans gives you all beans and there are other endpoints as well.
+
+    properties in application.properties
+        logging.level.org.springframework=DEBUG 
+        you give log file name also.
+        you can set port 
+        context path means after port it should also have this.
+        security properties.
+        jdbc urls 
+
+    lighening bolt: that icon to run.
+    JPA: java persistence API, standard api for object to relational mapping (orm)
+        it is only  a specification.
+        it requires implementation.
+        hibernate is one of its implementations.
+        jpa spec: jpa specifications.
+        in spring boot hibernate is underneath.
+        DAO stands for Data Access Object. It’s a design pattern in which a data access object (DAO) is an object that provides an abstract interface to some type of database or other persistence mechanisms. By mapping application calls to the persistence layer, DAOs provide some specific data operations without exposing details of the database. 
+        we get a DAO interface.
+        there are different DAO techniques.
+            spring DATA JPA is the best one.
+            it gives crud implementation for free.
+            you just create an interface that extend jpaRepository and takes table name and primary key type as parameters, and that is it, no need to write any code.
+            you get crud methods for free now.
+            no need for implementation class.
+            you just create an object of that interface.
+            before spring data jpa we had to implement crud methods as well.
+            
+
