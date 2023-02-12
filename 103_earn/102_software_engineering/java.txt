@@ -1806,14 +1806,97 @@ amigos code junit5:
  in intellij ctrl+shift+t to create test
 
 
+youtube:
+    to disable a test: @Disabled("Not implemented yet")
+    you can also run just one test that you wrote.
+    @DisplayName("this tests abc")
+
+Junit5:
+    if you write the tests then it is called automation testing.
+    you have to test after every change: called regression testing and it is not possible timewise with manual testing.
+    testing framework takes care of things that are used for each test, so we don't have to repeat ourselves, like running the test, alerting as output if tests fails and provide a rise report.
+
+    Archtecture of junit:
+        there is a platform which is the core, and it provides an api called jupiter eg assert etc.
+        it is called jupiter because jupiter is 5th planet and this is junit5.
+        vintage is another set of api to run old tests as junit5 is different from junit4, like a new technology.
+        so new tests use jupiter and old tests use vintage.
+        EXT (for 3rd party api) and using same engine/platform underneath.
+        platform is what runs your tests.
+        IDE's use platform directly.
+        you need two dependencies, the engine and the kind of api.
+    
+    fail("not implemented yet")
+    @Test tells the engine, that this is a test, and you have to run it.
+    click on run as and then junit test.
+    if test reaches the end, it is marked as passed. No News is Good News.
+    junit only runs methods with @Test annotation.
+    make sure assertions and Test are imported from jupiter in junit5.
+    you can assert for arrays also, same for iterables.
+    you can give third arugment to assert statements and it would be a string telling what you expected it makes it easier to figure out what failed.
+
+    testing driven programming: writing tests first.
+        you write a method and its return type only and then you go to test and write the tests, and then complete rest of the implementation of your code.
+        you tests fail initially and as you start implmentating, things start to pass.
+
+    you can also run tests using maven, gradle etc.
+
+    to check if method is throwing right exeption when it needs to:
+        assertThrows(ArithmeticException.class, ()->math.Utils.divide(1,0),"that string that we talked about")
+    
+    Test lifecycle:
+        engine creates an object of your test class.
+        it doesn't have to run your tests in order of declaration.
+        junit creates new object for test class for every test method in it, hence don't put state outside these methods.
+
+        hooks in junit: methods that you can run at the beinging and at the end.
+        @BeforeAll @AfterAll @BeforeEach @AfterEach
+        you can create all objects in beforeEach call it init method. you have to create objects outside though, just initialize them in init().
+        BeforeAll and AfterAll are executes before object is create and after object is destroyed, hence methods related to these two have to be static.
+
+        above your class name:
+            @TestInstance(TestInstance.Lifecycle.PER_ClASS or PER_METHOD)
+            //this decides how many instances of your test class would be created, that if you want one for each test or not.
+            for PER_CLASS you don't need to make those two methods static.
+        
+    
+    Annotation to scale your tests:
+        @DisplayName("testing add method")
+        @Disabled("not yet implemented") //this test would be skipped.
+
+    conditional execution:
+        @EnableOnOs(OS.LINUX) //it would be disabled on other.
+        same for JRE11 etc 
+        or based on environment variables.
+    
+        Assertions are static import.
+        assumeTrue(condition like if server is up)//it would go to next statement only if this condition is true or it would skip.
+    
+    assertAll(
+        ()->assertEquals(1,2),
+        ()->assertEquals(1,2),
+        ()->assertEquals(1,2),
+        ()->assertEquals(1,2),
+    );
+
+    if you want to test same method for muliple values, you can create a class within your test class and test all your tests there with different display names and annotate that class as Nested
+    junit puts these tests under one branch in a tree, if any one of them fails, the whole class is market as fails, hence of all its children have to pass,you can put display name for your whole class as well.
+
+    the message string that you give as third arugment should be put in lambda and returned as that way it is only computed if test fails, eg if you are appending expecting and actual value to it etc.
+
+    @RepeatedTest(5) instead of @Test
+        test is sucessfull if everything repetition is scuessfull.
+
+    tagging for grouping:
+        tag your tests as @Tag("math")
+        as many tags as you want.
+        you can select a tag and run only tests under given set of tags.
+    
+    
 
 
 
-
-
-
-
-
+        
 
 
 
