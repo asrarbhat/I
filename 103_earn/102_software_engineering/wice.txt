@@ -18,4 +18,84 @@ Verify Request:
 Legal documents
     
 New Automation build:
+
+Agile Transformation:
+    squad independence.
+    three work streams:
+        product automation: minimize the IC work in products, just submitter submits and then IC does minimization, ZBA is done we may do it for payments next.
+        
+        product development: building more features like Api's.
+        customer onboarding:
+            client onboarding.
+        confluence: display/emrollrm/squads
+        there is bpm, backend, frontend, testing.
+        6,9,12 for product automation 
+        4,10,11 for product development 
+        squad names: ENROLL IND 11, ENROLL US 5 etc
+
+another lecture:
+    wiceueuat has backend in cloud the ui is not cloud.
+    loader api pulls existing data.
+    backend for this is done in spring.
+    wicieueuat uses mongodb.
+    elastic search has logs for what exactly happened, basically the logs for each step.
+    wice ui calls sbs and dsof calls fe, for generation fo ach id.
+    the goal is to move from oracle to mongo.
+    now orders directly go to mongo codebase in submitter flow.
+    
+
+lecture 1: drive 
+    dsof-uat.wellsfargo.com 
+    full order: dsof order 
+    express request: ssm order or self service maintenance order.
+    in express request you work with exising account, you clone and copy to create new request.
+    ceopay, business essentials, business manager are different products, you can have some in certain combinations but no other.
+    we have WCIS client id.
+    sebs is some kind of backend.
+    there are very few products in dsof, liek ceopayments etc.
+    your order is submitted to wice.
+    we use mongo and oracle for dsof.
+    you create dsof order in UI.
+    the code is processes in dsof-fe and sebs-fe
+    the goal is to move to mongo completely.
+    after dsof request is completed, it goes to wice for legals and stuff.
+    this whole thing is a event driven chain.
+
+lecture 2: drive 
+    there is no ceoid for new companies.
+    stp: straight through processing.
+    rpa: robotic process automation.
+
+Lecture 3: drive 
+
+Lecture 4: drive
+    bpm: those shitty pages in wice, those are dealt by bpm.
+    rest of the pages are from react.
+    wiceue works with mongo.
+    you can create wcis id.
+    sebs is a backend system.
+    graphql is good for read.
+    bpm builds the products.
+
+Lecture 5: drive 
+    FE: fullfillment engine 
+    we work with enrollment of wholesale customers.
+    wcis: wholesale customer information system.
+    DEV — Development [Software developer]
+    SIT — System Integration Test [Software developer and QA engineer]
+    UAT — User Acceptance Test [Client]
+    PROD — Production [Public user]
+    Quality assurance (QA) testing is the process of ensuring that your product is of the highest possible quality for your customers. QA is simply the techniques used to prevent issues with your software product or service and to ensure great user experience for your customers.
+    Business process management (BPM)
+    wellsfargo sales person would be a submitter.
+    after dsop FE does some processing and now we go to wice.
+
+LECTURE 6: drive
+    nothing much
+
+
+
+
+
+
     

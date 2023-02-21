@@ -1,3 +1,36 @@
+Annotations in java:
+    Annotations are metadata, they are supplemental information that you put in your java code.
+    something else processes those annotations.
+    eg @SuppressWarnings("unused")
+    you can pass parameters for some and not for other, and some might have it a requirement.
+    you can annotate: classes, variables, methods even other annotations.
+
+    building your custom annotation:
+        eg for classes 
+            @VeryImportant annotation for classes.
+
+            create a:
+                @Target(ElementType.TYPE) //like classes etc you can pass multiple in {} separated by commas. ElementType.METHOD methods. Field for fields 
+                @Retention(RetentionPolicy.RUNTIME) if you use source it means java will get rid of them before complilation.
+                public @interface VeryImportant{
+
+                }
+                object.getClass().isAnnotationPresent(VeryImportant.class);
+                can be used to check if it has annotation 
+                for method names: method.isAnnotationPresent(annotion.class)
+                to invoke a method you can call method.invoke(object to call on)
+            
+            to have parameters:
+                in interface put 
+                    int times(); to have int times varialbe.
+                    you can assign an annotation you have during processing to that interface type and you can now get value of variables.
+                    annotiaotn.times();
+                    you can put default value and now value becomes optional.
+                    classname.getDeclaredFields() would give you all fields in a class.
+
+
+
+
 openjdk ->opensource java development kit
 SE: standard edition,there are different editions like EE is for enterprise edition.and Micro 
 jdk: java development kit = compiler plus JRE 
@@ -1895,18 +1928,6 @@ Junit5:
     
 
 
-
-        
-
-
-
-
-
-
-
-        
-    
-
 mobile:
     javac -d . packagename/*.java
 
@@ -1916,3 +1937,95 @@ project == name of your folder where everything will be.
 
 src/main/java for main code.
 src/main/test for test
+
+
+Mokito:
+    Test double: stub, Mock, spy etc 
+    Fake objects: they have working implementtation, but not as actial as prouction, basic logic.
+    Dummy objects: you just create a class and provide no implementation,it i sued to make the code compile nothing more than that.
+    Stub: provides predefiend answers directly. Everything is hardcoded.
+    spy: spy objects are similar to stubs but they record information about how they were executed. It helps to verify behaviour interaction. It is very helpful when methods return nothing and you don't know how it worked. you just call a variable or a list that records everything you do in the stub, basically you add behaviour verifiction to your stub,you can verify things in your test with those fields to verify the behaviour.
+    Mock: similar to spy, but verification is done by Mock itself and not in test.
+
+    All these are complex to do manually so we use mockito to replace them.
+
+    class under test: CUT 
+    mockito is open source tesing framework for java.
+    you create a mock using mock() funciton.
+    when().thenReturn()
+    Mockito.verify(obj).save(book1)//to verify that save method was called on our mock obj with arugment book 1, helpful when methods don't return anything.
+    to create a spy use spy method instead of mock 
+
+    using annotations.
+        tests are public void type.
+        annotations are also imported.
+        instead of calling method we use:
+        @Mock 
+        Classname object;
+        but now we need to tell mockito to tell what to do with this Mock as this is created by separate libary, so you need to use annotaiton on your test class as @ExtendWith(MockitoExtension.class)
+        you can use when and thenReturn same way. in junit 4 we use @RunWith(MockitoJunitRunner.class), instead of extendswith. if you are using other runners also, like spring runner, in that case you can configure this is @Before method.
+        instead of creating constructor you can inject mock.
+        @InjectMocks
+        private Bookservice bookservice;
+        
+    when and thenReturn are used for stubbing.
+    another way is doReturn and when().
+        doReturn(2)when(bookrepo).add(1,1);
+    Mockito uses equals() method while mathcing arugments during stubbing.
+    if response is not stubbed, mockito returns default value.
+    you can create mocks and inject them outside methods in test class.
+
+    if method returns nothing:
+        example: a save method.
+        doNothing().when(bookRepo).save(book);
+        equals by default just checks using ==
+        this could cause a problem if objects are being created internally as well.
+        you can solve by overriding equals method in your original class.
+
+    behaviour verification:
+        done by verify method.
+        verif(obj).save(book) //to verify save method was called on obj.
+        verify(obj, times(2)).save(book);
+        times can be 0 also.
+        verifyNoInteractions(mockobject); //to verify no interactions were made.
+        using when is called stubbing in mockito.
+        verifyNoMoreINteractions(mockobj); it means no interactions were after this point.
+
+        to check the order in which things were called.
+        Inorder inorder=Mockito.inOrder(book);
+        inorder.verify(whatever)...
+        inorder.verify(whatver)
+        now order is take into consideration.
+    
+    throwing exception:
+        when(abc.d()).thenThrow(SQLException.class)
+        now you can use assertThrows(exdpetionname.class,()->bookservice.getTotal());
+        for void methods when doesn't work so we use:
+            doThrow(SQLException.class).when(abc).d();
+        
+    Arugment captor:
+        lets say an arugment to your method somewhere is created within that class and not injecte.
+        ArgumentCaptor<Book> bookArgumentCaptor = ArgumentCaptor.forClass(Book.class);
+        verify(bookRepository).save(bookArgumentCaptor.capture());
+        Book book =bookArgumentCaptor.getValue();
+        or directly use:
+            @Captor 
+            private ArugmentCaptor<book> bookArgumentCaptor; insead of creating it other way.
+    
+    spy:
+        spy tracks every interaction.
+        called partial mock.because it is connected to original data as well.
+        you can use @Spy annotation.
+        if there is a method that you don't need to mock, you can call it.
+        you mock what needs to be mocked and for .
+        you can call method on this mock and it would work.
+        spies are cool.
+        so basically spies take stuff from original class and copy to them.
+        you have to use doREturn when with spies as when().thenReturn would call the original method.
+        you get same behavioural verifications for spies.
+
+        BDD: writing test cases in natural langauge, that focuses on behaviour and not requirements.
+        
+
+
+

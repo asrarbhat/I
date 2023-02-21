@@ -1,0 +1,19 @@
+Its a devops tool.
+devops vision: continruous flow of updates.
+artifactory: where you store and manage all types of packages, your own and ones you need.
+xray is for clear security and compliance.
+
+artifactory: universal binary repository manager.
+it is a proxy for remote reporsitories.
+it is faster, and you can enforce policies with xray.
+it gets them from original sources.
+checksum based storage.
+CI server pulls from your git and builds.
+reporsitories:
+    local, one on your jfrog for you.
+    remote, it is proxy for another network like mavencentral.
+    virtual repository: aggregates of number of reporsitories under a single url, helps to have single url for all kind of dependencies.
+
+naming convention for reporsitories: team-tech-maturity-locator
+                                     webinar-npm-dev-local
+you can use it for any programming langauge.

@@ -1,0 +1,10 @@
+plugins{
+    id 'application'
+}
+group = 'com.rayon'
+version = '1.0-SNAPSHOT'
+
+repositories{
+    mavenCentral()
+}
+mainClassName = 'com.rayon.first.Main'

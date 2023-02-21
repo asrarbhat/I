@@ -136,5 +136,68 @@ spring inversion of control:
         now to configure, all you have to do is change the class to BaseballCoach in configuration file, we made no changes to code, which is amazing.
         
 
-section 5:
+spring dependency injection:
+    the client delegates the calls to another object the respoinsibility of prividing its dependencies.
+    spring has object factory that has xml configuration file and it would provide the objects.
+    there is constructor injection and setter injection.
+    lets say you have an interface of a dependency and a few implementations.
+    create a constructor that takes object of the interface type and set it to your object.
+    create a bean in xml.
+    to inject it to your object we put instead <bean of object that takes dependencies> <constructor-arg ref="myFortuneService"(id of dependency bean) /> </bean>
+    now when spring reads your xml it creates objects for all beans and wherever you ask it also injects dependencies.
+    #amazing.
+    the name of the objects created by spring framework is same as the id you provide.
+    class in xml has to be full package name till class.
+    the java creates default constructor only if there isn't any, if you create one with paramter, java doesn't create one without parameters.
+    you set using setter injection:
+        in <bean> put <property name="fortuneService" ref..same/>
+        it looks for setFortuneService.
+    
+    injecting literal values:
+        <property name=.... value='3' /> 
+    to read these things from a properties file instead of hardcoding in xml file.
+    create abc.properties 
+        foo.email=abc@d.com 
+        load properite file to xml 
+        <context:property-placeholder location='classpath:abc.properties"/>
+        now use value="${foo.email}"
+
+
+spring bean scopes and lifecycle:
+    scopes refer to lifecycle of a bean 
+    how long does the bean live.
+    how many instances would be created, and how would it be shared.
+    default scope is singleton:
+        spring container creates only one instanc eof the bean by default and it is cached in memory, all requested would be shared reference to the same bean.
+        hence if you use same context anywhere, changes reflect.
+        <bean scope='singleton" ... 
+    
+        proptype scope: create new bean for each request even though container/context is same.
+        request: scoped to a http web request.
+        session: for http session.
+        global-session: scoped for global http web session only for web apps.
+    singleton is best as less beans are created.
+
+    Bean Lifecycle:
+        container started ---> Bean Instantiated ----> dependencies injected ----> Internal Spring Processing -----> YOur custom Init method--->your application runs ------->your custom destory method ------>stop
+
+        you can add custom code during bean intialization.
+        calling custom business logic methods.
+        setting up handles to resources(db, sockets, file etc)
+
+        you can add custom code during bean destruction
+        calling custom business logic method.
+        clean up handles to resources like db, sockets, files etc
+
+        in <bean add init-method="doMyStartUpStuff"> same for destroy-method="whatever" 
+        these methods cannot take any arugment they can have any access modifer and they can return anything.
+
+        these methods are within the class.
+        these are life cycle methods of beans also called hooks.
+         
+        for prototype scoped beans, spring does not call the destroy method,it just hands over object and doesn't care what happens to it. you have to do cleanup on your own applies to annotatins as well.
+        
+
+
+
 
