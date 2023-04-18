@@ -5,7 +5,7 @@ if  your video is shaky:
     this is one of the many effects that we will learn.
 
 click on premier pro to open a project or create new project.
-set a name for your project, you set where to save it, you can choose compute power as well that your device has, keep other settings to defualts, scratch disks button means where would the edited stuff get saved so keep it to same as project. and now adobe premier pro will open up.
+set a name for your project, you set where to save it, you can choose compute power as well that your device has, keep other settings to defualts, scratch disks button means where would the edited stuff get saved so keep it to same as project. and now adobe premier pro will open up. capture means if you want to record using your camera directly now.
 
 you want to have four panels up there, and to set it that way go to window, then to workspace and click on editing and that is the workdspace we will be working in.
 
@@ -40,7 +40,7 @@ to import footage:
     within video you can create multiple folders for multiple camera's 
     you can create b-roll folder for video's for footage that describes what the narrator is taking about, or the footage that one cuts to, also called cut away footage.
     there is no set rules, just follow any convention.
-    you can rename things within premier pro as well.
+    you can rename things within premier pro as well. give things descriptive names.
     you can see info about your files, like framerate etc for video and same for audio.
     media browser in window, if that tab is open it will show you preview of videos that are in your folder so you can know, what is what within premier pro.
     

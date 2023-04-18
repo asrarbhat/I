@@ -197,6 +197,155 @@ spring bean scopes and lifecycle:
          
         for prototype scoped beans, spring does not call the destroy method,it just hands over object and doesn't care what happens to it. you have to do cleanup on your own applies to annotatins as well.
         
+spring configuration with java annotatations:
+    special labels markers added to java class
+    provide meta-data about the class
+    processed at compile tie or runtime for special processing.
+    eg @Overtime it tell compiler hey we are overriding, now at compile time compiler will make sure that you method is overriding and is not different from original.
+    it it fails we get error at time of compilation.
+    why annotations:
+        because xml configurations are verbose.
+        this minimizes xml configuration.
+    scanning for component classes:
+        spring will scan your java classes for special annotations.
+        it would automatically register the beans in the spring container.
+        steps:
+            enable compnent scanning in spring config file.
+                <beans ...>
+                    <context:component-scan base-package="com.abc.gg"/>
+                </beans>
+                spring scans recursively.
+            add @Component Annotation to yoru java classes to register the beans
+                @Component("thatSillyCoach")//that is bean id.
+                @Component only would create a default bean id which is the classname with first letter in lower case.
+            Retrieve beans from Spring container.
+                Coach theCoach=context.getBean("thatSillyCoach",Coach.class)
+
+
+constructor injection:
+    for dependency injection spring can use auto wiring.
+    spring will look for a class that matches the property, match by type: class or interface.
+    spring will inject it automatically, hence it is autowired.
+    spring scans all @Compnents
+    there are constucor setter and field injection.
+
+    private FortuneService fortuneService;
+    @Autowired
+    public TennisCoach(FortuneService theFortuneSearvice){
+        fortuneService = theFortuneSearvice;
+    }
+    spring will fine a bean that implements FortuneService.
+    if there are multiple implementations there is something called @Qualfier annotaion we will learn later.
+    if there is just one constructor, then @Autowired is optional.
+    if multiple constructors then atleast one must be annotated.
+    but always used autowired.
+
+setter injection:
+    create setter method, configure iwth @autowired.
+    just annoate setter method with @Autowired
+    first the constructor is run and then teh annotated setters are called.
+
+method injection:
+    using any method.
+    just autowire and method and its parameters will be passed as they are the beans and you can do anything with those beans.
+
+field injection:
+    just declare the field and annotate it with @Autowired, even for private fields, as it is done using reflections.
+    @Autowired
+    private FieldClass fieldName;
+    no need to setter or constructor injection.
+    if you are not modying this then you can just use it this way otherwise if you are changing use one with setters.
+    you can use this instead of constructor injection.
+
+
+Which injection type to use:
+    stay consistent in your project.
+    you get same functionality with all three.
+
+Annotation Autowiring and Qualifiers:
+    what if there are multiple implementations, which one will it pick?
+        by default it fails to autowire.
+
+        @Autowired
+        @Qualfier("happyFortuneService")
+        private FortuneService fortuneService;
+        //here we are asking it to use happyFortuneService
+        can apply for constructor or setter or field injection.
+
+In Java, it is possible to apply multiple annotations to a single class. When multiple annotations are applied to a class, each annotation can provide additional metadata or behavior to the class, and the annotations are processed in a well-defined order.
+
+The order in which annotations are processed is determined by their target. Annotations that target the class itself are processed first, followed by annotations that target the class's fields, methods, and constructors.
+
+If multiple annotations target the same element, the order in which they are processed is not specified by the Java language specification. In practice, the order in which annotations are processed may depend on the order in which they are specified in the source code, or on the order in which they are returned by the reflection API.
+
+It is also possible for multiple annotations to have conflicting behavior or metadata, in which case the behavior of the class may be ambiguous or undefined. It is the responsibility of the developer to ensure that any conflicting annotations are resolved in a way that is consistent with the desired behavior of the class.
+
+
+for RESTFortuneService default mean would remain same since both first and second letter are cap.
+for constuctor you have to use Qualfier instead the constructor with parameters:
+    public TennisCoach(@Qualifiers("name") FortuneService fs){}
+    you can inject values to your fields from a properties file.
+
+    @Value("${foo.email}")
+    private String email;
+
+    but you can to add the properties file to your xml file first.
+
+
+Bean Scopes with annotations:
+    default scope is singleton.
+    cached in memory and shared.
+    to explicitly specify.
+
+    @Component
+    @Scope("singleton")
+    public class Tennis implements Coach{}
+    can put as prototype 
+
+Bean life cycle methods:
+    define you methods and then add annotaions to them.
+    @PostCostruct 
+    @PreDestroy
+    these methods can have nay access modifier.
+    void is preferred return type.
+    there should be no arguments.
+    for prototype scoped beans spring does not call th predestroy method.
+
+
+spring configuration with java code and no xml:
+    hence no xml at all.
+    this is the third method of doing it and here we just write a java configuration class.
+
+    package abc;
+
+    @Configuration
+    @ComponentScan("com.luv2code.springdemo")//this is optional
+    public class SportConfig{
+
+        //THIS ACTS LIEK THE XML FILE
+    }    
+
+    now you just read the class that you created.
+    AnnotationConfigApplicationContext context new AnnotationConfigApplicationContext(SportConfig.class);
+    now you can retrieve a bean.
+    instead of @Bean at every class,
+    you can put instead the configuartion class.
+    like:
+        @Bean
+        public FortuneService sadFortuneService(){
+            return new sadFortuneService();
+        }
+        method name is now the beanID.
+        return type here is the Interface.
+    
+    injecting values from a properties file.
+    create abc.properties
+    in configuartion class above class put.
+    @PropertySource("classpath:sprot.properties")
+    @Value("${food.email}")
+    private String email;
+    you can now put anywhere in any class.
+    
 
 
 
